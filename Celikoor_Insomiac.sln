@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.33801.447
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celikoor_Insomiac", "Celikoor_Insomiac\Celikoor_Insomiac.csproj", "{0FBCA473-8F6C-4B0E-B1DC-BB45150C236F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insomiac_lib", "Insomiac_lib\Insomiac_lib.csproj", "{62C3CD67-61B2-413A-A8C5-8AACE3C0629F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0FBCA473-8F6C-4B0E-B1DC-BB45150C236F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FBCA473-8F6C-4B0E-B1DC-BB45150C236F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FBCA473-8F6C-4B0E-B1DC-BB45150C236F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C3CD67-61B2-413A-A8C5-8AACE3C0629F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C3CD67-61B2-413A-A8C5-8AACE3C0629F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C3CD67-61B2-413A-A8C5-8AACE3C0629F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C3CD67-61B2-413A-A8C5-8AACE3C0629F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

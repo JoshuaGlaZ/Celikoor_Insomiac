@@ -16,5 +16,15 @@ namespace Celikoor_Insomiac
         {
             InitializeComponent();
         }
+
+        private void FormUtama_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
