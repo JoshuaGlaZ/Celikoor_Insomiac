@@ -24,9 +24,14 @@ namespace Celikoor_Insomiac
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void linkLabelREgister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

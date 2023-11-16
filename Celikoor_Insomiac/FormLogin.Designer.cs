@@ -32,10 +32,12 @@
             this.labelPwd = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.linkLabelREgister = new System.Windows.Forms.LinkLabel();
+            this.labelAsk = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelUsername
@@ -71,10 +73,10 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.buttonLogin.Location = new System.Drawing.Point(514, 311);
+            this.buttonLogin.Location = new System.Drawing.Point(553, 336);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(198, 74);
+            this.buttonLogin.Size = new System.Drawing.Size(159, 49);
             this.buttonLogin.TabIndex = 12;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -92,21 +94,21 @@
             this.textBox3.Size = new System.Drawing.Size(234, 96);
             this.textBox3.TabIndex = 13;
             // 
-            // button1
+            // buttonExit
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.button1.Location = new System.Drawing.Point(25, 311);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 74);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "EXIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.buttonExit.Location = new System.Drawing.Point(23, 336);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(159, 49);
+            this.buttonExit.TabIndex = 14;
+            this.buttonExit.Text = "EXIT";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label1
             // 
@@ -147,16 +149,41 @@
             this.textBox1.TabIndex = 17;
             this.textBox1.Text = "lorem ipsum";
             // 
+            // linkLabelREgister
+            // 
+            this.linkLabelREgister.AutoSize = true;
+            this.linkLabelREgister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelREgister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.linkLabelREgister.Location = new System.Drawing.Point(404, 261);
+            this.linkLabelREgister.Name = "linkLabelREgister";
+            this.linkLabelREgister.Size = new System.Drawing.Size(162, 32);
+            this.linkLabelREgister.TabIndex = 19;
+            this.linkLabelREgister.TabStop = true;
+            this.linkLabelREgister.Text = "Register Here";
+            this.linkLabelREgister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelREgister_LinkClicked);
+            // 
+            // labelAsk
+            // 
+            this.labelAsk.AutoSize = true;
+            this.labelAsk.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAsk.Location = new System.Drawing.Point(138, 261);
+            this.labelAsk.Name = "labelAsk";
+            this.labelAsk.Size = new System.Drawing.Size(269, 32);
+            this.labelAsk.TabIndex = 21;
+            this.labelAsk.Text = "Don\'t have an account?";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(725, 399);
+            this.Controls.Add(this.labelAsk);
+            this.Controls.Add(this.linkLabelREgister);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelPwd);
@@ -174,9 +201,11 @@
         private System.Windows.Forms.Label labelPwd;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabelREgister;
+        private System.Windows.Forms.Label labelAsk;
     }
 }
