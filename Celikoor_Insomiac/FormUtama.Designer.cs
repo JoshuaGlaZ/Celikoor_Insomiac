@@ -108,7 +108,7 @@ namespace Celikoor_Insomiac
             // 
             this.toolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripMenuItem2.AutoSize = false;
-            this.toolStripMenuItem2.BackgroundImage = global::Celikoor_Insomiac.Properties.Resources.celikoor2;
+            this.toolStripMenuItem2.BackgroundImage = global::Celikoor_Insomiac.Properties.Resources.celikoor_light;
             this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(122, 33);

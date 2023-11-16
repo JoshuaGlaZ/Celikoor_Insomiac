@@ -81,40 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\celikoor.png" />
+    <None Include="Resources\celikoor_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\celikoor1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons collection .png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo_celikoor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\celikoor21.png" />
+    <None Include="Resources\celikoor_dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

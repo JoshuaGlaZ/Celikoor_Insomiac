@@ -63,9 +63,9 @@ namespace Celikoor_Insomiac.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap celikoor2 {
+        internal static System.Drawing.Bitmap celikoor_dark {
             get {
-                object obj = ResourceManager.GetObject("celikoor2", resourceCulture);
+                object obj = ResourceManager.GetObject("celikoor_dark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Celikoor_Insomiac.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_celikoor {
+        internal static System.Drawing.Bitmap celikoor_light {
             get {
-                object obj = ResourceManager.GetObject("logo_celikoor", resourceCulture);
+                object obj = ResourceManager.GetObject("celikoor_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
