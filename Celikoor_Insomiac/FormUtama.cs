@@ -19,10 +19,15 @@ namespace Celikoor_Insomiac
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.Purple;
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
