@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\logo_celikoor.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celikoor21.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
