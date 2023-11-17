@@ -76,7 +76,7 @@
             this.textBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxUsername.Location = new System.Drawing.Point(77, 339);
+            this.textBoxUsername.Location = new System.Drawing.Point(77, 324);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(332, 36);
             this.textBoxUsername.TabIndex = 21;
@@ -113,7 +113,7 @@
             this.groupBoxGender.Controls.Add(this.radioButtonLakiLaki);
             this.groupBoxGender.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxGender.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBoxGender.Location = new System.Drawing.Point(77, 241);
+            this.groupBoxGender.Location = new System.Drawing.Point(77, 233);
             this.groupBoxGender.Name = "groupBoxGender";
             this.groupBoxGender.Size = new System.Drawing.Size(89, 70);
             this.groupBoxGender.TabIndex = 24;
@@ -129,7 +129,6 @@
             this.radioButtonPerempuan.Name = "radioButtonPerempuan";
             this.radioButtonPerempuan.Size = new System.Drawing.Size(23, 38);
             this.radioButtonPerempuan.TabIndex = 1;
-            this.radioButtonPerempuan.TabStop = true;
             this.radioButtonPerempuan.Text = "P";
             this.radioButtonPerempuan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonPerempuan.UseVisualStyleBackColor = true;
@@ -154,7 +153,7 @@
             this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(77, 407);
+            this.textBoxPassword.Location = new System.Drawing.Point(77, 384);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 36);
             this.textBoxPassword.TabIndex = 26;
@@ -166,7 +165,7 @@
             this.textBoxUlangiPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 449);
+            this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 426);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(332, 36);
             this.textBoxUlangiPassword.TabIndex = 27;
@@ -178,11 +177,11 @@
             this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.buttonRegister.FlatAppearance.BorderSize = 0;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonRegister.Location = new System.Drawing.Point(77, 518);
+            this.buttonRegister.Location = new System.Drawing.Point(77, 491);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(332, 32);
+            this.buttonRegister.Size = new System.Drawing.Size(332, 45);
             this.buttonRegister.TabIndex = 28;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
@@ -192,23 +191,23 @@
             // 
             this.labelAsk.AutoSize = true;
             this.labelAsk.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAsk.Location = new System.Drawing.Point(221, 553);
+            this.labelAsk.Location = new System.Drawing.Point(225, 540);
             this.labelAsk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAsk.Name = "labelAsk";
-            this.labelAsk.Size = new System.Drawing.Size(44, 21);
+            this.labelAsk.Size = new System.Drawing.Size(26, 21);
             this.labelAsk.TabIndex = 29;
-            this.labelAsk.Text = "Atau";
+            this.labelAsk.Text = "or";
             // 
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.buttonExit.Location = new System.Drawing.Point(77, 577);
+            this.buttonExit.Location = new System.Drawing.Point(77, 564);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(332, 32);
+            this.buttonExit.Size = new System.Drawing.Size(332, 45);
             this.buttonExit.TabIndex = 30;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -219,7 +218,7 @@
             this.groupBoxTglLahir.Controls.Add(this.dateTimePicker1);
             this.groupBoxTglLahir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTglLahir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBoxTglLahir.Location = new System.Drawing.Point(172, 241);
+            this.groupBoxTglLahir.Location = new System.Drawing.Point(172, 233);
             this.groupBoxTglLahir.Name = "groupBoxTglLahir";
             this.groupBoxTglLahir.Size = new System.Drawing.Size(237, 70);
             this.groupBoxTglLahir.TabIndex = 25;
@@ -254,7 +253,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRegister";
+            this.Text = "Register";
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
             this.groupBoxTglLahir.ResumeLayout(false);
