@@ -108,6 +108,7 @@
             this.textBoxUsername.Size = new System.Drawing.Size(332, 29);
             this.textBoxUsername.TabIndex = 16;
             this.textBoxUsername.Text = "Username";
+            this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // linkLabelREgister
             // 
@@ -146,6 +147,7 @@
             this.textBox1.Size = new System.Drawing.Size(332, 29);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "Password";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
