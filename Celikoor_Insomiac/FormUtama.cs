@@ -20,6 +20,9 @@ namespace Celikoor_Insomiac
         private void FormUtama_Load(object sender, EventArgs e)
         {
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(152, 204, 211);
+            FormLogin login = new FormLogin();
+            login.Owner = this;
+            login.ShowDialog();
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)

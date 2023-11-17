@@ -31,7 +31,9 @@ namespace Celikoor_Insomiac
 
         private void linkLabelREgister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormRegister register = new FormRegister();
+            this.Visible = false;
+            register.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

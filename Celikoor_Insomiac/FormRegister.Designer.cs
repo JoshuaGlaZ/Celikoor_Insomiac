@@ -34,12 +34,12 @@
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.groupBoxGender = new System.Windows.Forms.GroupBox();
-            this.radioButtonLakiLaki = new System.Windows.Forms.RadioButton();
             this.radioButtonPerempuan = new System.Windows.Forms.RadioButton();
+            this.radioButtonLakiLaki = new System.Windows.Forms.RadioButton();
             this.groupBoxTglLahir = new System.Windows.Forms.GroupBox();
-            this.comboBoxTanggal = new System.Windows.Forms.ComboBox();
-            this.comboBoxBulan = new System.Windows.Forms.ComboBox();
             this.comboBoxTahun = new System.Windows.Forms.ComboBox();
+            this.comboBoxBulan = new System.Windows.Forms.ComboBox();
+            this.comboBoxTanggal = new System.Windows.Forms.ComboBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUlangiPassword = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -63,9 +63,9 @@
             // 
             // textBoxNoHp
             // 
-            this.textBoxNoHp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxNoHp.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNoHp.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxNoHp.ForeColor = System.Drawing.Color.White;
+            this.textBoxNoHp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxNoHp.Location = new System.Drawing.Point(77, 99);
             this.textBoxNoHp.Name = "textBoxNoHp";
             this.textBoxNoHp.Size = new System.Drawing.Size(332, 36);
@@ -75,9 +75,9 @@
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxUsername.ForeColor = System.Drawing.Color.White;
+            this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxUsername.Location = new System.Drawing.Point(77, 141);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(332, 36);
@@ -87,9 +87,9 @@
             // 
             // textBoxNama
             // 
-            this.textBoxNama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxNama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNama.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxNama.ForeColor = System.Drawing.Color.White;
+            this.textBoxNama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxNama.Location = new System.Drawing.Point(77, 183);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(332, 36);
@@ -99,9 +99,9 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxEmail.ForeColor = System.Drawing.Color.White;
+            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxEmail.Location = new System.Drawing.Point(77, 225);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(332, 36);
@@ -117,24 +117,10 @@
             this.groupBoxGender.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBoxGender.Location = new System.Drawing.Point(77, 267);
             this.groupBoxGender.Name = "groupBoxGender";
-            this.groupBoxGender.Size = new System.Drawing.Size(332, 70);
+            this.groupBoxGender.Size = new System.Drawing.Size(127, 70);
             this.groupBoxGender.TabIndex = 24;
             this.groupBoxGender.TabStop = false;
             this.groupBoxGender.Text = "Gender:";
-            // 
-            // radioButtonLakiLaki
-            // 
-            this.radioButtonLakiLaki.AutoSize = true;
-            this.radioButtonLakiLaki.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.radioButtonLakiLaki.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonLakiLaki.Location = new System.Drawing.Point(28, 26);
-            this.radioButtonLakiLaki.Name = "radioButtonLakiLaki";
-            this.radioButtonLakiLaki.Size = new System.Drawing.Size(22, 38);
-            this.radioButtonLakiLaki.TabIndex = 0;
-            this.radioButtonLakiLaki.TabStop = true;
-            this.radioButtonLakiLaki.Text = "L";
-            this.radioButtonLakiLaki.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonLakiLaki.UseVisualStyleBackColor = true;
             // 
             // radioButtonPerempuan
             // 
@@ -150,6 +136,20 @@
             this.radioButtonPerempuan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonPerempuan.UseVisualStyleBackColor = true;
             // 
+            // radioButtonLakiLaki
+            // 
+            this.radioButtonLakiLaki.AutoSize = true;
+            this.radioButtonLakiLaki.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.radioButtonLakiLaki.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonLakiLaki.Location = new System.Drawing.Point(28, 26);
+            this.radioButtonLakiLaki.Name = "radioButtonLakiLaki";
+            this.radioButtonLakiLaki.Size = new System.Drawing.Size(22, 38);
+            this.radioButtonLakiLaki.TabIndex = 0;
+            this.radioButtonLakiLaki.TabStop = true;
+            this.radioButtonLakiLaki.Text = "L";
+            this.radioButtonLakiLaki.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonLakiLaki.UseVisualStyleBackColor = true;
+            // 
             // groupBoxTglLahir
             // 
             this.groupBoxTglLahir.Controls.Add(this.comboBoxTahun);
@@ -164,35 +164,11 @@
             this.groupBoxTglLahir.TabStop = false;
             this.groupBoxTglLahir.Text = "Tanggal Lahir:";
             // 
-            // comboBoxTanggal
-            // 
-            this.comboBoxTanggal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
-            this.comboBoxTanggal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBoxTanggal.ForeColor = System.Drawing.Color.White;
-            this.comboBoxTanggal.FormattingEnabled = true;
-            this.comboBoxTanggal.Location = new System.Drawing.Point(10, 28);
-            this.comboBoxTanggal.Name = "comboBoxTanggal";
-            this.comboBoxTanggal.Size = new System.Drawing.Size(100, 29);
-            this.comboBoxTanggal.TabIndex = 0;
-            this.comboBoxTanggal.Text = "Tanggal";
-            // 
-            // comboBoxBulan
-            // 
-            this.comboBoxBulan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
-            this.comboBoxBulan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBoxBulan.ForeColor = System.Drawing.Color.White;
-            this.comboBoxBulan.FormattingEnabled = true;
-            this.comboBoxBulan.Location = new System.Drawing.Point(116, 28);
-            this.comboBoxBulan.Name = "comboBoxBulan";
-            this.comboBoxBulan.Size = new System.Drawing.Size(100, 29);
-            this.comboBoxBulan.TabIndex = 1;
-            this.comboBoxBulan.Text = "Bulan";
-            // 
             // comboBoxTahun
             // 
-            this.comboBoxTahun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.comboBoxTahun.BackColor = System.Drawing.Color.WhiteSmoke;
             this.comboBoxTahun.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBoxTahun.ForeColor = System.Drawing.Color.White;
+            this.comboBoxTahun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.comboBoxTahun.FormattingEnabled = true;
             this.comboBoxTahun.Location = new System.Drawing.Point(222, 28);
             this.comboBoxTahun.Name = "comboBoxTahun";
@@ -200,11 +176,35 @@
             this.comboBoxTahun.TabIndex = 2;
             this.comboBoxTahun.Text = "Tahun";
             // 
+            // comboBoxBulan
+            // 
+            this.comboBoxBulan.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxBulan.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBoxBulan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.comboBoxBulan.FormattingEnabled = true;
+            this.comboBoxBulan.Location = new System.Drawing.Point(116, 28);
+            this.comboBoxBulan.Name = "comboBoxBulan";
+            this.comboBoxBulan.Size = new System.Drawing.Size(100, 29);
+            this.comboBoxBulan.TabIndex = 1;
+            this.comboBoxBulan.Text = "Bulan";
+            // 
+            // comboBoxTanggal
+            // 
+            this.comboBoxTanggal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxTanggal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.comboBoxTanggal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.comboBoxTanggal.FormattingEnabled = true;
+            this.comboBoxTanggal.Location = new System.Drawing.Point(10, 28);
+            this.comboBoxTanggal.Name = "comboBoxTanggal";
+            this.comboBoxTanggal.Size = new System.Drawing.Size(100, 29);
+            this.comboBoxTanggal.TabIndex = 0;
+            this.comboBoxTanggal.Text = "Tanggal";
+            // 
             // textBoxPassword
             // 
-            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxPassword.ForeColor = System.Drawing.Color.White;
+            this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxPassword.Location = new System.Drawing.Point(77, 419);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 36);
@@ -214,9 +214,9 @@
             // 
             // textBoxUlangiPassword
             // 
-            this.textBoxUlangiPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(204)))), ((int)(((byte)(211)))));
+            this.textBoxUlangiPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.White;
+            this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 461);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(332, 36);
@@ -230,13 +230,14 @@
             this.buttonRegister.FlatAppearance.BorderSize = 0;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.buttonRegister.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonRegister.Location = new System.Drawing.Point(77, 518);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(332, 32);
             this.buttonRegister.TabIndex = 28;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // labelAsk
             // 
@@ -251,17 +252,18 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.buttonExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.buttonExit.Location = new System.Drawing.Point(77, 577);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(332, 32);
             this.buttonExit.TabIndex = 30;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FormRegister
             // 
@@ -281,8 +283,9 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxNoHp);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
