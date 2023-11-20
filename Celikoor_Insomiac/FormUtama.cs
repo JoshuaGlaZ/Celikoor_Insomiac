@@ -25,14 +25,36 @@ namespace Celikoor_Insomiac
             login.ShowDialog();
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form form = Application.OpenForms["FormMasterKonsumen"];
+            if (form == null)
+            {
+                FormMasterKonsumen cinema = new FormMasterKonsumen();
+                cinema.MdiParent = this;
+                cinema.Show();
+            }
+            else
+            {
+                form.BringToFront();
+                form.Show();
+            }
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form form = Application.OpenForms["FormMasterCinema"];
+            if (form == null)
+            {
+                FormMasterCinema cinema = new FormMasterCinema();
+                cinema.MdiParent = this;
+                cinema.Show();
+            }
+            else
+            {
+                form.BringToFront();
+                form.Show();
+            }
         }
     }
 }
