@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>db.settings</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +63,23 @@
     <Compile Include="FormMasterCinema.Designer.cs">
       <DependentUpon>FormMasterCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterKelompok.Designer.cs">
+      <DependentUpon>FormMasterKelompok.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMasterKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMasterKonsumen.Designer.cs">
       <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterPegawai.Designer.cs">
+      <DependentUpon>FormMasterPegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
@@ -70,11 +87,35 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKelompok.Designer.cs">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTambahKonsumen.Designer.cs">
       <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahPegawai.Designer.cs">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahKelompok.Designer.cs">
+      <DependentUpon>FormUbahKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahPegawai.Designer.cs">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
@@ -90,14 +131,32 @@
     <EmbeddedResource Include="FormMasterCinema.resx">
       <DependentUpon>FormMasterCinema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterKelompok.resx">
+      <DependentUpon>FormMasterKelompok.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMasterKonsumen.resx">
       <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterPegawai.resx">
+      <DependentUpon>FormMasterPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKelompok.resx">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKonsumen.resx">
       <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahPegawai.resx">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahKelompok.resx">
+      <DependentUpon>FormUbahKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahPegawai.resx">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>
@@ -112,6 +171,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="db.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>db.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Insomiac_lib\Insomiac_lib.csproj">
+      <Project>{62c3cd67-61b2-413a-a8c5-8aace3c0629f}</Project>
+      <Name>Insomiac_lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

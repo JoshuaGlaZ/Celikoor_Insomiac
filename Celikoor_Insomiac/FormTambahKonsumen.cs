@@ -41,5 +41,10 @@ namespace Celikoor_Insomiac
         {
             this.Close();
         }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

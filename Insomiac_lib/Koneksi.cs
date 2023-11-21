@@ -23,8 +23,8 @@ namespace Insomiac_lib
         public Koneksi()
         {
             Configuration myC = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            ConfigurationSectionGroup userSetting = myC.SectionGroups["userSettings"];
-            var sectionSetting = userSetting.Sections["Celikoor_insomiac.db"] as ClientSettingsSection;
+            ConfigurationSectionGroup userSetting = myC.SectionGroups["userSettings"]; //userSetting = null ?
+            var sectionSetting = userSetting.Sections["Celikoor_Insomiac.db"] as ClientSettingsSection;
 
             string vServer = sectionSetting.Settings.Get("server").Value.ValueXml.InnerText;
             string vDb = sectionSetting.Settings.Get("dbname").Value.ValueXml.InnerText;

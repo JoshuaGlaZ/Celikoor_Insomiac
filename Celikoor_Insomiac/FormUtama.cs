@@ -56,5 +56,37 @@ namespace Celikoor_Insomiac
                 form.Show();
             }
         }
+
+        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormMasterPegawai"];
+            if (form == null)
+            {
+                FormMasterPegawai pegawai = new FormMasterPegawai();
+                pegawai.MdiParent = this;
+                pegawai.Show();
+            }
+            else
+            {
+                form.BringToFront();
+                form.Show();
+            }
+        }
+
+        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormMasterKelompok"];
+            if (form == null)
+            {
+                FormMasterKelompok kelompok = new FormMasterKelompok();
+                kelompok.MdiParent = this;
+                kelompok.Show();
+            }
+            else
+            {
+                form.BringToFront();
+                form.Show();
+            }
+        }
     }
 }
