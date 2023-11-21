@@ -31,7 +31,12 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+
+# Untuk nyettings database settings
 db.settings
+db.Designer.cs
+App.config
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
