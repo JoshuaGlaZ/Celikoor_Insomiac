@@ -25,11 +25,11 @@ namespace Insomiac_lib
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
 
-        public static List<Kelompok> bacaData()
+        public static List<Kelompok> BacaData()
         {
             List<Kelompok> lst = new List<Kelompok>();
             string perintah = "SELECT * FROM kelompoks;";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 Kelompok p = new Kelompok();
@@ -40,11 +40,11 @@ namespace Insomiac_lib
             return lst;
         }
 
-        public static List<Kelompok> bacaData(string kolom, string cari)
+        public static List<Kelompok> BacaData(string kolom, string cari)
         {
             List<Kelompok> lst = new List<Kelompok>();
             string perintah = "SELECT * FROM Kelompoks WHERE " + kolom + " LIKE \'%" + cari + "%\';";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 Kelompok p = new Kelompok();
@@ -55,10 +55,10 @@ namespace Insomiac_lib
             return lst;
         }
 
-        public static Kelompok bacaData(int id)
+        public static Kelompok BacaData(int id)
         {
             string perintah = "SELECT * FROM Kelompoks WHERE id=" + id + ";";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
                 Kelompok p = new Kelompok();
@@ -73,19 +73,19 @@ namespace Insomiac_lib
         {
             string perintah = "INSERT INTO Kelompoks (nama) " +
                 "VALUES ('" + k.Nama + "');";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
         public static void UbahData(Kelompok k) //ada yang salah
         {
             string perintah = "UPDATE kelompoks SET nama='"+k.Nama+"' WHERE id='"+k.Id+"';";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
         public static void HapusData(Kelompok k)
         {
             string perintah = "DELETE FROM Kelompoks WHERE id=" + k.Id + ";";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
     }
 }

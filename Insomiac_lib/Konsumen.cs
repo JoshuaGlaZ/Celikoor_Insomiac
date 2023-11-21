@@ -56,10 +56,10 @@ namespace Insomiac_lib
         public string Password { get => password; set => password = value; }
 
         //buat ambil semua
-        public static List<Konsumen> bacaData()
+        public static List<Konsumen> BacaData()
         {
             string perintah = "SELECT * FROM konsumens;";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             List<Konsumen> data = new List<Konsumen>();
             while (msdr.Read())
             {
@@ -78,10 +78,10 @@ namespace Insomiac_lib
         }
 
         //buat filter
-        public static List<Konsumen> bacaData(string kolom, string cari)
+        public static List<Konsumen> BacaData(string kolom, string cari)
         {
             string perintah = "SELECT * FROM Konsumens WHERE " + kolom + " LIKE \'%" + cari + "%\';";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             List<Konsumen> data = new List<Konsumen>();
             while (msdr.Read())
             {
@@ -100,10 +100,10 @@ namespace Insomiac_lib
         }
 
         //buat ambil 1 spesifik
-        public static Konsumen bacaData(string idKonsumen)
+        public static Konsumen BacaData(string idKonsumen)
         {
             string perintah = "SELECT * FROM konsumens WHERE id=\"" + idKonsumen + "\";";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
                 Konsumen k = new Konsumen();
@@ -127,10 +127,10 @@ namespace Insomiac_lib
                 "VALUES (" + k.Id + ", '" + k.Nama + "', '" + k.Email + "', '" + k.No_hp + "', '" + k.Gender + "', '" +
                 k.Tgl_lahir.ToString("yyyy-MM-dd") + "', '" + k.Saldo.ToString() + "', '" +
                 k.Username + "', SHA2('" + k.Password + "',512));";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
-        public static void ubahData(Konsumen k)
+        public static void UbahData(Konsumen k)
         {
             string perintah =
                 "UPDATE konsumens SET " +
@@ -143,13 +143,13 @@ namespace Insomiac_lib
                 "username=\"" + k.Username + "\"," +
                 "gender=\"" + k.Gender + "\"," +
                 "WHERE id=" + k.Id + ";";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
-        public static void hapusData(Konsumen k)
+        public static void HapusData(Konsumen k)
         {
             string perintah = "DELETE FROM konsumens WHERE id=" + k.Id + ";";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Celikoor_Insomiac
 
         private void FormMasterKelompok_Load(object sender, EventArgs e)
         {
-            kelompoks = Kelompok.bacaData();
+            kelompoks = Kelompok.BacaData();
             dataGridView1.DataSource = kelompoks;
             if (dataGridView1.Rows.Count >= 1 && dataGridView1.Columns.Count == 2)
             {
@@ -44,7 +44,7 @@ namespace Celikoor_Insomiac
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int idKelompok = int.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
-            Kelompok k = Kelompok.bacaData(idKelompok);
+            Kelompok k = Kelompok.BacaData(idKelompok);
             FormUbahKelompok frm = new FormUbahKelompok();
             if (e.ColumnIndex == 0)
             {

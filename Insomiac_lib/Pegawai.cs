@@ -41,11 +41,11 @@ namespace Insomiac_lib
         public string Password { get => password; set => password = value; }
         public string Roles { get => roles; set => roles = value; }
 
-        public static List<Pegawai> bacaData()
+        public static List<Pegawai> BacaData()
         {
             List<Pegawai> lst = new List<Pegawai>();
             string perintah = "SELECT * FROM pegawais;";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 Pegawai p = new Pegawai();
@@ -60,11 +60,11 @@ namespace Insomiac_lib
             return lst;
         }
 
-        public static List<Pegawai> bacaData(string kolom, string cari)
+        public static List<Pegawai> BacaData(string kolom, string cari)
         {
             List<Pegawai> lst = new List<Pegawai>();
             string perintah = "SELECT * FROM pegawais WHERE " + kolom + " LIKE \'%" + cari + "%\';";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 Pegawai p = new Pegawai();
@@ -79,10 +79,10 @@ namespace Insomiac_lib
             return lst;
         }
 
-        public static Pegawai bacaData(int id)
+        public static Pegawai BacaData(int id)
         {
             string perintah = "SELECT * FROM pegawais WHERE id="+id+";";
-            MySqlDataReader msdr = Koneksi.jalankanPerintahSelect(perintah);
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
                 Pegawai p = new Pegawai();
@@ -101,7 +101,7 @@ namespace Insomiac_lib
         {
             string perintah = "INSERT INTO pegawais (nama, email, username, password, roles) " +
                 "VALUES ('"+p.Nama+"', '"+p.Email+"', '"+p.Username+ "', SHA2('" + p.Password + "',512), '" + p.Roles+"');";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
         public static void UbahData(Pegawai p)
@@ -112,13 +112,13 @@ namespace Insomiac_lib
                 "username='"+p.Username+"', " +
                 "roles='"+p.Roles+"' " +
                 "WHERE id='"+p.Id+"';";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
 
         public static void HapusData(Pegawai p)
         {
             string perintah = "DELETE FROM pegawais WHERE id="+p.Id+";";
-            Koneksi.jalankanPerintah(perintah);
+            Koneksi.JalankanPerintah(perintah);
         }
     }
 }

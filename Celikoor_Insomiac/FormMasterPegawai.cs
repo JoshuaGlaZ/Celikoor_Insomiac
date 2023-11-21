@@ -21,7 +21,7 @@ namespace Celikoor_Insomiac
 
         private void FormMasterPegawai_Load(object sender, EventArgs e)
         {
-            pegawais = Pegawai.bacaData();
+            pegawais = Pegawai.BacaData();
             dataGridView1.DataSource = pegawais;
             if (dataGridView1.Rows.Count >= 1 && dataGridView1.Columns.Count == 6) //baru muncul kalau ada 1 data
             {
@@ -62,7 +62,7 @@ namespace Celikoor_Insomiac
         {
             string pKodeKategori = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
             Form frm = Application.OpenForms["FormUbahPegawai"];
-            Pegawai p = Pegawai.bacaData(int.Parse(pKodeKategori));
+            Pegawai p = Pegawai.BacaData(int.Parse(pKodeKategori));
             if (frm == null && e.ColumnIndex == 0)
             {
                 if (p != null)

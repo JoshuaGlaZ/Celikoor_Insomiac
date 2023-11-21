@@ -48,14 +48,14 @@ namespace Insomiac_lib
             KoneksiDB.Open();
         }
 
-        public static MySqlDataReader jalankanPerintahSelect(string perintah)
+        public static MySqlDataReader JalankanPerintahSelect(string perintah)
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
             return cmd.ExecuteReader();
         }
 
-        public static void jalankanPerintah(string perintah)
+        public static void JalankanPerintah(string perintah)
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
