@@ -87,6 +87,12 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahCinema.Designer.cs">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahKelompok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +111,23 @@
     <Compile Include="FormTambahPegawai.Designer.cs">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUbahCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahCinema.Designer.cs">
+      <DependentUpon>FormUbahCinema.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUbahKelompok.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUbahKelompok.Designer.cs">
       <DependentUpon>FormUbahKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahKonsumen.Designer.cs">
+      <DependentUpon>FormUbahKonsumen.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUbahPegawai.cs">
       <SubType>Form</SubType>
@@ -143,6 +161,9 @@
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahCinema.resx">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKelompok.resx">
       <DependentUpon>FormTambahKelompok.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +173,14 @@
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahCinema.resx">
+      <DependentUpon>FormUbahCinema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUbahKelompok.resx">
       <DependentUpon>FormUbahKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahKonsumen.resx">
+      <DependentUpon>FormUbahKonsumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahPegawai.resx">
       <DependentUpon>FormUbahPegawai.cs</DependentUpon>

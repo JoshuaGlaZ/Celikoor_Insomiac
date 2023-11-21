@@ -26,17 +26,17 @@ namespace Celikoor_Insomiac
                 else if (textBoxEmail.Text == "") { throw new Exception("Email"); }
                 else if (textBoxUsername.Text == "") { throw new Exception("Username"); }
                 else if (textBoxPassword.Text == "") { throw new Exception("Password"); }
-                else if (comboBox1.SelectedIndex == -1) { throw new Exception("Roles"); }
+                else if (comboBoxRoles.SelectedIndex == -1) { throw new Exception("Roles"); }
                 else
                 {
-                    Pegawai p = new Pegawai(textBoxNama.Text, textBoxEmail.Text, textBoxUsername.Text, textBoxPassword.Text, comboBox1.Text);
+                    Pegawai p = new Pegawai(textBoxNama.Text, textBoxEmail.Text, textBoxUsername.Text, textBoxPassword.Text, comboBoxRoles.Text);
                     Pegawai.TambahData(p);
                     MessageBox.Show("Data berhasil ditambahkan");
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Data "+ex+" belum diisi");
+                MessageBox.Show("Data "+ex.Message+" belum diisi");
             }
         }
 
@@ -46,7 +46,7 @@ namespace Celikoor_Insomiac
             textBoxEmail.Text = "";
             textBoxUsername.Text = "";
             textBoxPassword.Text = "";
-            comboBox1.SelectedIndex = -1;
+            comboBoxRoles.SelectedIndex = -1;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -56,9 +56,9 @@ namespace Celikoor_Insomiac
 
         private void FormTambahPegawai_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("ADMIN");
-            comboBox1.Items.Add("KASIR");
-            comboBox1.Items.Add("OPERATOR");
+            comboBoxRoles.Items.Add("ADMIN");
+            comboBoxRoles.Items.Add("KASIR");
+            comboBoxRoles.Items.Add("OPERATOR");
         }
     }
 }

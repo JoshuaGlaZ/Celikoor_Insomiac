@@ -37,7 +37,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("uas_database")]
+        [global::System.Configuration.DefaultSettingValueAttribute("celikoor")]
         public string dbname {
             get {
                 return ((string)(this["dbname"]));

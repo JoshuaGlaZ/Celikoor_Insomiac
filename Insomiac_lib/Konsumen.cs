@@ -20,15 +20,14 @@ namespace Insomiac_lib
         private string username;
         private string password;
 
-        public Konsumen(int id, string nama, string email, string no_hp, string gender, DateTime tgl_lahir, double saldo, string username, string password)
+        public Konsumen(string nama, string email, string no_hp, string gender, DateTime tgl_lahir, string username, string password)
         {
-            Id = id;
             Nama = nama;
             Email = email;
             No_hp = no_hp;
             Gender = gender;
             Tgl_lahir = tgl_lahir;
-            Saldo = saldo;
+            Saldo = 1000000;
             Username = username;
             Password = password;
         }
@@ -40,7 +39,7 @@ namespace Insomiac_lib
             No_hp = "";
             Gender = "";
             Tgl_lahir = DateTime.Now;
-            Saldo = 0.0;
+            Saldo = 1000000;
             Username = "";
             Password = "";
         }
@@ -60,7 +59,7 @@ namespace Insomiac_lib
         {
             string perintah = "SELECT * FROM konsumens;";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            List<Konsumen> data = new List<Konsumen>();
+            List<Konsumen> lst = new List<Konsumen>();
             while (msdr.Read())
             {
                 Konsumen k = new Konsumen();
@@ -68,13 +67,14 @@ namespace Insomiac_lib
                 k.Nama = (string)msdr.GetValue(1);
                 k.Email = (string)msdr.GetValue(2);
                 k.No_hp = (string)msdr.GetValue(3);
-                k.Tgl_lahir = (DateTime)msdr.GetValue(4);
-                k.Saldo = Double.Parse(msdr.GetValue(5).ToString());
-                k.Username = (string)msdr.GetValue(6);
-                k.Password = (string)msdr.GetValue(7);
-                data.Add(k);
+                k.Gender = (string)msdr.GetValue(4);
+                k.Tgl_lahir = DateTime.Parse(msdr.GetValue(5).ToString());
+                k.Saldo = double.Parse(msdr.GetValue(6).ToString());
+                k.Username = (string)msdr.GetValue(7);
+                k.Password = "";
+                lst.Add(k);
             }
-            return data;
+            return lst;
         }
 
         //buat filter
@@ -90,19 +90,20 @@ namespace Insomiac_lib
                 k.Nama = (string)msdr.GetValue(1);
                 k.Email = (string)msdr.GetValue(2);
                 k.No_hp = (string)msdr.GetValue(3);
-                k.Tgl_lahir = (DateTime)msdr.GetValue(4);
-                k.Saldo = Double.Parse(msdr.GetValue(5).ToString());
-                k.Username = (string)msdr.GetValue(6);
-                k.Password = (string)msdr.GetValue(7);
+                k.Gender = (string)msdr.GetValue(4);
+                k.Tgl_lahir = DateTime.Parse(msdr.GetValue(5).ToString());
+                k.Saldo = double.Parse(msdr.GetValue(6).ToString());
+                k.Username = (string)msdr.GetValue(7);
+                k.Password = "";
                 data.Add(k);
             }
             return data;
         }
 
         //buat ambil 1 spesifik
-        public static Konsumen BacaData(string idKonsumen)
+        public static Konsumen BacaData(int idKonsumen)
         {
-            string perintah = "SELECT * FROM konsumens WHERE id=\"" + idKonsumen + "\";";
+            string perintah = "SELECT * FROM konsumens WHERE id='" + idKonsumen + "';";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
@@ -111,10 +112,11 @@ namespace Insomiac_lib
                 k.Nama = (string)msdr.GetValue(1);
                 k.Email = (string)msdr.GetValue(2);
                 k.No_hp = (string)msdr.GetValue(3);
-                k.Tgl_lahir = (DateTime)msdr.GetValue(4);
-                k.Saldo = Double.Parse(msdr.GetValue(5).ToString());
-                k.Username = (string)msdr.GetValue(6);
-                k.Password = (string)msdr.GetValue(7);
+                k.Gender = (string)msdr.GetValue(4);
+                k.Tgl_lahir = DateTime.Parse(msdr.GetValue(5).ToString());
+                k.Saldo = double.Parse(msdr.GetValue(6).ToString());
+                k.Username = (string)msdr.GetValue(7);
+                k.Password = "";
                 return k;
             }
             else { return null; }
@@ -134,15 +136,15 @@ namespace Insomiac_lib
         {
             string perintah =
                 "UPDATE konsumens SET " +
-                "nama=\"" + k.Nama + "\"," +
-                "email=\"" + k.Email + "\"," +
-                "no_hp=\"" + k.No_hp + "\"," +
-                "gender=\"" + k.Gender + "\"," +
-                "tgl_lahir=\"" + k.Tgl_lahir.ToString("yyyy-MM-dd") + "\"," +
+                "nama='" + k.Nama + "'," +
+                "email='" + k.Email + "'," +
+                "no_hp='" + k.No_hp + "'," +
+                "gender='" + k.Gender + "'," +
+                "tgl_lahir='" + k.Tgl_lahir.ToString("yyyy-MM-dd") + "'," +
                 "saldo=" + k.Saldo.ToString() + "," +
-                "username=\"" + k.Username + "\"," +
-                "gender=\"" + k.Gender + "\"," +
-                "WHERE id=" + k.Id + ";";
+                "username='" + k.Username + "'," +
+                "gender='" + k.Gender + "' " + 
+                "WHERE id='" + k.Id + "';";
             Koneksi.JalankanPerintah(perintah);
         }
 
@@ -150,6 +152,11 @@ namespace Insomiac_lib
         {
             string perintah = "DELETE FROM konsumens WHERE id=" + k.Id + ";";
             Koneksi.JalankanPerintah(perintah);
+        }
+
+        public static int CheckUmur(DateTime lahir)
+        {
+            return (int)((DateTime.Now - lahir).TotalDays / 365);
         }
     }
 }

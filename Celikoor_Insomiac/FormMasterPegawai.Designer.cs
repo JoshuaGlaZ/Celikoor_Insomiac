@@ -36,8 +36,8 @@ namespace Celikoor_Insomiac
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -48,10 +48,9 @@ namespace Celikoor_Insomiac
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(26, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1226, 65);
+            this.label2.Size = new System.Drawing.Size(814, 41);
             this.label2.TabIndex = 24;
             this.label2.Text = "D A F T A R   P E G A W A I";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,10 +65,9 @@ namespace Celikoor_Insomiac
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(1084, 624);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(721, 405);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(168, 69);
+            this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 23;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -85,10 +83,9 @@ namespace Celikoor_Insomiac
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(26, 624);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonTambah.Location = new System.Drawing.Point(16, 405);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(168, 69);
+            this.buttonTambah.Size = new System.Drawing.Size(112, 45);
             this.buttonTambah.TabIndex = 22;
             this.buttonTambah.Text = "TAMBAH";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -96,71 +93,59 @@ namespace Celikoor_Insomiac
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel2.Location = new System.Drawing.Point(1260, 16);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(839, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 686);
+            this.panel2.Size = new System.Drawing.Size(10, 446);
             this.panel2.TabIndex = 19;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel1.Location = new System.Drawing.Point(2, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(15, 686);
+            this.panel1.Size = new System.Drawing.Size(10, 446);
             this.panel1.TabIndex = 18;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel3.Location = new System.Drawing.Point(2, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1274, 15);
+            this.panel3.Size = new System.Drawing.Size(849, 10);
             this.panel3.TabIndex = 20;
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel4.Location = new System.Drawing.Point(2, 703);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 456);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1274, 15);
+            this.panel4.Size = new System.Drawing.Size(849, 10);
             this.panel4.TabIndex = 21;
             // 
-            // dataGridView1
+            // dataGridViewHasil
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewHasil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 106);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1226, 509);
-            this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Location = new System.Drawing.Point(17, 68);
+            this.dataGridViewHasil.Name = "dataGridViewHasil";
+            this.dataGridViewHasil.RowHeadersWidth = 62;
+            this.dataGridViewHasil.Size = new System.Drawing.Size(814, 330);
+            this.dataGridViewHasil.TabIndex = 26;
+            this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
             // FormMasterPegawai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 719);
+            this.ClientSize = new System.Drawing.Size(849, 466);
+            this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
@@ -168,11 +153,11 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMasterPegawai";
-            this.Text = "FormMasterPegawai";
+            this.Text = "Pegawai";
             this.Load += new System.EventHandler(this.FormMasterPegawai_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,6 +171,6 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewHasil;
     }
 }

@@ -53,7 +53,7 @@ namespace Insomiac_lib
                 p.Nama = msdr.GetValue(1).ToString();
                 p.Email = msdr.GetValue(2).ToString();
                 p.Username = msdr.GetValue(3).ToString();
-                p.Password = msdr.GetValue(4).ToString();
+                p.Password = "";
                 p.Roles = msdr.GetValue(5).ToString();
                 lst.Add(p);
             }
@@ -72,7 +72,7 @@ namespace Insomiac_lib
                 p.Nama = msdr.GetValue(1).ToString();
                 p.Email = msdr.GetValue(2).ToString();
                 p.Username = msdr.GetValue(3).ToString();
-                p.Password = msdr.GetValue(4).ToString();
+                p.Password = "";
                 p.Roles = msdr.GetValue(5).ToString();
                 lst.Add(p);
             }
@@ -90,7 +90,7 @@ namespace Insomiac_lib
                 p.Nama = msdr.GetValue(1).ToString();
                 p.Email = msdr.GetValue(2).ToString();
                 p.Username = msdr.GetValue(3).ToString();
-                p.Password = msdr.GetValue(4).ToString();
+                p.Password = "";
                 p.Roles = msdr.GetValue(5).ToString();
                 return p;
             }

@@ -33,20 +33,20 @@ namespace Celikoor_Insomiac
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBoxNoHp = new System.Windows.Forms.TextBox();
+            this.radioButtonLakilaki = new System.Windows.Forms.RadioButton();
+            this.radioButtonPerempuan = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendarTanggalLahir = new System.Windows.Forms.MonthCalendar();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxUlangiPassword = new System.Windows.Forms.TextBox();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
@@ -58,10 +58,9 @@ namespace Celikoor_Insomiac
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(18, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(825, 65);
+            this.label2.Size = new System.Drawing.Size(550, 42);
             this.label2.TabIndex = 17;
             this.label2.Text = "T A M B A H   K O N S U M E N";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,10 +70,9 @@ namespace Celikoor_Insomiac
             this.textBoxNama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxNama.Location = new System.Drawing.Point(240, 106);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxNama.Location = new System.Drawing.Point(160, 69);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(242, 39);
+            this.textBoxNama.Size = new System.Drawing.Size(163, 29);
             this.textBoxNama.TabIndex = 34;
             this.textBoxNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -82,10 +80,9 @@ namespace Celikoor_Insomiac
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 111);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(16, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 32);
+            this.label1.Size = new System.Drawing.Size(141, 21);
             this.label1.TabIndex = 43;
             this.label1.Text = "Nama Konsumen : ";
             // 
@@ -93,83 +90,76 @@ namespace Celikoor_Insomiac
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 165);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(20, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 32);
+            this.label3.Size = new System.Drawing.Size(137, 21);
             this.label3.TabIndex = 45;
             this.label3.Text = "Email Konsumen : ";
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBox1.Location = new System.Drawing.Point(240, 160);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 39);
-            this.textBox1.TabIndex = 44;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxEmail.Location = new System.Drawing.Point(160, 104);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(163, 29);
+            this.textBoxEmail.TabIndex = 44;
+            this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 218);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(13, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 32);
+            this.label4.Size = new System.Drawing.Size(144, 21);
             this.label4.TabIndex = 47;
             this.label4.Text = "No Hp Konsumen : ";
             // 
-            // textBox2
+            // textBoxNoHp
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBox2.Location = new System.Drawing.Point(240, 214);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 39);
-            this.textBox2.TabIndex = 46;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNoHp.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxNoHp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNoHp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxNoHp.Location = new System.Drawing.Point(160, 139);
+            this.textBoxNoHp.Name = "textBoxNoHp";
+            this.textBoxNoHp.Size = new System.Drawing.Size(163, 29);
+            this.textBoxNoHp.TabIndex = 46;
+            this.textBoxNoHp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // radioButton1
+            // radioButtonLakilaki
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.radioButton1.Location = new System.Drawing.Point(532, 465);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(141, 36);
-            this.radioButton1.TabIndex = 51;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Laki - laki";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonLakilaki.AutoSize = true;
+            this.radioButtonLakilaki.Checked = true;
+            this.radioButtonLakilaki.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.radioButtonLakilaki.Location = new System.Drawing.Point(355, 302);
+            this.radioButtonLakilaki.Name = "radioButtonLakilaki";
+            this.radioButtonLakilaki.Size = new System.Drawing.Size(94, 25);
+            this.radioButtonLakilaki.TabIndex = 51;
+            this.radioButtonLakilaki.TabStop = true;
+            this.radioButtonLakilaki.Text = "Laki - laki";
+            this.radioButtonLakilaki.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonPerempuan
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.radioButton2.Location = new System.Drawing.Point(682, 465);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(161, 36);
-            this.radioButton2.TabIndex = 52;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Perempuan";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonPerempuan.AutoSize = true;
+            this.radioButtonPerempuan.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.radioButtonPerempuan.Location = new System.Drawing.Point(455, 302);
+            this.radioButtonPerempuan.Name = "radioButtonPerempuan";
+            this.radioButtonPerempuan.Size = new System.Drawing.Size(107, 25);
+            this.radioButtonPerempuan.TabIndex = 52;
+            this.radioButtonPerempuan.TabStop = true;
+            this.radioButtonPerempuan.Text = "Perempuan";
+            this.radioButtonPerempuan.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(507, 415);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(338, 270);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(232, 32);
+            this.label6.Size = new System.Drawing.Size(150, 21);
             this.label6.TabIndex = 50;
             this.label6.Text = "Gender Konsumen : ";
             // 
@@ -177,89 +167,80 @@ namespace Celikoor_Insomiac
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(507, 106);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(338, 69);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(294, 32);
+            this.label7.Size = new System.Drawing.Size(191, 21);
             this.label7.TabIndex = 55;
             this.label7.Text = "Tanggal Lahir Konsumen : ";
             // 
-            // monthCalendar1
+            // monthCalendarTanggalLahir
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(513, 152);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 57;
+            this.monthCalendarTanggalLahir.Location = new System.Drawing.Point(342, 99);
+            this.monthCalendarTanggalLahir.Name = "monthCalendarTanggalLahir";
+            this.monthCalendarTanggalLahir.TabIndex = 57;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 272);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(13, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 32);
+            this.label5.Size = new System.Drawing.Size(170, 21);
             this.label5.TabIndex = 59;
             this.label5.Text = "Username Konsumen : ";
             // 
-            // textBox3
+            // textBoxUsername
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBox3.Location = new System.Drawing.Point(26, 328);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(457, 39);
-            this.textBox3.TabIndex = 58;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxUsername.Location = new System.Drawing.Point(17, 213);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(306, 29);
+            this.textBoxUsername.TabIndex = 58;
+            this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(106, 408);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(71, 265);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 32);
+            this.label8.Size = new System.Drawing.Size(83, 21);
             this.label8.TabIndex = 61;
             this.label8.Text = "Password :";
             // 
-            // textBox4
+            // textBoxPassword
             // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBox4.Location = new System.Drawing.Point(240, 403);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 39);
-            this.textBox4.TabIndex = 60;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxPassword.Location = new System.Drawing.Point(160, 262);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(163, 29);
+            this.textBoxPassword.TabIndex = 60;
+            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(33, 465);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(22, 302);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 32);
+            this.label9.Size = new System.Drawing.Size(132, 21);
             this.label9.TabIndex = 63;
             this.label9.Text = "Ulangi Password :";
             // 
-            // textBox5
+            // textBoxUlangiPassword
             // 
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBox5.Location = new System.Drawing.Point(240, 465);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(242, 39);
-            this.textBox5.TabIndex = 62;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUlangiPassword.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxUlangiPassword.Location = new System.Drawing.Point(160, 302);
+            this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
+            this.textBoxUlangiPassword.Size = new System.Drawing.Size(163, 29);
+            this.textBoxUlangiPassword.TabIndex = 62;
+            this.textBoxUlangiPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonSimpan
             // 
@@ -271,10 +252,9 @@ namespace Celikoor_Insomiac
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSimpan.Location = new System.Drawing.Point(142, 552);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSimpan.Location = new System.Drawing.Point(95, 359);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(177, 69);
+            this.buttonSimpan.Size = new System.Drawing.Size(118, 45);
             this.buttonSimpan.TabIndex = 64;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -290,13 +270,13 @@ namespace Celikoor_Insomiac
             this.buttonKosongi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKosongi.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKosongi.Location = new System.Drawing.Point(350, 552);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKosongi.Location = new System.Drawing.Point(233, 359);
             this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(177, 69);
+            this.buttonKosongi.Size = new System.Drawing.Size(118, 45);
             this.buttonKosongi.TabIndex = 65;
             this.buttonKosongi.Text = "KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
+            this.buttonKosongi.Click += new System.EventHandler(this.buttonKosongi_Click);
             // 
             // buttonKeluar
             // 
@@ -308,10 +288,9 @@ namespace Celikoor_Insomiac
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(555, 552);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(370, 359);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(177, 69);
+            this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
             this.buttonKeluar.TabIndex = 66;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -319,32 +298,31 @@ namespace Celikoor_Insomiac
             // 
             // FormTambahKonsumen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 640);
+            this.ClientSize = new System.Drawing.Size(574, 416);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxUlangiPassword);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.monthCalendarTanggalLahir);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonPerempuan);
+            this.Controls.Add(this.radioButtonLakilaki);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNoHp);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormTambahKonsumen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
@@ -358,20 +336,20 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.TextBox textBoxNama;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBoxNoHp;
+        private System.Windows.Forms.RadioButton radioButtonLakilaki;
+        private System.Windows.Forms.RadioButton radioButtonPerempuan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar monthCalendarTanggalLahir;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxUlangiPassword;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonKosongi;
         private System.Windows.Forms.Button buttonKeluar;

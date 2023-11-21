@@ -22,22 +22,31 @@ namespace Celikoor_Insomiac
         private void FormMasterPegawai_Load(object sender, EventArgs e)
         {
             pegawais = Pegawai.BacaData();
-            dataGridView1.DataSource = pegawais;
-            if (dataGridView1.Rows.Count >= 1 && dataGridView1.Columns.Count == 6) //baru muncul kalau ada 1 data
+            dataGridViewHasil.DataSource = pegawais;
+            if (dataGridViewHasil.Rows.Count >= 1 && dataGridViewHasil.Columns.Count == 6) //baru muncul kalau ada 1 data
             {
-                DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                bcol.HeaderText = "Ubah";
-                bcol.Text = "Ubah";
-                bcol.Name = "buttonCollumn";
-                bcol.UseColumnTextForButtonValue = true;
-                dataGridView1.Columns.Add(bcol);
+                DataGridViewButtonColumn bcolUbah = new DataGridViewButtonColumn();
+                bcolUbah.HeaderText = "Ganti Data";
+                bcolUbah.Text = "Ubah";
+                bcolUbah.Name = "buttonCollumnUbah";
+                bcolUbah.FlatStyle = FlatStyle.Flat;
+                bcolUbah.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolUbah.DefaultCellStyle.BackColor = Color.FromArgb(54, 78, 104);
+                bcolUbah.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                bcolUbah.UseColumnTextForButtonValue = true;
+                dataGridViewHasil.Columns.Add(bcolUbah);
 
-                DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                bcol2.HeaderText = "Hapus";
-                bcol2.Text = "Hapus";
-                bcol2.Name = "buttonCollumn2";
-                bcol2.UseColumnTextForButtonValue = true;
-                dataGridView1.Columns.Add(bcol2);
+                DataGridViewButtonColumn bcolHapus = new DataGridViewButtonColumn();
+                bcolHapus.HeaderText = "Hapus Data";
+                bcolHapus.Text = "Hapus";
+                bcolHapus.Name = "buttonCollumnHapus";
+                bcolHapus.FlatStyle = FlatStyle.Flat;
+                bcolHapus.FlatStyle = FlatStyle.Flat;
+                bcolHapus.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolHapus.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
+                bcolHapus.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
+                bcolHapus.UseColumnTextForButtonValue = true;
+                dataGridViewHasil.Columns.Add(bcolHapus);
             }
         }
 
@@ -58,9 +67,14 @@ namespace Celikoor_Insomiac
             FormMasterPegawai_Load(sender, e);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonKeluar_Click(object sender, EventArgs e)
         {
-            string pKodeKategori = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string pKodeKategori = dataGridViewHasil.CurrentRow.Cells["Id"].Value.ToString();
             Form frm = Application.OpenForms["FormUbahPegawai"];
             Pegawai p = Pegawai.BacaData(int.Parse(pKodeKategori));
             if (frm == null && e.ColumnIndex == 0)
@@ -79,8 +93,8 @@ namespace Celikoor_Insomiac
             {
                 if (p != null)
                 {
-                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus karyawan "+p.Nama+" ?","Hapus Data",MessageBoxButtons.YesNo);
-                    if(ans == DialogResult.Yes)
+                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus karyawan " + p.Nama + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                    if (ans == DialogResult.Yes)
                     {
                         Pegawai.HapusData(p);
                         FormMasterPegawai_Load(sender, e);
@@ -88,11 +102,6 @@ namespace Celikoor_Insomiac
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

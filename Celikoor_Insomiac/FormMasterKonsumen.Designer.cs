@@ -29,7 +29,7 @@ namespace Celikoor_Insomiac
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -37,20 +37,20 @@ namespace Celikoor_Insomiac
             this.buttonTambah = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewHasil
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewHasil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(817, 331);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 68);
+            this.dataGridViewHasil.Name = "dataGridViewHasil";
+            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 331);
+            this.dataGridViewHasil.TabIndex = 0;
+            this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
             // panel1
             // 
@@ -62,7 +62,6 @@ namespace Celikoor_Insomiac
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 446);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -74,7 +73,6 @@ namespace Celikoor_Insomiac
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 446);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -86,7 +84,6 @@ namespace Celikoor_Insomiac
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(849, 10);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -98,7 +95,6 @@ namespace Celikoor_Insomiac
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(849, 10);
             this.panel4.TabIndex = 2;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // buttonTambah
             // 
@@ -150,7 +146,6 @@ namespace Celikoor_Insomiac
             this.label2.TabIndex = 16;
             this.label2.Text = "D A F T A R   K O N S U M E N";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FormMasterKonsumen
             // 
@@ -165,19 +160,19 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.dataGridViewHasil);
             this.Name = "FormMasterKonsumen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormMasterKonsumen";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Pegawai";
+            this.Load += new System.EventHandler(this.FormMasterKonsumen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

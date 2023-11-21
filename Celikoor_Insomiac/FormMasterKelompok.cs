@@ -22,28 +22,58 @@ namespace Celikoor_Insomiac
         private void FormMasterKelompok_Load(object sender, EventArgs e)
         {
             kelompoks = Kelompok.BacaData();
-            dataGridView1.DataSource = kelompoks;
-            if (dataGridView1.Rows.Count >= 1 && dataGridView1.Columns.Count == 2)
+            dataGridViewHasil.DataSource = kelompoks;
+            if (dataGridViewHasil.Rows.Count >= 1 && dataGridViewHasil.Columns.Count == 2)
             {
-                DataGridViewButtonColumn bcol = new DataGridViewButtonColumn();
-                bcol.HeaderText = "Ubah";
-                bcol.Text = "Ubah";
-                bcol.Name = "buttonCollumn";
-                bcol.UseColumnTextForButtonValue = true;
-                dataGridView1.Columns.Add(bcol);
+                DataGridViewButtonColumn bcolUbah = new DataGridViewButtonColumn();
+                bcolUbah.HeaderText = "Ganti Data";
+                bcolUbah.Text = "Ubah";
+                bcolUbah.Name = "buttonCollumnUbah";
+                bcolUbah.FlatStyle = FlatStyle.Flat;
+                bcolUbah.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolUbah.DefaultCellStyle.BackColor = Color.FromArgb(54, 78, 104);
+                bcolUbah.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                bcolUbah.UseColumnTextForButtonValue = true;
+                dataGridViewHasil.Columns.Add(bcolUbah);
 
-                DataGridViewButtonColumn bcol2 = new DataGridViewButtonColumn();
-                bcol2.HeaderText = "Hapus";
-                bcol2.Text = "Hapus";
-                bcol2.Name = "buttonCollumn2";
-                bcol2.UseColumnTextForButtonValue = true;
-                dataGridView1.Columns.Add(bcol2);
+                DataGridViewButtonColumn bcolHapus = new DataGridViewButtonColumn();
+                bcolHapus.HeaderText = "Hapus Data";
+                bcolHapus.Text = "Hapus";
+                bcolHapus.Name = "buttonCollumnHapus";
+                bcolHapus.FlatStyle = FlatStyle.Flat;
+                bcolHapus.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolHapus.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
+                bcolHapus.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
+                bcolHapus.UseColumnTextForButtonValue = true;
+                dataGridViewHasil.Columns.Add(bcolHapus);
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonTambah_Click(object sender, EventArgs e)
         {
-            int idKelompok = int.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
+            Form form = Application.OpenForms["FormTambahKelompok"];
+            if (form == null)
+            {
+                FormTambahKelompok kelompok = new FormTambahKelompok();
+                kelompok.Owner = this;
+                kelompok.ShowDialog();
+            }
+            else
+            {
+                form.BringToFront();
+                form.Show();
+            }
+            FormMasterKelompok_Load(sender, e);
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idKelompok = int.Parse(dataGridViewHasil.CurrentRow.Cells["Id"].Value.ToString());
             Kelompok k = Kelompok.BacaData(idKelompok);
             FormUbahKelompok frm = new FormUbahKelompok();
             if (e.ColumnIndex == 0)
@@ -71,28 +101,6 @@ namespace Celikoor_Insomiac
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormTambahKelompok"];
-            if (form == null)
-            {
-                FormTambahKelompok kelompok = new FormTambahKelompok();
-                kelompok.Owner = this;
-                kelompok.ShowDialog();
-            }
-            else
-            {
-                form.BringToFront();
-                form.Show();
-            }
-            FormMasterKelompok_Load(sender, e);
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
