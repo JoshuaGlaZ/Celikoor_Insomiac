@@ -30,9 +30,9 @@ namespace Celikoor_Insomiac
             Form form = Application.OpenForms["FormMasterKonsumen"];
             if (form == null)
             {
-                FormMasterKonsumen cinema = new FormMasterKonsumen();
-                cinema.MdiParent = this;
-                cinema.Show();
+                FormMasterKonsumen konsumen = new FormMasterKonsumen();
+                konsumen.MdiParent = this;
+                konsumen.Show();
             }
             else
             {
