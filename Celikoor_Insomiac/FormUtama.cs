@@ -23,6 +23,12 @@ namespace Celikoor_Insomiac
             FormLogin login = new FormLogin();
             login.Owner = this;
             login.ShowDialog();
+
+            timerHour_Tick(sender, e);
+            Timer hour = new Timer();
+            hour.Interval = (1000);
+            hour.Tick += new EventHandler(timerHour_Tick);
+            hour.Start();
         }
 
         private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +93,12 @@ namespace Celikoor_Insomiac
                 form.BringToFront();
                 form.Show();
             }
+        }
+
+        private void timerHour_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabelClock.Text = DateTime.Now.ToShortDateString();
+            toolStripStatusLabelTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

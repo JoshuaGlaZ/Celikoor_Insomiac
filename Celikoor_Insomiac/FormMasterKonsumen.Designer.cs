@@ -37,7 +37,14 @@ namespace Celikoor_Insomiac
             this.buttonTambah = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxCari = new System.Windows.Forms.ComboBox();
+            this.comboBoxUrut = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxCari = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewHasil
@@ -50,10 +57,10 @@ namespace Celikoor_Insomiac
             this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 68);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 128);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.ReadOnly = true;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 331);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 271);
             this.dataGridViewHasil.TabIndex = 0;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
@@ -143,12 +150,101 @@ namespace Celikoor_Insomiac
             this.label2.Text = "D A F T A R   K O N S U M E N";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
+            this.panel5.Controls.Add(this.textBoxCari);
+            this.panel5.Controls.Add(this.comboBoxUrut);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.comboBoxCari);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Location = new System.Drawing.Point(16, 68);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(817, 54);
+            this.panel5.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Cari Berdasarkan :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxCari
+            // 
+            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCari.FormattingEnabled = true;
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "ID",
+            "Nama",
+            "Email",
+            "No Hp",
+            "Gender (L/P)",
+            "Tanggal Lahir",
+            "Username"});
+            this.comboBoxCari.Location = new System.Drawing.Point(153, 17);
+            this.comboBoxCari.Name = "comboBoxCari";
+            this.comboBoxCari.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxCari.TabIndex = 19;
+            // 
+            // comboBoxUrut
+            // 
+            this.comboBoxUrut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUrut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUrut.FormattingEnabled = true;
+            this.comboBoxUrut.Items.AddRange(new object[] {
+            "ID",
+            "Nama",
+            "Email",
+            "No Hp",
+            "Tanggal Lahir",
+            "Username"});
+            this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
+            this.comboBoxUrut.Name = "comboBoxUrut";
+            this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxUrut.TabIndex = 21;
+            this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label3.Location = new System.Drawing.Point(526, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Urut Berdasarkan :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxCari
+            // 
+            this.textBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCari.Location = new System.Drawing.Point(289, 17);
+            this.textBoxCari.Name = "textBoxCari";
+            this.textBoxCari.Size = new System.Drawing.Size(231, 22);
+            this.textBoxCari.TabIndex = 22;
+            this.textBoxCari.TextChanged += new System.EventHandler(this.textBoxCari_TextChanged);
+            // 
             // FormMasterKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(849, 466);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
@@ -162,6 +258,8 @@ namespace Celikoor_Insomiac
             this.Text = "Konsumen";
             this.Load += new System.EventHandler(this.FormMasterKonsumen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,5 +274,11 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBoxCari;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxUrut;
+        private System.Windows.Forms.ComboBox comboBoxCari;
+        private System.Windows.Forms.Label label1;
     }
 }
