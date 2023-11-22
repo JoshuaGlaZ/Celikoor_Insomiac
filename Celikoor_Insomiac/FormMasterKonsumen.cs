@@ -44,6 +44,7 @@ namespace Celikoor_Insomiac
 
         private void FormMasterKonsumen_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = this.Size;
             listKonsumen = Konsumen.BacaData();
             dataGridViewHasil.DataSource = listKonsumen;
             if (dataGridViewHasil.Rows.Count >= 1 && dataGridViewHasil.Columns.Count == 9) //baru muncul kalau ada 1 data
@@ -102,6 +103,11 @@ namespace Celikoor_Insomiac
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }
+        }
+
+        private void FormMasterKonsumen_Resize(object sender, EventArgs e)
+        {
+            dataGridViewHasil.AutoResizeColumns();
         }
     }
 }

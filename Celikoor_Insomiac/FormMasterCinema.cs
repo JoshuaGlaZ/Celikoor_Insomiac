@@ -21,6 +21,7 @@ namespace Celikoor_Insomiac
 
         private void FormMasterCinema_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = this.Size;
             listCinema = Cinema.BacaData();
             dataGridViewHasil.DataSource = listCinema;
             if (dataGridViewHasil.Rows.Count >= 1 && dataGridViewHasil.Columns.Count == 5) //baru muncul kalau ada 1 data

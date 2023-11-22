@@ -128,12 +128,17 @@ namespace Celikoor_Insomiac
             // 
             // dataGridViewHasil
             // 
+            this.dataGridViewHasil.AllowUserToAddRows = false;
+            this.dataGridViewHasil.AllowUserToDeleteRows = false;
             this.dataGridViewHasil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHasil.Location = new System.Drawing.Point(16, 68);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
+            this.dataGridViewHasil.ReadOnly = true;
             this.dataGridViewHasil.Size = new System.Drawing.Size(817, 331);
             this.dataGridViewHasil.TabIndex = 17;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
