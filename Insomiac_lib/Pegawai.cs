@@ -120,5 +120,27 @@ namespace Insomiac_lib
             string perintah = "DELETE FROM pegawais WHERE id="+p.Id+";";
             Koneksi.JalankanPerintah(perintah);
         }
+
+        public static Pegawai CekLogin(string username, string password)
+        {
+            Pegawai p = new Pegawai();
+            string query = "SELECT * FROM pegawais WHERE username='" + username + "' AND password=sha2('" + password + "', 512);";
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(query);
+            if (msdr.Read() == true)
+            {
+                p.Id = int.Parse(msdr.GetValue(0).ToString());
+                p.Nama = msdr.GetValue(1).ToString();
+                p.Email = msdr.GetValue(2).ToString();
+                p.Username = msdr.GetValue(3).ToString();
+                p.Password = "";
+                p.Roles = msdr.GetValue(5).ToString();
+
+                return p;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -158,5 +158,30 @@ namespace Insomiac_lib
         {
             return (int)((DateTime.Now - lahir).TotalDays / 365);
         }
+
+        public static Konsumen CekLogin(string username, string password)
+        {
+            Konsumen k = new Konsumen();
+            string query = "SELECT * FROM konsumens WHERE username='" + username + "' AND password=sha2('" + password + "', 512);";
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(query);
+            if (msdr.Read() == true)
+            {
+                k.Id = int.Parse(msdr.GetValue(0).ToString());
+                k.Nama = (string)msdr.GetValue(1);
+                k.Email = (string)msdr.GetValue(2);
+                k.No_hp = (string)msdr.GetValue(3);
+                k.Gender = (string)msdr.GetValue(4);
+                k.Tgl_lahir = DateTime.Parse(msdr.GetValue(5).ToString());
+                k.Saldo = double.Parse(msdr.GetValue(6).ToString());
+                k.Username = (string)msdr.GetValue(7);
+                k.Password = "";
+
+                return k;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Insomiac_lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace Celikoor_Insomiac
 {
     public partial class FormUtama : Form
     {
+        public Konsumen konsumenLogin;
+        public Pegawai pegawaiLogin;
+
         public FormUtama()
         {
             InitializeComponent();
@@ -23,6 +27,71 @@ namespace Celikoor_Insomiac
             FormLogin login = new FormLogin();
             login.Owner = this;
             login.ShowDialog();
+
+            if (konsumenLogin != null)
+            {
+                toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
+                cinemaToolStripMenuItem.Visible = false;
+                pegawaiToolStripMenuItem.Visible = false;
+                kelompokToolStripMenuItem.Visible = false;
+                konsumenToolStripMenuItem.Visible = false;
+                aktorToolStripMenuItem.Visible = false;
+                genreToolStripMenuItem.Visible = false;
+                studioToolStripMenuItem.Visible = false;
+                jenisStudioToolStripMenuItem.Visible = false;
+                jadwalFilmToolStripMenuItem.Visible = false;
+                filmToolStripMenuItem.Visible = false;
+                invoicesToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
+                if (pegawaiLogin.Roles == "ADMIN")
+                {
+                    cinemaToolStripMenuItem.Visible = true;
+                    pegawaiToolStripMenuItem.Visible = true;
+                    kelompokToolStripMenuItem.Visible = true;
+                    konsumenToolStripMenuItem.Visible = true;
+                    aktorToolStripMenuItem.Visible = true;
+                    genreToolStripMenuItem.Visible = true;
+                    studioToolStripMenuItem.Visible = true;
+                    jenisStudioToolStripMenuItem.Visible = true;
+                    jadwalFilmToolStripMenuItem.Visible = true;
+                    filmToolStripMenuItem.Visible = true;
+                    invoicesToolStripMenuItem.Visible = true;
+                }
+                else if (pegawaiLogin.Roles == "OPERATOR")
+                {
+                    cinemaToolStripMenuItem.Visible = false;
+                    pegawaiToolStripMenuItem.Visible = false;
+                    kelompokToolStripMenuItem.Visible = false;
+                    konsumenToolStripMenuItem.Visible = false;
+                    aktorToolStripMenuItem.Visible = false;
+                    genreToolStripMenuItem.Visible = false;
+                    studioToolStripMenuItem.Visible = false;
+                    jenisStudioToolStripMenuItem.Visible = false;
+                    jadwalFilmToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem.Visible = false;
+                    invoicesToolStripMenuItem.Visible = false;
+                }
+                else if (pegawaiLogin.Roles == "KASIR")
+                {
+                    cinemaToolStripMenuItem.Visible = false;
+                    pegawaiToolStripMenuItem.Visible = false;
+                    kelompokToolStripMenuItem.Visible = false;
+                    konsumenToolStripMenuItem.Visible = false;
+                    aktorToolStripMenuItem.Visible = false;
+                    genreToolStripMenuItem.Visible = false;
+                    studioToolStripMenuItem.Visible = false;
+                    jenisStudioToolStripMenuItem.Visible = false;
+                    jadwalFilmToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem.Visible = false;
+                    invoicesToolStripMenuItem.Visible = true;
+                }
+            }
+            
+            
+            
 
             timerHour_Tick(sender, e);
             Timer hour = new Timer();
@@ -99,6 +168,11 @@ namespace Celikoor_Insomiac
         {
             toolStripStatusLabelClock.Text = DateTime.Now.ToShortDateString();
             toolStripStatusLabelTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
