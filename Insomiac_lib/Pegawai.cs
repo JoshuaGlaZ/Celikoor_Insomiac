@@ -79,6 +79,25 @@ namespace Insomiac_lib
             return lst;
         }
 
+        public static List<Pegawai> BacaData(string kolom, string cari, string urut)
+        {
+            List<Pegawai> lst = new List<Pegawai>();
+            string perintah = "SELECT * FROM pegawais WHERE " + kolom + " LIKE \'%" + cari + "%\' ORDER BY "+urut+";";
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
+            while (msdr.Read())
+            {
+                Pegawai p = new Pegawai();
+                p.Id = int.Parse(msdr.GetValue(0).ToString());
+                p.Nama = msdr.GetValue(1).ToString();
+                p.Email = msdr.GetValue(2).ToString();
+                p.Username = msdr.GetValue(3).ToString();
+                p.Password = "";
+                p.Roles = msdr.GetValue(5).ToString();
+                lst.Add(p);
+            }
+            return lst;
+        }
+
         public static Pegawai BacaData(int id)
         {
             string perintah = "SELECT * FROM pegawais WHERE id="+id+";";

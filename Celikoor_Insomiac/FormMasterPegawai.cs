@@ -21,6 +21,8 @@ namespace Celikoor_Insomiac
 
         private void FormMasterPegawai_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = this.Size;
+            comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
             pegawais = Pegawai.BacaData();
             dataGridViewHasil.DataSource = pegawais;
             if (dataGridViewHasil.Rows.Count >= 1 && dataGridViewHasil.Columns.Count == 6) //baru muncul kalau ada 1 data
@@ -102,6 +104,26 @@ namespace Celikoor_Insomiac
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }
+        }
+
+        private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pegawais = Pegawai.BacaData(comboBoxCari.Text,textBoxCari.Text);
+            dataGridViewHasil.DataSource = pegawais;
+        }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            string kriteria = comboBoxCari.Text.Replace(" (L/P)", "").Replace(" ", "_").Replace("Tanggal", "tgl");
+            string nilai = textBoxCari.Text;
+            string order = comboBoxUrut.Text.Replace(" ", "_").Replace("Tanggal", "tgl");
+            pegawais = Pegawai.BacaData(kriteria, nilai, order);
+            dataGridViewHasil.DataSource = pegawais;
+        }
+
+        private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxCari_TextChanged(sender, e);
         }
     }
 }
