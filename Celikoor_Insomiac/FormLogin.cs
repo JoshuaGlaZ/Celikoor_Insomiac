@@ -45,6 +45,7 @@ namespace Celikoor_Insomiac
         private void linkLabelREgister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegister register = new FormRegister();
+            register.Owner= this;
             this.Visible = false;
             register.ShowDialog();
         }

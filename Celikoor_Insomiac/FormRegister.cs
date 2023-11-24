@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Insomiac_lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,44 @@ namespace Celikoor_Insomiac
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormLogin frm = (FormLogin)this.Owner;
+
+            Konsumen k = new Konsumen();
+            k.Nama = textBoxNama.Text;
+            k.Email = textBoxEmail.Text;
+            k.No_hp = textBoxNoHp.Text;
+            k.Tgl_lahir = dateTimePicker1.Value;
+            if (radioButtonLakiLaki.Checked)
+            {
+                k.Gender = "Laki Laki";
+                
+            }
+            else if (radioButtonPerempuan.Checked)
+            {
+                k.Gender = "Perempuan";
+            }
+
+            k.Username= textBoxUsername.Text;
+            k.Password= textBoxPassword.Text;
+
+            if(textBoxPassword.Text == textBoxUlangiPassword.Text)
+            {
+                Konsumen.TambahData(k);
+                frm.Visible = true;
+                this.Close();
+                
+            }
+            else
+            {
+                MessageBox.Show("Password Salah");
+            }
+
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
     }
 }

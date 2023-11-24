@@ -81,6 +81,12 @@
     <Compile Include="FormMasterPegawai.Designer.cs">
       <DependentUpon>FormMasterPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProfileKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileKonsumen.Designer.cs">
+      <DependentUpon>FormProfileKonsumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterPegawai.resx">
       <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileKonsumen.resx">
+      <DependentUpon>FormProfileKonsumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>

@@ -172,7 +172,21 @@ namespace Celikoor_Insomiac
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            if(konsumenLogin != null)
+            {
+                Form form = Application.OpenForms["FormProfileKonsumen"];
+                if (form == null)
+                {
+                    FormProfileKonsumen kelompok = new FormProfileKonsumen();
+                    kelompok.MdiParent = this;
+                    kelompok.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
         }
     }
 }
