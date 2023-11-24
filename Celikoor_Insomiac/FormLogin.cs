@@ -35,6 +35,7 @@ namespace Celikoor_Insomiac
             {
                 MessageBox.Show("Login tidak valid, silahkan coba lagi", "Konfirmasi");
             }
+            
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -50,19 +51,36 @@ namespace Celikoor_Insomiac
             register.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void textBoxUsername_Enter(object sender, EventArgs e)
         {
-
+            if (textBoxUsername.Text == "Username")
+            {
+                textBoxUsername.Text = "";
+            }
         }
 
-        private void textBoxUsername_Click(object sender, EventArgs e)
+        private void textBoxUsername_Leave(object sender, EventArgs e)
         {
-            textBoxUsername.Clear();
+            if (textBoxUsername.Text == "")
+            {
+                textBoxUsername.Text = "Username";
+            }
         }
 
-        private void textBoxPassword_Click(object sender, EventArgs e)
+        private void textBoxPassword_Enter(object sender, EventArgs e)
         {
-            textBoxPassword.Clear();
+            if (textBoxUsername.Text == "Password")
+            {
+                textBoxUsername.Text = "";
+            }
+        }
+
+        private void textBoxPassword_Leave(object sender, EventArgs e)
+        {
+            if (textBoxUsername.Text == "")
+            {
+                textBoxUsername.Text = "Password";
+            }
         }
     }
 }

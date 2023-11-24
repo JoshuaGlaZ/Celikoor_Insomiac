@@ -12,7 +12,7 @@ namespace Celikoor_Insomiac {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
     internal sealed partial class db : global::System.Configuration.ApplicationSettingsBase {
         
         private static db defaultInstance = ((db)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new db())));
@@ -25,19 +25,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("insomniac")]
-        public string dbname {
-            get {
-                return ((string)(this["dbname"]));
-            }
-            set {
-                this["dbname"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.1.6")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -49,7 +37,19 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("root")]
+        [global::System.Configuration.DefaultSettingValueAttribute("insomiac")]
+        public string dbname {
+            get {
+                return ((string)(this["dbname"]));
+            }
+            set {
+                this["dbname"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("workbench")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -61,7 +61,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MySQL.WB321")]
         public string password {
             get {
                 return ((string)(this["password"]));

@@ -30,22 +30,22 @@ namespace Celikoor_Insomiac
             if (radioButtonLakiLaki.Checked)
             {
                 k.Gender = "Laki Laki";
-                
+
             }
             else if (radioButtonPerempuan.Checked)
             {
                 k.Gender = "Perempuan";
             }
 
-            k.Username= textBoxUsername.Text;
-            k.Password= textBoxPassword.Text;
+            k.Username = textBoxUsername.Text;
+            k.Password = textBoxPassword.Text;
 
-            if(textBoxPassword.Text == textBoxUlangiPassword.Text)
+            if (textBoxPassword.Text == textBoxUlangiPassword.Text)
             {
                 Konsumen.TambahData(k);
                 frm.Visible = true;
                 this.Close();
-                
+
             }
             else
             {

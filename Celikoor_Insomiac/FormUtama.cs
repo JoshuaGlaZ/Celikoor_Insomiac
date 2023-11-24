@@ -23,45 +23,18 @@ namespace Celikoor_Insomiac
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(152, 204, 211);
-            FormLogin login = new FormLogin();
-            login.Owner = this;
-            login.ShowDialog();
+            try
+            {
+                //Koneksi koneksi = new Koneksi();
 
-            if (konsumenLogin != null)
-            {
-                toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
-                cinemaToolStripMenuItem.Visible = false;
-                pegawaiToolStripMenuItem.Visible = false;
-                kelompokToolStripMenuItem.Visible = false;
-                konsumenToolStripMenuItem.Visible = false;
-                aktorToolStripMenuItem.Visible = false;
-                genreToolStripMenuItem.Visible = false;
-                studioToolStripMenuItem.Visible = false;
-                jenisStudioToolStripMenuItem.Visible = false;
-                jadwalFilmToolStripMenuItem.Visible = false;
-                filmToolStripMenuItem.Visible = false;
-                invoicesToolStripMenuItem.Visible = false;
-            }
-            else if (pegawaiLogin != null)
-            {
-                toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
-                if (pegawaiLogin.Roles == "ADMIN")
+                Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(152, 204, 211);
+                FormLogin login = new FormLogin();
+                login.Owner = this;
+                login.ShowDialog();
+
+                if (konsumenLogin != null)
                 {
-                    cinemaToolStripMenuItem.Visible = true;
-                    pegawaiToolStripMenuItem.Visible = true;
-                    kelompokToolStripMenuItem.Visible = true;
-                    konsumenToolStripMenuItem.Visible = true;
-                    aktorToolStripMenuItem.Visible = true;
-                    genreToolStripMenuItem.Visible = true;
-                    studioToolStripMenuItem.Visible = true;
-                    jenisStudioToolStripMenuItem.Visible = true;
-                    jadwalFilmToolStripMenuItem.Visible = true;
-                    filmToolStripMenuItem.Visible = true;
-                    invoicesToolStripMenuItem.Visible = true;
-                }
-                else if (pegawaiLogin.Roles == "OPERATOR")
-                {
+                    toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
                     cinemaToolStripMenuItem.Visible = false;
                     pegawaiToolStripMenuItem.Visible = false;
                     kelompokToolStripMenuItem.Visible = false;
@@ -74,27 +47,65 @@ namespace Celikoor_Insomiac
                     filmToolStripMenuItem.Visible = false;
                     invoicesToolStripMenuItem.Visible = false;
                 }
-                else if (pegawaiLogin.Roles == "KASIR")
+                else if (pegawaiLogin != null)
                 {
-                    cinemaToolStripMenuItem.Visible = false;
-                    pegawaiToolStripMenuItem.Visible = false;
-                    kelompokToolStripMenuItem.Visible = false;
-                    konsumenToolStripMenuItem.Visible = false;
-                    aktorToolStripMenuItem.Visible = false;
-                    genreToolStripMenuItem.Visible = false;
-                    studioToolStripMenuItem.Visible = false;
-                    jenisStudioToolStripMenuItem.Visible = false;
-                    jadwalFilmToolStripMenuItem.Visible = false;
-                    filmToolStripMenuItem.Visible = false;
-                    invoicesToolStripMenuItem.Visible = true;
+                    toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
+                    if (pegawaiLogin.Roles == "ADMIN")
+                    {
+                        cinemaToolStripMenuItem.Visible = true;
+                        pegawaiToolStripMenuItem.Visible = true;
+                        kelompokToolStripMenuItem.Visible = true;
+                        konsumenToolStripMenuItem.Visible = true;
+                        aktorToolStripMenuItem.Visible = true;
+                        genreToolStripMenuItem.Visible = true;
+                        studioToolStripMenuItem.Visible = true;
+                        jenisStudioToolStripMenuItem.Visible = true;
+                        jadwalFilmToolStripMenuItem.Visible = true;
+                        filmToolStripMenuItem.Visible = true;
+                        invoicesToolStripMenuItem.Visible = true;
+                    }
+                    else if (pegawaiLogin.Roles == "OPERATOR")
+                    {
+                        cinemaToolStripMenuItem.Visible = false;
+                        pegawaiToolStripMenuItem.Visible = false;
+                        kelompokToolStripMenuItem.Visible = false;
+                        konsumenToolStripMenuItem.Visible = false;
+                        aktorToolStripMenuItem.Visible = false;
+                        genreToolStripMenuItem.Visible = false;
+                        studioToolStripMenuItem.Visible = false;
+                        jenisStudioToolStripMenuItem.Visible = false;
+                        jadwalFilmToolStripMenuItem.Visible = false;
+                        filmToolStripMenuItem.Visible = false;
+                        invoicesToolStripMenuItem.Visible = false;
+                    }
+                    else if (pegawaiLogin.Roles == "KASIR")
+                    {
+                        cinemaToolStripMenuItem.Visible = false;
+                        pegawaiToolStripMenuItem.Visible = false;
+                        kelompokToolStripMenuItem.Visible = false;
+                        konsumenToolStripMenuItem.Visible = false;
+                        aktorToolStripMenuItem.Visible = false;
+                        genreToolStripMenuItem.Visible = false;
+                        studioToolStripMenuItem.Visible = false;
+                        jenisStudioToolStripMenuItem.Visible = false;
+                        jadwalFilmToolStripMenuItem.Visible = false;
+                        filmToolStripMenuItem.Visible = false;
+                        invoicesToolStripMenuItem.Visible = true;
+                    }
                 }
+
+                timerHour_Tick(sender, e);
+                Timer hour = new Timer();
+                hour.Interval = (1000);
+                hour.Tick += new EventHandler(timerHour_Tick);
+                hour.Start();
             }
-            
-            timerHour_Tick(sender, e);
-            Timer hour = new Timer();
-            hour.Interval = (1000);
-            hour.Tick += new EventHandler(timerHour_Tick);
-            hour.Start();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Koneksi gagal. Tidak dapat terhubung ke database" +
+                                "\nError : " + ex.Message, "PERINGATAN!!!");
+                Application.Exit();
+            }
         }
 
         private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
