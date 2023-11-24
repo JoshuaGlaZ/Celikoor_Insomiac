@@ -59,5 +59,10 @@ namespace Celikoor_Insomiac
             Application.Exit();
             
         }
+
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

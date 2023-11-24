@@ -254,6 +254,7 @@
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.FormRegister_Load);
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
             this.groupBoxTglLahir.ResumeLayout(false);

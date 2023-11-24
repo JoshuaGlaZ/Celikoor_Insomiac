@@ -43,7 +43,7 @@ namespace Celikoor_Insomiac
                 filmToolStripMenuItem.Visible = false;
                 invoicesToolStripMenuItem.Visible = false;
             }
-            else
+            else if (pegawaiLogin != null)
             {
                 toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
                 if (pegawaiLogin.Roles == "ADMIN")
@@ -90,9 +90,6 @@ namespace Celikoor_Insomiac
                 }
             }
             
-            
-            
-
             timerHour_Tick(sender, e);
             Timer hour = new Timer();
             hour.Interval = (1000);
