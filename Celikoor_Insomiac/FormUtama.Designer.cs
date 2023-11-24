@@ -134,7 +134,7 @@ namespace Celikoor_Insomiac
             this.menuStripItem.Location = new System.Drawing.Point(0, 46);
             this.menuStripItem.Name = "menuStripItem";
             this.menuStripItem.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStripItem.Size = new System.Drawing.Size(134, 737);
+            this.menuStripItem.Size = new System.Drawing.Size(155, 737);
             this.menuStripItem.TabIndex = 5;
             this.menuStripItem.Text = "menuStrip2";
             // 
@@ -143,7 +143,7 @@ namespace Celikoor_Insomiac
             this.cinemaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
             this.cinemaToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(123, 40);
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(144, 40);
             this.cinemaToolStripMenuItem.Text = "CINEMA";
             this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
             // 
@@ -152,7 +152,7 @@ namespace Celikoor_Insomiac
             this.pegawaiToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
             this.pegawaiToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(123, 40);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(144, 40);
             this.pegawaiToolStripMenuItem.Text = "PEGAWAI";
             this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
@@ -161,7 +161,7 @@ namespace Celikoor_Insomiac
             this.kelompokToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.kelompokToolStripMenuItem.Name = "kelompokToolStripMenuItem";
             this.kelompokToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(123, 40);
+            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(144, 40);
             this.kelompokToolStripMenuItem.Text = "KELOMPOK";
             this.kelompokToolStripMenuItem.Click += new System.EventHandler(this.kelompokToolStripMenuItem_Click);
             // 
@@ -171,7 +171,7 @@ namespace Celikoor_Insomiac
             this.konsumenToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
             this.konsumenToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.konsumenToolStripMenuItem.Text = "KONSUMEN";
             this.konsumenToolStripMenuItem.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
             // 
@@ -181,8 +181,9 @@ namespace Celikoor_Insomiac
             this.aktorToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
             this.aktorToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.aktorToolStripMenuItem.Text = "AKTOR";
+            this.aktorToolStripMenuItem.Click += new System.EventHandler(this.aktorToolStripMenuItem_Click);
             // 
             // genreToolStripMenuItem
             // 
@@ -190,8 +191,9 @@ namespace Celikoor_Insomiac
             this.genreToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
             this.genreToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.genreToolStripMenuItem.Text = "GENRE";
+            this.genreToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
             // 
             // studioToolStripMenuItem
             // 
@@ -199,7 +201,7 @@ namespace Celikoor_Insomiac
             this.studioToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.studioToolStripMenuItem.Name = "studioToolStripMenuItem";
             this.studioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.studioToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.studioToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.studioToolStripMenuItem.Text = "STUDIO";
             // 
             // jenisStudioToolStripMenuItem
@@ -208,7 +210,7 @@ namespace Celikoor_Insomiac
             this.jenisStudioToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.jenisStudioToolStripMenuItem.Name = "jenisStudioToolStripMenuItem";
             this.jenisStudioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.jenisStudioToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.jenisStudioToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.jenisStudioToolStripMenuItem.Text = "JENIS STUDIO";
             // 
             // jadwalFilmToolStripMenuItem
@@ -217,7 +219,7 @@ namespace Celikoor_Insomiac
             this.jadwalFilmToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.jadwalFilmToolStripMenuItem.Name = "jadwalFilmToolStripMenuItem";
             this.jadwalFilmToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.jadwalFilmToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.jadwalFilmToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.jadwalFilmToolStripMenuItem.Text = "JADWAL FILM";
             // 
             // filmToolStripMenuItem
@@ -226,7 +228,7 @@ namespace Celikoor_Insomiac
             this.filmToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
             this.filmToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.filmToolStripMenuItem.Text = "FILM";
             // 
             // invoicesToolStripMenuItem
@@ -235,7 +237,7 @@ namespace Celikoor_Insomiac
             this.invoicesToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.invoicesToolStripMenuItem.Name = "invoicesToolStripMenuItem";
             this.invoicesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(123, 43);
+            this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(144, 43);
             this.invoicesToolStripMenuItem.Text = "INVOICES";
             // 
             // FormUtama
@@ -250,7 +252,7 @@ namespace Celikoor_Insomiac
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripInfo;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUtama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Celikoor 21 Cineplex";

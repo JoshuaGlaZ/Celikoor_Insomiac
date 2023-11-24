@@ -188,5 +188,43 @@ namespace Celikoor_Insomiac
                 }
             }
         }
+
+        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterGenre"];
+                if (form == null)
+                {
+                    FormMasterGenre kelompok = new FormMasterGenre();
+                    kelompok.MdiParent = this;
+                    kelompok.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
+
+        private void aktorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterAktor"];
+                if (form == null)
+                {
+                    FormMasterAktor kelompok = new FormMasterAktor();
+                    kelompok.MdiParent = this;
+                    kelompok.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
     }
 }

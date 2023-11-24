@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aktor.cs" />
     <Compile Include="Cinema.cs" />
+    <Compile Include="Genre.cs" />
     <Compile Include="Kelompok.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />

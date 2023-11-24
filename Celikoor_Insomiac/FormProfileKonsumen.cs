@@ -23,6 +23,7 @@ namespace Celikoor_Insomiac
 
         private void FormProfileKonsumen_Load(object sender, EventArgs e)
         {
+            frm = (FormUtama)this.MdiParent; 
             user = frm.konsumenLogin;
             labelUsername.Text = user.Username;
             labelNama.Text = user.Nama;
