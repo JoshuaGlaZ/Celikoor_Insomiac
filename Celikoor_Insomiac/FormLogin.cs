@@ -13,8 +13,6 @@ namespace Celikoor_Insomiac
 {
     public partial class FormLogin : Form
     {
-        FormUtama frm;
-
         public FormLogin()
         {
             InitializeComponent();
@@ -22,7 +20,7 @@ namespace Celikoor_Insomiac
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            FormUtama frm = (FormUtama)this.Owner;
+            
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -32,6 +30,7 @@ namespace Celikoor_Insomiac
 
             if (k != null || p != null)
             {
+                FormUtama frm = (FormUtama)this.Owner;
                 frm.Visible = true;
                 frm.konsumenLogin = k;
                 frm.pegawaiLogin = p;

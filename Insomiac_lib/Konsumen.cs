@@ -80,7 +80,7 @@ namespace Insomiac_lib
         //buat filter
         public static List<Konsumen> BacaData(string kolom, string cari, string urut)
         {
-            string perintah = "SELECT * FROM Konsumens WHERE " + kolom + " LIKE '%" + cari + "%' ORDER BY " + urut + ";";
+            string perintah = "SELECT * FROM konsumens WHERE " + kolom + " LIKE '%" + cari + "%' ORDER BY " + urut + ";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             List<Konsumen> data = new List<Konsumen>();
             while (msdr.Read())

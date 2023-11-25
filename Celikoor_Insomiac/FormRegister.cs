@@ -13,8 +13,6 @@ namespace Celikoor_Insomiac
 {
     public partial class FormRegister : Form
     {
-        FormLogin frm;
-
         public FormRegister()
         {
             InitializeComponent();
@@ -30,12 +28,12 @@ namespace Celikoor_Insomiac
 
             if (radioButtonLakiLaki.Checked)
             {
-                k.Gender = "Laki Laki";
+                k.Gender = "L";
 
             }
             else if (radioButtonPerempuan.Checked)
             {
-                k.Gender = "Perempuan";
+                k.Gender = "P";
             }
 
             k.Username = textBoxUsername.Text;
@@ -43,6 +41,7 @@ namespace Celikoor_Insomiac
 
             if (textBoxPassword.Text == textBoxUlangiPassword.Text)
             {
+                FormLogin frm = (FormLogin)this.Owner;
                 Konsumen.TambahData(k);
                 frm.Visible = true;
                 this.Close();
@@ -61,7 +60,7 @@ namespace Celikoor_Insomiac
 
         private void FormRegister_Load(object sender, EventArgs e)
         {
-            FormLogin frm = (FormLogin)this.Owner;
+            
         }
 
         #region Placeholder
