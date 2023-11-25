@@ -25,7 +25,7 @@ namespace Celikoor_Insomiac
         {
             try
             {
-                //Koneksi koneksi = new Koneksi();
+                Koneksi koneksi = new Koneksi();
 
                 Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(152, 204, 211);
                 FormLogin login = new FormLogin();

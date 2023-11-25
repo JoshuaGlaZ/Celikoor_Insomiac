@@ -67,9 +67,11 @@
             this.textBoxNoHp.Location = new System.Drawing.Point(77, 139);
             this.textBoxNoHp.Name = "textBoxNoHp";
             this.textBoxNoHp.Size = new System.Drawing.Size(332, 36);
-            this.textBoxNoHp.TabIndex = 1;
-            this.textBoxNoHp.Text = "Nomor Handphone";
+            this.textBoxNoHp.TabIndex = 3;
+            this.textBoxNoHp.Text = "     Nomor Handphone     ";
             this.textBoxNoHp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNoHp.Enter += new System.EventHandler(this.textBoxNoHp_Enter);
+            this.textBoxNoHp.Leave += new System.EventHandler(this.textBoxNoHp_Leave);
             // 
             // textBoxUsername
             // 
@@ -79,9 +81,11 @@
             this.textBoxUsername.Location = new System.Drawing.Point(77, 324);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(332, 36);
-            this.textBoxUsername.TabIndex = 21;
-            this.textBoxUsername.Text = "Username";
+            this.textBoxUsername.TabIndex = 7;
+            this.textBoxUsername.Text = "     Username     ";
             this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
+            this.textBoxUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
             // 
             // textBoxNama
             // 
@@ -91,9 +95,11 @@
             this.textBoxNama.Location = new System.Drawing.Point(77, 97);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(332, 36);
-            this.textBoxNama.TabIndex = 22;
-            this.textBoxNama.Text = "Nama Lengkap";
+            this.textBoxNama.TabIndex = 2;
+            this.textBoxNama.Text = "     Nama Lengkap     ";
             this.textBoxNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNama.Enter += new System.EventHandler(this.textBoxNama_Enter);
+            this.textBoxNama.Leave += new System.EventHandler(this.textBoxNama_Leave);
             // 
             // textBoxEmail
             // 
@@ -103,9 +109,11 @@
             this.textBoxEmail.Location = new System.Drawing.Point(77, 181);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(332, 36);
-            this.textBoxEmail.TabIndex = 23;
-            this.textBoxEmail.Text = "Alamat Email";
+            this.textBoxEmail.TabIndex = 4;
+            this.textBoxEmail.Text = "     Alamat Email     ";
             this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
+            this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
             // 
             // groupBoxGender
             // 
@@ -116,7 +124,7 @@
             this.groupBoxGender.Location = new System.Drawing.Point(77, 233);
             this.groupBoxGender.Name = "groupBoxGender";
             this.groupBoxGender.Size = new System.Drawing.Size(89, 70);
-            this.groupBoxGender.TabIndex = 24;
+            this.groupBoxGender.TabIndex = 5;
             this.groupBoxGender.TabStop = false;
             this.groupBoxGender.Text = "Gender:";
             // 
@@ -156,9 +164,12 @@
             this.textBoxPassword.Location = new System.Drawing.Point(77, 384);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 36);
-            this.textBoxPassword.TabIndex = 26;
-            this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.TabIndex = 8;
+            this.textBoxPassword.Text = "     Password     ";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
+            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // textBoxUlangiPassword
             // 
@@ -168,9 +179,12 @@
             this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 426);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(332, 36);
-            this.textBoxUlangiPassword.TabIndex = 27;
-            this.textBoxUlangiPassword.Text = "Ulangi Password";
+            this.textBoxUlangiPassword.TabIndex = 9;
+            this.textBoxUlangiPassword.Text = "     Ulangi Password     ";
             this.textBoxUlangiPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxUlangiPassword.TextChanged += new System.EventHandler(this.textBoxUlangiPassword_TextChanged);
+            this.textBoxUlangiPassword.Enter += new System.EventHandler(this.textBoxUlangiPassword_Enter);
+            this.textBoxUlangiPassword.Leave += new System.EventHandler(this.textBoxUlangiPassword_Leave);
             // 
             // buttonRegister
             // 
@@ -182,7 +196,7 @@
             this.buttonRegister.Location = new System.Drawing.Point(77, 491);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(332, 45);
-            this.buttonRegister.TabIndex = 28;
+            this.buttonRegister.TabIndex = 10;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
@@ -208,7 +222,7 @@
             this.buttonExit.Location = new System.Drawing.Point(77, 564);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(332, 45);
-            this.buttonExit.TabIndex = 30;
+            this.buttonExit.TabIndex = 1;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -221,7 +235,7 @@
             this.groupBoxTglLahir.Location = new System.Drawing.Point(172, 233);
             this.groupBoxTglLahir.Name = "groupBoxTglLahir";
             this.groupBoxTglLahir.Size = new System.Drawing.Size(237, 70);
-            this.groupBoxTglLahir.TabIndex = 25;
+            this.groupBoxTglLahir.TabIndex = 6;
             this.groupBoxTglLahir.TabStop = false;
             this.groupBoxTglLahir.Text = "Tanggal Lahir:";
             // 

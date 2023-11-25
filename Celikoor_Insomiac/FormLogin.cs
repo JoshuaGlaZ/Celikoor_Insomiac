@@ -13,9 +13,16 @@ namespace Celikoor_Insomiac
 {
     public partial class FormLogin : Form
     {
+        FormUtama frm;
+
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            FormUtama frm = (FormUtama)this.Owner;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -25,7 +32,6 @@ namespace Celikoor_Insomiac
 
             if (k != null || p != null)
             {
-                FormUtama frm = (FormUtama)this.Owner;
                 frm.Visible = true;
                 frm.konsumenLogin = k;
                 frm.pegawaiLogin = p;
@@ -51,9 +57,11 @@ namespace Celikoor_Insomiac
             register.ShowDialog();
         }
 
+        #region Placeholder
+
         private void textBoxUsername_Enter(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text == "Username")
+            if (textBoxUsername.Text == "     Username     ")
             {
                 textBoxUsername.Text = "";
             }
@@ -63,24 +71,41 @@ namespace Celikoor_Insomiac
         {
             if (textBoxUsername.Text == "")
             {
-                textBoxUsername.Text = "Username";
+                textBoxUsername.Text = "     Username     ";
             }
         }
 
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text == "Password")
+            if (textBoxPassword.Text == "     Password     ")
             {
-                textBoxUsername.Text = "";
+                textBoxPassword.Text = "";
             }
         }
 
         private void textBoxPassword_Leave(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text == "")
+            if (textBoxPassword.Text == "")
             {
-                textBoxUsername.Text = "Password";
+                textBoxPassword.Text = "     Password     ";
             }
         }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == "     Password     " || textBoxPassword.Text == "")
+            {
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+
+            else if (textBoxPassword.Text != "     Password     ")
+            {
+                textBoxPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        #endregion
+
+        
     }
 }

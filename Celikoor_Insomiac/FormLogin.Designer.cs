@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -54,21 +53,10 @@
             this.buttonLogin.Location = new System.Drawing.Point(325, 456);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(106, 45);
-            this.buttonLogin.TabIndex = 12;
+            this.buttonLogin.TabIndex = 5;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.textBox3.Location = new System.Drawing.Point(169, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(156, 64);
-            this.textBox3.TabIndex = 13;
             // 
             // buttonExit
             // 
@@ -80,7 +68,7 @@
             this.buttonExit.Location = new System.Drawing.Point(62, 456);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(106, 45);
-            this.buttonExit.TabIndex = 14;
+            this.buttonExit.TabIndex = 1;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -94,7 +82,7 @@
             this.label1.Location = new System.Drawing.Point(159, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 65);
-            this.label1.TabIndex = 15;
+            this.label1.TabIndex = 11;
             this.label1.Text = "LOGIN";
             // 
             // textBoxUsername
@@ -106,8 +94,8 @@
             this.textBoxUsername.Location = new System.Drawing.Point(62, 326);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(369, 29);
-            this.textBoxUsername.TabIndex = 16;
-            this.textBoxUsername.Text = "Username";
+            this.textBoxUsername.TabIndex = 2;
+            this.textBoxUsername.Text = "     Username     ";
             this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
             this.textBoxUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
@@ -121,7 +109,7 @@
             this.linkLabelREgister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelREgister.Name = "linkLabelREgister";
             this.linkLabelREgister.Size = new System.Drawing.Size(111, 21);
-            this.linkLabelREgister.TabIndex = 19;
+            this.linkLabelREgister.TabIndex = 4;
             this.linkLabelREgister.TabStop = true;
             this.linkLabelREgister.Text = "Register Here";
             this.linkLabelREgister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelREgister_LinkClicked);
@@ -147,9 +135,10 @@
             this.textBoxPassword.Location = new System.Drawing.Point(62, 361);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(369, 29);
-            this.textBoxPassword.TabIndex = 22;
-            this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.TabIndex = 3;
+            this.textBoxPassword.Text = "     Password     ";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
@@ -204,13 +193,13 @@
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.buttonLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -221,7 +210,6 @@
 
         #endregion
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxUsername;
