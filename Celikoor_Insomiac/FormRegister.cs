@@ -24,7 +24,7 @@ namespace Celikoor_Insomiac
             k.Nama = textBoxNama.Text;
             k.Email = textBoxEmail.Text;
             k.No_hp = textBoxNoHp.Text;
-            k.Tgl_lahir = dateTimePicker1.Value;
+            k.Tgl_lahir = dateTimePickerLahir.Value;
 
             if (radioButtonLakiLaki.Checked)
             {
@@ -41,16 +41,14 @@ namespace Celikoor_Insomiac
 
             if (textBoxPassword.Text == textBoxUlangiPassword.Text)
             {
-                FormLogin frm = (FormLogin)this.Owner;
                 Konsumen.TambahData(k);
-                frm.Visible = true;
+                this.Owner.Visible = true;
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Password tidak cocok. Coba lagi.");
             }
-
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -61,6 +59,12 @@ namespace Celikoor_Insomiac
         private void FormRegister_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Owner.Visible = true;
+            this.Close();
         }
 
         #region Placeholder
@@ -211,8 +215,9 @@ namespace Celikoor_Insomiac
             }
         }
 
+
         #endregion
 
-
+        
     }
 }

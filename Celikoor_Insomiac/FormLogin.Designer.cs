@@ -32,7 +32,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.linkLabelREgister = new System.Windows.Forms.LinkLabel();
+            this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
             this.labelAsk = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -100,19 +100,19 @@
             this.textBoxUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
             this.textBoxUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
             // 
-            // linkLabelREgister
+            // linkLabelRegister
             // 
-            this.linkLabelREgister.AutoSize = true;
-            this.linkLabelREgister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelREgister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.linkLabelREgister.Location = new System.Drawing.Point(285, 414);
-            this.linkLabelREgister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabelREgister.Name = "linkLabelREgister";
-            this.linkLabelREgister.Size = new System.Drawing.Size(111, 21);
-            this.linkLabelREgister.TabIndex = 4;
-            this.linkLabelREgister.TabStop = true;
-            this.linkLabelREgister.Text = "Register Here";
-            this.linkLabelREgister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelREgister_LinkClicked);
+            this.linkLabelRegister.AutoSize = true;
+            this.linkLabelRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.linkLabelRegister.Location = new System.Drawing.Point(285, 414);
+            this.linkLabelRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelRegister.Name = "linkLabelRegister";
+            this.linkLabelRegister.Size = new System.Drawing.Size(111, 21);
+            this.linkLabelRegister.TabIndex = 4;
+            this.linkLabelRegister.TabStop = true;
+            this.linkLabelRegister.Text = "Register Here";
+            this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
             // 
             // labelAsk
             // 
@@ -189,7 +189,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelAsk);
-            this.Controls.Add(this.linkLabelREgister);
+            this.Controls.Add(this.linkLabelRegister);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExit);
@@ -213,7 +213,7 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxUsername;
-        private System.Windows.Forms.LinkLabel linkLabelREgister;
+        private System.Windows.Forms.LinkLabel linkLabelRegister;
         private System.Windows.Forms.Label labelAsk;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.PictureBox pictureBox1;

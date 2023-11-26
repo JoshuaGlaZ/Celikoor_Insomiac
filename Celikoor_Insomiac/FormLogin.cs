@@ -48,10 +48,10 @@ namespace Celikoor_Insomiac
             Application.Exit();
         }
 
-        private void linkLabelREgister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegister register = new FormRegister();
-            register.Owner= this;
+            register.Owner = this;
             this.Visible = false;
             register.ShowDialog();
         }
@@ -109,6 +109,8 @@ namespace Celikoor_Insomiac
                 textBoxPassword.ForeColor = Color.FromArgb(25, 34, 56);
             }
         }
+
+
 
 
         #endregion

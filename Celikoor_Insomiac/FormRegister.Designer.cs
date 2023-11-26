@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegister = new System.Windows.Forms.Label();
             this.textBoxNoHp = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxNama = new System.Windows.Forms.TextBox();
@@ -39,25 +39,27 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUlangiPassword = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
-            this.labelAsk = new System.Windows.Forms.Label();
+            this.labelOr = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.groupBoxTglLahir = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerLahir = new System.Windows.Forms.DateTimePicker();
+            this.labelAsk = new System.Windows.Forms.Label();
+            this.linkLabelLogin = new System.Windows.Forms.LinkLabel();
             this.groupBoxGender.SuspendLayout();
             this.groupBoxTglLahir.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // labelRegister
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(121, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 65);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "REGISTER";
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegister.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.labelRegister.Location = new System.Drawing.Point(121, 9);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(246, 65);
+            this.labelRegister.TabIndex = 16;
+            this.labelRegister.Text = "REGISTER";
             // 
             // textBoxNoHp
             // 
@@ -78,7 +80,7 @@
             this.textBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.textBoxUsername.Location = new System.Drawing.Point(77, 324);
+            this.textBoxUsername.Location = new System.Drawing.Point(77, 319);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(332, 36);
             this.textBoxUsername.TabIndex = 7;
@@ -161,7 +163,7 @@
             this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(77, 384);
+            this.textBoxPassword.Location = new System.Drawing.Point(77, 361);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 36);
             this.textBoxPassword.TabIndex = 8;
@@ -176,7 +178,7 @@
             this.textBoxUlangiPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 426);
+            this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 403);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(332, 36);
             this.textBoxUlangiPassword.TabIndex = 9;
@@ -196,21 +198,21 @@
             this.buttonRegister.Location = new System.Drawing.Point(77, 491);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(332, 45);
-            this.buttonRegister.TabIndex = 10;
+            this.buttonRegister.TabIndex = 11;
             this.buttonRegister.Text = "REGISTER";
             this.buttonRegister.UseVisualStyleBackColor = false;
             this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
-            // labelAsk
+            // labelOr
             // 
-            this.labelAsk.AutoSize = true;
-            this.labelAsk.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAsk.Location = new System.Drawing.Point(225, 540);
-            this.labelAsk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAsk.Name = "labelAsk";
-            this.labelAsk.Size = new System.Drawing.Size(26, 21);
-            this.labelAsk.TabIndex = 29;
-            this.labelAsk.Text = "or";
+            this.labelOr.AutoSize = true;
+            this.labelOr.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOr.Location = new System.Drawing.Point(225, 540);
+            this.labelOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelOr.Name = "labelOr";
+            this.labelOr.Size = new System.Drawing.Size(26, 21);
+            this.labelOr.TabIndex = 29;
+            this.labelOr.Text = "or";
             // 
             // buttonExit
             // 
@@ -229,7 +231,7 @@
             // 
             // groupBoxTglLahir
             // 
-            this.groupBoxTglLahir.Controls.Add(this.dateTimePicker1);
+            this.groupBoxTglLahir.Controls.Add(this.dateTimePickerLahir);
             this.groupBoxTglLahir.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTglLahir.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBoxTglLahir.Location = new System.Drawing.Point(172, 233);
@@ -239,12 +241,38 @@
             this.groupBoxTglLahir.TabStop = false;
             this.groupBoxTglLahir.Text = "Tanggal Lahir:";
             // 
-            // dateTimePicker1
+            // dateTimePickerLahir
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 26);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(216, 25);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePickerLahir.Location = new System.Drawing.Point(15, 26);
+            this.dateTimePickerLahir.Name = "dateTimePickerLahir";
+            this.dateTimePickerLahir.Size = new System.Drawing.Size(216, 25);
+            this.dateTimePickerLahir.TabIndex = 0;
+            // 
+            // labelAsk
+            // 
+            this.labelAsk.AutoSize = true;
+            this.labelAsk.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAsk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.labelAsk.Location = new System.Drawing.Point(119, 454);
+            this.labelAsk.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAsk.Name = "labelAsk";
+            this.labelAsk.Size = new System.Drawing.Size(193, 21);
+            this.labelAsk.TabIndex = 31;
+            this.labelAsk.Text = "Already have an account?";
+            // 
+            // linkLabelLogin
+            // 
+            this.linkLabelLogin.AutoSize = true;
+            this.linkLabelLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLogin.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.linkLabelLogin.Location = new System.Drawing.Point(312, 454);
+            this.linkLabelLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelLogin.Name = "linkLabelLogin";
+            this.linkLabelLogin.Size = new System.Drawing.Size(55, 21);
+            this.linkLabelLogin.TabIndex = 10;
+            this.linkLabelLogin.TabStop = true;
+            this.linkLabelLogin.Text = "Log in";
+            this.linkLabelLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogin_LinkClicked);
             // 
             // FormRegister
             // 
@@ -252,8 +280,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(484, 631);
-            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelAsk);
+            this.Controls.Add(this.linkLabelLogin);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.labelOr);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.textBoxUlangiPassword);
             this.Controls.Add(this.textBoxPassword);
@@ -263,7 +293,7 @@
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxNoHp);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRegister);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -279,7 +309,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegister;
         private System.Windows.Forms.TextBox textBoxNoHp;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxNama;
@@ -290,9 +320,11 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUlangiPassword;
         private System.Windows.Forms.Button buttonRegister;
-        private System.Windows.Forms.Label labelAsk;
+        private System.Windows.Forms.Label labelOr;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.GroupBox groupBoxTglLahir;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerLahir;
+        private System.Windows.Forms.Label labelAsk;
+        private System.Windows.Forms.LinkLabel linkLabelLogin;
     }
 }
