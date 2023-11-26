@@ -63,7 +63,7 @@
             // 
             this.textBoxNoHp.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNoHp.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxNoHp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxNoHp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxNoHp.Location = new System.Drawing.Point(77, 139);
             this.textBoxNoHp.Name = "textBoxNoHp";
             this.textBoxNoHp.Size = new System.Drawing.Size(332, 36);
@@ -77,7 +77,7 @@
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxUsername.Location = new System.Drawing.Point(77, 324);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(332, 36);
@@ -91,7 +91,7 @@
             // 
             this.textBoxNama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNama.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxNama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxNama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxNama.Location = new System.Drawing.Point(77, 97);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(332, 36);
@@ -105,7 +105,7 @@
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxEmail.Location = new System.Drawing.Point(77, 181);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(332, 36);
@@ -160,7 +160,7 @@
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxPassword.Location = new System.Drawing.Point(77, 384);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(332, 36);
@@ -175,7 +175,7 @@
             // 
             this.textBoxUlangiPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxUlangiPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxUlangiPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.textBoxUlangiPassword.Location = new System.Drawing.Point(77, 426);
             this.textBoxUlangiPassword.Name = "textBoxUlangiPassword";
             this.textBoxUlangiPassword.Size = new System.Drawing.Size(332, 36);

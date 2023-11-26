@@ -48,7 +48,7 @@ namespace Celikoor_Insomiac
             }
             else
             {
-                MessageBox.Show("Password Salah");
+                MessageBox.Show("Password tidak cocok. Coba lagi.");
             }
 
         }
@@ -71,6 +71,10 @@ namespace Celikoor_Insomiac
             {
                 textBoxNama.Text = "";
             }
+            if (textBoxNama.Text != "     Nama Lengkap     ")
+            {
+                textBoxNama.ForeColor = Color.FromArgb(25, 34, 56);
+            }
         }
 
         private void textBoxNama_Leave(object sender, EventArgs e)
@@ -78,6 +82,7 @@ namespace Celikoor_Insomiac
             if (textBoxNama.Text == "")
             {
                 textBoxNama.Text = "     Nama Lengkap     ";
+                textBoxNama.ForeColor = Color.FromArgb(195, 195, 195);
             }
         }
 
@@ -87,6 +92,10 @@ namespace Celikoor_Insomiac
             {
                 textBoxNoHp.Text = "";
             }
+            if (textBoxNoHp.Text != "     Nomor Handphone     ")
+            {
+                textBoxNoHp.ForeColor = Color.FromArgb(25, 34, 56);
+            }
         }
 
         private void textBoxNoHp_Leave(object sender, EventArgs e)
@@ -94,6 +103,7 @@ namespace Celikoor_Insomiac
             if (textBoxNoHp.Text == "")
             {
                 textBoxNoHp.Text = "     Nomor Handphone     ";
+                textBoxNoHp.ForeColor = Color.FromArgb(195, 195, 195);
             }
         }
 
@@ -103,6 +113,10 @@ namespace Celikoor_Insomiac
             {
                 textBoxEmail.Text = "";
             }
+            if (textBoxEmail.Text != "     Alamat Email     ")
+            {
+                textBoxEmail.ForeColor = Color.FromArgb(25, 34, 56);
+            }
         }
 
         private void textBoxEmail_Leave(object sender, EventArgs e)
@@ -110,6 +124,7 @@ namespace Celikoor_Insomiac
             if (textBoxEmail.Text == "")
             {
                 textBoxEmail.Text = "     Alamat Email     ";
+                textBoxEmail.ForeColor = Color.FromArgb(195, 195, 195);
             }
         }
 
@@ -119,6 +134,10 @@ namespace Celikoor_Insomiac
             {
                 textBoxUsername.Text = "";
             }
+            if (textBoxUsername.Text != "     Username     ")
+            {
+                textBoxUsername.ForeColor = Color.FromArgb(25, 34, 56);
+            }
         }
 
         private void textBoxUsername_Leave(object sender, EventArgs e)
@@ -126,6 +145,7 @@ namespace Celikoor_Insomiac
             if (textBoxUsername.Text == "")
             {
                 textBoxUsername.Text = "     Username     ";
+                textBoxUsername.ForeColor = Color.FromArgb(195, 195, 195);
             }
         }
 
@@ -166,24 +186,28 @@ namespace Celikoor_Insomiac
             if (textBoxPassword.Text == "     Password     " || textBoxPassword.Text == "")
             {
                 textBoxPassword.UseSystemPasswordChar = false;
+                textBoxPassword.ForeColor = Color.FromArgb(195, 195, 195);
             }
 
             else if (textBoxPassword.Text != "     Password     ")
             {
                 textBoxPassword.UseSystemPasswordChar = true;
+                textBoxPassword.ForeColor = Color.FromArgb(25, 34, 56);
             }
         }
 
         private void textBoxUlangiPassword_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxUlangiPassword.Text == "     Ulangi Password     " || textBoxUlangiPassword.Text == "") 
+            if (textBoxUlangiPassword.Text == "     Ulangi Password     " || textBoxUlangiPassword.Text == "")
             {
                 textBoxUlangiPassword.UseSystemPasswordChar = false;
+                textBoxUlangiPassword.ForeColor = Color.FromArgb(195, 195, 195);
             }
 
             else if (textBoxUlangiPassword.Text != "     Ulangi Password     ")
             {
                 textBoxUlangiPassword.UseSystemPasswordChar = true;
+                textBoxUlangiPassword.ForeColor = Color.FromArgb(25, 34, 56);
             }
         }
 

@@ -64,6 +64,10 @@ namespace Celikoor_Insomiac
             {
                 textBoxUsername.Text = "";
             }
+            if (textBoxUsername.Text != "     Username     ")
+            {
+                textBoxUsername.ForeColor = Color.FromArgb(25, 34, 56);
+            }
         }
 
         private void textBoxUsername_Leave(object sender, EventArgs e)
@@ -71,6 +75,7 @@ namespace Celikoor_Insomiac
             if (textBoxUsername.Text == "")
             {
                 textBoxUsername.Text = "     Username     ";
+                textBoxUsername.ForeColor = Color.FromArgb(195, 195, 195);
             }
         }
 
@@ -95,13 +100,16 @@ namespace Celikoor_Insomiac
             if (textBoxPassword.Text == "     Password     " || textBoxPassword.Text == "")
             {
                 textBoxPassword.UseSystemPasswordChar = false;
+                textBoxPassword.ForeColor = Color.FromArgb(195, 195, 195);
             }
 
             else if (textBoxPassword.Text != "     Password     ")
             {
                 textBoxPassword.UseSystemPasswordChar = true;
+                textBoxPassword.ForeColor = Color.FromArgb(25, 34, 56);
             }
         }
+
 
         #endregion
 
