@@ -114,7 +114,7 @@ namespace Celikoor_Insomiac
             // 
             this.comboBoxRoles.FormattingEnabled = true;
             this.comboBoxRoles.Location = new System.Drawing.Point(175, 205);
-            this.comboBoxRoles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRoles.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRoles.Name = "comboBoxRoles";
             this.comboBoxRoles.Size = new System.Drawing.Size(190, 21);
             this.comboBoxRoles.TabIndex = 80;
@@ -196,6 +196,7 @@ namespace Celikoor_Insomiac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(407, 305);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonKeluar);
@@ -210,7 +211,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNama);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormUbahPegawai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormUbahPegawai";

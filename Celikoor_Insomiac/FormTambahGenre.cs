@@ -49,5 +49,10 @@ namespace Celikoor_Insomiac
         {
             this.Close();
         }
+
+        private void FormTambahGenre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

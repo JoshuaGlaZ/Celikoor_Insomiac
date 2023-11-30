@@ -6,7 +6,7 @@
       <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="dbname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">uas_database</Value>
+      <Value Profile="(Default)">celikoor</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)">root</Value>

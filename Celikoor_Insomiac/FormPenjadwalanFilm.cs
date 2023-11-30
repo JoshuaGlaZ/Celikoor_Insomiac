@@ -26,5 +26,10 @@ namespace Celikoor_Insomiac
         {
 
         }
+
+        private void FormPenjadwalanFilm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -129,6 +129,7 @@ namespace Celikoor_Insomiac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(423, 203);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonKosongi);
@@ -137,7 +138,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNama);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormUbahKelompok";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormUbahKelompok";

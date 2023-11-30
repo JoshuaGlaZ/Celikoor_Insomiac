@@ -234,5 +234,9 @@ namespace Celikoor_Insomiac
                 }
             }
         }
+
+        private void jadwalFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
