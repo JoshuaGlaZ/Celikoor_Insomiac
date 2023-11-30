@@ -48,6 +48,7 @@
     <Compile Include="Aktor.cs" />
     <Compile Include="Cinema.cs" />
     <Compile Include="Genre.cs" />
+    <Compile Include="Invoice.cs" />
     <Compile Include="JadwalFilm.cs" />
     <Compile Include="Kelompok.cs" />
     <Compile Include="Koneksi.cs" />
