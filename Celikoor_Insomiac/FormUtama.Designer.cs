@@ -34,7 +34,6 @@ namespace Celikoor_Insomiac
             this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStripInfo = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemProfile = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItem = new System.Windows.Forms.MenuStrip();
             this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@ namespace Celikoor_Insomiac
             this.jadwalFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripInfo.SuspendLayout();
             this.menuStripInfo.SuspendLayout();
             this.menuStripItem.SuspendLayout();
@@ -102,16 +102,6 @@ namespace Celikoor_Insomiac
             this.toolStripMenuItemProfile.Size = new System.Drawing.Size(78, 33);
             this.toolStripMenuItemProfile.Text = "X / Admin";
             this.toolStripMenuItemProfile.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripMenuItem2.AutoSize = false;
-            this.toolStripMenuItem2.BackgroundImage = global::Celikoor_Insomiac.Properties.Resources.celikoor_dark;
-            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(122, 33);
-            this.toolStripMenuItem2.Text = " ";
             // 
             // menuStripItem
             // 
@@ -212,6 +202,7 @@ namespace Celikoor_Insomiac
             this.jenisStudioToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.jenisStudioToolStripMenuItem.Size = new System.Drawing.Size(115, 37);
             this.jenisStudioToolStripMenuItem.Text = "JENIS STUDIO";
+            this.jenisStudioToolStripMenuItem.Click += new System.EventHandler(this.jenisStudioToolStripMenuItem_Click);
             // 
             // jadwalFilmToolStripMenuItem
             // 
@@ -241,6 +232,17 @@ namespace Celikoor_Insomiac
             this.invoicesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.invoicesToolStripMenuItem.Size = new System.Drawing.Size(115, 37);
             this.invoicesToolStripMenuItem.Text = "INVOICES";
+            this.invoicesToolStripMenuItem.Click += new System.EventHandler(this.invoicesToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripMenuItem2.AutoSize = false;
+            this.toolStripMenuItem2.BackgroundImage = global::Celikoor_Insomiac.Properties.Resources.celikoor_dark;
+            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(122, 33);
+            this.toolStripMenuItem2.Text = " ";
             // 
             // FormUtama
             // 

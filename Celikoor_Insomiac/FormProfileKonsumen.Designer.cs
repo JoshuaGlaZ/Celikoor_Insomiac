@@ -273,9 +273,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelUsername);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProfileKonsumen";
-            this.Text = "FormProfileKonsumen";
+            this.Text = "Profile Konsumen";
             this.Load += new System.EventHandler(this.FormProfileKonsumen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

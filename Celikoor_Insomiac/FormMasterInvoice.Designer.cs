@@ -1,6 +1,7 @@
-﻿namespace Celikoor_Insomiac
+﻿
+namespace Celikoor_Insomiac
 {
-    partial class FormMasterFilm
+    partial class FormMasterInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.buttonTambah = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,9 +54,9 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.comboBoxCari);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(17, 68);
+            this.panel5.Location = new System.Drawing.Point(16, 68);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(817, 53);
+            this.panel5.Size = new System.Drawing.Size(817, 54);
             this.panel5.TabIndex = 26;
             // 
             // textBoxCari
@@ -75,13 +75,11 @@
             this.comboBoxUrut.FormattingEnabled = true;
             this.comboBoxUrut.Items.AddRange(new object[] {
             "ID",
-            "Judul",
-            "Tahun",
-            "Durasi",
-            "Kelompok",
-            "Bahasa",
-            "Sub Indo",
-            "Diskon"});
+            "Tanggal",
+            "Grand Total",
+            "Konsumen",
+            "Kasir",
+            "Status"});
             this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);
@@ -110,14 +108,11 @@
             this.comboBoxCari.FormattingEnabled = true;
             this.comboBoxCari.Items.AddRange(new object[] {
             "ID",
-            "Judul",
-            "Tahun",
-            "Durasi",
-            "Kelompok",
-            "Bahasa",
-            "Sub Indo",
-            "Cover",
-            "Diskon"});
+            "Tanggal",
+            "Grand Total",
+            "Konsumen",
+            "Kasir",
+            "Status"});
             this.comboBoxCari.Location = new System.Drawing.Point(153, 17);
             this.comboBoxCari.Name = "comboBoxCari";
             this.comboBoxCari.Size = new System.Drawing.Size(130, 24);
@@ -146,11 +141,11 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(17, 18);
+            this.label2.Location = new System.Drawing.Point(16, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(817, 42);
             this.label2.TabIndex = 25;
-            this.label2.Text = "D A F T A R   F I L M";
+            this.label2.Text = "D A F T A R   I N V O I C E";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonKeluar
@@ -161,7 +156,7 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(721, 404);
+            this.buttonKeluar.Location = new System.Drawing.Point(721, 405);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 24;
@@ -169,28 +164,12 @@
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // buttonTambah
-            // 
-            this.buttonTambah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
-            this.buttonTambah.FlatAppearance.BorderSize = 0;
-            this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(17, 404);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(112, 45);
-            this.buttonTambah.TabIndex = 23;
-            this.buttonTambah.Text = "TAMBAH";
-            this.buttonTambah.UseVisualStyleBackColor = false;
-            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel2.Location = new System.Drawing.Point(840, 10);
+            this.panel2.Location = new System.Drawing.Point(839, 10);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 446);
             this.panel2.TabIndex = 20;
@@ -200,7 +179,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel1.Location = new System.Drawing.Point(1, 10);
+            this.panel1.Location = new System.Drawing.Point(0, 10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 446);
             this.panel1.TabIndex = 19;
@@ -210,7 +189,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(849, 10);
             this.panel3.TabIndex = 21;
@@ -220,7 +199,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel4.Location = new System.Drawing.Point(1, 456);
+            this.panel4.Location = new System.Drawing.Point(0, 456);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(849, 10);
             this.panel4.TabIndex = 22;
@@ -235,32 +214,30 @@
             this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(17, 129);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 128);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.ReadOnly = true;
-            this.dataGridViewHasil.RowHeadersWidth = 51;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 272);
+            this.dataGridViewHasil.RowHeadersWidth = 62;
+            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 271);
             this.dataGridViewHasil.TabIndex = 18;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
-            // FormMasterFilm
+            // FormMasterInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 466);
+            this.ClientSize = new System.Drawing.Size(849, 466);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
-            this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewHasil);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormMasterFilm";
-            this.Text = "Film";
-            this.Load += new System.EventHandler(this.FormMasterFilm_Load);
+            this.Name = "FormMasterInvoice";
+            this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.FormMasterInvoice_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
@@ -278,7 +255,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;

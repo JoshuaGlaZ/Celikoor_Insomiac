@@ -142,6 +142,7 @@ namespace Celikoor_Insomiac
             this.Name = "FormTambahKelompok";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormTambahKelompok";
+            this.Load += new System.EventHandler(this.FormTambahKelompok_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -87,5 +87,10 @@ namespace Insomiac_lib
             string perintah = "DELETE FROM Kelompoks WHERE id=" + k.Id + ";";
             Koneksi.JalankanPerintah(perintah);
         }
+
+        public override string ToString()
+        {
+            return Nama;
+        }
     }
 }

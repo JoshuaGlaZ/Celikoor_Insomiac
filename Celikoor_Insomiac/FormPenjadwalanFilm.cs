@@ -35,7 +35,12 @@ namespace Celikoor_Insomiac
         {
             comboBoxCinema.DataSource = Cinema.BacaData();
             comboBoxCinema.DisplayMember = "Nama_cabang";
-            
+
+            comboBoxFilm.DataSource = Film.BacaData();
+            comboBoxFilm.DisplayMember = "Judul";
+
+            //comboBoxStudio.DataSource = StudioCol.BacaData();
+            comboBoxStudio.DisplayMember = "Judul";
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -96,6 +101,19 @@ namespace Celikoor_Insomiac
             {
                 dataGridViewInput.Rows.Add(comboBoxFilm.Text, comboBoxCinema.Text, comboBoxStudio.Text, jf.TanggalPutar.ToString("yyyy-MM-dd"), jf.JamPemutaran);
             }
+            if (dataGridViewInput.Rows.Count >= 1 && dataGridViewInput.Columns.Count == 5)
+            {
+                DataGridViewButtonColumn bcolHapus = new DataGridViewButtonColumn();
+                bcolHapus.HeaderText = "Hapus Data";
+                bcolHapus.Text = "Hapus";
+                bcolHapus.Name = "buttonHapus";
+                bcolHapus.FlatStyle = FlatStyle.Flat;
+                bcolHapus.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolHapus.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
+                bcolHapus.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
+                bcolHapus.UseColumnTextForButtonValue = true;
+                dataGridViewInput.Columns.Add(bcolHapus);
+            }
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -105,7 +123,9 @@ namespace Celikoor_Insomiac
 
         private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Film f = (Film)comboBoxFilm.SelectedItem;
+            labelSinopsis.Text = f.Sinopsis.ToString();
+            labelDurasi.Text = f.Durasi.ToString();
         }
     }
 }

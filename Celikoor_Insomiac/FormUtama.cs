@@ -273,5 +273,43 @@ namespace Celikoor_Insomiac
                 }
             }
         }
+
+        private void invoicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterInvoice"];
+                if (form == null)
+                {
+                    FormMasterInvoice jadwal = new FormMasterInvoice();
+                    jadwal.MdiParent = this;
+                    jadwal.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
+
+        private void jenisStudioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterJenisStudio"];
+                if (form == null)
+                {
+                    FormMasterJenisStudio jadwal = new FormMasterJenisStudio();
+                    jadwal.MdiParent = this;
+                    jadwal.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
     }
 }

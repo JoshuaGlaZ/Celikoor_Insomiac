@@ -15,6 +15,7 @@ namespace Celikoor_Insomiac
 {
     public partial class FormTambahFilm : Form
     {
+        List<Film> listFilm = new List<Film>();
         FormUtama utama;
         public FormTambahFilm()
         {
@@ -57,6 +58,11 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
+            foreach (Film f in listFilm) 
+            {
+                Film.TambahData(f);
+            }
+            MessageBox.Show("Data berhasil ditambahkan");
 
         }
 
@@ -83,8 +89,8 @@ namespace Celikoor_Insomiac
                         (Kelompok)comboBoxKelompok.SelectedItem, comboBoxBahasa.SelectedItem.ToString(),
                         radioButtonYes.Checked ? "iya" : "tidak", labelCoverPath.Text,
                         double.Parse(textBoxDiskon.Text));
-                    Film.TambahData(f);
-                    MessageBox.Show("Data berhasil ditambahkan");
+                    listFilm.Add(f);
+                    loadDataGrid();
                 }
             }
             catch (Exception ex)
@@ -128,6 +134,29 @@ namespace Celikoor_Insomiac
             if (e.ColumnIndex == dataGridViewFilm.Columns["buttonHapus"].Index)
             {
                 dataGridViewFilm.Rows.RemoveAt(i);
+                loadDataGrid();
+            }
+        }
+
+        private void loadDataGrid()
+        {
+            dataGridViewFilm.Rows.Clear();
+            foreach (Film f in listFilm)
+            {
+                dataGridViewFilm.Rows.Add(f.Id, f.Judul, f.Sinopsis, f.Tahun, f.Durasi, f.Kelompok.Nama, f.Bahasa, f.IsSubIndo, f.CoverPath, f.Diskon);
+            }
+            if (dataGridViewFilm.Rows.Count >= 1 && dataGridViewFilm.Columns.Count == 10)
+            {
+                DataGridViewButtonColumn bcolHapus = new DataGridViewButtonColumn();
+                bcolHapus.HeaderText = "Hapus Data";
+                bcolHapus.Text = "Hapus";
+                bcolHapus.Name = "buttonHapus";
+                bcolHapus.FlatStyle = FlatStyle.Flat;
+                bcolHapus.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                bcolHapus.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
+                bcolHapus.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
+                bcolHapus.UseColumnTextForButtonValue = true;
+                dataGridViewFilm.Columns.Add(bcolHapus);
             }
         }
     }

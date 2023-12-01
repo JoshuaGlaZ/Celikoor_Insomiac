@@ -56,6 +56,7 @@
     <Compile Include="Konsumen.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JenisStudio.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,7 +42,6 @@
             this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.radioButtonNo = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,10 +61,21 @@
             this.buttonCari = new System.Windows.Forms.Button();
             this.labelCoverPath = new System.Windows.Forms.Label();
             this.comboBoxBahasa = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colJudul = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSinopsis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTahun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDurasi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKelompok = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBahasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubIndo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCoverImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiskon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -222,16 +232,6 @@
             this.label6.Text = "T A M B A H   F I L M ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBoxCover
-            // 
-            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxCover.Location = new System.Drawing.Point(776, 149);
-            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
-            this.pictureBoxCover.TabIndex = 106;
-            this.pictureBoxCover.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -357,7 +357,7 @@
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(672, 611);
+            this.buttonTambah.Location = new System.Drawing.Point(676, 627);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(118, 45);
             this.buttonTambah.TabIndex = 147;
@@ -373,7 +373,7 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(490, 611);
+            this.buttonKeluar.Location = new System.Drawing.Point(494, 627);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
             this.buttonKeluar.TabIndex = 146;
@@ -389,7 +389,7 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSimpan.Location = new System.Drawing.Point(315, 611);
+            this.buttonSimpan.Location = new System.Drawing.Point(319, 627);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(118, 45);
             this.buttonSimpan.TabIndex = 145;
@@ -400,12 +400,23 @@
             // dataGridViewFilm
             // 
             this.dataGridViewFilm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFilm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colJudul,
+            this.colSinopsis,
+            this.colTahun,
+            this.colDurasi,
+            this.colKelompok,
+            this.colBahasa,
+            this.colSubIndo,
+            this.colCoverImage,
+            this.colDiskon});
             this.dataGridViewFilm.Location = new System.Drawing.Point(10, 433);
             this.dataGridViewFilm.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewFilm.Name = "dataGridViewFilm";
             this.dataGridViewFilm.RowHeadersWidth = 62;
             this.dataGridViewFilm.RowTemplate.Height = 28;
-            this.dataGridViewFilm.Size = new System.Drawing.Size(1039, 161);
+            this.dataGridViewFilm.Size = new System.Drawing.Size(1039, 179);
             this.dataGridViewFilm.TabIndex = 148;
             this.dataGridViewFilm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFilm_CellContentClick);
             // 
@@ -472,6 +483,66 @@
             this.comboBoxBahasa.Size = new System.Drawing.Size(303, 21);
             this.comboBoxBahasa.TabIndex = 154;
             // 
+            // colId
+            // 
+            this.colId.HeaderText = "Id";
+            this.colId.Name = "colId";
+            // 
+            // colJudul
+            // 
+            this.colJudul.HeaderText = "Judul";
+            this.colJudul.Name = "colJudul";
+            // 
+            // colSinopsis
+            // 
+            this.colSinopsis.HeaderText = "Sinopsis";
+            this.colSinopsis.Name = "colSinopsis";
+            // 
+            // colTahun
+            // 
+            this.colTahun.HeaderText = "Tahun";
+            this.colTahun.Name = "colTahun";
+            // 
+            // colDurasi
+            // 
+            this.colDurasi.HeaderText = "Durasi";
+            this.colDurasi.Name = "colDurasi";
+            // 
+            // colKelompok
+            // 
+            this.colKelompok.HeaderText = "Kelompok";
+            this.colKelompok.Name = "colKelompok";
+            // 
+            // colBahasa
+            // 
+            this.colBahasa.HeaderText = "Bahasa";
+            this.colBahasa.Name = "colBahasa";
+            // 
+            // colSubIndo
+            // 
+            this.colSubIndo.HeaderText = "Sub Indo";
+            this.colSubIndo.Name = "colSubIndo";
+            // 
+            // colCoverImage
+            // 
+            this.colCoverImage.HeaderText = "Cover Image";
+            this.colCoverImage.Name = "colCoverImage";
+            // 
+            // colDiskon
+            // 
+            this.colDiskon.HeaderText = "Diskon Nominal";
+            this.colDiskon.Name = "colDiskon";
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxCover.Location = new System.Drawing.Point(776, 149);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
+            this.pictureBoxCover.TabIndex = 106;
+            this.pictureBoxCover.TabStop = false;
+            // 
             // FormTambahFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,10 +586,10 @@
             this.Name = "FormTambahFilm";
             this.Text = "FormTambahFilm";
             this.Load += new System.EventHandler(this.FormTambahFilm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +630,15 @@
         private System.Windows.Forms.Button buttonCari;
         private System.Windows.Forms.Label labelCoverPath;
         private System.Windows.Forms.ComboBox comboBoxBahasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colJudul;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSinopsis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTahun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDurasi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKelompok;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBahasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSubIndo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCoverImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiskon;
     }
 }

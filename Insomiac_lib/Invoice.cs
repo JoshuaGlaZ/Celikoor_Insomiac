@@ -20,8 +20,8 @@ namespace Insomiac_lib
         Konsumen pelanggan;
         Pegawai kasir;
         string status;
-/*        List <Tiket>
-Tunggu Class Tiket*/
+//        List<Tiket> listTiket;
+//Tunggu Class Tiket
         public Invoice()
         {
             Id = "";
@@ -51,12 +51,70 @@ Tunggu Class Tiket*/
         public Konsumen Pelanggan { get => pelanggan; set => pelanggan = value; }
         public Pegawai Kasir { get => kasir; set => kasir = value; }
         public string Status { get => status; set => status = value; }
+        //public List<Tiket> ListTiket { get => listTiket; private set => listTiket = value; }
 
         public static void CreateInvoice(Invoice newInv)
         {
             string perintah = "INSERT INTO `invoices` (`tanggal`, `grand_total`, `diskon_nominal`, `konsumens_id`, `kasir_id`, `status`)" +
                 "VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + newInv.Grand_total + "', '" + newInv.Diskon_nominal + "', '" + newInv.Pelanggan.Id.ToString() + "', '" + newInv.Kasir.Id.ToString() + "', 'PENDING');";
             Koneksi.JalankanPerintah(perintah); 
+        }
+        public static List<Invoice> DisplayInvoice()
+        {
+            string perintah = "SELECT * from invoices";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Invoice> lst = new List<Invoice>();
+            while (hasil.Read() == true)
+            {
+                Invoice newInv = new Invoice();
+                newInv.Id = hasil.GetString(0);
+                newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                newInv.Grand_total = hasil.GetInt32(2);
+                newInv.Diskon_nominal = hasil.GetInt32(3);
+                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
+                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Status = hasil.GetString(6);
+                lst.Add(newInv);
+            }
+            return lst;
+        }
+        public static List<Invoice> DisplayInvoice(string kriteria, string nilai)
+        {
+            string perintah = "SELECT * from invoices WHERE '" + kriteria + "' LIKE '%" + nilai + "';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Invoice> lst = new List<Invoice>();
+            while (hasil.Read() == true)
+            {
+                Invoice newInv = new Invoice();
+                newInv.Id = hasil.GetString(0);
+                newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                newInv.Grand_total = hasil.GetInt32(2);
+                newInv.Diskon_nominal = hasil.GetInt32(3);
+                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
+                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Status = hasil.GetString(6);
+                lst.Add(newInv);
+            }
+            return lst;
+        }
+        public static List<Invoice> DisplayInvoice(string kriteria, string nilai, string order)
+        {
+            string perintah = "SELECT * from invoices WHERE '" + kriteria + "' LIKE '%" + nilai + "%' ORDER BY '" + order + "';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Invoice> lst = new List<Invoice>();
+            while (hasil.Read() == true)
+            {
+                Invoice newInv = new Invoice();
+                newInv.Id = hasil.GetString(0);
+                newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                newInv.Grand_total = hasil.GetInt32(2);
+                newInv.Diskon_nominal = hasil.GetInt32(3);
+                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
+                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Status = hasil.GetString(6);
+                lst.Add(newInv);
+            }
+            return lst;
         }
         public static Invoice DisplayInvoice(string id)
         {

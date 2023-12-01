@@ -75,6 +75,12 @@
     <Compile Include="FormMasterFilm.Designer.cs">
       <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterInvoice.Designer.cs">
+      <DependentUpon>FormMasterInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMasterKelompok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="FormMasterPegawai.Designer.cs">
       <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterJenisStudio.Designer.cs">
+      <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPenjadwalanFilm.cs">
       <SubType>Form</SubType>
@@ -165,6 +177,12 @@
     <Compile Include="FormTambahPegawai.Designer.cs">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahJenisStudio.Designer.cs">
+      <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUbahCinema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +239,9 @@
     <EmbeddedResource Include="FormMasterFilm.resx">
       <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterInvoice.resx">
+      <DependentUpon>FormMasterInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMasterKelompok.resx">
       <DependentUpon>FormMasterKelompok.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterPegawai.resx">
       <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterJenisStudio.resx">
+      <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPenjadwalanFilm.resx">
       <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
@@ -253,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahCinema.resx">
       <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahJenisStudio.resx">
+      <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahKelompok.resx">
       <DependentUpon>FormTambahKelompok.cs</DependentUpon>

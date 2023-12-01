@@ -35,5 +35,10 @@ namespace Celikoor_Insomiac
         {
             Close();
         }
+
+        private void FormTambahKelompok_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
