@@ -31,6 +31,7 @@ namespace Celikoor_Insomiac
                 FormLogin login = new FormLogin();
                 login.Owner = this;
                 login.ShowDialog();
+                this.WindowState = FormWindowState.Maximized;
 
                 if (konsumenLogin != null)
                 {
@@ -243,6 +244,25 @@ namespace Celikoor_Insomiac
                 if (form == null)
                 {
                     FormPenjadwalanFilm jadwal = new FormPenjadwalanFilm();
+                    jadwal.MdiParent = this;
+                    jadwal.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
+
+        private void filmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterFilm"];
+                if (form == null)
+                {
+                    FormMasterFilm jadwal = new FormMasterFilm();
                     jadwal.MdiParent = this;
                     jadwal.Show();
                 }

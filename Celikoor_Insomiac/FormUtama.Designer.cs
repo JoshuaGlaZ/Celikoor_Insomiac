@@ -231,6 +231,7 @@ namespace Celikoor_Insomiac
             this.filmToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.filmToolStripMenuItem.Size = new System.Drawing.Size(115, 37);
             this.filmToolStripMenuItem.Text = "FILM";
+            this.filmToolStripMenuItem.Click += new System.EventHandler(this.filmToolStripMenuItem_Click);
             // 
             // invoicesToolStripMenuItem
             // 
