@@ -237,6 +237,21 @@ namespace Celikoor_Insomiac
 
         private void jadwalFilmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormPenjadwalanFilm"];
+                if (form == null)
+                {
+                    FormPenjadwalanFilm jadwal = new FormPenjadwalanFilm();
+                    jadwal.MdiParent = this;
+                    jadwal.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
         }
     }
 }
