@@ -51,6 +51,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormBeliTIket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBeliTIket.Designer.cs">
+      <DependentUpon>FormBeliTIket.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="FormMasterCinema.Designer.cs">
       <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterFilm.Designer.cs">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMasterKelompok.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,12 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahFilm.Designer.cs">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahGenre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +171,12 @@
     <Compile Include="FormUbahCinema.Designer.cs">
       <DependentUpon>FormUbahCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUbahFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahFilm.Designer.cs">
+      <DependentUpon>FormUbahFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUbahKelompok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,11 +209,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBeliTIket.resx">
+      <DependentUpon>FormBeliTIket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterCinema.resx">
       <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterFilm.resx">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterKelompok.resx">
       <DependentUpon>FormMasterKelompok.cs</DependentUpon>
@@ -215,6 +245,9 @@
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahFilm.resx">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahCinema.resx">
       <DependentUpon>FormUbahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahFilm.resx">
+      <DependentUpon>FormUbahFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahKelompok.resx">
       <DependentUpon>FormUbahKelompok.cs</DependentUpon>
