@@ -16,5 +16,15 @@ namespace Celikoor_Insomiac
         {
             InitializeComponent();
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
