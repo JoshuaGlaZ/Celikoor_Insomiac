@@ -27,10 +27,10 @@ namespace Celikoor_Insomiac
             user = frm.konsumenLogin;
             labelUsername.Text = user.Username;
             labelNama.Text = user.Nama;
-            labelTgl.Text = user.Tgl_lahir.ToString();
+            labelTgl.Text = user.Tgl_lahir.ToString("dddd, dd MMMM yyyy");
             labelEmail.Text = user.Email;
             labelHP.Text = user.No_hp;
-            labelKelamin.Text = user.Gender;
+            labelKelamin.Text = user.Gender == "L" ? "Laki-laki" : "Perempuan"; 
             labelSaldo.Text = user.Saldo.ToString();
 
         }

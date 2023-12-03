@@ -3,16 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">localhost</Value>
+      <Value Profile="(Default)">kresnayangasli.my.id</Value>
+    </Setting>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">55555</Value>
     </Setting>
     <Setting Name="dbname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">celikoor</Value>
+      <Value Profile="(Default)">insomiac</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">root</Value>
+      <Value Profile="(Default)">celikoor</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Ins0mi4C</Value>
     </Setting>
   </Settings>
 </SettingsFile>
