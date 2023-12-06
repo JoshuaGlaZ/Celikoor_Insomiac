@@ -311,5 +311,24 @@ namespace Celikoor_Insomiac
                 }
             }
         }
+
+        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormMasterStudio"];
+                if (form == null)
+                {
+                    FormMasterStudio jadwal = new FormMasterStudio();
+                    jadwal.MdiParent = this;
+                    jadwal.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
     }
 }

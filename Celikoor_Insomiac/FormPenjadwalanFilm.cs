@@ -13,7 +13,7 @@ namespace Celikoor_Insomiac
 {
     public partial class FormPenjadwalanFilm : Form
     {
-        List<JadwalFilm> ListJF = new List<JadwalFilm>();
+        List<Sesi_Film> ListSF = new List<Sesi_Film>();
         public FormPenjadwalanFilm()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace Celikoor_Insomiac
         private void dataGridViewInput_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = dataGridViewInput.CurrentRow.Index;
-            ListJF.Remove(ListJF[id]);
+            ListSF.Remove(ListSF[id]);
             loadDataGrid();
         }
 
@@ -35,61 +35,149 @@ namespace Celikoor_Insomiac
         {
             comboBoxCinema.DataSource = Cinema.BacaData();
             comboBoxCinema.DisplayMember = "Nama_cabang";
+            comboBoxCinema.SelectedIndex = -1;
 
             comboBoxFilm.DataSource = Film.BacaData();
             comboBoxFilm.DisplayMember = "Judul";
-
-            //comboBoxStudio.DataSource = StudioCol.BacaData();
-            comboBoxStudio.DisplayMember = "Judul";
+            comboBoxFilm.SelectedIndex = -1;
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            if (checkBoxI.Checked)
+            try
             {
-                JadwalFilm jf = new JadwalFilm();
-                jf.TanggalPutar = dateTimePickerTanggal.Value;
-                jf.JamPemutaran = "I";
-                MessageBox.Show(jf.JamPemutaran);
-                PengecekanDouble(jf);
+                if (comboBoxStudio.SelectedIndex == -1) { throw new Exception("harap isi studio terlebih dulu"); }
+                if (checkBoxI.Checked) {
+                    Sesi_Film sf = new Sesi_Film();
+
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.TanggalPutar = dateTimePickerTanggal.Value;
+                    jf.JamPemutaran = "I";
+                    sf.Jf = jf;
+
+                    Film_Studio fs = new Film_Studio();
+                    fs.Std = (Studio)comboBoxStudio.SelectedItem;
+                    fs.Flm = (Film)comboBoxFilm.SelectedItem;
+                    sf.Fs = fs;
+
+                    PengecekanDouble(sf);
+                }
+                if (checkBoxII.Checked) {
+                    Sesi_Film sf = new Sesi_Film();
+
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.TanggalPutar = dateTimePickerTanggal.Value;
+                    jf.JamPemutaran = "II";
+                    sf.Jf = jf;
+
+                    Film_Studio fs = new Film_Studio();
+                    fs.Std = (Studio)comboBoxStudio.SelectedItem;
+                    fs.Flm = (Film)comboBoxFilm.SelectedItem;
+                    sf.Fs = fs;
+
+                    PengecekanDouble(sf);
+                }
+                if (checkBoxIII.Checked) {
+                    Sesi_Film sf = new Sesi_Film();
+
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.TanggalPutar = dateTimePickerTanggal.Value;
+                    jf.JamPemutaran = "III";
+                    sf.Jf = jf;
+
+                    Film_Studio fs = new Film_Studio();
+                    fs.Std = (Studio)comboBoxStudio.SelectedItem;
+                    fs.Flm = (Film)comboBoxFilm.SelectedItem;
+                    sf.Fs = fs;
+
+                    PengecekanDouble(sf);
+                }
+                if (checkBoxIV.Checked) {
+                    Sesi_Film sf = new Sesi_Film();
+
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.TanggalPutar = dateTimePickerTanggal.Value;
+                    jf.JamPemutaran = "IV";
+                    sf.Jf = jf;
+
+                    Film_Studio fs = new Film_Studio();
+                    fs.Std = (Studio)comboBoxStudio.SelectedItem;
+                    fs.Flm = (Film)comboBoxFilm.SelectedItem;
+                    sf.Fs = fs;
+
+                    PengecekanDouble(sf);
+                }
             }
-            if (checkBoxII.Checked)
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e) // mungkin perlu dicek lagi
+        {
+            foreach(Sesi_Film sf in ListSF)
             {
-                JadwalFilm jf = new JadwalFilm();
-                jf.TanggalPutar = dateTimePickerTanggal.Value;
-                jf.JamPemutaran = "II";
-                MessageBox.Show(jf.JamPemutaran);
-                PengecekanDouble(jf);
-            }
-            if (checkBoxIII.Checked)
-            {
-                JadwalFilm jf = new JadwalFilm();
-                jf.TanggalPutar = dateTimePickerTanggal.Value;
-                jf.JamPemutaran = "III";
-                MessageBox.Show(jf.JamPemutaran);
-                PengecekanDouble(jf);
-            }
-            if (checkBoxIV.Checked)
-            {
-                JadwalFilm jf = new JadwalFilm();
-                jf.TanggalPutar = dateTimePickerTanggal.Value;
-                jf.JamPemutaran = "IV";
-                MessageBox.Show(jf.JamPemutaran);
-                PengecekanDouble(jf);
+                List<JadwalFilm> ljf = JadwalFilm.BacaData("");
+                List<Film_Studio> lsf = Film_Studio.BacaData("", "");
+                bool check = true;
+                foreach(JadwalFilm jf in ljf) 
+                {
+                    if(sf.Jf.JamPemutaran==jf.JamPemutaran || sf.Jf.TanggalPutar == jf.TanggalPutar) { check = false; break; }
+                }
+                if (check) { JadwalFilm.masukanData(sf.Jf); }
+                check = true;
+                foreach(Film_Studio fs in lsf)
+                {
+                    if (sf.Fs.Flm.Judul == fs.Flm.Judul || sf.Fs.Std.Nama == fs.Std.Nama) { check = false; break; }
+                }
+                if (check) { Film_Studio.MasukanData(sf.Fs); }
+                Sesi_Film.MasukanData(sf);
+                MessageBox.Show("data berhasil dimasukan");
             }
         }
 
-        private void PengecekanDouble(JadwalFilm jf) //kalau ada data yang double dia nggak masuk
+        private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxFilm.SelectedIndex != -1)
+            {
+                Film f = (Film)comboBoxFilm.SelectedItem;
+                labelSinopsis.Text = f.Sinopsis.ToString();
+                labelDurasi.Text = f.Durasi.ToString();
+            }
+        }
+
+        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCinema.SelectedIndex != -1)
+            {
+                Cinema c = (Cinema)comboBoxCinema.SelectedValue;
+                comboBoxStudio.DataSource = Studio.BacaData("cinemas_id", c.Id.ToString());
+                comboBoxStudio.DisplayMember = "Nama";
+                comboBoxStudio.SelectedIndex = -1;
+                comboBoxStudio.Text = "";
+            }
+        }
+
+        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxStudio.SelectedIndex != -1)
+            {
+                Studio s = (Studio)comboBoxStudio.SelectedItem;
+                labelNamaStudio.Text = s.Nama;
+                labelHargaWeekday.Text = s.Harga_weekday + " Rp";
+                labelHargaWeekend.Text = s.Harga_weekend + " Rp";
+            }
+        }
+
+        private void PengecekanDouble(Sesi_Film sf) //kalau ada data yang double dia nggak masuk
         {
             bool check = true;
-            foreach(JadwalFilm x in ListJF)
+            foreach (Sesi_Film x in ListSF)
             {
-                if(jf.TanggalPutar==x.TanggalPutar && jf.JamPemutaran == x.JamPemutaran) { check = false; break; }
+                if (sf.Jf.JamPemutaran == x.Jf.JamPemutaran || sf.Jf.TanggalPutar == sf.Jf.TanggalPutar || sf.Fs.Flm.Judul == x.Fs.Flm.Judul || sf.Fs.Std.Nama == sf.Fs.Std.Nama)
+                { check = false; break; }
             }
-            //masih harus dicek cinema dan studionya
             if (check)
             {
-                ListJF.Add(jf);
+                ListSF.Add(sf);
                 loadDataGrid();
             }
         }
@@ -97,9 +185,9 @@ namespace Celikoor_Insomiac
         private void loadDataGrid()
         {
             dataGridViewInput.Rows.Clear();
-            foreach (JadwalFilm jf in ListJF)
+            foreach (Sesi_Film x in ListSF)
             {
-                dataGridViewInput.Rows.Add(comboBoxFilm.Text, comboBoxCinema.Text, comboBoxStudio.Text, jf.TanggalPutar.ToString("yyyy-MM-dd"), jf.JamPemutaran);
+                dataGridViewInput.Rows.Add(x.Fs.Flm.Judul, x.Fs.Std.Bioskop.Nama_cabang, x.Fs.Std.Nama, x.Jf.TanggalPutar.ToString("yyyy-MM-dd"), x.Jf.JamPemutaran);
             }
             if (dataGridViewInput.Rows.Count >= 1 && dataGridViewInput.Columns.Count == 5)
             {
@@ -114,18 +202,6 @@ namespace Celikoor_Insomiac
                 bcolHapus.UseColumnTextForButtonValue = true;
                 dataGridViewInput.Columns.Add(bcolHapus);
             }
-        }
-
-        private void buttonSimpan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Film f = (Film)comboBoxFilm.SelectedItem;
-            labelSinopsis.Text = f.Sinopsis.ToString();
-            labelDurasi.Text = f.Durasi.ToString();
         }
     }
 }

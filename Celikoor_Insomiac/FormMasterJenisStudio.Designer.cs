@@ -47,11 +47,12 @@ namespace Celikoor_Insomiac
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(16, 18);
+            this.label2.Location = new System.Drawing.Point(24, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(817, 42);
+            this.label2.Size = new System.Drawing.Size(1226, 65);
             this.label2.TabIndex = 25;
-            this.label2.Text = "D A F T A R   S T U D I O";
+            this.label2.Text = "D A F T A R   J E N I S   S T U D I O";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonKeluar
@@ -62,9 +63,10 @@ namespace Celikoor_Insomiac
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(721, 405);
+            this.buttonKeluar.Location = new System.Drawing.Point(1082, 623);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
+            this.buttonKeluar.Size = new System.Drawing.Size(168, 69);
             this.buttonKeluar.TabIndex = 24;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -78,9 +80,10 @@ namespace Celikoor_Insomiac
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(16, 405);
+            this.buttonTambah.Location = new System.Drawing.Point(24, 623);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(112, 45);
+            this.buttonTambah.Size = new System.Drawing.Size(168, 69);
             this.buttonTambah.TabIndex = 23;
             this.buttonTambah.Text = "TAMBAH";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -91,9 +94,10 @@ namespace Celikoor_Insomiac
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel2.Location = new System.Drawing.Point(839, 10);
+            this.panel2.Location = new System.Drawing.Point(1258, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 446);
+            this.panel2.Size = new System.Drawing.Size(15, 686);
             this.panel2.TabIndex = 20;
             // 
             // panel1
@@ -101,9 +105,10 @@ namespace Celikoor_Insomiac
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel1.Location = new System.Drawing.Point(0, 10);
+            this.panel1.Location = new System.Drawing.Point(0, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 446);
+            this.panel1.Size = new System.Drawing.Size(15, 686);
             this.panel1.TabIndex = 19;
             // 
             // panel3
@@ -112,8 +117,9 @@ namespace Celikoor_Insomiac
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(849, 10);
+            this.panel3.Size = new System.Drawing.Size(1274, 15);
             this.panel3.TabIndex = 21;
             // 
             // panel4
@@ -121,9 +127,10 @@ namespace Celikoor_Insomiac
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel4.Location = new System.Drawing.Point(0, 456);
+            this.panel4.Location = new System.Drawing.Point(0, 702);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(849, 10);
+            this.panel4.Size = new System.Drawing.Size(1274, 15);
             this.panel4.TabIndex = 22;
             // 
             // dataGridViewHasil
@@ -136,18 +143,20 @@ namespace Celikoor_Insomiac
             this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 68);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(24, 105);
+            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.ReadOnly = true;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 331);
+            this.dataGridViewHasil.RowHeadersWidth = 62;
+            this.dataGridViewHasil.Size = new System.Drawing.Size(1226, 509);
             this.dataGridViewHasil.TabIndex = 26;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick_1);
             // 
             // FormMasterJenisStudio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 466);
+            this.ClientSize = new System.Drawing.Size(1274, 717);
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
@@ -156,6 +165,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMasterJenisStudio";
             this.Text = "Studio";
             this.Load += new System.EventHandler(this.FormMasterJenisStudio_Load);

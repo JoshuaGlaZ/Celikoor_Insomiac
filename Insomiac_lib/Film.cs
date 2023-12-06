@@ -23,7 +23,7 @@ namespace Insomiac_lib
         
         //private List<Genre> listGenre;
         //private List<Aktor> listAktor;
-        //private List<Studio> listStudio;
+        private List<Studio> listStudio;
 
         public Film()
         {
@@ -63,7 +63,7 @@ namespace Insomiac_lib
         public double Diskon { get => diskon; set => diskon = value; }
         //public List<Genre> ListGenre { get => listGenre; set => listGenre = value; }
         //public List<Aktor> ListAktor { get => listAktor; set => listAktor = value; }
-        //public List<Studio> ListStudio { get => listStudio; set => listStudio = value; }
+        public List<Studio> ListStudio { get => listStudio; set => listStudio = value; }
 
         public static List<Film> BacaData()
         {

@@ -112,5 +112,10 @@ namespace Insomiac_lib
             string perintah = "DELETE FROM cinemas WHERE id=" + c.Id + ";";
             Koneksi.JalankanPerintah(perintah);
         }
+
+        public override string ToString()
+        {
+            return this.Nama_cabang;
+        }
     }
 }

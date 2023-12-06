@@ -30,11 +30,11 @@ namespace Insomiac_lib
             Koneksi.JalankanPerintah(perintah);
         }
 
-        public static List<JadwalFilm> bacaData(string tanggal) //bisa cari berdasarkan tanggal pakai yyyy-MM-dd
+        public static List<JadwalFilm> BacaData(string kode)
         {
             List<JadwalFilm> lst = new List<JadwalFilm>();
             string perintah = "SELECT * FROM jadwal_films;";
-            if (tanggal != "") { perintah = "SELECT * FROM jadwal_films WHERE tanggal='"+tanggal+"';"; }
+            if (kode != "") { perintah = "SELECT * FROM jadwal_films WHERE id='"+kode+"';"; }
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {

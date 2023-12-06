@@ -89,5 +89,10 @@ namespace Celikoor_Insomiac
             listGenre = Genre.BacaData(kriteria, nilai);
             dataGridViewHasil.DataSource = listGenre;
         }
+
+        private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
