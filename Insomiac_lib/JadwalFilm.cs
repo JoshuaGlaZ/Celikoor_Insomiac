@@ -46,5 +46,21 @@ namespace Insomiac_lib
             }
             return lst;
         }
+
+        public static JadwalFilm BacaData(string tanggal, string jam)
+        {
+            string perintah = "SELECT * FROM jadwal_films;";
+            if (tanggal != "" && jam != "") { perintah = "SELECT * FROM jadwal_films WHERE tanggal='" + tanggal + "' AND jam_pemutaran='" + jam + "';"; }
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
+            if (msdr.Read())
+            {
+                JadwalFilm jf = new JadwalFilm();
+                jf.Id = int.Parse(msdr.GetValue(0).ToString());
+                jf.TanggalPutar = DateTime.Parse(msdr.GetValue(1).ToString());
+                jf.JamPemutaran = msdr.GetValue(2).ToString();
+                return jf;
+            }
+            else { return null; }
+        }
     }
 }

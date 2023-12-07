@@ -41,6 +41,9 @@ namespace Insomiac_lib
 
         public static void MasukanData(Sesi_Film sf)
         {
+            sf.Jf = JadwalFilm.BacaData(sf.Jf.TanggalPutar.ToString("yyyy-MM-dd"), sf.Jf.JamPemutaran);
+            sf.Fs.Std = Studio.BacaData("nama",sf.Fs.Std.Nama)[0];
+            sf.Fs.Flm = Film.BacaData("judul",sf.Fs.Flm.Judul)[0];
             string perintah = "INSERT INTO sesi_films (jadwal_film_id, studios_id, films_id) " +
                 "VALUES ('" + sf.Jf.Id + "', '" + sf.Fs.Std.Id + "', '"+sf.Fs.Flm.Id+"');";
             Koneksi.JalankanPerintah(perintah);

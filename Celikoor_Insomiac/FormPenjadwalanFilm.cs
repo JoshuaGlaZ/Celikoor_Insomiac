@@ -120,13 +120,13 @@ namespace Celikoor_Insomiac
                 bool check = true;
                 foreach(JadwalFilm jf in ljf) 
                 {
-                    if(sf.Jf.JamPemutaran==jf.JamPemutaran || sf.Jf.TanggalPutar == jf.TanggalPutar) { check = false; break; }
+                    if(sf.Jf.JamPemutaran==jf.JamPemutaran && sf.Jf.TanggalPutar == jf.TanggalPutar) { check = false; break; }
                 }
                 if (check) { JadwalFilm.masukanData(sf.Jf); }
                 check = true;
                 foreach(Film_Studio fs in lsf)
                 {
-                    if (sf.Fs.Flm.Judul == fs.Flm.Judul || sf.Fs.Std.Nama == fs.Std.Nama) { check = false; break; }
+                    if (sf.Fs.Flm.Judul == fs.Flm.Judul && sf.Fs.Std.Nama == fs.Std.Nama) { check = false; break; }
                 }
                 if (check) { Film_Studio.MasukanData(sf.Fs); }
                 Sesi_Film.MasukanData(sf);
@@ -172,7 +172,7 @@ namespace Celikoor_Insomiac
             bool check = true;
             foreach (Sesi_Film x in ListSF)
             {
-                if (sf.Jf.JamPemutaran == x.Jf.JamPemutaran || sf.Jf.TanggalPutar == sf.Jf.TanggalPutar || sf.Fs.Flm.Judul == x.Fs.Flm.Judul || sf.Fs.Std.Nama == sf.Fs.Std.Nama)
+                if (sf.Jf.JamPemutaran == x.Jf.JamPemutaran && sf.Jf.TanggalPutar == sf.Jf.TanggalPutar && sf.Fs.Flm.Judul == x.Fs.Flm.Judul && sf.Fs.Std.Nama == sf.Fs.Std.Nama)
                 { check = false; break; }
             }
             if (check)
