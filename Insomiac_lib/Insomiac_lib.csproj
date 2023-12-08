@@ -60,6 +60,7 @@
     <Compile Include="JenisStudio.cs" />
     <Compile Include="Sesi_Film.cs" />
     <Compile Include="Studio.cs" />
+    <Compile Include="Ticket.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

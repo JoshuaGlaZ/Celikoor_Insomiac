@@ -20,8 +20,7 @@ namespace Insomiac_lib
         Konsumen pelanggan;
         Pegawai kasir;
         string status;
-//        List<Tiket> listTiket;
-//Tunggu Class Tiket
+        List<Ticket> listTiket; 
         public Invoice()
         {
             Id = "";
@@ -31,9 +30,10 @@ namespace Insomiac_lib
             Pelanggan = new Konsumen();
             Kasir = new Pegawai();
             Status = "";
+            ListTiket = new List<Ticket>();
         }
 
-        public Invoice(string id, DateTime tanggal, int grand_total, int diskon_nominal, Konsumen pelanggan, Pegawai kasir, string status)
+        public Invoice(string id, DateTime tanggal, int grand_total, int diskon_nominal, Konsumen pelanggan, Pegawai kasir)
         {
             Id = id;
             Tanggal = tanggal;
@@ -41,7 +41,6 @@ namespace Insomiac_lib
             Diskon_nominal = diskon_nominal;
             Pelanggan = pelanggan;
             Kasir = kasir;
-            Status = status;
         }
 
         public string Id { get => id; set => id = value; }
@@ -51,13 +50,33 @@ namespace Insomiac_lib
         public Konsumen Pelanggan { get => pelanggan; set => pelanggan = value; }
         public Pegawai Kasir { get => kasir; set => kasir = value; }
         public string Status { get => status; set => status = value; }
-        //public List<Tiket> ListTiket { get => listTiket; private set => listTiket = value; }
+        public List<Ticket> ListTiket { get => listTiket; private set => listTiket = value; }
 
         public static void CreateInvoice(Invoice newInv)
         {
             string perintah = "INSERT INTO `invoices` (`tanggal`, `grand_total`, `diskon_nominal`, `konsumens_id`, `kasir_id`, `status`)" +
                 "VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + newInv.Grand_total + "', '" + newInv.Diskon_nominal + "', '" + newInv.Pelanggan.Id.ToString() + "', '" + newInv.Kasir.Id.ToString() + "', 'PENDING');";
             Koneksi.JalankanPerintah(perintah); 
+            
+            foreach(Ticket tiket in newInv.ListTiket)
+            {
+                perintah = "INSERT INTO `tikets` (`invoices_id`,`nomor_kursi`, `status_hadir`, `operator_id`, `harga`, `jadwal_film_id`, `studios_id`, `films_id`)" +
+                    "VALUES ('"+ newInv.Id +"','"+tiket.Nomor_kursi+"', '"+tiket.Status+"', '"+0+"', '"+tiket.Harga+"', '"+tiket.JadwalFilm+"', '"+tiket.Studio+"', '"+tiket.JadwalFilm+"')";
+                Koneksi.JalankanPerintah(perintah);
+            }
+        }
+        public void AddTicket(string nomor_kursi, double harga, JadwalFilm jadwalFilm, Studio studio, Film film, Pegawai tOp)
+        {
+            Ticket tiket = new Ticket(nomor_kursi, harga, jadwalFilm, studio, film, tOp);
+            ListTiket.Add(tiket); 
+        }
+        public static void UpdateTicket(string barcode)
+        {
+            string invID = barcode.Substring(0, 3);
+            string nomorKursi = barcode.Substring(3);
+
+            string perintah = "UPDATE tikets SET status_hadir = 1 WHERE SUBSTRING(invoices_id,0,3) = '" + invID + "'AND nomor_kursi = '" + nomorKursi + "';";
+            Koneksi.JalankanPerintah(perintah);
         }
         public static List<Invoice> DisplayInvoice()
         {
