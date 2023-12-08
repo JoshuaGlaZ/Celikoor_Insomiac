@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxJudul = new System.Windows.Forms.ComboBox();
-            this.comboBoxTanggal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -143,21 +142,23 @@
             this.label1Durasi = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.labelTotalKursi = new System.Windows.Forms.Label();
+            this.labelSaldo = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.labelTotalAkhir = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.labelDiskon = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.labelDiskon = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.labelTotalAkhir = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.labelSaldo = new System.Windows.Forms.Label();
+            this.labelTotalKursi = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.buttonPembayaran = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.comboBoxTanggal = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,14 +180,6 @@
             this.comboBoxJudul.Name = "comboBoxJudul";
             this.comboBoxJudul.Size = new System.Drawing.Size(283, 28);
             this.comboBoxJudul.TabIndex = 159;
-            // 
-            // comboBoxTanggal
-            // 
-            this.comboBoxTanggal.FormattingEnabled = true;
-            this.comboBoxTanggal.Location = new System.Drawing.Point(168, 74);
-            this.comboBoxTanggal.Name = "comboBoxTanggal";
-            this.comboBoxTanggal.Size = new System.Drawing.Size(283, 28);
-            this.comboBoxTanggal.TabIndex = 161;
             // 
             // label2
             // 
@@ -246,6 +239,7 @@
             this.comboBoxStudio.Name = "comboBoxStudio";
             this.comboBoxStudio.Size = new System.Drawing.Size(283, 28);
             this.comboBoxStudio.TabIndex = 166;
+            this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
             // checkBoxA2
             // 
@@ -1298,7 +1292,7 @@
             // 
             this.labelSinopsi.AutoSize = true;
             this.labelSinopsi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSinopsi.Location = new System.Drawing.Point(1399, 27);
+            this.labelSinopsi.Location = new System.Drawing.Point(127, 3);
             this.labelSinopsi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSinopsi.Name = "labelSinopsi";
             this.labelSinopsi.Size = new System.Drawing.Size(91, 32);
@@ -1341,6 +1335,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel5.Controls.Add(this.labelSinopsi);
             this.panel5.Location = new System.Drawing.Point(1279, 20);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(595, 386);
@@ -1364,27 +1359,71 @@
             this.panel6.Size = new System.Drawing.Size(595, 326);
             this.panel6.TabIndex = 261;
             // 
-            // label14
+            // labelSaldo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(120, 31);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 32);
-            this.label14.TabIndex = 274;
-            this.label14.Text = "KURSI :";
+            this.labelSaldo.AutoSize = true;
+            this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldo.Location = new System.Drawing.Point(236, 212);
+            this.labelSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.Size = new System.Drawing.Size(84, 32);
+            this.labelSaldo.TabIndex = 283;
+            this.labelSaldo.Text = "50000";
             // 
-            // labelTotalKursi
+            // label18
             // 
-            this.labelTotalKursi.AutoSize = true;
-            this.labelTotalKursi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalKursi.Location = new System.Drawing.Point(237, 31);
-            this.labelTotalKursi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTotalKursi.Name = "labelTotalKursi";
-            this.labelTotalKursi.Size = new System.Drawing.Size(45, 32);
-            this.labelTotalKursi.TabIndex = 275;
-            this.labelTotalKursi.Text = "A1";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(115, 212);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 32);
+            this.label18.TabIndex = 282;
+            this.label18.Text = "SALDO : ";
+            // 
+            // labelTotalAkhir
+            // 
+            this.labelTotalAkhir.AutoSize = true;
+            this.labelTotalAkhir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalAkhir.Location = new System.Drawing.Point(236, 166);
+            this.labelTotalAkhir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTotalAkhir.Name = "labelTotalAkhir";
+            this.labelTotalAkhir.Size = new System.Drawing.Size(84, 32);
+            this.labelTotalAkhir.TabIndex = 281;
+            this.labelTotalAkhir.Text = "50000";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(40, 166);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(188, 32);
+            this.label17.TabIndex = 280;
+            this.label17.Text = "TOTAL AKHIR : ";
+            // 
+            // labelDiskon
+            // 
+            this.labelDiskon.AutoSize = true;
+            this.labelDiskon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiskon.Location = new System.Drawing.Point(236, 123);
+            this.labelDiskon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDiskon.Name = "labelDiskon";
+            this.labelDiskon.Size = new System.Drawing.Size(84, 32);
+            this.labelDiskon.TabIndex = 279;
+            this.labelDiskon.Text = "50000";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(102, 123);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 32);
+            this.label15.TabIndex = 278;
+            this.label15.Text = "DISKON : ";
             // 
             // labelTotal
             // 
@@ -1408,71 +1447,27 @@
             this.label16.TabIndex = 276;
             this.label16.Text = "TOTAL :";
             // 
-            // label15
+            // labelTotalKursi
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(102, 123);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 32);
-            this.label15.TabIndex = 278;
-            this.label15.Text = "DISKON : ";
+            this.labelTotalKursi.AutoSize = true;
+            this.labelTotalKursi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalKursi.Location = new System.Drawing.Point(237, 31);
+            this.labelTotalKursi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTotalKursi.Name = "labelTotalKursi";
+            this.labelTotalKursi.Size = new System.Drawing.Size(45, 32);
+            this.labelTotalKursi.TabIndex = 275;
+            this.labelTotalKursi.Text = "A1";
             // 
-            // labelDiskon
+            // label14
             // 
-            this.labelDiskon.AutoSize = true;
-            this.labelDiskon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiskon.Location = new System.Drawing.Point(236, 123);
-            this.labelDiskon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDiskon.Name = "labelDiskon";
-            this.labelDiskon.Size = new System.Drawing.Size(84, 32);
-            this.labelDiskon.TabIndex = 279;
-            this.labelDiskon.Text = "50000";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(40, 166);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(188, 32);
-            this.label17.TabIndex = 280;
-            this.label17.Text = "TOTAL AKHIR : ";
-            // 
-            // labelTotalAkhir
-            // 
-            this.labelTotalAkhir.AutoSize = true;
-            this.labelTotalAkhir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalAkhir.Location = new System.Drawing.Point(236, 166);
-            this.labelTotalAkhir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTotalAkhir.Name = "labelTotalAkhir";
-            this.labelTotalAkhir.Size = new System.Drawing.Size(84, 32);
-            this.labelTotalAkhir.TabIndex = 281;
-            this.labelTotalAkhir.Text = "50000";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(115, 212);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 32);
-            this.label18.TabIndex = 282;
-            this.label18.Text = "SALDO : ";
-            // 
-            // labelSaldo
-            // 
-            this.labelSaldo.AutoSize = true;
-            this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(236, 212);
-            this.labelSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(84, 32);
-            this.labelSaldo.TabIndex = 283;
-            this.labelSaldo.Text = "50000";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(120, 31);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 32);
+            this.label14.TabIndex = 274;
+            this.label14.Text = "KURSI :";
             // 
             // buttonPembayaran
             // 
@@ -1491,6 +1486,7 @@
             this.buttonPembayaran.TabIndex = 274;
             this.buttonPembayaran.Text = "KONFIRMASI PEMBAYARAN";
             this.buttonPembayaran.UseVisualStyleBackColor = false;
+            this.buttonPembayaran.Click += new System.EventHandler(this.buttonPembayaran_Click);
             // 
             // buttonKeluar
             // 
@@ -1510,6 +1506,14 @@
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             // 
+            // comboBoxTanggal
+            // 
+            this.comboBoxTanggal.FormattingEnabled = true;
+            this.comboBoxTanggal.Location = new System.Drawing.Point(168, 74);
+            this.comboBoxTanggal.Name = "comboBoxTanggal";
+            this.comboBoxTanggal.Size = new System.Drawing.Size(283, 28);
+            this.comboBoxTanggal.TabIndex = 161;
+            // 
             // FormBeliTIket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1522,7 +1526,6 @@
             this.Controls.Add(this.labelKelompok);
             this.Controls.Add(this.labelGenre);
             this.Controls.Add(this.labelAktor);
-            this.Controls.Add(this.labelSinopsi);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -1634,6 +1637,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
@@ -1645,7 +1650,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxJudul;
-        private System.Windows.Forms.ComboBox comboBoxTanggal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCinema;
         private System.Windows.Forms.Label label3;
@@ -1770,5 +1774,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button buttonPembayaran;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.ComboBox comboBoxTanggal;
     }
 }

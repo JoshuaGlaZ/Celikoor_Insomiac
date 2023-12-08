@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Insomiac_lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,22 @@ namespace Celikoor_Insomiac
 
         private void FormBeliTIket_Load(object sender, EventArgs e)
         {
+            List<Film> listFilm = Film.BacaData();
+            comboBoxJudul.DataSource = listFilm;
+            comboBoxJudul.DisplayMember = "Judul";
+
+            List<Cinema> listCinema = Cinema.BacaData();
+            comboBoxCinema.DataSource = listCinema;
+            comboBoxCinema.DisplayMember = "nama_cabang";
+
+            List<Film_Studio> listStudios = Film_Studio.BacaData(" ", " ");
+            comboBoxStudio.DataSource = listStudios;
+            comboBoxStudio.DisplayMember = "Studio";
+
+            List<Sesi_Film> listSesi = Sesi_Film.bacaData("", "");
+            comboBoxTanggal.DataSource = listSesi;
+            comboBoxTanggal.DisplayMember = "tanggal";
+
 
         }
 
@@ -170,6 +187,17 @@ namespace Celikoor_Insomiac
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonPembayaran_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Studio std = (Studio)comboBoxStudio.SelectedItem;
+            labelHarga.Text = std.Harga_weekday.ToString();
         }
     }
 }
