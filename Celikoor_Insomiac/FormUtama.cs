@@ -330,5 +330,24 @@ namespace Celikoor_Insomiac
                 }
             }
         }
+
+        private void lAPORANToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormLaporan"];
+                if (form == null)
+                {
+                    FormLaporan laporan = new FormLaporan();
+                    laporan.MdiParent = this;
+                    laporan.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
     }
 }

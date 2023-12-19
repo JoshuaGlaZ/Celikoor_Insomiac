@@ -118,19 +118,26 @@ namespace Celikoor_Insomiac
                 List<JadwalFilm> ljf = JadwalFilm.BacaData("");
                 List<Film_Studio> lsf = Film_Studio.BacaData("", "");
                 bool check = true;
-                foreach(JadwalFilm jf in ljf) 
+
+                foreach(JadwalFilm jf in ljf) //mengecek apakah jadwal_film dari sesi film sudah ditambahkan atau belum
                 {
                     if(sf.Jf.JamPemutaran==jf.JamPemutaran && sf.Jf.TanggalPutar == jf.TanggalPutar) { check = false; break; }
                 }
                 if (check) { JadwalFilm.masukanData(sf.Jf); }
+
                 check = true;
-                foreach(Film_Studio fs in lsf)
+                foreach (Film_Studio fs in lsf) //mengecek apakah film_studio dari sesi film sudah ditambahkan atau belum
                 {
                     if (sf.Fs.Flm.Judul == fs.Flm.Judul && sf.Fs.Std.Nama == fs.Std.Nama) { check = false; break; }
                 }
                 if (check) { Film_Studio.MasukanData(sf.Fs); }
-                Sesi_Film.MasukanData(sf);
-                MessageBox.Show("data berhasil dimasukan");
+
+                check = true;
+                foreach (Sesi_Film x in Sesi_Film.bacaData("","")) //mengecek apakah ada sesi_film yg dobel
+                {
+                    if (sf.Jf.Id == sf.Jf.Id && sf.Fs.Std.Id == sf.Fs.Std.Id && sf.Fs.Flm.Id == x.Fs.Flm.Id) { check = false; break; }
+                }
+                if (check) { Sesi_Film.MasukanData(sf); MessageBox.Show("data berhasil dimasukan"); }
             }
         }
 
@@ -172,8 +179,17 @@ namespace Celikoor_Insomiac
             bool check = true;
             foreach (Sesi_Film x in ListSF)
             {
-                if (sf.Jf.JamPemutaran == x.Jf.JamPemutaran && sf.Jf.TanggalPutar == sf.Jf.TanggalPutar && sf.Fs.Flm.Judul == x.Fs.Flm.Judul && sf.Fs.Std.Nama == sf.Fs.Std.Nama)
-                { check = false; break; }
+                bool checkJadwal = sf.Jf.JamPemutaran == x.Jf.JamPemutaran && sf.Jf.TanggalPutar == sf.Jf.TanggalPutar;
+                bool checkFilmStudio = sf.Fs.Flm.Judul == x.Fs.Flm.Judul && sf.Fs.Std.Nama == sf.Fs.Std.Nama;
+                if (checkJadwal && checkFilmStudio) 
+                { 
+                    check = false; 
+                    MessageBox.Show("ada data dobel\n"+
+                        sf.Jf.JamPemutaran +" \t "+ x.Jf.JamPemutaran+"\n"+
+                        sf.Jf.TanggalPutar + " \t " + x.Jf.TanggalPutar + "\n" +
+                        sf.Fs.Flm.Judul +" \t "+ x.Fs.Flm.Judul+"\n"+
+                        sf.Fs.Std.Nama + " \t " + x.Fs.Std.Nama + "\n"); 
+                    break; }
             }
             if (check)
             {

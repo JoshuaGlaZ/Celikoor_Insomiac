@@ -57,6 +57,12 @@
     <Compile Include="FormBeliTIket.Designer.cs">
       <DependentUpon>FormBeliTIket.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporan.Designer.cs">
+      <DependentUpon>FormLaporan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
