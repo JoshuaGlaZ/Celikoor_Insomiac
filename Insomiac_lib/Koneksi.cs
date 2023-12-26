@@ -63,5 +63,15 @@ namespace Insomiac_lib
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
             cmd.ExecuteNonQuery();
         }
+        public static void JalankanPerintah(string perintah, Koneksi k)
+        {
+            MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
+            cmd.ExecuteNonQuery();
+        }
+        public static int JalankanPerintahSelectLastId(string perintah, Koneksi k)
+        {
+            MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
+            return (int)cmd.ExecuteScalar();
+        }
     }
 }

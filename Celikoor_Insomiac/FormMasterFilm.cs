@@ -96,7 +96,34 @@ namespace Celikoor_Insomiac
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string fId = dataGridViewHasil.CurrentRow.Cells["Id"].Value.ToString();
+            Form frm = Application.OpenForms["FormUbahFilm"];
+            Film f = Film.BacaData(fId);
+            if (frm == null && e.ColumnIndex == 0)
+            {
+                if (f != null)
+                {
+                    FormUbahFilm ubah = new FormUbahFilm();
+                    ubah.filmUbah = f;
+                    ubah.Owner = this;
+                    ubah.ShowDialog();
+                }
+                else { MessageBox.Show("ada kesalahan pada data"); }
+                FormMasterFilm_Load(sender, e);
+            }
+            else if (e.ColumnIndex == 1)
+            {
+                if (f != null)
+                {
+                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus film " + f.Judul + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                    if (ans == DialogResult.Yes)
+                    {
+                        Film.HapusData(f);
+                        FormMasterFilm_Load(sender, e);
+                    }
+                }
+                else { MessageBox.Show("ada kesalahan pada data"); }
+            }
         }
     }
 }

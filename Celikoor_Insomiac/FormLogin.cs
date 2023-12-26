@@ -45,6 +45,7 @@ namespace Celikoor_Insomiac
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Application.Exit();
         }
 

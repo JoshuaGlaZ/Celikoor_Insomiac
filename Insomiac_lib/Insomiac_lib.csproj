@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aktor.cs" />
+    <Compile Include="Aktor_Film.cs" />
     <Compile Include="Cinema.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="Film_Studio.cs" />
     <Compile Include="Genre.cs" />
+    <Compile Include="Genre_Film.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="JadwalFilm.cs" />
     <Compile Include="Kelompok.cs" />
@@ -61,6 +64,9 @@
     <Compile Include="Sesi_Film.cs" />
     <Compile Include="Studio.cs" />
     <Compile Include="Ticket.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

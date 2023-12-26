@@ -153,6 +153,12 @@
     <Compile Include="FormTambahFilm.Designer.cs">
       <DependentUpon>FormTambahFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahFilmAktorGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahFilmAktorGenre.Designer.cs">
+      <DependentUpon>FormTambahFilmAktorGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahGenre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahFilm.resx">
       <DependentUpon>FormTambahFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahFilmAktorGenre.resx">
+      <DependentUpon>FormTambahFilmAktorGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
