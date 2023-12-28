@@ -43,7 +43,7 @@ namespace Insomiac_lib
         public static List<Kelompok> BacaData(string kolom, string cari)
         {
             List<Kelompok> lst = new List<Kelompok>();
-            string perintah = "SELECT * FROM Kelompoks WHERE " + kolom + " LIKE \'%" + cari + "%\';";
+            string perintah = "SELECT * FROM kelompoks WHERE " + kolom + " LIKE \'%" + cari + "%\';";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
@@ -57,7 +57,7 @@ namespace Insomiac_lib
 
         public static Kelompok BacaData(int id)
         {
-            string perintah = "SELECT * FROM Kelompoks WHERE id=" + id + ";";
+            string perintah = "SELECT * FROM kelompoks WHERE id=" + id + ";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
@@ -71,7 +71,7 @@ namespace Insomiac_lib
 
         public static void TambahData(Kelompok k)
         {
-            string perintah = "INSERT INTO Kelompoks (nama) " +
+            string perintah = "INSERT INTO kelompoks (nama) " +
                 "VALUES ('" + k.Nama + "');";
             Koneksi.JalankanPerintah(perintah);
         }
@@ -84,7 +84,7 @@ namespace Insomiac_lib
 
         public static void HapusData(Kelompok k)
         {
-            string perintah = "DELETE FROM Kelompoks WHERE id=" + k.Id + ";";
+            string perintah = "DELETE FROM kelompoks WHERE id=" + k.Id + ";";
             Koneksi.JalankanPerintah(perintah);
         }
 

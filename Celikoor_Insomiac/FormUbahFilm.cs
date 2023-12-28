@@ -80,9 +80,9 @@ namespace Celikoor_Insomiac
                 bcolHapus.UseColumnTextForButtonValue = true;
                 dataGridViewGenre.Columns.Add(bcolHapus);
             }
-            labelCoverPath.Text = currentFilm.CoverPath;
+            textBoxCoverPath.Text = currentFilm.CoverPath;
             pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxCover.Image = Image.FromFile(labelCoverPath.Text);
+            pictureBoxCover.Image = Image.FromFile(textBoxCoverPath.Text);
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
