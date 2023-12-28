@@ -82,7 +82,7 @@ namespace Celikoor_Insomiac
             }
             textBoxCoverPath.Text = currentFilm.CoverPath;
             pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxCover.Image = Image.FromFile(textBoxCoverPath.Text);
+            pictureBoxCover.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + textBoxCoverPath.Text));
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace Celikoor_Insomiac
                 else if (textBoxDurasi.Text == "") { throw new Exception("Durasi"); }
                 else if (comboBoxKelompok.SelectedIndex == -1) { throw new Exception("Kelompok"); }
                 else if (comboBoxBahasa.SelectedIndex == -1) { throw new Exception("Bahasa"); }
-                else if (labelCoverPath.Text == "-") { throw new Exception("Cover"); }
+                else if (textBoxCoverPath.Text == "-") { throw new Exception("Cover"); }
                 else if (dataGridViewGenre.Rows.Count == 0) { throw new Exception("Genre"); }
                 else if (dataGridViewAktor.Rows.Count == 0) { throw new Exception("Aktor"); }
                 else
@@ -107,7 +107,7 @@ namespace Celikoor_Insomiac
                                 (Kelompok)comboBoxKelompok.SelectedItem,
                                 comboBoxBahasa.SelectedItem.ToString(),
                                 radioButtonYes.Checked ? "iya" : "tidak",
-                                labelCoverPath.Text,
+                                textBoxCoverPath.Text,
                                 double.Parse(textBoxDiskon.Text));
                     filmUbah.Id = currentFilm.Id;
                     foreach (DataGridViewRow row in dataGridViewAktor.Rows)
@@ -126,7 +126,6 @@ namespace Celikoor_Insomiac
                                     row.Cells["ColumnGenreDeskripsi"].Value.ToString())));
                     }
                     Film.UbahData(filmUbah);
-
                     string filmSucceed = "Film = " + filmUbah.Judul + filmUbah.ToStringAktorGenre() + "\n";
                     MessageBox.Show("Data film berhasil diubah\n" + filmSucceed);
                 }
@@ -228,7 +227,7 @@ namespace Celikoor_Insomiac
             {
                 pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;
                 pictureBoxCover.Image = new Bitmap(open.FileName);
-                labelCoverPath.Text = open.FileName;
+                textBoxCoverPath.Text = Path.GetFileName(open.FileName); 
             }
         }
 
