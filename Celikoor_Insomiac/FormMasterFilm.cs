@@ -74,24 +74,18 @@ namespace Celikoor_Insomiac
             }
         }
 
-        private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string kriteria = comboBoxCari.Text.Replace("Kelompok", "kelompoks_id").Replace("Sub Indo", "is_sub_indo").Replace("Cover", "cover_image").Replace("Diskon", "diskon_nominal").Replace(" ", "_").Replace("Tanggal", "tgl");
-            string nilai = textBoxCari.Text;
-            string order = comboBoxUrut.Text.Replace("Kelompok", "kelompoks_id").Replace("Cover", "cover_image").Replace("Diskon", "diskon_nominal").Replace(" ", "_").Replace("Tanggal", "tgl");
-            listFilm = Film.BacaData(kriteria, nilai, order);
-            dataGridViewHasil.DataSource = listFilm;
-        }
-
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
-            listFilm = Film.BacaData(comboBoxCari.Text, textBoxCari.Text);
+            string kriteria = comboBoxCari.Text.Replace("Kelompok", "kelompoks_id").Replace("Sub Indo", "is_sub_indo").Replace("Cover", "cover_image").Replace("Diskon", "diskon_nominal");
+            string nilai = textBoxCari.Text;
+            string order = comboBoxUrut.Text.Replace("Kelompok", "kelompoks_id").Replace("Diskon", "diskon_nominal");
+            listFilm = Film.BacaData(kriteria, nilai, order);
             dataGridViewHasil.DataSource = listFilm;
         }
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxCari_SelectedIndexChanged(sender, e);
+            textBoxCari_TextChanged(this, e);
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -99,19 +93,19 @@ namespace Celikoor_Insomiac
             string fId = dataGridViewHasil.CurrentRow.Cells["Id"].Value.ToString();
             Form frm = Application.OpenForms["FormUbahFilm"];
             Film f = Film.BacaData(fId);
-            if (frm == null && e.ColumnIndex == 0)
+            if (frm == null && e.ColumnIndex == dataGridViewHasil.Columns["buttonCollumnUbah"].Index)
             {
                 if (f != null)
                 {
                     FormUbahFilm ubah = new FormUbahFilm();
-                    ubah.filmUbah = f;
+                    ubah.currentFilm = f;
                     ubah.Owner = this;
                     ubah.ShowDialog();
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
                 FormMasterFilm_Load(sender, e);
             }
-            else if (e.ColumnIndex == 1)
+            else if (e.ColumnIndex == dataGridViewHasil.Columns["buttonCollumnHapus"].Index)
             {
                 if (f != null)
                 {
@@ -125,5 +119,6 @@ namespace Celikoor_Insomiac
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }
         }
+
     }
 }

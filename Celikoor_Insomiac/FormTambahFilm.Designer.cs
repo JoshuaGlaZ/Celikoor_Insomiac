@@ -65,16 +65,6 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.dataGridViewFilm = new System.Windows.Forms.DataGridView();
-            this.comboBoxBahasa = new System.Windows.Forms.ComboBox();
-            this.colCoverImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSubIndo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxTahun = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.buttonCari = new System.Windows.Forms.Button();
-            this.labelCoverPath = new System.Windows.Forms.Label();
-            this.colKelompok = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelUtama = new System.Windows.Forms.Panel();
-            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.ColumnJudul = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSinopsis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTahun = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +74,16 @@
             this.ColumnSubIndo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCoverImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDiskon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxBahasa = new System.Windows.Forms.ComboBox();
+            this.colCoverImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSubIndo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxTahun = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonCari = new System.Windows.Forms.Button();
+            this.colKelompok = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelUtama = new System.Windows.Forms.Panel();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
+            this.textBoxCoverPath = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAktor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilm)).BeginInit();
@@ -514,134 +514,6 @@
             this.dataGridViewFilm.TabIndex = 148;
             this.dataGridViewFilm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFilm_CellContentClick);
             // 
-            // comboBoxBahasa
-            // 
-            this.comboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBahasa.FormattingEnabled = true;
-            this.comboBoxBahasa.Items.AddRange(new object[] {
-            "ID",
-            "EN",
-            "CHN",
-            "KOR",
-            "JPN",
-            "OTH"});
-            this.comboBoxBahasa.Location = new System.Drawing.Point(137, 266);
-            this.comboBoxBahasa.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxBahasa.Name = "comboBoxBahasa";
-            this.comboBoxBahasa.Size = new System.Drawing.Size(241, 21);
-            this.comboBoxBahasa.TabIndex = 154;
-            // 
-            // colCoverImage
-            // 
-            this.colCoverImage.HeaderText = "Cover Image";
-            this.colCoverImage.Name = "colCoverImage";
-            // 
-            // colSubIndo
-            // 
-            this.colSubIndo.HeaderText = "Sub Indo";
-            this.colSubIndo.Name = "colSubIndo";
-            // 
-            // textBoxTahun
-            // 
-            this.textBoxTahun.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxTahun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTahun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxTahun.Location = new System.Drawing.Point(137, 166);
-            this.textBoxTahun.Name = "textBoxTahun";
-            this.textBoxTahun.Size = new System.Drawing.Size(241, 29);
-            this.textBoxTahun.TabIndex = 149;
-            this.textBoxTahun.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(882, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 21);
-            this.label12.TabIndex = 150;
-            this.label12.Text = "Cover :";
-            // 
-            // buttonCari
-            // 
-            this.buttonCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
-            this.buttonCari.FlatAppearance.BorderSize = 0;
-            this.buttonCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCari.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCari.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonCari.Location = new System.Drawing.Point(886, 44);
-            this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(272, 35);
-            this.buttonCari.TabIndex = 152;
-            this.buttonCari.Text = "CARI";
-            this.buttonCari.UseVisualStyleBackColor = false;
-            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
-            // 
-            // labelCoverPath
-            // 
-            this.labelCoverPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCoverPath.Location = new System.Drawing.Point(947, 15);
-            this.labelCoverPath.Name = "labelCoverPath";
-            this.labelCoverPath.Size = new System.Drawing.Size(212, 21);
-            this.labelCoverPath.TabIndex = 153;
-            this.labelCoverPath.Text = "-";
-            // 
-            // colKelompok
-            // 
-            this.colKelompok.HeaderText = "Kelompok";
-            this.colKelompok.Name = "colKelompok";
-            // 
-            // panelUtama
-            // 
-            this.panelUtama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.panelUtama.Controls.Add(this.textBoxDiskon);
-            this.panelUtama.Controls.Add(this.dataGridViewFilm);
-            this.panelUtama.Controls.Add(this.buttonTambah);
-            this.panelUtama.Controls.Add(this.textBoxTahun);
-            this.panelUtama.Controls.Add(this.buttonSimpan);
-            this.panelUtama.Controls.Add(this.label12);
-            this.panelUtama.Controls.Add(this.buttonKeluar);
-            this.panelUtama.Controls.Add(this.buttonCari);
-            this.panelUtama.Controls.Add(this.labelCoverPath);
-            this.panelUtama.Controls.Add(this.comboBoxBahasa);
-            this.panelUtama.Controls.Add(this.label11);
-            this.panelUtama.Controls.Add(this.dataGridViewAktor);
-            this.panelUtama.Controls.Add(this.buttonAddAktor);
-            this.panelUtama.Controls.Add(this.buttonAddGenre);
-            this.panelUtama.Controls.Add(this.dataGridViewGenre);
-            this.panelUtama.Controls.Add(this.comboBoxActor);
-            this.panelUtama.Controls.Add(this.label10);
-            this.panelUtama.Controls.Add(this.comboBoxGenre);
-            this.panelUtama.Controls.Add(this.label9);
-            this.panelUtama.Controls.Add(this.radioButtonNo);
-            this.panelUtama.Controls.Add(this.radioButtonYes);
-            this.panelUtama.Controls.Add(this.label8);
-            this.panelUtama.Controls.Add(this.label7);
-            this.panelUtama.Controls.Add(this.comboBoxKelompok);
-            this.panelUtama.Controls.Add(this.label5);
-            this.panelUtama.Controls.Add(this.textBoxDurasi);
-            this.panelUtama.Controls.Add(this.pictureBoxCover);
-            this.panelUtama.Controls.Add(this.label4);
-            this.panelUtama.Controls.Add(this.label3);
-            this.panelUtama.Controls.Add(this.textBoxSinopsis);
-            this.panelUtama.Controls.Add(this.label2);
-            this.panelUtama.Controls.Add(this.label1);
-            this.panelUtama.Controls.Add(this.textBoxJudul);
-            this.panelUtama.Location = new System.Drawing.Point(-1, 62);
-            this.panelUtama.Name = "panelUtama";
-            this.panelUtama.Size = new System.Drawing.Size(1177, 676);
-            this.panelUtama.TabIndex = 155;
-            // 
-            // pictureBoxCover
-            // 
-            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxCover.Location = new System.Drawing.Point(886, 92);
-            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
-            this.pictureBoxCover.TabIndex = 106;
-            this.pictureBoxCover.TabStop = false;
-            // 
             // ColumnJudul
             // 
             this.ColumnJudul.HeaderText = "Judul";
@@ -695,6 +567,139 @@
             this.ColumnDiskon.HeaderText = "Diskon Nominal";
             this.ColumnDiskon.Name = "ColumnDiskon";
             this.ColumnDiskon.ReadOnly = true;
+            // 
+            // comboBoxBahasa
+            // 
+            this.comboBoxBahasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBahasa.FormattingEnabled = true;
+            this.comboBoxBahasa.Items.AddRange(new object[] {
+            "ID",
+            "EN",
+            "CHN",
+            "KOR",
+            "JPN",
+            "OTH"});
+            this.comboBoxBahasa.Location = new System.Drawing.Point(137, 266);
+            this.comboBoxBahasa.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBahasa.Name = "comboBoxBahasa";
+            this.comboBoxBahasa.Size = new System.Drawing.Size(241, 21);
+            this.comboBoxBahasa.TabIndex = 154;
+            // 
+            // colCoverImage
+            // 
+            this.colCoverImage.HeaderText = "Cover Image";
+            this.colCoverImage.Name = "colCoverImage";
+            // 
+            // colSubIndo
+            // 
+            this.colSubIndo.HeaderText = "Sub Indo";
+            this.colSubIndo.Name = "colSubIndo";
+            // 
+            // textBoxTahun
+            // 
+            this.textBoxTahun.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxTahun.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTahun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxTahun.Location = new System.Drawing.Point(137, 166);
+            this.textBoxTahun.Name = "textBoxTahun";
+            this.textBoxTahun.Size = new System.Drawing.Size(241, 29);
+            this.textBoxTahun.TabIndex = 149;
+            this.textBoxTahun.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(882, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 21);
+            this.label12.TabIndex = 150;
+            this.label12.Text = "Cover :";
+            // 
+            // buttonCari
+            // 
+            this.buttonCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonCari.FlatAppearance.BorderSize = 0;
+            this.buttonCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCari.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCari.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCari.Location = new System.Drawing.Point(886, 44);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(272, 35);
+            this.buttonCari.TabIndex = 152;
+            this.buttonCari.Text = "CARI";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
+            // 
+            // colKelompok
+            // 
+            this.colKelompok.HeaderText = "Kelompok";
+            this.colKelompok.Name = "colKelompok";
+            // 
+            // panelUtama
+            // 
+            this.panelUtama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.panelUtama.Controls.Add(this.textBoxCoverPath);
+            this.panelUtama.Controls.Add(this.textBoxDiskon);
+            this.panelUtama.Controls.Add(this.dataGridViewFilm);
+            this.panelUtama.Controls.Add(this.buttonTambah);
+            this.panelUtama.Controls.Add(this.textBoxTahun);
+            this.panelUtama.Controls.Add(this.buttonSimpan);
+            this.panelUtama.Controls.Add(this.label12);
+            this.panelUtama.Controls.Add(this.buttonKeluar);
+            this.panelUtama.Controls.Add(this.buttonCari);
+            this.panelUtama.Controls.Add(this.comboBoxBahasa);
+            this.panelUtama.Controls.Add(this.label11);
+            this.panelUtama.Controls.Add(this.dataGridViewAktor);
+            this.panelUtama.Controls.Add(this.buttonAddAktor);
+            this.panelUtama.Controls.Add(this.buttonAddGenre);
+            this.panelUtama.Controls.Add(this.dataGridViewGenre);
+            this.panelUtama.Controls.Add(this.comboBoxActor);
+            this.panelUtama.Controls.Add(this.label10);
+            this.panelUtama.Controls.Add(this.comboBoxGenre);
+            this.panelUtama.Controls.Add(this.label9);
+            this.panelUtama.Controls.Add(this.radioButtonNo);
+            this.panelUtama.Controls.Add(this.radioButtonYes);
+            this.panelUtama.Controls.Add(this.label8);
+            this.panelUtama.Controls.Add(this.label7);
+            this.panelUtama.Controls.Add(this.comboBoxKelompok);
+            this.panelUtama.Controls.Add(this.label5);
+            this.panelUtama.Controls.Add(this.textBoxDurasi);
+            this.panelUtama.Controls.Add(this.pictureBoxCover);
+            this.panelUtama.Controls.Add(this.label4);
+            this.panelUtama.Controls.Add(this.label3);
+            this.panelUtama.Controls.Add(this.textBoxSinopsis);
+            this.panelUtama.Controls.Add(this.label2);
+            this.panelUtama.Controls.Add(this.label1);
+            this.panelUtama.Controls.Add(this.textBoxJudul);
+            this.panelUtama.Location = new System.Drawing.Point(-1, 62);
+            this.panelUtama.Name = "panelUtama";
+            this.panelUtama.Size = new System.Drawing.Size(1177, 676);
+            this.panelUtama.TabIndex = 155;
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxCover.Location = new System.Drawing.Point(886, 92);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
+            this.pictureBoxCover.TabIndex = 106;
+            this.pictureBoxCover.TabStop = false;
+            // 
+            // textBoxCoverPath
+            // 
+            this.textBoxCoverPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxCoverPath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCoverPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCoverPath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.textBoxCoverPath.Location = new System.Drawing.Point(943, 13);
+            this.textBoxCoverPath.Name = "textBoxCoverPath";
+            this.textBoxCoverPath.ReadOnly = true;
+            this.textBoxCoverPath.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxCoverPath.Size = new System.Drawing.Size(215, 22);
+            this.textBoxCoverPath.TabIndex = 156;
+            this.textBoxCoverPath.Text = "-";
             // 
             // FormTambahFilm
             // 
@@ -755,7 +760,6 @@
         private System.Windows.Forms.TextBox textBoxTahun;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button buttonCari;
-        private System.Windows.Forms.Label labelCoverPath;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKelompok;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGenreId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnGenreNama;
@@ -776,5 +780,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSubIndo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCoverImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiskon;
+        private System.Windows.Forms.TextBox textBoxCoverPath;
     }
 }

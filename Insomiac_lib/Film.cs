@@ -100,7 +100,7 @@ namespace Insomiac_lib
 
         public static List<Film> BacaData(string kriteria, string nilai, string urut)
         {
-            string perintah = "SELECT * FROM films WHERE '" + kriteria + "' LIKE '&" + nilai + "&' ORDER BY '" + urut + "';";
+            string perintah = "SELECT * FROM films WHERE " + kriteria + " LIKE '%" + nilai + "%' ORDER BY " + urut + ";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             List<Film> lst = new List<Film>();
             while (msdr.Read())
@@ -117,7 +117,10 @@ namespace Insomiac_lib
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             if (msdr.Read())
             {
-                return BacaFilm(msdr);
+                Film f = BacaFilm(msdr);
+                f.ListAktor = f.BacaDataAktor(idFilm: f.Id.ToString());
+                f.ListGenre = f.BacaDataGenre(idFilm: f.Id.ToString());
+                return f;
             }
             return null;
         }
@@ -130,17 +133,15 @@ namespace Insomiac_lib
             f.Sinopsis = msdr.GetValue(2).ToString();
             f.Tahun = int.Parse(msdr.GetValue(3).ToString());
             f.Durasi = int.Parse(msdr.GetValue(4).ToString());
-            Kelompok k = new Kelompok();
-            k.Id = int.Parse(msdr.GetValue(5).ToString());
-            f.Kelompok = k;
+            f.Kelompok = Kelompok.BacaData(msdr.GetInt32(5));
             f.Bahasa = msdr.GetValue(6).ToString();
-            f.IsSubIndo = int.Parse(msdr.GetValue(7).ToString()) == 0 ? "iya" : "tidak";
+            f.IsSubIndo = int.Parse(msdr.GetValue(7).ToString()) == 1 ? "iya" : "tidak";
             f.CoverPath = msdr.GetValue(8).ToString();
             f.Diskon = double.Parse(msdr.GetValue(9).ToString());
             return f;
         }
 
-        public List<Aktor_Film> BacaDataAktor(string idAktor, string idFilm)
+        public List<Aktor_Film> BacaDataAktor(string idAktor="", string idFilm="")
         {
             List<Aktor_Film> lst = new List<Aktor_Film>();
             string perintah = "SELECT * FROM aktor_film";
@@ -167,7 +168,7 @@ namespace Insomiac_lib
             return lst;
         }
 
-        public List<Genre_Film> BacaDataGenre(string idFilm, string idGenre)
+        public List<Genre_Film> BacaDataGenre(string idFilm="", string idGenre="")
         {
             List<Genre_Film> lst = new List<Genre_Film>();
             string perintah = "SELECT * FROM genre_film";
@@ -203,77 +204,111 @@ namespace Insomiac_lib
             ListGenre.Add(gf);
         }
 
+        public string ToStringAktorGenre()
+        {
+            string data = ".\nAktor = ";
+            string aktorData = string.Join(", ", listAktor.Select(af => $"{af.Atr.Nama}/{af.Peran}"));
+            data += aktorData + ".\nGenre = ";
+            string genreData = string.Join(", ", listGenre.Select(gf => gf.Gnr.NamaGenre));
+            data += genreData + ".";
+            return data;
+        }
+
         public static void TambahData(Film f)
+        {
+            MySqlDataReader msdrId = Koneksi.JalankanPerintahId("SHOW TABLE STATUS LIKE 'films';");
+            if (msdrId.Read())
+            {
+                f.Id = Convert.ToInt32(msdrId["Auto_increment"]);
+                using (TransactionScope ts = new TransactionScope())
+                {
+                    try
+                    {
+                        Koneksi k = new Koneksi();
+                        string perintah = "INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa," +
+                        "is_sub_indo, cover_image, diskon_nominal) VALUES ('" + f.Judul + "', '" + f.Sinopsis +
+                            "', '" + f.Tahun + "', '" + f.Durasi + "', '" + f.Kelompok.Id + "', '" + f.Bahasa + "', '" +
+                            f.IsSubIndo == "iya" ? "1" : "0" + "', '" + f.CoverPath + "', '" + f.Diskon + "');";
+                        Koneksi.JalankanPerintah(perintah, k);
+                        TambahDataAktor(f, k);
+                        TambahDataGenre(f, k);
+                        ts.Complete();
+                    }
+                    catch (Exception ex)
+                    {
+                        ts.Dispose();
+                        throw new Exception(ex.Message);
+                    }
+                }
+            } 
+        }
+
+
+        private static void TambahDataGenre(Film f, Koneksi k)
+        {
+            try
+            {
+                foreach (Genre_Film gf in f.ListGenre)
+                {
+                    string perintah = "INSERT INTO genre_film (films_id, genres_id) " +
+                        "VALUES ('" + f.Id + "', '" + gf.Gnr.Id + "');";
+                    Koneksi.JalankanPerintah(perintah, k);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Gagal menambah genre. Error = " +  ex.Message);
+            }
+        }
+
+        private static void TambahDataAktor(Film f, Koneksi k)
+        {
+            try
+            {
+                foreach (Aktor_Film af in f.ListAktor)
+                {
+                    string perintah = "INSERT INTO aktor_film (aktors_id, films_id, peran) " +
+                    "VALUES ('" + af.Atr.Id + "', '" + f.Id + "', '" + af.Peran + "');";
+                    Koneksi.JalankanPerintah(perintah, k);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Gagal menambah aktor. Error = " + ex.Message);
+            }
+        }
+
+        public static void HapusData(Film f)
         {
             using (TransactionScope ts = new TransactionScope())
             {
                 try
                 {
                     Koneksi k = new Koneksi();
-                    string perintah = "INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa," +
-                        "is_sub_indo, cover_image, diskon_nominal) VALUES ('" + f.Judul + "', '" + f.Sinopsis +
-                        "', '" + f.Tahun + "', '" + f.Durasi + "', '" + f.Kelompok.Id + "', '" + f.Bahasa + "', '" +
-                        f.IsSubIndo + "', '" + f.CoverPath + "', '" + f.Diskon + "');";
+                    HapusDataAktor(f, k);
+                    HapusDataGenre(f, k);
+                    string perintah = "DELETE FROM films WHERE id=" + f.Id + ";";
                     Koneksi.JalankanPerintah(perintah, k);
-                    f.Id = Koneksi.JalankanPerintahSelectLastId("SELECT SCOPE_IDENTITY();", k);
-                    TambahDataAktor(f, k);
-                    TambahDataGenre(f, k);
                     ts.Complete();
                 }
                 catch (Exception ex)
                 {
                     ts.Dispose();
-                    Debug.WriteLine(ex.Message);
                     throw new Exception(ex.Message);
                 }
             }
         }
 
-
-        private static void TambahDataGenre(Film f, Koneksi k)
+        private static void HapusDataGenre(Film f, Koneksi k)
         {
-            foreach (Genre_Film gf in f.ListGenre)
-            {
-                string perintah = "INSERT INTO genre_film (films_id, genres_id) " +
-                    "VALUES ('" + f.Id + "', '" + gf.Gnr.Id + "');";
-                Koneksi.JalankanPerintah(perintah, k);
-            }
+            string perintah = "DELETE FROM genre_film WHERE films_id='" + f.Id + "';";
+            Koneksi.JalankanPerintah(perintah, k);
         }
 
-        private static void TambahDataAktor(Film f, Koneksi k)
+        private static void HapusDataAktor(Film f, Koneksi k)
         {
-            foreach (Aktor_Film af in f.ListAktor)
-            {
-                string perintah = "INSERT INTO aktor_film (aktors_id, films_id, peran) " +
-                "VALUES ('" + af.Atr.Id + "', '" + f.Id + "', '" + af.Peran + "');";
-                Koneksi.JalankanPerintah(perintah, k);
-            }
-        }
-
-        public static void HapusData(Film f)
-        {
-            HapusDataAktor(f);
-            HapusDataGenre(f);
-            string perintah = "DELETE FROM films WHERE id=" + f.Id + ";";
-            Koneksi.JalankanPerintah(perintah);
-        }
-
-        private static void HapusDataGenre(Film f)
-        {
-            foreach (Genre_Film gf in f.ListGenre)
-            {
-                string perintah = "DELETE FROM genre_film WHERE films_id='" + f.Id + "';";
-                Koneksi.JalankanPerintah(perintah);
-            }
-        }
-
-        private static void HapusDataAktor(Film f)
-        {
-            foreach (Aktor_Film af in f.ListAktor)
-            {
-                string perintah = "DELETE FROM aktor_film WHERE films_id='" + f.Id + "';";
-                Koneksi.JalankanPerintah(perintah);
-            }
+            string perintah = "DELETE FROM aktor_film WHERE films_id='" + f.Id + "';";
+            Koneksi.JalankanPerintah(perintah, k);
         }
 
         public static void UbahData(Film f)
@@ -283,13 +318,13 @@ namespace Insomiac_lib
                 try
                 {
                     Koneksi k = new Koneksi();
-                    string perintah = "UPDATE films SET judul='" + f.Judul + "', sinopsis='" + f.Sinopsis + "', " +
-                        "tahun='" + f.Tahun + "', durasi='" + f.Durasi + "', kelompoks_id='" + f.Kelompok.Id + "', " +
-                        "bahasa='" + f.Bahasa + "', is_sub_indo='" + f.IsSubIndo + "', cover_image='" + f.CoverPath + "', " +
-                        "diskon_nominal='" + f.Diskon + "' WHERE id='" + f.Id + "';";
-                    Koneksi.JalankanPerintah(perintah);
-                    HapusDataAktor(f);
-                    HapusDataGenre(f);
+                    string perintah = "UPDATE films SET judul='" + f.Judul + "', sinopsis='" + f.Sinopsis +
+                        "', tahun='" +f.Tahun + "', durasi='" +  f.Durasi + "', kelompoks_id='" + f.Kelompok.Id +
+                        "', bahasa='" + f.Bahasa + "', is_sub_indo='" + (f.isSubIndo == "iya" ? "1" : "0")  + 
+                        "', cover_image='" + f.CoverPath + "', diskon_nominal='"+ f.Diskon + "' WHERE id='" + f.Id + "';";
+                    Koneksi.JalankanPerintah(perintah, k);
+                    HapusDataAktor(f, k);
+                    HapusDataGenre(f, k);
                     TambahDataAktor(f, k);
                     TambahDataGenre(f, k);
                     ts.Complete();

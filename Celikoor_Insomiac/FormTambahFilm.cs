@@ -16,7 +16,6 @@ namespace Celikoor_Insomiac
     public partial class FormTambahFilm : Form
     {
         List<Film> listFilm = new List<Film>();
-        FormUtama utama;
         public FormTambahFilm()
         {
             InitializeComponent();
@@ -24,8 +23,6 @@ namespace Celikoor_Insomiac
 
         private void FormTambahFilm_Load(object sender, EventArgs e)
         {
-            utama = (FormUtama)this.Owner.MdiParent;
-
             List<Aktor> listAktor = Aktor.BacaData();
             comboBoxActor.DataSource = listAktor;
             comboBoxActor.DisplayMember = "Nama";
@@ -42,14 +39,29 @@ namespace Celikoor_Insomiac
         }
         private void buttonSimpan_Click(object sender, EventArgs e)
         { 
-            try 
+            try
             {
+                List<Film> listFilmCheck = Film.BacaData();
+                foreach (Film f in listFilmCheck)
+                {
+                    foreach (Aktor_Film af in f.ListAktor)
+                    {
+                        List<Aktor_Film> listAktorCheck = f.BacaDataAktor(af.Atr.Id.ToString(), f.Id.ToString());
+                    }
+                    foreach (Genre_Film gf in f.ListGenre)
+                    {
+                        List<Genre_Film> listGenreCheck = f.BacaDataGenre(f.Id.ToString(), gf.Gnr.Id.ToString());
+                    }
+                }
+                string filmSucceed = "";
                 if (listFilm.Count > 0)
                 {
                     foreach(Film filmSave in listFilm)
                     {
                         Film.TambahData(filmSave);
+                        filmSucceed += "Film = " + filmSave.Judul + filmSave.ToStringAktorGenre() + "\n";
                     }
+                    MessageBox.Show("Data film berhasil ditambah\n" + filmSucceed);
                 }
                 else
                 {
@@ -66,13 +78,14 @@ namespace Celikoor_Insomiac
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Title = "Open Cover Image";
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            open.InitialDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            open.Filter = "Image Files(*.png; *.jpg; *.jpeg; *.gif; *.bmp)|*.png; *.jpg; *.jpeg; *.gif; *.bmp";
+            open.InitialDirectory = Directory.GetCurrentDirectory();
             if (open.ShowDialog() == DialogResult.OK)
             {
+                string fileName = Path.GetFileName(open.FileName);
                 pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBoxCover.Image = new Bitmap(open.FileName);
-                labelCoverPath.Text = open.FileName;
+                pictureBoxCover.Image = Image.FromFile(open.FileName);
+                textBoxCoverPath.Text = fileName;
             }
         }
 
@@ -86,7 +99,7 @@ namespace Celikoor_Insomiac
                 else if (textBoxDurasi.Text == "") { throw new Exception("Durasi"); }
                 else if (comboBoxKelompok.SelectedIndex == -1) { throw new Exception("Kelompok"); }
                 else if (comboBoxBahasa.SelectedIndex == -1) { throw new Exception("Bahasa"); }
-                else if (labelCoverPath.Text == "-") { throw new Exception("Cover"); }
+                else if (textBoxCoverPath.Text == "-") { throw new Exception("Cover"); }
                 else if (dataGridViewGenre.Rows.Count == 0) { throw new Exception("Genre"); }
                 else if (dataGridViewAktor.Rows.Count == 0) { throw new Exception("Aktor"); }
                 else
@@ -98,8 +111,9 @@ namespace Celikoor_Insomiac
                                     (Kelompok)comboBoxKelompok.SelectedItem, 
                                     comboBoxBahasa.SelectedItem.ToString(),
                                     radioButtonYes.Checked ? "iya" : "tidak", 
-                                    labelCoverPath.Text,
+                                    textBoxCoverPath.Text,
                                     double.Parse(textBoxDiskon.Text));
+                    MessageBox.Show(f.Judul, f.IsSubIndo);
                     foreach (DataGridViewRow row in dataGridViewAktor.Rows)
                     {
                         f.AddAktor(new Aktor(int.Parse(row.Cells["ColumnAktorId"].Value.ToString()),

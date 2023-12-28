@@ -25,7 +25,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
+        [global::System.Configuration.DefaultSettingValueAttribute("kresnayangasli.my.id")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -37,7 +37,19 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("celikoor")]
+        [global::System.Configuration.DefaultSettingValueAttribute("55555")]
+        public string port {
+            get {
+                return ((string)(this["port"]));
+            }
+            set {
+                this["port"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("insomiac")]
         public string dbname {
             get {
                 return ((string)(this["dbname"]));
@@ -49,7 +61,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("root")]
+        [global::System.Configuration.DefaultSettingValueAttribute("celikoor")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -61,25 +73,13 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Ins0mi4C")]
         public string password {
             get {
                 return ((string)(this["password"]));
             }
             set {
                 this["password"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3306")]
-        public string port {
-            get {
-                return ((string)(this["port"]));
-            }
-            set {
-                this["port"] = value;
             }
         }
     }

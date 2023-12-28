@@ -80,7 +80,6 @@
             "Durasi",
             "Kelompok",
             "Bahasa",
-            "Sub Indo",
             "Diskon"});
             this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";
@@ -122,7 +121,6 @@
             this.comboBoxCari.Name = "comboBoxCari";
             this.comboBoxCari.Size = new System.Drawing.Size(130, 24);
             this.comboBoxCari.TabIndex = 19;
-            this.comboBoxCari.SelectedIndexChanged += new System.EventHandler(this.comboBoxCari_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -257,7 +255,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewHasil);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMasterFilm";
             this.Text = "Film";
             this.Load += new System.EventHandler(this.FormMasterFilm_Load);
