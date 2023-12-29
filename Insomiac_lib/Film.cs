@@ -71,6 +71,33 @@ namespace Insomiac_lib
         public List<Aktor_Film> ListAktor { get => listAktor; private set => listAktor = value; }
         //public List<Studio> ListStudio { get => listStudio; private set => listStudio = value; }
 
+        public string tampilkanAktor()
+        {
+            string data = "";
+            int count = 1;
+            foreach (Aktor_Film af in BacaDataAktor("","","UTAMA"))
+            {
+                data += af.Atr.Nama;
+                count++;
+                if (count < 2 && BacaDataAktor("", "", "UTAMA").Count!=1) { data += ", "; }
+                else if(count == 2) { data += ",..."; break; }
+            }
+            return data;
+        }
+
+        public string tampilkanGenre()
+        {
+            string data = "";
+            int count = 1;
+            foreach (Genre_Film gr in BacaDataGenre())
+            {
+                data += gr.Gnr.NamaGenre;
+                count++;
+                if(count!= BacaDataGenre().Count) { data += ", "; }
+            }
+            return data;
+        }
+
         public static List<Film> BacaData()
         {
             string perintah = "SELECT * FROM films;";
@@ -141,11 +168,11 @@ namespace Insomiac_lib
             return f;
         }
 
-        public List<Aktor_Film> BacaDataAktor(string idAktor="", string idFilm="")
+        public List<Aktor_Film> BacaDataAktor(string idAktor="", string idFilm="", string peran="")
         {
             List<Aktor_Film> lst = new List<Aktor_Film>();
             string perintah = "SELECT * FROM aktor_film";
-            if (idAktor != "" && idFilm != "")
+            if (idAktor != "" && idFilm != "" && peran!="")
             {
                 perintah += " WHERE aktors_id=" + idAktor + " AND films_id=" + idFilm + ";";
             }
@@ -156,6 +183,10 @@ namespace Insomiac_lib
             else if (idFilm != "")
             {
                 perintah += " WHERE films_id=" + idFilm + ";";
+            }
+            else if (peran != "")
+            {
+                perintah += " WHERE peran=" + peran + ";";
             }
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())

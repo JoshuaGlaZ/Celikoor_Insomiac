@@ -148,6 +148,9 @@ namespace Celikoor_Insomiac
                 Film f = (Film)comboBoxFilm.SelectedItem;
                 labelSinopsis.Text = f.Sinopsis.ToString();
                 labelDurasi.Text = f.Durasi.ToString();
+                labelAktorUtama.Text = f.tampilkanAktor();
+                labelGenre.Text = f.tampilkanGenre();
+                labelKelompok.Text = f.Kelompok.Nama;
             }
         }
 
