@@ -82,7 +82,14 @@ namespace Celikoor_Insomiac
             }
             textBoxCoverPath.Text = currentFilm.CoverPath;
             pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxCover.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + textBoxCoverPath.Text));
+            if (File.Exists(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + textBoxCoverPath.Text)))
+            {
+                pictureBoxCover.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + textBoxCoverPath.Text));
+            }
+            else
+            {
+                MessageBox.Show(currentFilm.CoverPath + " tidak ditemukan");
+            }
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -222,7 +229,7 @@ namespace Celikoor_Insomiac
             OpenFileDialog open = new OpenFileDialog();
             open.Title = "Open Cover Image";
             open.Filter = "Image Files(*.png; *.jpg; *.jpeg; *.gif; *.bmp)|*.png; *.jpg; *.jpeg; *.gif; *.bmp";
-            open.InitialDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            open.InitialDirectory = Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\");
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxCover.SizeMode = PictureBoxSizeMode.StretchImage;

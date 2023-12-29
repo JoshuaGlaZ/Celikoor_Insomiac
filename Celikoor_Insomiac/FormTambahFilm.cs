@@ -79,7 +79,7 @@ namespace Celikoor_Insomiac
             OpenFileDialog open = new OpenFileDialog();
             open.Title = "Open Cover Image";
             open.Filter = "Image Files(*.png; *.jpg; *.jpeg; *.gif; *.bmp)|*.png; *.jpg; *.jpeg; *.gif; *.bmp";
-            open.InitialDirectory = Directory.GetCurrentDirectory();
+            open.InitialDirectory = Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\");
             if (open.ShowDialog() == DialogResult.OK)
             {
                 string fileName = Path.GetFileName(open.FileName);
@@ -113,7 +113,6 @@ namespace Celikoor_Insomiac
                                     radioButtonYes.Checked ? "iya" : "tidak", 
                                     textBoxCoverPath.Text,
                                     double.Parse(textBoxDiskon.Text));
-                    MessageBox.Show(f.Judul, f.IsSubIndo);
                     foreach (DataGridViewRow row in dataGridViewAktor.Rows)
                     {
                         f.AddAktor(new Aktor(int.Parse(row.Cells["ColumnAktorId"].Value.ToString()),

@@ -228,7 +228,7 @@ namespace Insomiac_lib
                         string perintah = "INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa," +
                         "is_sub_indo, cover_image, diskon_nominal) VALUES ('" + f.Judul + "', '" + f.Sinopsis +
                             "', '" + f.Tahun + "', '" + f.Durasi + "', '" + f.Kelompok.Id + "', '" + f.Bahasa + "', '" +
-                            f.IsSubIndo == "iya" ? "1" : "0" + "', '" + f.CoverPath + "', '" + f.Diskon + "');";
+                            (f.IsSubIndo == "iya" ? "1" : "0") + "', '" + f.CoverPath + "', '" + f.Diskon + "');";
                         Koneksi.JalankanPerintah(perintah, k);
                         TambahDataAktor(f, k);
                         TambahDataGenre(f, k);
