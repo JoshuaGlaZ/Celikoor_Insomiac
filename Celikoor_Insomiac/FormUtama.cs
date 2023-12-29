@@ -33,67 +33,7 @@ namespace Celikoor_Insomiac
                 login.ShowDialog();
                 this.WindowState = FormWindowState.Maximized;
 
-                if (konsumenLogin != null)
-                {
-                    toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
-                    cinemaToolStripMenuItem.Visible = false;
-                    pegawaiToolStripMenuItem.Visible = false;
-                    kelompokToolStripMenuItem.Visible = false;
-                    konsumenToolStripMenuItem.Visible = false;
-                    aktorToolStripMenuItem.Visible = false;
-                    genreToolStripMenuItem.Visible = false;
-                    studioToolStripMenuItem.Visible = false;
-                    jenisStudioToolStripMenuItem.Visible = false;
-                    jadwalFilmToolStripMenuItem.Visible = false;
-                    filmToolStripMenuItem.Visible = false;
-                    invoicesToolStripMenuItem.Visible = false;
-                }
-                else if (pegawaiLogin != null)
-                {
-                    toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
-                    if (pegawaiLogin.Roles == "ADMIN")
-                    {
-                        cinemaToolStripMenuItem.Visible = true;
-                        pegawaiToolStripMenuItem.Visible = true;
-                        kelompokToolStripMenuItem.Visible = true;
-                        konsumenToolStripMenuItem.Visible = true;
-                        aktorToolStripMenuItem.Visible = true;
-                        genreToolStripMenuItem.Visible = true;
-                        studioToolStripMenuItem.Visible = true;
-                        jenisStudioToolStripMenuItem.Visible = true;
-                        jadwalFilmToolStripMenuItem.Visible = true;
-                        filmToolStripMenuItem.Visible = true;
-                        invoicesToolStripMenuItem.Visible = true;
-                    }
-                    else if (pegawaiLogin.Roles == "OPERATOR")
-                    {
-                        cinemaToolStripMenuItem.Visible = false;
-                        pegawaiToolStripMenuItem.Visible = false;
-                        kelompokToolStripMenuItem.Visible = false;
-                        konsumenToolStripMenuItem.Visible = false;
-                        aktorToolStripMenuItem.Visible = false;
-                        genreToolStripMenuItem.Visible = false;
-                        studioToolStripMenuItem.Visible = false;
-                        jenisStudioToolStripMenuItem.Visible = false;
-                        jadwalFilmToolStripMenuItem.Visible = false;
-                        filmToolStripMenuItem.Visible = false;
-                        invoicesToolStripMenuItem.Visible = false;
-                    }
-                    else if (pegawaiLogin.Roles == "KASIR")
-                    {
-                        cinemaToolStripMenuItem.Visible = false;
-                        pegawaiToolStripMenuItem.Visible = false;
-                        kelompokToolStripMenuItem.Visible = false;
-                        konsumenToolStripMenuItem.Visible = false;
-                        aktorToolStripMenuItem.Visible = false;
-                        genreToolStripMenuItem.Visible = false;
-                        studioToolStripMenuItem.Visible = false;
-                        jenisStudioToolStripMenuItem.Visible = false;
-                        jadwalFilmToolStripMenuItem.Visible = false;
-                        filmToolStripMenuItem.Visible = false;
-                        invoicesToolStripMenuItem.Visible = true;
-                    }
-                }
+                Akses();
 
                 timerHour_Tick(sender, e);
                 Timer hour = new Timer();
@@ -106,6 +46,80 @@ namespace Celikoor_Insomiac
                 MessageBox.Show("Koneksi gagal. Tidak dapat terhubung ke database" +
                                 "\nError : " + ex.Message, "PERINGATAN!!!");
                 Application.Exit();
+            }
+        }
+
+        private void Akses()
+        {
+
+            if (konsumenLogin != null)
+            {
+                toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
+                cinemaToolStripMenuItem.Visible = false;
+                pegawaiToolStripMenuItem.Visible = false;
+                kelompokToolStripMenuItem.Visible = false;
+                konsumenToolStripMenuItem.Visible = false;
+                aktorToolStripMenuItem.Visible = false;
+                genreToolStripMenuItem.Visible = false;
+                studioToolStripMenuItem.Visible = false;
+                jenisStudioToolStripMenuItem.Visible = false;
+                jadwalFilmToolStripMenuItem.Visible = false;
+                filmToolStripMenuItem.Visible = false;
+                invoicesToolStripMenuItem.Visible = false;
+                pemesananTiketToolStripMenuItem.Visible = true;
+                laporanToolStripMenuItem.Visible = false;
+            }
+            else if (pegawaiLogin != null)
+            {
+                toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
+                if (pegawaiLogin.Roles == "ADMIN")
+                {
+                    cinemaToolStripMenuItem.Visible = true;
+                    pegawaiToolStripMenuItem.Visible = true;
+                    kelompokToolStripMenuItem.Visible = true;
+                    konsumenToolStripMenuItem.Visible = true;
+                    aktorToolStripMenuItem.Visible = true;
+                    genreToolStripMenuItem.Visible = true;
+                    studioToolStripMenuItem.Visible = true;
+                    jenisStudioToolStripMenuItem.Visible = true;
+                    jadwalFilmToolStripMenuItem.Visible = true;
+                    filmToolStripMenuItem.Visible = true;
+                    invoicesToolStripMenuItem.Visible = true;
+                    pemesananTiketToolStripMenuItem.Visible = false;
+                    laporanToolStripMenuItem.Visible = true;
+                }
+                else if (pegawaiLogin.Roles == "OPERATOR")
+                {
+                    cinemaToolStripMenuItem.Visible = false;
+                    pegawaiToolStripMenuItem.Visible = false;
+                    kelompokToolStripMenuItem.Visible = false;
+                    konsumenToolStripMenuItem.Visible = false;
+                    aktorToolStripMenuItem.Visible = false;
+                    genreToolStripMenuItem.Visible = false;
+                    studioToolStripMenuItem.Visible = false;
+                    jenisStudioToolStripMenuItem.Visible = false;
+                    jadwalFilmToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem.Visible = false;
+                    invoicesToolStripMenuItem.Visible = false;
+                    pemesananTiketToolStripMenuItem.Visible = false;
+                    laporanToolStripMenuItem.Visible = false;
+                }
+                else if (pegawaiLogin.Roles == "KASIR")
+                {
+                    cinemaToolStripMenuItem.Visible = false;
+                    pegawaiToolStripMenuItem.Visible = false;
+                    kelompokToolStripMenuItem.Visible = false;
+                    konsumenToolStripMenuItem.Visible = false;
+                    aktorToolStripMenuItem.Visible = false;
+                    genreToolStripMenuItem.Visible = false;
+                    studioToolStripMenuItem.Visible = false;
+                    jenisStudioToolStripMenuItem.Visible = false;
+                    jadwalFilmToolStripMenuItem.Visible = false;
+                    filmToolStripMenuItem.Visible = false;
+                    invoicesToolStripMenuItem.Visible = true;
+                    pemesananTiketToolStripMenuItem.Visible = false;
+                    laporanToolStripMenuItem.Visible = false;
+                }
             }
         }
 
@@ -331,7 +345,27 @@ namespace Celikoor_Insomiac
             }
         }
 
-        private void lAPORANToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pemesananTiketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (konsumenLogin != null)
+            {
+                Form form = Application.OpenForms["FormBeliTiket"];
+                if (form == null)
+                {
+                    FormBeliTiket beliTiket = new FormBeliTiket();
+                    beliTiket.MdiParent = this;
+                    beliTiket.StartPosition = FormStartPosition.CenterParent;
+                    beliTiket.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
+
+        private void laporanToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (pegawaiLogin != null)
             {
@@ -348,6 +382,24 @@ namespace Celikoor_Insomiac
                     form.Show();
                 }
             }
+        }
+
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            konsumenLogin = null;
+            pegawaiLogin = null;
+
+            foreach (Form childForm in this.MdiChildren)
+            {
+                childForm.Close();
+            }
+
+            this.Hide();
+            FormLogin login = new FormLogin();
+            login.Owner = this;
+            login.FormClosed += (l, args) => this.Show();
+            login.ShowDialog();
+            Akses();
         }
     }
 }
