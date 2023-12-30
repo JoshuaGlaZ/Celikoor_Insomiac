@@ -9,7 +9,7 @@
       <Value Profile="(Default)">3306</Value>
     </Setting>
     <Setting Name="dbname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">insomiac</Value>
+      <Value Profile="(Default)">insomniac</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)">root</Value>

@@ -49,7 +49,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("insomiac")]
+        [global::System.Configuration.DefaultSettingValueAttribute("insomniac")]
         public string dbname {
             get {
                 return ((string)(this["dbname"]));
