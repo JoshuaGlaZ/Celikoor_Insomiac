@@ -25,7 +25,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("kresnayangasli.my.id")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string server {
             get {
                 return ((string)(this["server"]));
@@ -37,7 +37,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("55555")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3306")]
         public string port {
             get {
                 return ((string)(this["port"]));
@@ -61,7 +61,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("celikoor")]
+        [global::System.Configuration.DefaultSettingValueAttribute("root")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -73,7 +73,7 @@ namespace Celikoor_Insomiac {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Ins0mi4C")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string password {
             get {
                 return ((string)(this["password"]));
