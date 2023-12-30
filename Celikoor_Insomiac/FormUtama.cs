@@ -352,7 +352,7 @@ namespace Celikoor_Insomiac
                 Form form = Application.OpenForms["FormBeliTiket"];
                 if (form == null)
                 {
-                    FormBeliTiket beliTiket = new FormBeliTiket();
+                    FormBeliTIket beliTiket = new FormBeliTIket();
                     beliTiket.MdiParent = this;
                     beliTiket.StartPosition = FormStartPosition.CenterParent;
                     beliTiket.Show();

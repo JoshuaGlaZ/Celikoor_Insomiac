@@ -174,7 +174,7 @@ namespace Insomiac_lib
             string perintah = "SELECT * FROM aktor_film";
             if (idAktor != "" && idFilm != "" && peran!="")
             {
-                perintah += " WHERE aktors_id=" + idAktor + " AND films_id=" + idFilm + ";";
+                perintah += " WHERE aktors_id=" + idAktor + " AND films_id=" + idFilm + " AND peran=" + peran+ ";";
             }
             else if (idAktor != "")
             {
@@ -186,7 +186,7 @@ namespace Insomiac_lib
             }
             else if (peran != "")
             {
-                perintah += " WHERE peran=" + peran + ";";
+                perintah += " WHERE peran='" + peran + "';";
             }
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
