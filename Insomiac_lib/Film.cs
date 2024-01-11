@@ -367,5 +367,9 @@ namespace Insomiac_lib
                 }
             }
         }
+        public override string ToString()
+        {
+            return Judul; 
+        }
     }
 }

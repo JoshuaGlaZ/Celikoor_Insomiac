@@ -365,25 +365,6 @@ namespace Celikoor_Insomiac
             }
         }
 
-        private void laporanToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            if (pegawaiLogin != null)
-            {
-                Form form = Application.OpenForms["FormLaporan"];
-                if (form == null)
-                {
-                    FormLaporan laporan = new FormLaporan();
-                    laporan.MdiParent = this;
-                    laporan.Show();
-                }
-                else
-                {
-                    form.BringToFront();
-                    form.Show();
-                }
-            }
-        }
-
         private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             konsumenLogin = null;
@@ -400,6 +381,45 @@ namespace Celikoor_Insomiac
             login.FormClosed += (l, args) => this.Show();
             login.ShowDialog();
             Akses();
+        }
+
+        private void fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormLaporanFilmTerlarisPerBulan"];
+                if (form == null)
+                {
+                    FormLaporanFilmTerlarisPerBulan laporan = new FormLaporanFilmTerlarisPerBulan();
+                    laporan.MdiParent = this;
+                    laporan.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
+        }
+
+        private void fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormLaporanFilmBerdasarkanKetidakhadiranPenonton"];
+                if (form == null)
+                {
+                    FormLaporanFilmBerdasarkanKetidakhadiranPenonton laporan = new FormLaporanFilmBerdasarkanKetidakhadiranPenonton();
+                    laporan.MdiParent = this;
+                    laporan.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
         }
     }
 }

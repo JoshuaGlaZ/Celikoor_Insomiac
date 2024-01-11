@@ -58,11 +58,17 @@
     <Compile Include="FormBeliTIket.Designer.cs">
       <DependentUpon>FormBeliTIket.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLaporan.cs">
+    <Compile Include="FormLaporanFilmBerdasarkanKetidakhadiranPenonton.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLaporan.Designer.cs">
-      <DependentUpon>FormLaporan.cs</DependentUpon>
+    <Compile Include="FormLaporanFilmBerdasarkanKetidakhadiranPenonton.Designer.cs">
+      <DependentUpon>FormLaporanFilmBerdasarkanKetidakhadiranPenonton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanFilmTerlarisPerBulan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanFilmTerlarisPerBulan.Designer.cs">
+      <DependentUpon>FormLaporanFilmTerlarisPerBulan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -254,6 +260,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBeliTIket.resx">
       <DependentUpon>FormBeliTIket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanFilmBerdasarkanKetidakhadiranPenonton.resx">
+      <DependentUpon>FormLaporanFilmBerdasarkanKetidakhadiranPenonton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanFilmTerlarisPerBulan.resx">
+      <DependentUpon>FormLaporanFilmTerlarisPerBulan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

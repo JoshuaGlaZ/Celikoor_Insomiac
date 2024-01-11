@@ -59,6 +59,8 @@
     <Compile Include="Kelompok.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />
+    <Compile Include="LaporanFilmKetidakhadiranPenonton.cs" />
+    <Compile Include="LaporanFilmLaris.cs" />
     <Compile Include="Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JenisStudio.cs" />

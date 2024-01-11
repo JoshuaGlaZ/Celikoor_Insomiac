@@ -34,6 +34,7 @@ namespace Celikoor_Insomiac
             this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStripInfo = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemProfile = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripItem = new System.Windows.Forms.MenuStrip();
             this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,9 +47,10 @@ namespace Celikoor_Insomiac
             this.jadwalFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pemesananTiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripInfo.SuspendLayout();
             this.menuStripInfo.SuspendLayout();
             this.menuStripItem.SuspendLayout();
@@ -105,12 +107,21 @@ namespace Celikoor_Insomiac
             this.toolStripMenuItemProfile.Text = "X / Admin";
             this.toolStripMenuItemProfile.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
+            // logOffToolStripMenuItem
+            // 
+            this.logOffToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(59, 33);
+            this.logOffToolStripMenuItem.Text = "Log Off";
+            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
+            // 
             // menuStripItem
             // 
             this.menuStripItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
             this.menuStripItem.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStripItem.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.laporanToolStripMenuItem,
             this.cinemaToolStripMenuItem,
             this.pegawaiToolStripMenuItem,
             this.kelompokToolStripMenuItem,
@@ -122,8 +133,7 @@ namespace Celikoor_Insomiac
             this.jadwalFilmToolStripMenuItem,
             this.filmToolStripMenuItem,
             this.invoicesToolStripMenuItem,
-            this.pemesananTiketToolStripMenuItem,
-            this.laporanToolStripMenuItem});
+            this.pemesananTiketToolStripMenuItem});
             this.menuStripItem.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStripItem.Location = new System.Drawing.Point(0, 37);
             this.menuStripItem.Name = "menuStripItem";
@@ -239,16 +249,6 @@ namespace Celikoor_Insomiac
             this.invoicesToolStripMenuItem.Text = "INVOICES";
             this.invoicesToolStripMenuItem.Click += new System.EventHandler(this.invoicesToolStripMenuItem_Click);
             // 
-            // laporanToolStripMenuItem
-            // 
-            this.laporanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laporanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            this.laporanToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(127, 37);
-            this.laporanToolStripMenuItem.Text = "LAPORAN";
-            this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click_1);
-            // 
             // pemesananTiketToolStripMenuItem
             // 
             this.pemesananTiketToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,13 +259,33 @@ namespace Celikoor_Insomiac
             this.pemesananTiketToolStripMenuItem.Text = "PEMESANAN TIKET";
             this.pemesananTiketToolStripMenuItem.Click += new System.EventHandler(this.pemesananTiketToolStripMenuItem_Click);
             // 
-            // logOffToolStripMenuItem
+            // laporanToolStripMenuItem
             // 
-            this.logOffToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(59, 33);
-            this.logOffToolStripMenuItem.Text = "Log Off";
-            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
+            this.laporanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem,
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem});
+            this.laporanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laporanToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
+            this.laporanToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(127, 41);
+            this.laporanToolStripMenuItem.Text = "LAPORAN";
+            // 
+            // fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem
+            // 
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Name = "fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem";
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Text = "FILM TERLARIS PER BULAN SELAMA 2023";
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Click += new System.EventHandler(this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem_Click);
+            // 
+            // fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem
+            // 
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem.Name = "fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem";
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem.Text = "FILM BERDASARKAN JUMLAH KETIDAKHADIRAN PENONTON";
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem.Click += new System.EventHandler(this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -315,6 +335,8 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.ToolStripMenuItem pemesananTiketToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem;
     }
 }
 
