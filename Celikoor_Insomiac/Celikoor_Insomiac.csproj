@@ -70,6 +70,24 @@
     <Compile Include="FormLaporanFilmTerlarisPerBulan.Designer.cs">
       <DependentUpon>FormLaporanFilmTerlarisPerBulan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLaporanKonsumenBeradasarkanGenreTontonan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanKonsumenBeradasarkanGenreTontonan.Designer.cs">
+      <DependentUpon>FormLaporanKonsumenBeradasarkanGenreTontonan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanPemasukkanCabangDariPenjualanTiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanPemasukkanCabangDariPenjualanTiket.Designer.cs">
+      <DependentUpon>FormLaporanPemasukkanCabangDariPenjualanTiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanStudioBerdasarkanTingkatUtilitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanStudioBerdasarkanTingkatUtilitas.Designer.cs">
+      <DependentUpon>FormLaporanStudioBerdasarkanTingkatUtilitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +284,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLaporanFilmTerlarisPerBulan.resx">
       <DependentUpon>FormLaporanFilmTerlarisPerBulan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanKonsumenBeradasarkanGenreTontonan.resx">
+      <DependentUpon>FormLaporanKonsumenBeradasarkanGenreTontonan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanPemasukkanCabangDariPenjualanTiket.resx">
+      <DependentUpon>FormLaporanPemasukkanCabangDariPenjualanTiket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanStudioBerdasarkanTingkatUtilitas.resx">
+      <DependentUpon>FormLaporanStudioBerdasarkanTingkatUtilitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

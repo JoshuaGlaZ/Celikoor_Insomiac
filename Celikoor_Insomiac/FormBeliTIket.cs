@@ -199,5 +199,10 @@ namespace Celikoor_Insomiac
             Studio std = (Studio)comboBoxStudio.SelectedItem;
             labelHarga.Text = std.Harga_weekday.ToString();
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

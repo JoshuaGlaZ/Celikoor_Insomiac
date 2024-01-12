@@ -1,7 +1,6 @@
-﻿
-namespace Celikoor_Insomiac
+﻿namespace Celikoor_Insomiac
 {
-    partial class FormLaporanFilmBerdasarkanKetidakhadiranPenonton
+    partial class FormLaporanStudioBerdasarkanTingkatUtilitas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +28,12 @@ namespace Celikoor_Insomiac
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBoxBulan = new System.Windows.Forms.ComboBox();
             this.textBoxCari = new System.Windows.Forms.TextBox();
             this.comboBoxUrut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
@@ -46,9 +46,25 @@ namespace Celikoor_Insomiac
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
             // 
+            // comboBoxCari
+            // 
+            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCari.FormattingEnabled = true;
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "Judul",
+            "Jumlah Penonton",
+            "Bulan"});
+            this.comboBoxCari.Location = new System.Drawing.Point(230, 26);
+            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxCari.Name = "comboBoxCari";
+            this.comboBoxCari.Size = new System.Drawing.Size(193, 33);
+            this.comboBoxCari.TabIndex = 19;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
+            this.panel5.Controls.Add(this.comboBoxBulan);
             this.panel5.Controls.Add(this.textBoxCari);
             this.panel5.Controls.Add(this.comboBoxUrut);
             this.panel5.Controls.Add(this.label3);
@@ -60,6 +76,30 @@ namespace Celikoor_Insomiac
             this.panel5.Size = new System.Drawing.Size(1226, 83);
             this.panel5.TabIndex = 34;
             // 
+            // comboBoxBulan
+            // 
+            this.comboBoxBulan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBulan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBulan.FormattingEnabled = true;
+            this.comboBoxBulan.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBoxBulan.Location = new System.Drawing.Point(434, 26);
+            this.comboBoxBulan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxBulan.Name = "comboBoxBulan";
+            this.comboBoxBulan.Size = new System.Drawing.Size(343, 33);
+            this.comboBoxBulan.TabIndex = 23;
+            // 
             // textBoxCari
             // 
             this.textBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,7 +108,6 @@ namespace Celikoor_Insomiac
             this.textBoxCari.Name = "textBoxCari";
             this.textBoxCari.Size = new System.Drawing.Size(344, 30);
             this.textBoxCari.TabIndex = 22;
-            this.textBoxCari.TextChanged += new System.EventHandler(this.textBoxCari_TextChanged);
             // 
             // comboBoxUrut
             // 
@@ -77,13 +116,13 @@ namespace Celikoor_Insomiac
             this.comboBoxUrut.FormattingEnabled = true;
             this.comboBoxUrut.Items.AddRange(new object[] {
             "Judul",
-            "Jumlah Ketidakhadiran Penonton"});
+            "Jumlah Penonton",
+            "Bulan"});
             this.comboBoxUrut.Location = new System.Drawing.Point(1012, 26);
             this.comboBoxUrut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(193, 33);
             this.comboBoxUrut.TabIndex = 21;
-            this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -100,20 +139,6 @@ namespace Celikoor_Insomiac
             this.label3.TabIndex = 20;
             this.label3.Text = "Urut Berdasarkan :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxCari
-            // 
-            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCari.FormattingEnabled = true;
-            this.comboBoxCari.Items.AddRange(new object[] {
-            "Judul",
-            "Jumlah Ketidakhadiran Penonton"});
-            this.comboBoxCari.Location = new System.Drawing.Point(230, 26);
-            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxCari.Name = "comboBoxCari";
-            this.comboBoxCari.Size = new System.Drawing.Size(193, 33);
-            this.comboBoxCari.TabIndex = 19;
             // 
             // label1
             // 
@@ -143,8 +168,9 @@ namespace Celikoor_Insomiac
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1226, 65);
             this.label2.TabIndex = 33;
-            this.label2.Text = "F I L M   B E R D A S A R K A N   K E T I D A K H A D I R A N   P E N O N T O N";
+            this.label2.Text = "T I N G K A T  U T I L I T A S  S T U D I O ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonKeluar
             // 
@@ -225,7 +251,7 @@ namespace Celikoor_Insomiac
             this.dataGridViewHasil.Size = new System.Drawing.Size(1226, 417);
             this.dataGridViewHasil.TabIndex = 27;
             // 
-            // FormLaporanFilmBerdasarkanKetidakhadiranPenonton
+            // FormLaporanStudioBerdasarkanTingkatUtilitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,11 +264,8 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridViewHasil);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FormLaporanFilmBerdasarkanKetidakhadiranPenonton";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Laporan Film Berdasarkan Banyaknya Ketidakhadiran Penonton";
-            this.Load += new System.EventHandler(this.FormLaporanFilmBerdasarkanBanyakKetidakhadiranPenonton_Load);
+            this.Name = "FormLaporanStudioBerdasarkanTingkatUtilitas";
+            this.Text = "FormLaporanStudioBerdasarkanTingkatUtilitas";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
@@ -252,11 +275,12 @@ namespace Celikoor_Insomiac
 
         #endregion
 
+        private System.Windows.Forms.ComboBox comboBoxCari;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox comboBoxBulan;
         private System.Windows.Forms.TextBox textBoxCari;
         private System.Windows.Forms.ComboBox comboBoxUrut;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxCari;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeluar;

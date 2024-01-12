@@ -60,5 +60,10 @@ namespace Celikoor_Insomiac
         {
 
         }
+
+        private void buttonKosongi_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
