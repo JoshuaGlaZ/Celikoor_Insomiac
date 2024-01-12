@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBoxBulan = new System.Windows.Forms.ComboBox();
             this.textBoxCari = new System.Windows.Forms.TextBox();
@@ -46,21 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBoxCari
-            // 
-            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCari.FormattingEnabled = true;
-            this.comboBoxCari.Items.AddRange(new object[] {
-            "Judul",
-            "Jumlah Penonton",
-            "Bulan"});
-            this.comboBoxCari.Location = new System.Drawing.Point(230, 26);
-            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxCari.Name = "comboBoxCari";
-            this.comboBoxCari.Size = new System.Drawing.Size(193, 33);
-            this.comboBoxCari.TabIndex = 19;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
@@ -68,7 +52,6 @@
             this.panel5.Controls.Add(this.textBoxCari);
             this.panel5.Controls.Add(this.comboBoxUrut);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.comboBoxCari);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(24, 105);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -94,11 +77,12 @@
             "October",
             "November",
             "December"});
-            this.comboBoxBulan.Location = new System.Drawing.Point(434, 26);
+            this.comboBoxBulan.Location = new System.Drawing.Point(233, 26);
             this.comboBoxBulan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxBulan.Name = "comboBoxBulan";
-            this.comboBoxBulan.Size = new System.Drawing.Size(343, 33);
+            this.comboBoxBulan.Size = new System.Drawing.Size(544, 33);
             this.comboBoxBulan.TabIndex = 23;
+            this.comboBoxBulan.SelectedIndexChanged += new System.EventHandler(this.comboBoxBulan_SelectedIndexChanged);
             // 
             // textBoxCari
             // 
@@ -115,14 +99,14 @@
             this.comboBoxUrut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUrut.FormattingEnabled = true;
             this.comboBoxUrut.Items.AddRange(new object[] {
-            "Judul",
-            "Jumlah Penonton",
-            "Bulan"});
+            "Tertinggi ",
+            "Terendah"});
             this.comboBoxUrut.Location = new System.Drawing.Point(1012, 26);
             this.comboBoxUrut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(193, 33);
             this.comboBoxUrut.TabIndex = 21;
+            this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -170,7 +154,6 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "T I N G K A T  U T I L I T A S  S T U D I O ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonKeluar
             // 
@@ -266,6 +249,7 @@
             this.Controls.Add(this.dataGridViewHasil);
             this.Name = "FormLaporanStudioBerdasarkanTingkatUtilitas";
             this.Text = "FormLaporanStudioBerdasarkanTingkatUtilitas";
+            this.Load += new System.EventHandler(this.FormLaporanStudioBerdasarkanTingkatUtilitas_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
@@ -274,8 +258,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBoxCari;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox comboBoxBulan;
         private System.Windows.Forms.TextBox textBoxCari;

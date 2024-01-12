@@ -10,57 +10,43 @@ namespace Insomiac_lib
     public class LaporanTingkatUtilitasStudio
     {
         private Studio studio;
+        private Cinema cinema;
         private int jumlahKursiKosong;
         public Studio Studio { get => studio; set => studio = value; }
         public int JumlahKursiKosong { get => jumlahKursiKosong; set => jumlahKursiKosong = value; }
+        public Cinema Cinema { get => cinema; set => cinema = value; }
 
-        public static List<LaporanFilmKetidakhadiranPenonton> BacaData()
+        public static List<LaporanTingkatUtilitasStudio> BacaData(string bulan = "", string order = "Terendah")
         {
-            List<LaporanFilmKetidakhadiranPenonton> listLaporan = new List<LaporanFilmKetidakhadiranPenonton>();
-            string perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Ketidakhadiran Penonton' FROM films f " +
-                    "INNER JOIN tikets t ON f.id = t.films_id WHERE t.status_hadir = 0 GROUP BY f.Judul LIMIT 3;";
-            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            while (msdr.Read())
+            List<LaporanTingkatUtilitasStudio> listLaporan = new List<LaporanTingkatUtilitasStudio>();
+            if(order == "Terendah")
             {
-                LaporanFilmKetidakhadiranPenonton laporan = new LaporanFilmKetidakhadiranPenonton();
-                laporan.Film = Film.BacaData("judul", msdr.GetString(0))[0];
-                laporan.Jumlah_ketidakhadiran_penonton = msdr.GetInt32(1);
-                listLaporan.Add(laporan);
-            }
-            return listLaporan;
-        }
-        public static List<LaporanFilmKetidakhadiranPenonton> BacaData(string kriteria, string nilai, string urut)
-        {
-            List<LaporanFilmKetidakhadiranPenonton> listLaporan = new List<LaporanFilmKetidakhadiranPenonton>();
-            string perintah;
-            if (kriteria != "COUNT(t.films_id)")
-            {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Ketidakhadiran Penonton' FROM films f " +
-                    "INNER JOIN tikets t ON f.id = t.films_id WHERE t.status_hadir = 0 AND " + kriteria + " LIKE '%" + nilai + "%' GROUP BY f.Judul " +
-                    "ORDER BY " + urut + " LIMIT 3;";
-            }
-            else if (string.IsNullOrEmpty(nilai))
-            {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Ketidakhadiran Penonton' FROM films f " +
-                    "INNER JOIN tikets t ON f.id = t.films_id WHERE t.status_hadir = 0 GROUP BY f.Judul " +
-                    "ORDER BY " + urut + " LIMIT 3;";
-            }
+                order = "DESC";
+            } 
             else
             {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Ketidakhadiran Penonton' FROM films f " +
-                    "INNER JOIN tikets t ON f.id = t.films_id WHERE t.status_hadir = 0 GROUP BY f.Judul HAVING " +
-                    kriteria + " = '" + nilai + "' ORDER BY " + urut + " LIMIT 3;";
+                order = "ASC";
             }
-
+            string perintah = "select c.nama_cabang, s.nama, (s.kapasitas - Count(t.nomor_kursi)) as KursiKosong from cinemas c left join studios s on c.id = s.cinemas_id " +
+                   "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id And monthname(i.tanggal) = 'january' " +
+                   "group by c.nama_cabang, s.nama order by KursiKosong "+ order +" LIMIT 3;";
+            if (bulan != "")
+            {
+                perintah = "select c.nama_cabang, s.nama, (s.kapasitas - Count(t.nomor_kursi)) as KursiKosong from cinemas c left join studios s on c.id = s.cinemas_id " +
+                   "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id And monthname(i.tanggal) = '" + bulan + "'" +
+                   "group by c.nama_cabang, s.nama order by KursiKosong " + order + " LIMIT 3;";
+            }
+           
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
-                LaporanFilmKetidakhadiranPenonton laporan = new LaporanFilmKetidakhadiranPenonton();
-                laporan.Film = Film.BacaData("judul", msdr.GetString(0))[0];
-                laporan.Jumlah_ketidakhadiran_penonton = msdr.GetInt32(1);
+                LaporanTingkatUtilitasStudio laporan = new LaporanTingkatUtilitasStudio();
+                laporan.Studio = Studio.BacaData("judul", msdr.GetString(0))[0];
+                laporan.JumlahKursiKosong = msdr.GetInt32(1);
                 listLaporan.Add(laporan);
             }
             return listLaporan;
         }
+        
     }
 }

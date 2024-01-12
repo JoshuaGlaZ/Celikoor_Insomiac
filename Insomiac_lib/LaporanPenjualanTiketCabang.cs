@@ -12,6 +12,17 @@ namespace Insomiac_lib
         private Cinema cabang;
         private int nominalPenjualan;
 
+        public LaporanPenjualanTiketCabang()
+        {
+            this.Cabang = cabang;
+            this.NominalPenjualan = 0;
+        }
+        public LaporanPenjualanTiketCabang(Cinema cabang, int nominalPenjualan)
+        {
+            this.Cabang = cabang;
+            this.NominalPenjualan = nominalPenjualan;
+        }
+
         public Cinema Cabang { get => cabang; set => cabang = value; }
         public int NominalPenjualan { get => nominalPenjualan; set => nominalPenjualan = value; }
 
