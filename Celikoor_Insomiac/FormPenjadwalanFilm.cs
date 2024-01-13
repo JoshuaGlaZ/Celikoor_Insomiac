@@ -26,7 +26,19 @@ namespace Celikoor_Insomiac
 
         private void dataGridViewInput_CellContentClick(object sender, DataGridViewCellEventArgs e) //masih perlu dilengkapi
         {
-            int id = dataGridViewInput.CurrentRow.Index;
+            string tgl = dataGridViewInput.CurrentRow.Cells["Tanggal"].Value.ToString();
+            string jamputar = dataGridViewInput.CurrentRow.Cells["Jam"].Value.ToString();
+            foreach (JadwalFilm jf in ListJF)
+            {
+                if (jf.TanggalPutar.ToString("yyyy-MM-dd") == tgl && jf.JamPemutaran == jamputar) 
+                {
+                    Film_Studio fs = new Film_Studio();
+                    fs.Flm = Film.BacaData("judul", dataGridViewInput.CurrentRow.Cells["Judul Film"].Value.ToString())[0];
+                    jf.ListFS.Remove(fs);
+                    if (jf.ListFS.Count == 0) { ListJF.Remove(jf); }
+                    MessageBox.Show("data berhasil dihapus");
+                }
+            }
             loadDataGrid();
         }
 
