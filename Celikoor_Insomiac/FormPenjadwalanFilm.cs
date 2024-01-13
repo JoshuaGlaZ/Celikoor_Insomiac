@@ -24,7 +24,7 @@ namespace Celikoor_Insomiac
             this.Close();
         }
 
-        private void dataGridViewInput_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewInput_CellContentClick(object sender, DataGridViewCellEventArgs e) //masih perlu dilengkapi
         {
             int id = dataGridViewInput.CurrentRow.Index;
             loadDataGrid();
@@ -54,41 +54,81 @@ namespace Celikoor_Insomiac
 
                     if (checkBoxI.Checked)
                     {
-                        JadwalFilm jf = new JadwalFilm();
-                        jf.TanggalPutar = dateTimePickerTanggal.Value;
-                        jf.JamPemutaran = "I";
-                        PengecekanDouble(jf,fs);
+                        bool check = true;
+                        foreach(JadwalFilm x in ListJF) //mengecek jadwalnya sudah ada atau belum
+                        {
+                            if(x.TanggalPutar==dateTimePickerTanggal.Value && x.JamPemutaran == "I") 
+                            { x.ListFS.Add(fs); check = false; break; }
+                        }
+                        if (check)
+                        {
+                            JadwalFilm jf = new JadwalFilm();
+                            jf.TanggalPutar = dateTimePickerTanggal.Value;
+                            jf.JamPemutaran = "I";
+                            jf.ListFS.Add(fs);
+                        }
                     }
                     if (checkBoxII.Checked)
                     {
-                        JadwalFilm jf = new JadwalFilm();
-                        jf.TanggalPutar = dateTimePickerTanggal.Value;
-                        jf.JamPemutaran = "II";
-                        PengecekanDouble(jf, fs);
+                        bool check = true;
+                        foreach (JadwalFilm x in ListJF) //mengecek jadwalnya sudah ada atau belum
+                        {
+                            if (x.TanggalPutar == dateTimePickerTanggal.Value && x.JamPemutaran == "II")
+                            { x.ListFS.Add(fs); check = false; break; }
+                        }
+                        if (check)
+                        {
+                            JadwalFilm jf = new JadwalFilm();
+                            jf.TanggalPutar = dateTimePickerTanggal.Value;
+                            jf.JamPemutaran = "II";
+                            jf.ListFS.Add(fs);
+                        }
                     }
                     if (checkBoxIII.Checked)
                     {
-                        JadwalFilm jf = new JadwalFilm();
-                        jf.TanggalPutar = dateTimePickerTanggal.Value;
-                        jf.JamPemutaran = "III";
-                        PengecekanDouble(jf, fs);
+                        bool check = true;
+                        foreach (JadwalFilm x in ListJF) //mengecek jadwalnya sudah ada atau belum
+                        {
+                            if (x.TanggalPutar == dateTimePickerTanggal.Value && x.JamPemutaran == "III")
+                            { x.ListFS.Add(fs); check = false; break; }
+                        }
+                        if (check)
+                        {
+                            JadwalFilm jf = new JadwalFilm();
+                            jf.TanggalPutar = dateTimePickerTanggal.Value;
+                            jf.JamPemutaran = "III";
+                            jf.ListFS.Add(fs);
+                        }
                     }
                     if (checkBoxIV.Checked)
                     {
-                        JadwalFilm jf = new JadwalFilm();
-                        jf.TanggalPutar = dateTimePickerTanggal.Value;
-                        jf.JamPemutaran = "IV";
-                        PengecekanDouble(jf, fs);
+                        bool check = true;
+                        foreach (JadwalFilm x in ListJF) //mengecek jadwalnya sudah ada atau belum
+                        {
+                            if (x.TanggalPutar == dateTimePickerTanggal.Value && x.JamPemutaran == "IV")
+                            { x.ListFS.Add(fs); check = false; break; }
+                        }
+                        if (check)
+                        {
+                            JadwalFilm jf = new JadwalFilm();
+                            jf.TanggalPutar = dateTimePickerTanggal.Value;
+                            jf.JamPemutaran = "IV";
+                            jf.ListFS.Add(fs);
+                        }
                     }
+                    loadDataGrid();
                 }
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void buttonSimpan_Click(object sender, EventArgs e) // mungkin perlu dicek lagi
+        private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            
-
+            foreach(JadwalFilm jf in ListJF)
+            {
+                JadwalFilm.masukanData(jf);
+                jf.TambahDataFilmStudio();
+            }
         }
 
         private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
@@ -125,11 +165,6 @@ namespace Celikoor_Insomiac
                 labelHargaWeekday.Text = s.Harga_weekday + " Rp";
                 labelHargaWeekend.Text = s.Harga_weekend + " Rp";
             }
-        }
-
-        private void PengecekanDouble(JadwalFilm jf, Film_Studio fs) //kalau ada data yang double dia nggak masuk
-        {
-            
         }
 
         private void loadDataGrid()

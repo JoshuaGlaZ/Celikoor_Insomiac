@@ -66,21 +66,11 @@ namespace Insomiac_lib
             else { return null; }
         }
 
-        public void TambahFilmStudio(Film_Studio fs)
-        {
-            this.ListFS.Add(fs);
-        }
-
         public void TambahDataFilmStudio()
         {
             foreach (Film_Studio fs in this.ListFS)
             {
-                bool check = true;
-                foreach(Film_Studio x in Film_Studio.BacaData("", "")) //mengecek apakah film studio nya sudah pernah ada
-                {
-                    if(fs.Flm==x.Flm && fs.Std == fs.Std) { check = false; break; }
-                }
-                if (check)
+                if (Film_Studio.BacaData(fs.Std.Id.ToString(), fs.Flm.Id.ToString()).Count==0)
                 {
                     string perintah = "INSERT INTO `insomniac`.`film_studio` (`studios_id`, `films_id`) VALUES ('"+fs.Std.Id+"', '"+fs.Flm.Id+"');";
                     Koneksi.JalankanPerintah(perintah);
@@ -90,6 +80,20 @@ namespace Insomiac_lib
                     "VALUES ('"+this.Id+"', '"+fs.Std.Id+"', '"+fs.Flm.Id+"');";
                 Koneksi.JalankanPerintah(perintah2);
             }
+        }
+
+
+        public void TambahDataFilmStudio(Film_Studio fs)
+        {
+            if (Film_Studio.BacaData(fs.Std.Id.ToString(), fs.Flm.Id.ToString()).Count == 0)
+            {
+                string perintah = "INSERT INTO `insomniac`.`film_studio` (`studios_id`, `films_id`) VALUES ('" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
+                Koneksi.JalankanPerintah(perintah);
+            }
+            string perintah2 = "INSERT INTO `insomniac`.`sesi_films` " +
+                "(`jadwal_film_id`, `studios_id`, `films_id`) " +
+                "VALUES ('" + this.Id + "', '" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
+            Koneksi.JalankanPerintah(perintah2);
         }
 
         public List<Film_Studio> DaftarFilmStudio()
@@ -117,7 +121,7 @@ namespace Insomiac_lib
             Koneksi.JalankanPerintah(perintah2);
         }
 
-        public void UdahJadwalFilm(DateTime tgl, string jamPutar)
+        public void UbahJadwalFilm(DateTime tgl, string jamPutar)
         {
             string perintah = "UPDATE `insomniac`.`jadwal_films` SET `tanggal`='"+tgl.ToString("yyyy-MM-dd")+"', `jam_pemutaran`='"+jamPutar+"' WHERE `id`='"+this.Id+"';";
             Koneksi.JalankanPerintah(perintah);
