@@ -67,10 +67,6 @@ namespace Celikoor_Insomiac
                 buttonFilm.Visible = false;
                 buttonInvoices.Visible = false;
                 buttonTicket.Visible = false;
-                buttonFilmStudio.Visible = false;
-                buttonAktorFilm.Visible = false;
-                buttonSesiFilm.Visible = false;
-                buttonGenreFilm.Visible = false;
                 buttonPesanTicket.Visible = true; buttonPesanTicket.Location = new Point(0, 53);
                 buttonCekTiket.Visible = false;
             }
@@ -91,10 +87,6 @@ namespace Celikoor_Insomiac
                     buttonFilm.Visible = true;
                     buttonInvoices.Visible = true;
                     buttonTicket.Visible = true;
-                    buttonFilmStudio.Visible = true;
-                    buttonAktorFilm.Visible = true;
-                    buttonSesiFilm.Visible = true;
-                    buttonGenreFilm.Visible = true;
                     buttonPesanTicket.Visible = false;
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 672);
                 }
@@ -112,10 +104,6 @@ namespace Celikoor_Insomiac
                     buttonFilm.Visible = false;
                     buttonInvoices.Visible = false;
                     buttonTicket.Visible = false;
-                    buttonFilmStudio.Visible = false;
-                    buttonAktorFilm.Visible = false;
-                    buttonSesiFilm.Visible = false;
-                    buttonGenreFilm.Visible = false;
                     buttonPesanTicket.Visible = false ; 
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 53);
                 }
@@ -378,27 +366,6 @@ namespace Celikoor_Insomiac
         {
 
         }
-
-        private void buttonFilmStudio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAktorFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSesiFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonGenreFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonPesanTicket_Click(object sender, EventArgs e)
         {
             if (konsumenLogin != null)
