@@ -444,5 +444,50 @@
   <ItemGroup>
     <None Include="Resources\test_poster2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pegawai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\konsumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insomiac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cek tiket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesan tiket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jadwal film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jenis studio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kelompok.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
