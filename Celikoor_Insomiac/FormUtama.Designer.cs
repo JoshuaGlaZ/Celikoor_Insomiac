@@ -29,40 +29,132 @@ namespace Celikoor_Insomiac
         /// </summary>
         private void InitializeComponent()
         {
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemLaporan = new System.Windows.Forms.ToolStripMenuItem();
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonCekTiket = new System.Windows.Forms.Button();
+            this.buttonPesanTicket = new System.Windows.Forms.Button();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripInfo = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemProfile = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabelClock = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStripInfo = new System.Windows.Forms.StatusStrip();
-            this.menuStripLaporan = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItemLaporan = new System.Windows.Forms.ToolStripMenuItem();
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelSideBar = new System.Windows.Forms.Panel();
-            this.buttonCekTiket = new System.Windows.Forms.Button();
-            this.buttonPesanTicket = new System.Windows.Forms.Button();
-            this.buttonTicket = new System.Windows.Forms.Button();
+            this.toolStripStatusLabelClock = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonInvoices = new System.Windows.Forms.Button();
             this.buttonFilm = new System.Windows.Forms.Button();
             this.buttonStudio = new System.Windows.Forms.Button();
             this.buttonJadwalFilm = new System.Windows.Forms.Button();
+            this.menuStripLaporan = new System.Windows.Forms.MenuStrip();
+            this.statusStripInfo = new System.Windows.Forms.StatusStrip();
             this.buttonJenisStudio = new System.Windows.Forms.Button();
             this.buttonGenre = new System.Windows.Forms.Button();
             this.buttonAktor = new System.Windows.Forms.Button();
             this.buttonKelompok = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.buttonPegawai = new System.Windows.Forms.Button();
             this.buttonKonsumen = new System.Windows.Forms.Button();
             this.buttonCinema = new System.Windows.Forms.Button();
+            this.panelSideBar = new System.Windows.Forms.Panel();
+            this.buttonPegawai = new System.Windows.Forms.Button();
             this.menuStripInfo.SuspendLayout();
-            this.statusStripInfo.SuspendLayout();
             this.menuStripLaporan.SuspendLayout();
+            this.statusStripInfo.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem
+            // 
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Name = "kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem";
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Text = "KONSUMEN BERDASARKAN TONTONAN GENRE KOMEDI";
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Click += new System.EventHandler(this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem_Click);
+            // 
+            // fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1
+            // 
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Name = "fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1";
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Size = new System.Drawing.Size(433, 22);
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Text = "FILM BERDASARKAN JUMLAH KETIDAKHADIRAN PENONTON";
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Click += new System.EventHandler(this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem_Click);
+            // 
+            // pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem
+            // 
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Name = "pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem";
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Text = "PEMASUKAN CABANG TERBANYAK DARI PENJUALAN TIKET";
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Click += new System.EventHandler(this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem_Click);
+            // 
+            // fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem
+            // 
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.AutoSize = false;
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Name = "fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem";
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Text = "FILM TERLARIS PER BULAN SELAMA 2023";
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Click += new System.EventHandler(this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItemLaporan
+            // 
+            this.toolStripMenuItemLaporan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem,
+            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem,
+            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1,
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem,
+            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem});
+            this.toolStripMenuItemLaporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItemLaporan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.toolStripMenuItemLaporan.Name = "toolStripMenuItemLaporan";
+            this.toolStripMenuItemLaporan.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.toolStripMenuItemLaporan.Size = new System.Drawing.Size(182, 41);
+            this.toolStripMenuItemLaporan.Text = "  LAPORAN               . . .";
+            this.toolStripMenuItemLaporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem
+            // 
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Name = "sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem";
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Text = "STUDIO BERDASARKAN TINGKAT UTILITAS TERENDAH";
+            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Click += new System.EventHandler(this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem_Click);
+            // 
+            // buttonCekTiket
+            // 
+            this.buttonCekTiket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.buttonCekTiket.FlatAppearance.BorderSize = 0;
+            this.buttonCekTiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCekTiket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCekTiket.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCekTiket.Image = global::Celikoor_Insomiac.Properties.Resources.cek_tiket;
+            this.buttonCekTiket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCekTiket.Location = new System.Drawing.Point(0, 528);
+            this.buttonCekTiket.Name = "buttonCekTiket";
+            this.buttonCekTiket.Size = new System.Drawing.Size(183, 30);
+            this.buttonCekTiket.TabIndex = 44;
+            this.buttonCekTiket.Text = "  CEK TIKET";
+            this.buttonCekTiket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCekTiket.UseVisualStyleBackColor = false;
+            this.buttonCekTiket.Click += new System.EventHandler(this.buttonCekTiket_Click);
+            // 
+            // buttonPesanTicket
+            // 
+            this.buttonPesanTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.buttonPesanTicket.FlatAppearance.BorderSize = 0;
+            this.buttonPesanTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPesanTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPesanTicket.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPesanTicket.Image = global::Celikoor_Insomiac.Properties.Resources.pesan_tiket;
+            this.buttonPesanTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPesanTicket.Location = new System.Drawing.Point(0, 492);
+            this.buttonPesanTicket.Name = "buttonPesanTicket";
+            this.buttonPesanTicket.Size = new System.Drawing.Size(183, 30);
+            this.buttonPesanTicket.TabIndex = 43;
+            this.buttonPesanTicket.Text = "  PESAN TICKET";
+            this.buttonPesanTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPesanTicket.UseVisualStyleBackColor = false;
+            this.buttonPesanTicket.Click += new System.EventHandler(this.buttonPesanTicket_Click);
             // 
             // logOffToolStripMenuItem
             // 
@@ -99,183 +191,17 @@ namespace Celikoor_Insomiac
             this.toolStripMenuItemProfile.Text = "X / Admin";
             this.toolStripMenuItemProfile.Click += new System.EventHandler(this.toolStripMenuItemProfile_Click);
             // 
-            // toolStripStatusLabelClock
-            // 
-            this.toolStripStatusLabelClock.Name = "toolStripStatusLabelClock";
-            this.toolStripStatusLabelClock.Size = new System.Drawing.Size(77, 17);
-            this.toolStripStatusLabelClock.Text = "dd/MM/yyyy";
-            // 
             // toolStripStatusLabelTime
             // 
             this.toolStripStatusLabelTime.Name = "toolStripStatusLabelTime";
             this.toolStripStatusLabelTime.Size = new System.Drawing.Size(63, 17);
             this.toolStripStatusLabelTime.Text = "hh/mm/ss";
             // 
-            // statusStripInfo
+            // toolStripStatusLabelClock
             // 
-            this.statusStripInfo.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStripInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelClock,
-            this.toolStripStatusLabelTime});
-            this.statusStripInfo.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStripInfo.Location = new System.Drawing.Point(0, 712);
-            this.statusStripInfo.Name = "statusStripInfo";
-            this.statusStripInfo.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStripInfo.Size = new System.Drawing.Size(1013, 22);
-            this.statusStripInfo.TabIndex = 27;
-            this.statusStripInfo.Text = "statusStrip1";
-            // 
-            // menuStripLaporan
-            // 
-            this.menuStripLaporan.AutoSize = false;
-            this.menuStripLaporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.menuStripLaporan.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStripLaporan.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStripLaporan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemLaporan});
-            this.menuStripLaporan.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStripLaporan.Location = new System.Drawing.Point(0, 53);
-            this.menuStripLaporan.Name = "menuStripLaporan";
-            this.menuStripLaporan.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStripLaporan.Size = new System.Drawing.Size(183, 46);
-            this.menuStripLaporan.TabIndex = 31;
-            this.menuStripLaporan.Text = "menuStrip2";
-            // 
-            // toolStripMenuItemLaporan
-            // 
-            this.toolStripMenuItemLaporan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem,
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem,
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1,
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem,
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem});
-            this.toolStripMenuItemLaporan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemLaporan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.toolStripMenuItemLaporan.Name = "toolStripMenuItemLaporan";
-            this.toolStripMenuItemLaporan.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.toolStripMenuItemLaporan.Size = new System.Drawing.Size(182, 41);
-            this.toolStripMenuItemLaporan.Text = "  LAPORAN               . . .";
-            this.toolStripMenuItemLaporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem
-            // 
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.AutoSize = false;
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Name = "fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem";
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Text = "FILM TERLARIS PER BULAN SELAMA 2023";
-            this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem.Click += new System.EventHandler(this.fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem_Click);
-            // 
-            // pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem
-            // 
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Name = "pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem";
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Text = "PEMASUKAN CABANG TERBANYAK DARI PENJUALAN TIKET";
-            this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem.Click += new System.EventHandler(this.pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem_Click);
-            // 
-            // fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1
-            // 
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Name = "fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1";
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Size = new System.Drawing.Size(433, 22);
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Text = "FILM BERDASARKAN JUMLAH KETIDAKHADIRAN PENONTON";
-            this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1.Click += new System.EventHandler(this.fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem_Click);
-            // 
-            // sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem
-            // 
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Name = "sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem";
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Text = "STUDIO BERDASARKAN TINGKAT UTILITAS TERENDAH";
-            this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem.Click += new System.EventHandler(this.sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem_Click);
-            // 
-            // kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem
-            // 
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Name = "kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem";
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Size = new System.Drawing.Size(433, 22);
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Text = "KONSUMEN BERDASARKAN TONTONAN GENRE KOMEDI";
-            this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem.Click += new System.EventHandler(this.kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem_Click);
-            // 
-            // panelSideBar
-            // 
-            this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.panelSideBar.Controls.Add(this.buttonCekTiket);
-            this.panelSideBar.Controls.Add(this.buttonPesanTicket);
-            this.panelSideBar.Controls.Add(this.buttonTicket);
-            this.panelSideBar.Controls.Add(this.buttonInvoices);
-            this.panelSideBar.Controls.Add(this.buttonFilm);
-            this.panelSideBar.Controls.Add(this.buttonStudio);
-            this.panelSideBar.Controls.Add(this.buttonJadwalFilm);
-            this.panelSideBar.Controls.Add(this.menuStripLaporan);
-            this.panelSideBar.Controls.Add(this.buttonJenisStudio);
-            this.panelSideBar.Controls.Add(this.buttonGenre);
-            this.panelSideBar.Controls.Add(this.buttonAktor);
-            this.panelSideBar.Controls.Add(this.buttonKelompok);
-            this.panelSideBar.Controls.Add(this.button2);
-            this.panelSideBar.Controls.Add(this.buttonPegawai);
-            this.panelSideBar.Controls.Add(this.buttonKonsumen);
-            this.panelSideBar.Controls.Add(this.buttonCinema);
-            this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(183, 712);
-            this.panelSideBar.TabIndex = 29;
-            // 
-            // buttonCekTiket
-            // 
-            this.buttonCekTiket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.buttonCekTiket.FlatAppearance.BorderSize = 0;
-            this.buttonCekTiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCekTiket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCekTiket.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonCekTiket.Image = global::Celikoor_Insomiac.Properties.Resources.cek_tiket;
-            this.buttonCekTiket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCekTiket.Location = new System.Drawing.Point(0, 564);
-            this.buttonCekTiket.Name = "buttonCekTiket";
-            this.buttonCekTiket.Size = new System.Drawing.Size(183, 30);
-            this.buttonCekTiket.TabIndex = 44;
-            this.buttonCekTiket.Text = "  CEK TIKET";
-            this.buttonCekTiket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCekTiket.UseVisualStyleBackColor = false;
-            this.buttonCekTiket.Click += new System.EventHandler(this.buttonCekTiket_Click);
-            // 
-            // buttonPesanTicket
-            // 
-            this.buttonPesanTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.buttonPesanTicket.FlatAppearance.BorderSize = 0;
-            this.buttonPesanTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPesanTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPesanTicket.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPesanTicket.Image = global::Celikoor_Insomiac.Properties.Resources.pesan_tiket;
-            this.buttonPesanTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPesanTicket.Location = new System.Drawing.Point(0, 528);
-            this.buttonPesanTicket.Name = "buttonPesanTicket";
-            this.buttonPesanTicket.Size = new System.Drawing.Size(183, 30);
-            this.buttonPesanTicket.TabIndex = 43;
-            this.buttonPesanTicket.Text = "  PESAN TICKET";
-            this.buttonPesanTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPesanTicket.UseVisualStyleBackColor = false;
-            this.buttonPesanTicket.Click += new System.EventHandler(this.buttonPesanTicket_Click);
-            // 
-            // buttonTicket
-            // 
-            this.buttonTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.buttonTicket.FlatAppearance.BorderSize = 0;
-            this.buttonTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTicket.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicket.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTicket.Image = global::Celikoor_Insomiac.Properties.Resources.ticket;
-            this.buttonTicket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTicket.Location = new System.Drawing.Point(0, 492);
-            this.buttonTicket.Name = "buttonTicket";
-            this.buttonTicket.Size = new System.Drawing.Size(183, 30);
-            this.buttonTicket.TabIndex = 36;
-            this.buttonTicket.Text = "  TICKET";
-            this.buttonTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTicket.UseVisualStyleBackColor = false;
-            this.buttonTicket.Click += new System.EventHandler(this.buttonTicket_Click);
+            this.toolStripStatusLabelClock.Name = "toolStripStatusLabelClock";
+            this.toolStripStatusLabelClock.Size = new System.Drawing.Size(77, 17);
+            this.toolStripStatusLabelClock.Text = "dd/MM/yyyy";
             // 
             // buttonInvoices
             // 
@@ -348,6 +274,36 @@ namespace Celikoor_Insomiac
             this.buttonJadwalFilm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonJadwalFilm.UseVisualStyleBackColor = false;
             this.buttonJadwalFilm.Click += new System.EventHandler(this.buttonJadwalFilm_Click);
+            // 
+            // menuStripLaporan
+            // 
+            this.menuStripLaporan.AutoSize = false;
+            this.menuStripLaporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.menuStripLaporan.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStripLaporan.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStripLaporan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemLaporan});
+            this.menuStripLaporan.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStripLaporan.Location = new System.Drawing.Point(0, 53);
+            this.menuStripLaporan.Name = "menuStripLaporan";
+            this.menuStripLaporan.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStripLaporan.Size = new System.Drawing.Size(183, 46);
+            this.menuStripLaporan.TabIndex = 31;
+            this.menuStripLaporan.Text = "menuStrip2";
+            // 
+            // statusStripInfo
+            // 
+            this.statusStripInfo.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStripInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelClock,
+            this.toolStripStatusLabelTime});
+            this.statusStripInfo.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.statusStripInfo.Location = new System.Drawing.Point(0, 712);
+            this.statusStripInfo.Name = "statusStripInfo";
+            this.statusStripInfo.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
+            this.statusStripInfo.Size = new System.Drawing.Size(1013, 22);
+            this.statusStripInfo.TabIndex = 27;
+            this.statusStripInfo.Text = "statusStrip1";
             // 
             // buttonJenisStudio
             // 
@@ -441,24 +397,6 @@ namespace Celikoor_Insomiac
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // buttonPegawai
-            // 
-            this.buttonPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
-            this.buttonPegawai.FlatAppearance.BorderSize = 0;
-            this.buttonPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPegawai.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPegawai.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPegawai.Image = global::Celikoor_Insomiac.Properties.Resources.pegawai;
-            this.buttonPegawai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPegawai.Location = new System.Drawing.Point(0, 168);
-            this.buttonPegawai.Name = "buttonPegawai";
-            this.buttonPegawai.Size = new System.Drawing.Size(183, 30);
-            this.buttonPegawai.TabIndex = 25;
-            this.buttonPegawai.Text = "  PEGAWAI";
-            this.buttonPegawai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPegawai.UseVisualStyleBackColor = false;
-            this.buttonPegawai.Click += new System.EventHandler(this.buttonPegawai_Click);
-            // 
             // buttonKonsumen
             // 
             this.buttonKonsumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
@@ -496,6 +434,48 @@ namespace Celikoor_Insomiac
             this.buttonCinema.UseVisualStyleBackColor = false;
             this.buttonCinema.Click += new System.EventHandler(this.buttonCinema_Click);
             // 
+            // panelSideBar
+            // 
+            this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.panelSideBar.Controls.Add(this.buttonCekTiket);
+            this.panelSideBar.Controls.Add(this.buttonPesanTicket);
+            this.panelSideBar.Controls.Add(this.buttonInvoices);
+            this.panelSideBar.Controls.Add(this.buttonFilm);
+            this.panelSideBar.Controls.Add(this.buttonStudio);
+            this.panelSideBar.Controls.Add(this.buttonJadwalFilm);
+            this.panelSideBar.Controls.Add(this.menuStripLaporan);
+            this.panelSideBar.Controls.Add(this.buttonJenisStudio);
+            this.panelSideBar.Controls.Add(this.buttonGenre);
+            this.panelSideBar.Controls.Add(this.buttonAktor);
+            this.panelSideBar.Controls.Add(this.buttonKelompok);
+            this.panelSideBar.Controls.Add(this.button2);
+            this.panelSideBar.Controls.Add(this.buttonPegawai);
+            this.panelSideBar.Controls.Add(this.buttonKonsumen);
+            this.panelSideBar.Controls.Add(this.buttonCinema);
+            this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideBar.Location = new System.Drawing.Point(0, 0);
+            this.panelSideBar.Name = "panelSideBar";
+            this.panelSideBar.Size = new System.Drawing.Size(183, 712);
+            this.panelSideBar.TabIndex = 29;
+            // 
+            // buttonPegawai
+            // 
+            this.buttonPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(71)))), ((int)(((byte)(94)))));
+            this.buttonPegawai.FlatAppearance.BorderSize = 0;
+            this.buttonPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPegawai.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPegawai.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPegawai.Image = global::Celikoor_Insomiac.Properties.Resources.pegawai;
+            this.buttonPegawai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPegawai.Location = new System.Drawing.Point(0, 168);
+            this.buttonPegawai.Name = "buttonPegawai";
+            this.buttonPegawai.Size = new System.Drawing.Size(183, 30);
+            this.buttonPegawai.TabIndex = 25;
+            this.buttonPegawai.Text = "  PEGAWAI";
+            this.buttonPegawai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPegawai.UseVisualStyleBackColor = false;
+            this.buttonPegawai.Click += new System.EventHandler(this.buttonPegawai_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,10 +493,10 @@ namespace Celikoor_Insomiac
             this.Load += new System.EventHandler(this.FormUtama_Load);
             this.menuStripInfo.ResumeLayout(false);
             this.menuStripInfo.PerformLayout();
-            this.statusStripInfo.ResumeLayout(false);
-            this.statusStripInfo.PerformLayout();
             this.menuStripLaporan.ResumeLayout(false);
             this.menuStripLaporan.PerformLayout();
+            this.statusStripInfo.ResumeLayout(false);
+            this.statusStripInfo.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -525,35 +505,34 @@ namespace Celikoor_Insomiac
 
         #endregion
 
+        private System.Windows.Forms.ToolStripMenuItem kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLaporan;
+        private System.Windows.Forms.ToolStripMenuItem sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem;
+        private System.Windows.Forms.Button buttonCekTiket;
+        private System.Windows.Forms.Button buttonPesanTicket;
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripInfo;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemProfile;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelClock;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelTime;
-        private System.Windows.Forms.StatusStrip statusStripInfo;
-        private System.Windows.Forms.Button buttonCinema;
-        private System.Windows.Forms.Button buttonKonsumen;
-        private System.Windows.Forms.Button buttonPegawai;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonKelompok;
-        private System.Windows.Forms.Button buttonAktor;
-        private System.Windows.Forms.Button buttonGenre;
-        private System.Windows.Forms.Button buttonJenisStudio;
-        private System.Windows.Forms.MenuStrip menuStripLaporan;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLaporan;
-        private System.Windows.Forms.ToolStripMenuItem fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pEMASUKANCABANGDARIPENJUALANTIKETToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fILMBERDASARKANJUMLAHKETIDAKHADIRANPENONTONToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sTUDIOBERDASARKANTINGKATUTILITASTERENDAHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kONSUMENBERDASARKANTONTONANGENREKOMEDIToolStripMenuItem;
-        private System.Windows.Forms.Button buttonJadwalFilm;
-        private System.Windows.Forms.Button buttonStudio;
-        private System.Windows.Forms.Button buttonFilm;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelClock;
         private System.Windows.Forms.Button buttonInvoices;
-        private System.Windows.Forms.Button buttonTicket;
-        private System.Windows.Forms.Button buttonPesanTicket;
-        private System.Windows.Forms.Button buttonCekTiket;
+        private System.Windows.Forms.Button buttonFilm;
+        private System.Windows.Forms.Button buttonStudio;
+        private System.Windows.Forms.Button buttonJadwalFilm;
+        private System.Windows.Forms.MenuStrip menuStripLaporan;
+        private System.Windows.Forms.StatusStrip statusStripInfo;
+        private System.Windows.Forms.Button buttonJenisStudio;
+        private System.Windows.Forms.Button buttonGenre;
+        private System.Windows.Forms.Button buttonAktor;
+        private System.Windows.Forms.Button buttonKelompok;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonKonsumen;
+        private System.Windows.Forms.Button buttonCinema;
         private System.Windows.Forms.Panel panelSideBar;
+        private System.Windows.Forms.Button buttonPegawai;
     }
 }
 

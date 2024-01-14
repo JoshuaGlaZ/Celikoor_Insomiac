@@ -362,10 +362,6 @@ namespace Celikoor_Insomiac
             }
         }
 
-        private void buttonTicket_Click(object sender, EventArgs e)
-        {
-
-        }
         private void buttonPesanTicket_Click(object sender, EventArgs e)
         {
             if (konsumenLogin != null)
@@ -481,6 +477,91 @@ namespace Celikoor_Insomiac
                     form.Show();
                 }
             }
+        }
+
+        private void buttonGenreFilm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSesiFilm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAktorFilm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFilmStudio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aktorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jenisStudioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jadwalFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void invoicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pemesananTiketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
