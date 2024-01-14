@@ -34,13 +34,13 @@ namespace Celikoor_Insomiac
 
         private void comboBoxBulan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            filterPencarian()
+            filterPencarian();
 
         }
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
         {
-            filterPencarian()
+            filterPencarian();
         }
 
         private void filterPencarian()

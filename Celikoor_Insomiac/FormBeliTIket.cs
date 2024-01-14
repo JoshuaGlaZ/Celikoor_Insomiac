@@ -32,8 +32,8 @@ namespace Celikoor_Insomiac
             comboBoxStudio.DataSource = listStudios;
             comboBoxStudio.DisplayMember = "Studio";
 
-            List<Sesi_Film> listSesi = Sesi_Film.bacaData("", "");
-            comboBoxTanggal.DataSource = listSesi;
+            //List<Sesi_Film> listSesi = Sesi_Film.bacaData("", "");
+            //comboBoxTanggal.DataSource = listSesi;
             comboBoxTanggal.DisplayMember = "tanggal";
 
 
