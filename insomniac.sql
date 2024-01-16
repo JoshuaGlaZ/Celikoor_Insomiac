@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MariaDB dump 10.19  Distrib 10.6.12-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: kresnayangasli.my.id    Database: insomiac
+-- Host: localhost    Database: insomniac
 -- ------------------------------------------------------
--- Server version	5.5.5-10.9.8-MariaDB-1:10.9.8+maria~ubu2204
+-- Server version	10.6.12-MariaDB-0ubuntu0.22.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -58,7 +58,7 @@ CREATE TABLE `aktors` (
   `gender` enum('L','P') NOT NULL,
   `negara_asal` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `aktors` (
 
 LOCK TABLES `aktors` WRITE;
 /*!40000 ALTER TABLE `aktors` DISABLE KEYS */;
-INSERT INTO `aktors` VALUES (1,'Andi Setiawan','1980-01-05','L','Indonesia'),(2,'Budi Raharjo','1975-02-10','L','Indonesia'),(3,'Citra Kirana','1988-03-15','P','Indonesia'),(4,'Dian Sastrowardoyo','1990-04-20','P','Indonesia'),(5,'Eko Yuli','1985-05-25','L','Indonesia'),(6,'Fitri Tropica','1983-06-30','P','Indonesia'),(7,'Galih Ginanjar','1978-07-05','L','Indonesia'),(8,'Hilda Vitria','1987-08-10','P','Indonesia'),(9,'Irfan Hakim','1979-09-15','L','Indonesia'),(10,'Jessica Iskandar','1982-10-20','P','Indonesia'),(11,'Kiki Fatmala','1981-11-25','P','Indonesia'),(12,'Luna Maya','1986-12-30','P','Indonesia'),(13,'Mario Lawalata','1984-01-04','L','Indonesia'),(14,'Nia Ramadhani','1989-02-09','P','Indonesia'),(15,'Olla Ramlan','1977-03-15','P','Indonesia'),(16,'Pevita Pearce','1992-04-19','P','Indonesia'),(17,'Raffi Ahmad','1983-05-24','L','Indonesia'),(18,'Syahrini','1985-06-29','P','Indonesia'),(19,'Titi Kamal','1979-07-04','P','Indonesia'),(20,'Ussy Sulistiawaty','1981-08-09','P','Indonesia');
+INSERT INTO `aktors` VALUES (1,'Tobey Maguire','1975-06-27','L','Amerika Serikat'),(2,'Kirsten Dunst','1982-04-30','P','Amerika Serikat'),(3,'Willem Dafoe','1955-07-22','L','Amerika Serikat'),(4,'James Franco','1978-04-19','L','Amerika Serikat'),(5,'Cliff Robertson','1923-09-09','L','Amerika Serikat'),(6,'Rosemary Harris','1927-09-19','P','Inggris'),(7,'Alfred Molina','1953-05-24','L','Inggris'),(8,'J.K. Simmons','1955-01-09','L','Amerika Serikat'),(9,'Donna Murphy','1959-03-07','P','Amerika Serikat'),(10,'Daniel Gillies','1976-03-14','L','Kanada'),(11,'Topher Grace','1978-07-12','L','Amerika Serikat'),(12,'Thomas Haden Church','1960-06-17','L','Amerika Serikat'),(13,'James Cromwell','1940-01-27','L','Amerika Serikat'),(14,'Theresa Russell','1957-03-20','P','Amerika Serikat'),(15,'Dylan Baker','1959-10-07','L','Amerika Serikat'),(16,'Andrew Garfield','1983-08-20','L','Amerika Serikat'),(17,'Emma Stone','1988-11-06','P','Amerika Serikat'),(18,'Rhys Ifans','1967-07-22','L','Inggris'),(19,'Irrfan Khan','1967-01-07','L','India'),(20,'Denis Leary','1957-08-18','L','Amerika Serikat'),(21,'Jamie Foxx','1967-12-13','L','Amerika Serikat'),(22,'Paul Giamatti','1967-06-06','L','Amerika Serikat'),(23,'Dane DeHaan','1986-02-06','L','Amerika Serikat'),(24,'Colm Feore','1958-08-22','L','Amerika Serikat'),(25,'Sally Field','1946-11-06','P','Amerika Serikat'),(26,'Tom Holland','1996-06-01','L','Inggris'),(27,'Michael Keaton','1951-09-05','L','Amerika Serikat'),(28,'Marisa Tomei','1964-12-04','P','Amerika Serikat'),(29,'Jon Favreau','1966-10-19','L','Amerika Serikat'),(30,'Gwyneth Paltrow','1972-09-27','P','Amerika Serikat'),(31,'Jake Gyllenhaal','1980-12-09','L','Amerika Serikat'),(32,'Zendaya','1996-09-01','P','Amerika Serikat'),(33,'Jacob Batalon','1996-09-09','L','Amerika Serikat'),(34,'Tony Revolori','1996-04-28','L','Amerika Serikat'),(35,'Angourie Rice','2001-01-01','P','Australia'),(36,'Benedict Cumberbatch','1976-07-19','L','Inggris'),(37,'Benedict Wong','1971-07-03','L','Inggris'),(38,'Arian Moayed','1980-04-15','L','Amerika Serikat'),(39,'Paula Newsome','1961-10-07','P','Amerika Serikat'),(40,'Hannibal Buress','1983-02-04','L','Amerika Serikat'),(41,'Chris Evans','1981-06-13','L','Amerika Serikat'),(42,'Hugo Weaving','1960-04-04','L','Nigeria'),(43,'Hayley Atwell','1982-04-05','P','Amerika Serikat'),(44,'Sebastian Stan','1982-08-13','L','Romania'),(45,'Dominic Cooper','1978-06-02','L','Inggris'),(46,'Scarlett Johansson','1984-11-22','P','Amerika Serikat'),(47,'Robert Redford','1936-08-18','L','Amerika Serikat'),(48,'Anthony Mackie','1978-09-23','L','Amerika Serikat'),(49,'Cobie Smulders','1982-04-03','P','Inggris'),(50,'Frank Grillo','1965-06-08','L','Amerika Serikat'),(51,'Jeremy Renner','1971-01-07','L','Amerika Serikat'),(52,'Chadwick Boseman','1976-11-29','L','Amerika Serikat'),(53,'Elizabeth Olsen','1989-02-16','P','Amerika Serikat'),(54,'Paul Rudd','1969-04-06','L','Amerika Serikat'),(55,'Paul Bettany','1971-05-27','L','Inggris'),(56,'Robert Downey Jr.','1965-04-04','L','Amerika Serikat'),(57,'Gwyneth Paltrow','1972-09-27','P','Amerika Serikat'),(58,'Terrence Howard','1969-03-11','L','Amerika Serikat'),(59,'Jeff Bridges','1949-12-04','L','Amerika Serikat'),(60,'Leslie Bibb','1974-11-17','P','Amerika Serikat'),(61,'Mickey Rourke','1952-09-16','L','Amerika Serikat'),(62,'Don Cheadle','1964-11-29','L','Amerika Serikat'),(63,'Sam Rockwell','1968-11-05','L','Amerika Serikat'),(64,'Clark Gregg','1962-04-02','L','Amerika Serikat'),(65,'Garry Shandling','1949-11-29','L','Amerika Serikat'),(66,'Guy Pearce','1967-10-05','L','Inggris'),(67,'Rebecca Hall','1982-05-03','P','Inggris'),(68,'Ben Kingsley','1943-12-31','L','Inggris'),(69,'James Badge Dale','1978-05-01','L','Amerika Serikat'),(70,'Stephanie Szostak','1975-08-05','P','Amerika Serikat'),(71,'Chris Hemsworth','1983-08-11','L','Australia'),(72,'Anthony Hopkins','1937-12-31','L','Inggris'),(73,'Natalie Portman','1981-06-09','P','Amerika Serikat'),(74,'Tom Hiddleston','1981-02-09','L','Inggris'),(75,'Stellan Skarsgård','1951-06-13','L','Swedia'),(76,'Christopher Eccleston','1964-02-16','L','Inggris'),(77,'Jaimie Alexander','1984-03-12','P','Amerika Serikat'),(78,'Zachary Levi','1980-09-29','L','Amerika Serikat'),(79,'Ray Stevenson','1964-05-25','L','Inggris'),(80,'Idris Elba','1972-09-06','L','Inggris'),(81,'Cate Blanchett','1969-05-14','P','Australia'),(82,'Jeff Goldblum','1952-10-22','L','Amerika Serikat'),(83,'Tessa Thompson','1983-10-03','P','Amerika Serikat'),(84,'Karl Urban','1972-06-07','L','Selandia Baru'),(85,'Tadanobu Asano','1973-11-27','L','Jepang'),(86,'Christian Bale','1974-01-30','L','Inggris'),(87,'Russell Crowe','1964-04-07','L','Selandia Baru'),(88,'Chris Pratt','1979-06-21','L','Amerika Serikat'),(89,'Dave Bautista','1969-01-18','L','Amerika Serikat'),(90,'Brett Goldstein','1980-07-17','L','Inggris'),(91,'Mark Ruffalo','1967-11-22','L','Amerika Serikat'),(92,'Samuel L. Jackson','1948-12-21','L','Amerika Serikat'),(93,'Alexis Denisof','1966-02-25','L','Amerika Serikat'),(94,'Jerzy Skolimowski','1938-05-05','L','Polandia'),(95,'Kirill Nikiforov','1980-07-09','L','Russia'),(96,'James Spader','1960-02-07','L','Amerika Serikat'),(97,'Aaron Taylor-Johnson','1990-06-13','L','Inggris'),(98,'Linda Cardellini','1975-06-25','P','Amerika Serikat'),(99,'Claudia Kim','1985-01-25','P','Korea'),(100,'Stan Lee','1922-12-28','L','Amerika Serikat'),(101,'Zoe Saldana','1978-06-19','P','Amerika Serikat'),(102,'Karen Gillan','1987-11-28','P','Inggris'),(103,'Danai Gurira','1978-02-14','P','Amerika Serikat'),(104,'Peter Dinklage','1969-06-11','L','Amerika Serikat'),(105,'Pom Klementieff','1986-05-03','P','Prancis'),(106,'Brie Larson','1989-10-01','P','Amerika Serikat'),(107,'Evangeline Lilly','1979-08-03','P','Kanada'),(108,'Rene Russo','1954-02-17','P','Amerika Serikat'),(109,'John Slattery','1962-08-13','L','Amerika Serikat'),(110,'Tilda Swinton','1960-11-05','P','Inggris');
 /*!40000 ALTER TABLE `aktors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +81,7 @@ DROP TABLE IF EXISTS `cinemas`;
 CREATE TABLE `cinemas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama_cabang` varchar(45) NOT NULL,
-  `alamat` varchar(45) NOT NULL,
+  `alamat` varchar(75) NOT NULL,
   `tgl_dibuka` date NOT NULL,
   `kota` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
@@ -94,7 +94,7 @@ CREATE TABLE `cinemas` (
 
 LOCK TABLES `cinemas` WRITE;
 /*!40000 ALTER TABLE `cinemas` DISABLE KEYS */;
-INSERT INTO `cinemas` VALUES (1,'Cinema Central','Jl. Merdeka No. 1','2010-06-15','Jakarta'),(2,'Starlight Theater','Jl. Raya Surya Kencana No. 23','2012-03-20','Bandung'),(3,'Galaxy Cinema','Jl. Ahmad Yani No. 45','2015-11-02','Surabaya'),(4,'Dreamland Cinema','Jl. Diponegoro No. 17','2013-07-18','Yogyakarta'),(5,'Mega Screen Cinemas','Jl. Sudirman No. 56','2014-09-10','Semarang'),(6,'Premiere Cinema Complex','Jl. Pahlawan No. 71','2016-12-05','Malang'),(7,'Fantasy Theater','Jl. Majapahit No. 88','2011-08-24','Denpasar'),(8,'Royal Cinema Palace','Jl. Pattimura No. 32','2017-05-30','Makassar'),(9,'Eclipse Movie House','Jl. Gatot Subroto No. 21','2019-01-15','Medan'),(10,'Silver Screen Cinemax','Jl. Hasanuddin No. 18','2018-04-08','Palembang'),(11,'Harmony Cinema','Jl. Sisingamangaraja No. 47','2020-07-22','Pekanbaru'),(12,'Sunshine Theater','Jl. Jendral Sudirman No. 99','2019-10-14','Balikpapan'),(13,'Cineplex 21','Jl. A. Yani No. 12','2021-02-11','Samarinda'),(14,'Grand Theater','Jl. Khatulistiwa No. 34','2017-06-19','Pontianak'),(15,'Metro Cinema','Jl. Merapi No. 22','2016-09-27','Manado'),(16,'Paradise Cinema','Jl. Palapa No. 63','2018-12-31','Jayapura'),(17,'Cinema One','Jl. Letjen S. Parman No. 11','2014-02-15','Bekasi'),(18,'Luxe Movie Theater','Jl. Imam Bonjol No. 78','2015-08-03','Tangerang'),(19,'Aurora Cinemas','Jl. Kalimantan No. 5','2020-03-29','Banjarmasin'),(20,'Horizon Cinema','Jl. Sumatra No. 14','2019-05-20','Batam');
+INSERT INTO `cinemas` VALUES (1,'Tunjungan XXI','Jl. Basuki Rahmat No.8-12','2015-08-12','Surabaya'),(2,'Galaxy XXI','Galaxy Mall 1, Jl. Dr. Ir. H. Soekarno No.35-39','2019-09-30','Surabaya'),(3,'Delta XXI','Plaza Surabaya, Jl. Pemuda No.31-37 Lt. 5','2019-10-10','Surabaya'),(4,'Grand City XXI','Lantai 4 Grand City, Jl. Walikota Mustajab No.1','2013-05-12','Surabaya'),(5,'PTC XXI','Pakuwon Trade Center, Jl. Puncak Indah Lontar II No.2 lt.1','2015-08-12','Surabaya'),(6,'Cinema XXI - Ciputra World','Ciputra World, Jl. Mayjen Sungkono No.89 Lantai 4','2012-03-12','Surabaya'),(7,'XXI Premiere Lenmarc','LenMarc Lt. 4, Jl. Mayjend. Jonosewojo No.9','2012-08-25','Surabaya'),(8,'XXI - Tunjungan Plaza 5','Tunjungan Plaza 5, Jl. Embong Malang No.32-36','2017-07-02','Surabaya'),(9,'Pakuwon City XXI','Pakuwon City, Jl. Raya Laguna KJW Putih Tambak No.17','2018-08-15','Surabaya'),(10,'CGV Cinemas BG Junction','BG Junction Mall, Jl. Bubutan No.1 - 7','2017-08-22','Surabaya'),(11,'Transmart Ngagel XXI','Jl. Ngagel','2015-12-16','Surabaya'),(12,'Pakuwon Mall XXI','Pakuwon Mall, Jl. Puncak Indah Lontar No.2','2012-09-06','Surabaya'),(13,'Royal XXI','Royal Plaza, Jl. Achmad Yani No.16-18 Lt. 3','2014-06-17','Surabaya'),(14,'Cinepolis','Jl. Ahmad Yani No.288','2018-02-17','Surabaya'),(15,'CGV Cinemas Maspion','Jl. Ahmad Yani No.73','2015-08-14','Surabaya'),(16,'CGV Marvell City','Marvell City Mall, Jl. Ngagel No.123 Lt. 3','2012-08-13','Surabaya'),(17,'The Premiere - XXI Grand City Mall','Jl. Walikota Mustajab No.1','2013-11-12','Surabaya'),(18,'Transmart Rungkut XXI','Transmart Rungkut, Jl. Raya Kalirungkut No.23-25','2013-02-26','Surabaya'),(19,'Movimax Kaza','Kaza Mall, Jl. Kapas Krampung No.45 Lantai 3','2020-10-09','Surabaya'),(20,'Trans Icon Mall XXI','Jl. Ahmad Yani, Gayungan','2019-03-04','Surabaya');
 /*!40000 ALTER TABLE `cinemas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +122,6 @@ CREATE TABLE `film_studio` (
 
 LOCK TABLES `film_studio` WRITE;
 /*!40000 ALTER TABLE `film_studio` DISABLE KEYS */;
-INSERT INTO `film_studio` VALUES (1,2),(1,5),(1,10),(4,1),(4,4),(4,6),(4,7);
 /*!40000 ALTER TABLE `film_studio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +146,7 @@ CREATE TABLE `films` (
   PRIMARY KEY (`id`),
   KEY `fk_films_kelompoks1_idx` (`kelompoks_id`),
   CONSTRAINT `fk_films_kelompoks1` FOREIGN KEY (`kelompoks_id`) REFERENCES `kelompoks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,7 +155,7 @@ CREATE TABLE `films` (
 
 LOCK TABLES `films` WRITE;
 /*!40000 ALTER TABLE `films` DISABLE KEYS */;
-INSERT INTO `films` VALUES (1,'xxx','xxx',1999,1,1,'CHN',1,'xxx',1),(2,'yyy','yyy',1999,1,1,'ID',1,'yyy',1),(3,'zzz','zzz',1999,1,1,'EN',1,'zzz',1),(4,'Mystery of the Ancient','Sebuah petualangan untuk menemukan kebenaran di balik mitos kuno.',2021,120,2,'EN',1,'cover4.jpg',10000),(5,'Rise of the Robot','Pertarungan epik antara manusia dan robot di masa depan.',2022,135,3,'EN',0,'cover5.jpg',15000),(6,'The Lost Kingdom','Penemuan kerajaan tersembunyi yang mengubah sejarah.',2020,110,1,'EN',1,'cover6.jpg',12000),(7,'Underwater Secrets','Ekspedisi bawah laut yang menemukan misteri tak terduga.',2019,95,2,'EN',0,'cover7.jpg',8000),(8,'Shadows in the Mist','Investigasi supernatural di sebuah desa terpencil.',2021,135,4,'EN',1,'cover8.jpg',13000),(9,'Heart of the Jungle','Petualangan epik dalam hutan belantara yang belum terjamah.',2018,120,2,'EN',0,'cover9.jpg',10000),(10,'Rising Storm','Kisah heroik dalam menghadapi bencana alam dahsyat.',2020,110,3,'EN',1,'cover10.jpg',12000),(11,'Quantum Leap','Penemuan ilmiah yang mengubah cara pandang manusia terhadap realitas.',2022,145,4,'EN',0,'cover11.jpg',14000),(12,'Ancient Secrets','Membongkar misteri peradaban kuno yang telah hilang.',2021,130,1,'EN',1,'cover12.jpg',11000),(13,'Urban Legends','Cerita menegangkan dari mitos perkotaan modern.',2023,100,2,'EN',0,'cover13.jpg',9000),(14,'Galactic Odyssey','Penjelajahan luar angkasa yang menantang dan penuh misteri.',2024,150,3,'EN',1,'cover14.jpg',16000),(15,'The Last Kingdom','Perebutan kekuasaan di kerajaan yang terancam runtuh.',2020,140,4,'EN',0,'cover15.jpg',13000),(16,'Beyond the Horizon','Perjalanan menakjubkan ke ujung dunia.',2022,110,1,'EN',1,'cover16.jpg',10000),(17,'The Enigma Code','Dekripsi kode rahasia yang bisa mengubah jalannya perang.',2023,135,2,'EN',0,'cover17.jpg',12000),(18,'Whispers in the Dark','Kisah horor psikologis yang mencekam.',2019,125,3,'EN',1,'cover18.jpg',11000),(19,'The Lost Artifact','Pencarian artefak kuno yang sarat dengan sejarah dan kekuatan.',2021,150,4,'EN',0,'cover19.jpg',15000),(20,'Invisible Threat','Misi mengungkap ancaman tersembunyi yang mengancam umat manusia.',2020,120,1,'EN',1,'cover20.jpg',10000),(21,'Echoes from the Past','Penyelidikan misteri masa lalu yang menghantui sebuah kota.',2022,115,2,'EN',0,'cover21.jpg',9500),(22,'The Last Expedition','Ekspedisi berbahaya ke wilayah tak dikenal.',2024,140,3,'EN',1,'cover22.jpg',13000),(23,'Shadow of Doubt','Thriller psikologis tentang pencarian kebenaran dalam jaringan konspirasi.',2021,130,4,'EN',0,'cover23.jpg',12500),(24,'Galactic Battles','Perang antargalaksi dengan efek visual yang menakjubkan.',2021,140,3,'EN',1,'cover24.jpg',20000),(25,'Desert Mirage','Petualangan di padang pasir yang menguji batas manusia.',2023,130,4,'EN',0,'cover25.jpg',18000),(26,'Anak Tiri','Jadi begini... Tamat',2021,180,4,'ID',1,'test_poster1.png',90),(27,'Hmmm','Bla bla bla bla',1009,19,3,'OTH',0,'test_poster2.png',200);
+INSERT INTO `films` VALUES (1,'Spider-Man','',2002,121,2,'EN',1,'Spider-Man.png',60),(2,'Spider-Man 2','',2004,127,2,'EN',1,'Spider-Man 2.png',45),(3,'Spider-Man 3','',2007,139,2,'EN',1,'Spider-Man 3.png',39),(4,'The Amazing Spider-Man','',2012,136,2,'EN',1,'The Amazing Spider-Man.png',28),(5,'The Amazing Spider-Man 2','',2014,142,2,'EN',1,'The Amazing Spider-Man 2.png',22),(6,'Spider-Man: Homecoming','',2017,133,2,'EN',1,'Spider-Man - Homecoming.png',30),(7,'Spider-Man: Far from Home','',2019,129,2,'EN',1,'Spider-Man - Far from Home.png',15),(8,'Spider-Man: No Way Home','',2021,148,2,'EN',1,'Spider-Man - No Way Home.png',10),(9,'Captain America: The First Avenger','',2011,124,2,'EN',1,'Captain America - The First Avenger.png',29),(10,'Captain America: The Winter Soldier','',2014,136,2,'EN',1,'Captain America - The Winter Soldier.png',11),(11,'Captain America: Civil War','',2016,147,2,'EN',1,'Captain America - Civil War.png',10),(12,'Iron Man','',2008,126,2,'EN',1,'Iron Man.png',12),(13,'Iron Man 2','',2010,124,2,'EN',1,'Iron Man 2.png',8),(14,'Iron Man 3','',2013,130,2,'EN',1,'Iron Man 3.png',14),(15,'Thor','',2011,115,2,'EN',1,'Thor.png',6),(16,'Thor: The Dark World','',2013,112,2,'EN',1,'Thor - The Dark World.png',10),(17,'Thor: Ragnarok','',2017,130,2,'EN',1,'Thor - Ragnarok.png',27),(18,'Thor: Love and Thunder','',2022,118,2,'EN',1,'Thor - Love and Thunder.png',42),(19,'The Avengers','',2012,143,2,'EN',1,'The Avengers.png',32),(20,'Avengers: Age of Ultron','',2015,141,2,'EN',1,'Avengers - Age of Ultron.png',13),(21,'Avengers: Infinity War','',2018,149,2,'EN',1,'Avengers - Infinity War.png',25),(22,'Avengers: Endgame','',2019,181,2,'EN',1,'Avengers - Endgame.png',30),(23,'Shadow of Doubt','Thriller psikologis tentang pencarian kebenaran dalam jaringan konspirasi.',2021,130,4,'EN',0,'cover23.jpg',12500),(24,'Galactic Battles','Perang antargalaksi dengan efek visual yang menakjubkan.',2021,140,3,'EN',1,'cover24.jpg',20000),(25,'Desert Mirage','Petualangan di padang pasir yang menguji batas manusia.',2023,130,4,'EN',0,'cover25.jpg',18000),(26,'Anak Tiri','Jadi begini... Tamat',2021,180,4,'ID',1,'test_poster1.png',90),(27,'Hmmm','Bla bla bla bla',1009,19,3,'OTH',0,'test_poster2.png',200),(28,'Spider-Man','',2002,121,2,'EN',1,'Spider-Man.png',60);
 /*!40000 ALTER TABLE `films` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,9 +197,9 @@ DROP TABLE IF EXISTS `genres`;
 CREATE TABLE `genres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) NOT NULL,
-  `deskripsi` varchar(45) DEFAULT NULL,
+  `deskripsi` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +208,7 @@ CREATE TABLE `genres` (
 
 LOCK TABLES `genres` WRITE;
 /*!40000 ALTER TABLE `genres` DISABLE KEYS */;
-INSERT INTO `genres` VALUES (1,'Misteri','Film yang penuh teka-teki dan investigasi.'),(2,'Komedi','Film humor yang menghibur penonton.'),(3,'Drama','Film berfokus pengembangan karakter.'),(4,'Fantasi','Film yang mengandung elemen fantastis.'),(5,'Horor','Film yang bertujuan menimbulkan ketakutan.'),(6,'Romantis','Film yang berkisah tentang cinta.'),(7,'Sci-Fi','Film yang berbasis pada ilmu pengetahuan.'),(8,'Thriller','Film dengan ketegangan tinggi.'),(9,'Dokumenter','Film yang menggambarkan peristiwa nyata.'),(10,'Musikal','Film yang mengandung unsur musik.'),(11,'Kriminal','Film yang berkisah tentang kejahatan.'),(12,'War','Film yang menceritakan tentang perang.'),(13,'Sejarah','Film yang berbasis pada peristiwa nyata.'),(14,'Misteri','Film yang penuh teka-teki dan investigasi.'),(15,'test','test aja bang'),(16,'Terserah','Terserah');
+INSERT INTO `genres` VALUES (1,'Action','Film yang menekankan pada urutan adegan seru dan energik, sering kali melibatkan adegan kejar-kejaran, pertarungan, dan ledakan.'),(2,'Adventure','Film yang berfokus pada petualangan heroik, sering kali di latar belakang eksotis atau tempat-tempat yang jauh.'),(3,'Comedy','Genre yang tujuannya menghibur penonton dengan humor, sering melibatkan situasi konyol atau dialog lucu.'),(4,'Drama','Film yang berfokus pada pengembangan karakter dan interaksi emosional, sering menggambarkan situasi kehidupan yang realistis.'),(5,'Fantasy','Genre yang mencakup unsur-unsur supranatural dan magis, sering berlatar di dunia yang sepenuhnya imajinatif.'),(6,'Horror','Film yang bertujuan menimbulkan rasa takut, sering dengan unsur supernatural atau psikologis yang menegangkan.'),(7,'Mystery','Genre yang melibatkan penyelidikan suatu misteri, sering mengandung plot yang rumit dan berakhir dengan twist yang mengejutkan.'),(8,'Romance','Film yang berpusat pada hubungan cinta antara karakter, menekankan pada emosi dan hubungan romantis.'),(9,'Sci-Fi','Genre yang mengeksplorasi dampak ilmu pengetahuan dan teknologi, sering berlatar di masa depan atau di dunia alternatif.'),(10,'Thriller','Film yang membangun ketegangan dan suspense, sering melibatkan konflik yang harus diatasi oleh protagonis.'),(11,'Documentary','Film non-fiksi yang memberikan informasi tentang suatu subjek, orang, atau peristiwa, sering digunakan untuk mendidik atau membawa kesadaran.'),(12,'Biography','Film yang menceritakan kehidupan seseorang, sering berdasarkan tokoh nyata dan peristiwa bersejarah.'),(13,'Animation','Film yang dibuat dengan animasi, bisa dalam berbagai bentuk seperti kartun, CGI, atau stop motion, menargetkan semua usia.');
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -280,9 +279,9 @@ DROP TABLE IF EXISTS `jenis_studios`;
 CREATE TABLE `jenis_studios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(45) NOT NULL,
-  `deskripsi` varchar(45) DEFAULT NULL,
+  `deskripsi` varchar(355) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -291,7 +290,7 @@ CREATE TABLE `jenis_studios` (
 
 LOCK TABLES `jenis_studios` WRITE;
 /*!40000 ALTER TABLE `jenis_studios` DISABLE KEYS */;
-INSERT INTO `jenis_studios` VALUES (1,'super ultra deluxe sss','xxx'),(2,'super ultra mega premium','bagus');
+INSERT INTO `jenis_studios` VALUES (1,'Reguler / Deluxe','Menawarkan pengalaman menonton dengan teknologi digital dan kualitas audio bersertifikat THX, dilengkapi dengan sofa yang empuk untuk kenyamanan penonton​​​​.'),(2,'Dolby Atmos','Menyuguhkan pengalaman audio yang imersif dengan total 64 speaker yang terhubung ke Atmos enabled amplifier, memungkinkan suara yang realistis dan pengalaman menonton yang mendalam​​​​.'),(3,'IMAX','Khusus dengan teknologi kamera IMAX untuk film yang diproduksi secara spesifik, memberikan gambar maksimal dan pengalaman audiovisual yang sangat mendetail​​.'),(4,'The Premiere / Velvet Class','Menawarkan pengalaman menonton eksklusif dengan sofa kulit yang sangat empuk, dilengkapi dengan layanan pemesanan makanan di tempat, menciptakan suasana yang mewah dan elegan​​.'),(5,'3D','Memungkinkan penonton untuk menikmati film dengan efek visual tiga dimensi, memberikan sensasi yang lebih hidup dan memasukkan penonton ke dalam aksi film​​.'),(6,'Gold Class','Pengalaman menonton terbaik dengan layanan pelanggan maksimal, nuansa premium dan pribadi di bioskop.'),(7,'Velvet Class','Rasakan konsep Sofa Bed pertama di Bioskop Indonesia, pengalaman menonton film dengan kenyamanan dan kemudahan terbaik. Dengan pelayanan pelanggan maksimal, nuansa premium dan privasi di dalam bioskop.'),(8,'Satin Class','Kenyamanan kelas gold tanpa menguras dompet Anda. Pengalaman premium yang terjangkau.'),(9,'Sweetbox','Fitur baru yang dirancang khusus untuk dua orang dengan kursi yang nyaman dan luas kini hadir di CGV.'),(10,'4DX','Auditorium khusus untuk pengalaman lima indera, di mana dapat merasakan berbagai efek lingkungan yang sesuai dengan film. Lebih dari sekadar menonton film, penonton dapat merasakan seolah-olah mereka adalah karakter utama dalam film tersebut, dan efek 4DX yang memaksimalkan kehidupan setiap adegan memungkinkan penonton untuk lebih tenggelam dalam film.'),(11,'ScreenX','Auditorium proyeksi multi-layar pertama di dunia yang menyediakan imersi maksimum melampaui batas layar. Melampaui layar menjadi ruang!\r\n'),(12,'Starium','Layar dengan skala yang memukau semua indera, kualitas gambar yang sangat jernih, dan suara menggelegar dari 16 kanal.'),(13,'SphereX','Teknologi sinematik terbaik dalam Layar, Suara, dan Kursi. Nikmati layar lengkung yang memukau dalam kursi yang dapat direbahkan dan rasakan efek dari sistem suara yang memenuhi ruangan.');
 /*!40000 ALTER TABLE `jenis_studios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -315,7 +314,7 @@ CREATE TABLE `kelompoks` (
 
 LOCK TABLES `kelompoks` WRITE;
 /*!40000 ALTER TABLE `kelompoks` DISABLE KEYS */;
-INSERT INTO `kelompoks` VALUES (1,'Film Semua Umur (SU)'),(2,'Film 13+'),(3,'Film 17+'),(4,'Film 21+');
+INSERT INTO `kelompoks` VALUES (1,'Semua Umur (SU)'),(2,'13+'),(3,'17+'),(4,'21+');
 /*!40000 ALTER TABLE `kelompoks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -403,7 +402,6 @@ CREATE TABLE `sesi_films` (
 
 LOCK TABLES `sesi_films` WRITE;
 /*!40000 ALTER TABLE `sesi_films` DISABLE KEYS */;
-INSERT INTO `sesi_films` VALUES (12,1,10);
 /*!40000 ALTER TABLE `sesi_films` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -427,7 +425,7 @@ CREATE TABLE `studios` (
   KEY `fk_studios_cinemas1_idx` (`cinemas_id`),
   CONSTRAINT `fk_studios_cinemas1` FOREIGN KEY (`cinemas_id`) REFERENCES `cinemas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_studios_jenis_studios` FOREIGN KEY (`jenis_studios_id`) REFERENCES `jenis_studios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -436,7 +434,7 @@ CREATE TABLE `studios` (
 
 LOCK TABLES `studios` WRITE;
 /*!40000 ALTER TABLE `studios` DISABLE KEYS */;
-INSERT INTO `studios` VALUES (1,'xxx',1,1,1,1,1),(4,'emejing',500,2,2,3000000,5000000),(6,'12',22,2,3,211,21111);
+INSERT INTO `studios` VALUES (1,'1',64,2,4,45000,70000),(2,'2',24,1,6,40000,70000),(3,'3',24,1,6,40000,70000),(4,'4',64,2,9,50000,70000),(5,'5',24,1,9,40000,70000),(6,'6',64,2,9,50000,70000),(7,'A',84,2,7,30000,60000),(8,'B',64,1,7,40000,70000),(9,'C',64,1,7,40000,70000),(10,'D',48,2,7,30000,60000),(11,'E',48,2,7,35000,70000);
 /*!40000 ALTER TABLE `studios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -484,4 +482,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-30 16:28:36
+-- Dump completed on 2024-01-17  1:11:37
