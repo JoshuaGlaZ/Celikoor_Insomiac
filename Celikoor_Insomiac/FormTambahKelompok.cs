@@ -20,10 +20,17 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            Kelompok k = new Kelompok();
-            k.Nama = textBoxNama.Text;
-            Kelompok.TambahData(k);
-            MessageBox.Show("Data kelompok berhasil ditambahkan");
+            try
+            {
+                Kelompok k = new Kelompok();
+                k.Nama = textBoxNama.Text;
+                Kelompok.TambahData(k);
+                MessageBox.Show("Data kelompok berhasil ditambahkan");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Data " + ex.Message + " belum diisi");
+            }
         }
 
         private void buttonKosongi_Click(object sender, EventArgs e)

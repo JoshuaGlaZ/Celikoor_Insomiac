@@ -30,6 +30,7 @@ namespace Celikoor_Insomiac
                 else if (textBoxEmail.Text == "") { throw new Exception("Email"); }
                 else if (textBoxNoHp.Text == "") { throw new Exception("No Hp"); }
                 else if (textBoxUsername.Text == "") { throw new Exception("Username"); }
+                else if (textBoxPassword.Text == "") { throw new Exception("Password"); }
                 else if (Konsumen.CheckUmur(monthCalendarTanggalLahir.SelectionStart) < 3) 
                 { MessageBox.Show("Umur tidak cukup"); }
                 else if (radioButtonLakilaki.Checked == false && radioButtonPerempuan.Checked == false) 
