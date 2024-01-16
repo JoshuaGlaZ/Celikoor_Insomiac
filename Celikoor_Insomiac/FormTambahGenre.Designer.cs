@@ -154,10 +154,10 @@ namespace Celikoor_Insomiac
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 268);
             this.Controls.Add(this.buttonKeluar);
+            this.Controls.Add(this.textBoxDeskripsi);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxDeskripsi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.label6);

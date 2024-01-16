@@ -1,7 +1,7 @@
 ﻿
 namespace Celikoor_Insomiac
 {
-    partial class FormTambahStudio
+    partial class FormUbahStudio
     {
         /// <summary>
         /// Required designer variable.
@@ -53,61 +53,61 @@ namespace Celikoor_Insomiac
             this.textBoxHargaWeekend.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxHargaWeekend.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHargaWeekend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxHargaWeekend.Location = new System.Drawing.Point(185, 246);
+            this.textBoxHargaWeekend.Location = new System.Drawing.Point(186, 249);
             this.textBoxHargaWeekend.Name = "textBoxHargaWeekend";
             this.textBoxHargaWeekend.Size = new System.Drawing.Size(164, 29);
-            this.textBoxHargaWeekend.TabIndex = 173;
+            this.textBoxHargaWeekend.TabIndex = 189;
             this.textBoxHargaWeekend.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 213);
+            this.label4.Location = new System.Drawing.Point(50, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 21);
-            this.label4.TabIndex = 172;
+            this.label4.TabIndex = 188;
             this.label4.Text = "Harga Weekday :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(106, 178);
+            this.label13.Location = new System.Drawing.Point(107, 181);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 21);
-            this.label13.TabIndex = 171;
+            this.label13.TabIndex = 187;
             this.label13.Text = "Cinema :";
             // 
             // comboBoxCinema
             // 
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(185, 181);
+            this.comboBoxCinema.Location = new System.Drawing.Point(186, 184);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCinema.Name = "comboBoxCinema";
             this.comboBoxCinema.Size = new System.Drawing.Size(164, 21);
-            this.comboBoxCinema.TabIndex = 170;
+            this.comboBoxCinema.TabIndex = 186;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(77, 143);
+            this.label12.Location = new System.Drawing.Point(78, 146);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(99, 21);
-            this.label12.TabIndex = 169;
+            this.label12.TabIndex = 185;
             this.label12.Text = "Jenis Studio :";
             // 
             // comboBoxJenisStudio
             // 
             this.comboBoxJenisStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJenisStudio.FormattingEnabled = true;
-            this.comboBoxJenisStudio.Location = new System.Drawing.Point(186, 146);
+            this.comboBoxJenisStudio.Location = new System.Drawing.Point(187, 149);
             this.comboBoxJenisStudio.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxJenisStudio.Name = "comboBoxJenisStudio";
             this.comboBoxJenisStudio.Size = new System.Drawing.Size(163, 21);
-            this.comboBoxJenisStudio.TabIndex = 168;
+            this.comboBoxJenisStudio.TabIndex = 184;
             // 
             // numericUpDownKapasitas
             // 
@@ -117,7 +117,7 @@ namespace Celikoor_Insomiac
             0,
             0,
             0});
-            this.numericUpDownKapasitas.Location = new System.Drawing.Point(186, 114);
+            this.numericUpDownKapasitas.Location = new System.Drawing.Point(187, 117);
             this.numericUpDownKapasitas.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownKapasitas.Maximum = new decimal(new int[] {
             84,
@@ -131,7 +131,7 @@ namespace Celikoor_Insomiac
             0});
             this.numericUpDownKapasitas.Name = "numericUpDownKapasitas";
             this.numericUpDownKapasitas.Size = new System.Drawing.Size(163, 20);
-            this.numericUpDownKapasitas.TabIndex = 167;
+            this.numericUpDownKapasitas.TabIndex = 183;
             this.numericUpDownKapasitas.Value = new decimal(new int[] {
             4,
             0,
@@ -145,13 +145,13 @@ namespace Celikoor_Insomiac
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(276, 311);
+            this.buttonKeluar.Location = new System.Drawing.Point(277, 314);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
-            this.buttonKeluar.TabIndex = 166;
+            this.buttonKeluar.TabIndex = 182;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            this.buttonKeluar.Click += new System.EventHandler(this.buttonBatal_Click);
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonKosongi
             // 
@@ -160,10 +160,10 @@ namespace Celikoor_Insomiac
             this.buttonKosongi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKosongi.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKosongi.Location = new System.Drawing.Point(144, 311);
+            this.buttonKosongi.Location = new System.Drawing.Point(145, 314);
             this.buttonKosongi.Name = "buttonKosongi";
             this.buttonKosongi.Size = new System.Drawing.Size(118, 45);
-            this.buttonKosongi.TabIndex = 165;
+            this.buttonKosongi.TabIndex = 181;
             this.buttonKosongi.Text = "KOSONGI";
             this.buttonKosongi.UseVisualStyleBackColor = false;
             this.buttonKosongi.Click += new System.EventHandler(this.buttonKosongi_Click);
@@ -175,22 +175,22 @@ namespace Celikoor_Insomiac
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSimpan.Location = new System.Drawing.Point(12, 311);
+            this.buttonSimpan.Location = new System.Drawing.Point(13, 314);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(118, 45);
-            this.buttonSimpan.TabIndex = 164;
+            this.buttonSimpan.TabIndex = 180;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
-            this.buttonSimpan.Click += new System.EventHandler(this.buttonTambah_Click);
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(49, 249);
+            this.label7.Location = new System.Drawing.Point(50, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 21);
-            this.label7.TabIndex = 163;
+            this.label7.TabIndex = 179;
             this.label7.Text = "Harga Weekend :";
             // 
             // textBoxHargaWeekday
@@ -198,30 +198,30 @@ namespace Celikoor_Insomiac
             this.textBoxHargaWeekday.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxHargaWeekday.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHargaWeekday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxHargaWeekday.Location = new System.Drawing.Point(186, 210);
+            this.textBoxHargaWeekday.Location = new System.Drawing.Point(187, 213);
             this.textBoxHargaWeekday.Name = "textBoxHargaWeekday";
             this.textBoxHargaWeekday.Size = new System.Drawing.Size(163, 29);
-            this.textBoxHargaWeekday.TabIndex = 162;
+            this.textBoxHargaWeekday.TabIndex = 178;
             this.textBoxHargaWeekday.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 110);
+            this.label3.Location = new System.Drawing.Point(95, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 21);
-            this.label3.TabIndex = 161;
+            this.label3.TabIndex = 177;
             this.label3.Text = "Kapasitas :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 77);
+            this.label2.Location = new System.Drawing.Point(69, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 21);
-            this.label2.TabIndex = 160;
+            this.label2.TabIndex = 176;
             this.label2.Text = "Nama Studio : ";
             // 
             // textBoxNama
@@ -229,10 +229,10 @@ namespace Celikoor_Insomiac
             this.textBoxNama.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxNama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.textBoxNama.Location = new System.Drawing.Point(186, 74);
+            this.textBoxNama.Location = new System.Drawing.Point(187, 77);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(163, 29);
-            this.textBoxNama.TabIndex = 159;
+            this.textBoxNama.TabIndex = 175;
             this.textBoxNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -240,14 +240,14 @@ namespace Celikoor_Insomiac
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Location = new System.Drawing.Point(13, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(382, 42);
-            this.label6.TabIndex = 158;
-            this.label6.Text = "T A M B A H   S T U D I O";
+            this.label6.TabIndex = 174;
+            this.label6.Text = "U B A H   S T U D I O";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormTambahStudio
+            // FormUbahStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,11 +269,9 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.textBoxNama);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormTambahStudio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormTambahStudio";
-            this.Load += new System.EventHandler(this.FormTambahStudio_Load);
+            this.Name = "FormUbahStudio";
+            this.Text = "FormUbahStudio";
+            this.Load += new System.EventHandler(this.FormUbahStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKapasitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

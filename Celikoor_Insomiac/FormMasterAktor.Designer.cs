@@ -182,7 +182,6 @@ namespace Celikoor_Insomiac
             "ID",
             "Nama",
             "Tanggal Lahir",
-            "Gender (L/P)",
             "Negara Asal"});
             this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";

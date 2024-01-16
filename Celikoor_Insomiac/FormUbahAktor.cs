@@ -24,6 +24,7 @@ namespace Celikoor_Insomiac
             textBoxNama.Text = aktorUbah.Nama;
             textBoxNegara.Text = aktorUbah.NegaraAsal;
             monthCalendarTanggalLahir.SelectionStart = aktorUbah.TglLahir;
+            monthCalendarTanggalLahir.MaxSelectionCount = 1;
             radioButtonLakilaki.Checked = aktorUbah.Gender == "L" ? true : false;
             radioButtonPerempuan.Checked = aktorUbah.Gender == "P" ? true : false;
         }
@@ -34,7 +35,7 @@ namespace Celikoor_Insomiac
             aktorUbah.NegaraAsal = textBoxNegara.Text;
             aktorUbah.TglLahir = monthCalendarTanggalLahir.SelectionStart;
             aktorUbah.Gender = radioButtonLakilaki.Checked ? "L" : "P";
-            Aktor.UbahData(aktorUbah);
+            Aktor.UbahData(aktorUbah); 
             MessageBox.Show("Data konsumen berhasil diubah");
         }
 
@@ -62,6 +63,11 @@ namespace Celikoor_Insomiac
         }
 
         private void buttonKosongi_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSimpan_Click_1(object sender, EventArgs e)
         {
 
         }

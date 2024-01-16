@@ -210,6 +210,7 @@ namespace Celikoor_Insomiac
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(574, 331);
+            this.Controls.Add(this.textBoxNegara);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
@@ -220,12 +221,12 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.radioButtonLakilaki);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxNegara);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNama);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTambahAktor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FormTambahAktor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
