@@ -42,21 +42,22 @@ namespace Celikoor_Insomiac
         {
             string tgl = dataGridViewInput.CurrentRow.Cells["TanggalCol"].Value.ToString();
             string jamputar = dataGridViewInput.CurrentRow.Cells["JamCol"].Value.ToString();
+            int temp = -1;
             foreach (JadwalFilm jf in ListJF)
             {
                 if (jf.TanggalPutar.ToString("yyyy-MM-dd").Equals(tgl) && jf.JamPemutaran.Equals(jamputar))
                 {
-                    MessageBox.Show(jf.TanggalPutar.ToString("yyyy-MM-dd") + "\t" + tgl + "\n" + jf.JamPemutaran + "\t" + jamputar);
-                    MessageBox.Show("p " + jf.ListFS.Count);
                     foreach(Film_Studio fs in jf.ListFS)
                     {
-                        if (fs.Flm.Equals(Film.BacaData("judul", dataGridViewInput.CurrentRow.Cells["JudulFilmCol"].Value.ToString())[0]) && fs.Std.Equals(Studio.BacaData("nama", dataGridViewInput.CurrentRow.Cells["StudioCol"].Value.ToString())[0])) { jf.ListFS.Remove(fs); break; }
+                        if (fs.Flm.Judul.Equals(dataGridViewInput.CurrentRow.Cells["JudulFilmCol"].Value.ToString()) && 
+                            fs.Std.Nama.Equals(dataGridViewInput.CurrentRow.Cells["StudioCol"].Value.ToString())) 
+                        {jf.ListFS.Remove(fs); break; }
                     }
-                    MessageBox.Show("p " + jf.ListFS.Count);
-                    if (jf.ListFS.Count == 0) { ListJF.Remove(jf); }
-                    MessageBox.Show("data berhasil dihapus");
+                    if (jf.ListFS.Count == 0) { temp = ListJF.IndexOf(jf); }
                 }
             }
+            if (temp != -1) { ListJF.RemoveAt(temp); }
+            MessageBox.Show("data berhasil dihapus");
             loadDataGrid();
         }
 
@@ -113,11 +114,11 @@ namespace Celikoor_Insomiac
                 if (x.TanggalPutar == dateTimePickerTanggal.Value && x.JamPemutaran == kode)
                 {
                     bool check2 = true;
-                    foreach(Film_Studio y in x.DaftarFilmStudio())
+                    foreach(Film_Studio y in x.ListFS)
                     {
                         if(y.Std.Nama == fs.Std.Nama) { check2 = false; break; }
                     }
-                    if (check2) { x.ListFS.Add(fs); }
+                    if (check2) { x.ListFS.Add(fs); MessageBox.Show("masuk"); }
                     check = false; 
                     break; 
                 }
