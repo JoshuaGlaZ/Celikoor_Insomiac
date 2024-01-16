@@ -66,7 +66,6 @@ namespace Celikoor_Insomiac
                 buttonStudio.Visible = false;
                 buttonFilm.Visible = false;
                 buttonInvoices.Visible = false;
-                buttonTicket.Visible = false;
                 buttonPesanTicket.Visible = true; buttonPesanTicket.Location = new Point(0, 53);
                 buttonCekTiket.Visible = false;
             }
@@ -86,7 +85,6 @@ namespace Celikoor_Insomiac
                     buttonStudio.Visible = true;
                     buttonFilm.Visible = true;
                     buttonInvoices.Visible = true;
-                    buttonTicket.Visible = true;
                     buttonPesanTicket.Visible = false;
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 672);
                 }
@@ -103,7 +101,6 @@ namespace Celikoor_Insomiac
                     buttonStudio.Visible = false;
                     buttonFilm.Visible = false;
                     buttonInvoices.Visible = false;
-                    buttonTicket.Visible = false;
                     buttonPesanTicket.Visible = false ; 
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 53);
                 }

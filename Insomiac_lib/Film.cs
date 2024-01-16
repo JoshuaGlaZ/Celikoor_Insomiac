@@ -75,7 +75,7 @@ namespace Insomiac_lib
         {
             string data = "";
             int count = 1;
-            foreach (Aktor_Film af in BacaDataAktor("","","UTAMA"))
+            foreach (Aktor_Film af in BacaDataAktor("",Id.ToString(), "UTAMA"))
             {
                 data += af.Atr.Nama;
                 count++;
@@ -89,7 +89,7 @@ namespace Insomiac_lib
         {
             string data = "";
             int count = 1;
-            foreach (Genre_Film gr in BacaDataGenre())
+            foreach (Genre_Film gr in BacaDataGenre(Id.ToString()))
             {
                 data += gr.Gnr.NamaGenre;
                 count++;
