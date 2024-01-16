@@ -11,14 +11,50 @@ using Insomiac_lib;
 
 namespace Celikoor_Insomiac
 {
-    public partial class FormTambahStudio : Form
+    public partial class FormUbahStudio : Form
     {
-        public FormTambahStudio()
+        public Studio studioUbah;
+
+        public FormUbahStudio()
         {
             InitializeComponent();
         }
 
-        private void buttonTambah_Click(object sender, EventArgs e)
+        private void FormUbahStudio_Load(object sender, EventArgs e)
+        {
+            List<Cinema> listCinema = Cinema.BacaData();
+            comboBoxCinema.DataSource = listCinema;
+            comboBoxCinema.DisplayMember = "nama_cabang";
+
+            List<JenisStudio> listJenisStudio = JenisStudio.BacaData();
+            comboBoxJenisStudio.DataSource = listJenisStudio;
+            comboBoxJenisStudio.DisplayMember = "nama";
+
+            textBoxNama.Text = studioUbah.Nama;
+            numericUpDownKapasitas.Value = studioUbah.Kapasitas;
+            comboBoxJenisStudio.SelectedItem = listJenisStudio.FirstOrDefault(js => js.Id == studioUbah.Jenis.Id);
+            comboBoxCinema.SelectedItem = listCinema.FirstOrDefault(c => c.Id == studioUbah.Bioskop.Id);
+            textBoxHargaWeekday.Text = studioUbah.Harga_weekday.ToString(); 
+            textBoxHargaWeekend.Text = studioUbah.Harga_weekend.ToString();
+
+        }
+
+        private void buttonKosongi_Click(object sender, EventArgs e)
+        {
+            textBoxNama.Clear();
+            numericUpDownKapasitas.Value = 4;
+            comboBoxJenisStudio.SelectedItem = null;
+            comboBoxCinema.SelectedItem = null;
+            textBoxHargaWeekday.Clear();
+            textBoxHargaWeekend.Clear();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
         {
             try
             {
@@ -40,37 +76,13 @@ namespace Celikoor_Insomiac
                     s.Harga_weekend = int.Parse(textBoxHargaWeekend.Text);
 
                     Studio.MasukanData(s);
-                    MessageBox.Show("Data berhasil ditambah");
+                    MessageBox.Show("Data berhasil diubah");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Data " + ex.Message + " belum diisi");
             }
-        }
-
-        private void buttonBatal_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FormTambahStudio_Load(object sender, EventArgs e)
-        {
-            comboBoxCinema.DataSource = Cinema.BacaData();
-            comboBoxCinema.DisplayMember = "nama_cabang";
-
-            comboBoxJenisStudio.DataSource = JenisStudio.BacaData();
-            comboBoxJenisStudio.DisplayMember = "nama";
-        }
-
-        private void buttonKosongi_Click(object sender, EventArgs e)
-        {
-            textBoxNama.Clear();
-            numericUpDownKapasitas.Value = 4;
-            comboBoxJenisStudio.SelectedItem = null;
-            comboBoxCinema.SelectedItem = null;
-            textBoxHargaWeekday.Clear();
-            textBoxHargaWeekend.Clear();
         }
     }
 }

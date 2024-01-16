@@ -56,6 +56,25 @@ namespace Insomiac_lib
             }
             return lst;
         }
+        public static List<Studio> BacaData(string kriteria, string nilai, string urut)
+        {
+            List<Studio> lst = new List<Studio>();
+            string perintah = "SELECT * FROM studios s INNER JOIN cinemas c ON s.cinemas_id = c.id INNER JOIN jenis_studios js ON s.jenis_studios_id = js.id WHERE " + kriteria + " LIKE '%" + nilai + "%' ORDER BY " + urut + ";";
+            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
+            while (msdr.Read())
+            {
+                Studio s = new Studio();
+                s.Id = int.Parse(msdr.GetValue(0).ToString());
+                s.Nama = msdr.GetValue(1).ToString();
+                s.Kapasitas = int.Parse(msdr.GetValue(2).ToString());
+                s.Jenis = JenisStudio.BacaData("id", msdr.GetValue(3).ToString())[0];
+                s.Bioskop = Cinema.BacaData("id", msdr.GetValue(4).ToString())[0];
+                s.Harga_weekday = int.Parse(msdr.GetValue(5).ToString());
+                s.Harga_weekend = int.Parse(msdr.GetValue(6).ToString());
+                lst.Add(s);
+            }
+            return lst;
+        }
 
         public static void MasukanData(Studio s)
         {

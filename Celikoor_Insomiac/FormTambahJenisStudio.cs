@@ -36,11 +36,23 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            JenisStudio js = new JenisStudio();
-            js.Nama = textBoxNama.Text;
-            js.Deskripsi = textBoxDeskripsi.Text;
-            JenisStudio.TambahData(js);
-            MessageBox.Show("Data jenis kelompok berhasil ditambahkan");
+            try
+            {
+                if (textBoxNama.Text == "") { throw new Exception("Nama"); }
+                else if (textBoxDeskripsi.Text == "") { throw new Exception("Deskripsi"); }
+                else
+                {
+                    JenisStudio js = new JenisStudio();
+                    js.Nama = textBoxNama.Text;
+                    js.Deskripsi = textBoxDeskripsi.Text;
+                    JenisStudio.TambahData(js);
+                    MessageBox.Show("Data jenis kelompok berhasil ditambahkan");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Data " + ex.Message + " belum diisi");
+            }
         }
     }
 }

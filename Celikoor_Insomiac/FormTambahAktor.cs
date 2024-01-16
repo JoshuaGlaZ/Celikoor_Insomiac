@@ -18,10 +18,6 @@ namespace Celikoor_Insomiac
             InitializeComponent();
         }
 
-        private void FormTambahKonsumen_Load(object sender, EventArgs e)
-        {
-
-        }
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
             try
@@ -60,6 +56,11 @@ namespace Celikoor_Insomiac
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormTambahAktor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
