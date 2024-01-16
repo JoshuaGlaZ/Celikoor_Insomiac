@@ -32,14 +32,25 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            Pegawai p = new Pegawai();
-            p.Id = current_pegawai.Id;
-            p.Nama = textBoxNama.Text;
-            p.Email = textBoxEmail.Text;
-            p.Username = textBoxUsername.Text;
-            p.Roles = comboBoxRoles.Text;
-            Pegawai.UbahData(p);
-            MessageBox.Show("Data pegawai berhasil diubah");
+            try
+            {
+                if (textBoxNama.Text == "") { throw new Exception("Nama"); }
+                else if (textBoxEmail.Text == "") { throw new Exception("Email"); }
+                else if (textBoxUsername.Text == "") { throw new Exception("Username"); }
+                else if (comboBoxRoles.SelectedIndex == -1) { throw new Exception("Roles"); }
+                Pegawai p = new Pegawai();
+                p.Id = current_pegawai.Id;
+                p.Nama = textBoxNama.Text;
+                p.Email = textBoxEmail.Text;
+                p.Username = textBoxUsername.Text;
+                p.Roles = comboBoxRoles.Text;
+                Pegawai.UbahData(p);
+                MessageBox.Show("Data pegawai berhasil diubah");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Data " + ex.Message + " belum diisi");
+            }
         }
 
         private void buttonKosongi_Click(object sender, EventArgs e)

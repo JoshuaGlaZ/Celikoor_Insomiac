@@ -32,16 +32,35 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            Konsumen k = new Konsumen();
-            k.Id = konsumenUbah.Id; 
-            k.Nama = textBoxNama.Text;
-            k.Email = textBoxEmail.Text;
-            k.No_hp = textBoxNoHp.Text;
-            k.Username = textBoxUsername.Text;
-            k.Tgl_lahir = monthCalendarTanggalLahir.SelectionStart;
-            k.Gender = radioButtonLakilaki.Checked ? "L" : "P";
-            Konsumen.UbahData(k);
-            MessageBox.Show("Data konsumen berhasil diubah");
+            try
+            {
+                if (textBoxNama.Text == "") { throw new Exception("Nama"); }
+                else if (textBoxEmail.Text == "") { throw new Exception("Email"); }
+                else if (textBoxNoHp.Text == "") { throw new Exception("No Hp"); }
+                else if (textBoxUsername.Text == "") { throw new Exception("Username"); }
+                else if (Konsumen.CheckUmur(monthCalendarTanggalLahir.SelectionStart) < 3)
+                { MessageBox.Show("Umur tidak cukup"); }
+                else if (radioButtonLakilaki.Checked == false && radioButtonPerempuan.Checked == false)
+                { throw new Exception("Gender"); }
+                else
+                {
+                    Konsumen k = new Konsumen();
+                    k.Id = konsumenUbah.Id;
+                    k.Nama = textBoxNama.Text;
+                    k.Email = textBoxEmail.Text;
+                    k.No_hp = textBoxNoHp.Text;
+                    k.Username = textBoxUsername.Text;
+                    k.Tgl_lahir = monthCalendarTanggalLahir.SelectionStart;
+                    k.Gender = radioButtonLakilaki.Checked ? "L" : "P";
+                    Konsumen.UbahData(k);
+                    MessageBox.Show("Data konsumen berhasil diubah");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Data " + ex.Message + " belum diisi");
+            }
+           
         }
 
         private void buttonKosongi_Click(object sender, EventArgs e)

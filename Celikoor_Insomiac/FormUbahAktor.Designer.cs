@@ -98,11 +98,12 @@ namespace Celikoor_Insomiac
             this.buttonSimpan.TabIndex = 98;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click_1);
             // 
             // monthCalendarTanggalLahir
             // 
             this.monthCalendarTanggalLahir.Location = new System.Drawing.Point(514, 146);
-            this.monthCalendarTanggalLahir.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
+            this.monthCalendarTanggalLahir.Margin = new System.Windows.Forms.Padding(14);
             this.monthCalendarTanggalLahir.Name = "monthCalendarTanggalLahir";
             this.monthCalendarTanggalLahir.TabIndex = 97;
             // 

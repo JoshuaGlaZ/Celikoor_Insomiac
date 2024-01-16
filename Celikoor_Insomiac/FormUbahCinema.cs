@@ -29,14 +29,24 @@ namespace Celikoor_Insomiac
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-            Cinema c = new Cinema();
-            c.Id = cinemaUbah.Id;
-            c.Nama_cabang = textBoxNama.Text;
-            c.Alamat = textBoxAlamat.Text;
-            c.Tgl_buka = dateTimePickerTanggalDibuka.Value;
-            c.Kota = textBoxKota.Text;
-            Cinema.UbahData(c);
-            MessageBox.Show("Data Cinema berhasil diubah");
+            try
+            {
+                if (textBoxNama.Text == "") { throw new Exception("Nama"); }
+                else if (textBoxAlamat.Text == "") { throw new Exception("Email"); }
+                else if (textBoxKota.Text == "") { throw new Exception("Kota"); }
+                Cinema c = new Cinema();
+                c.Id = cinemaUbah.Id;
+                c.Nama_cabang = textBoxNama.Text;
+                c.Alamat = textBoxAlamat.Text;
+                c.Tgl_buka = dateTimePickerTanggalDibuka.Value;
+                c.Kota = textBoxKota.Text;
+                Cinema.UbahData(c);
+                MessageBox.Show("Data Cinema berhasil diubah");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Data " + ex.Message + " belum diisi");
+            }
         }
 
         private void buttonKosongi_Click(object sender, EventArgs e)
