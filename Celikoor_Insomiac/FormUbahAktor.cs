@@ -66,5 +66,10 @@ namespace Celikoor_Insomiac
         {
 
         }
+
+        private void buttonSimpan_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
