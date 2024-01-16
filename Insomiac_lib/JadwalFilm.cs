@@ -75,10 +75,15 @@ namespace Insomiac_lib
                     string perintah = "INSERT INTO `insomniac`.`film_studio` (`studios_id`, `films_id`) VALUES ('"+fs.Std.Id+"', '"+fs.Flm.Id+"');";
                     Koneksi.JalankanPerintah(perintah);
                 }
-                string perintah2 = "INSERT INTO `insomniac`.`sesi_films` " +
-                    "(`jadwal_film_id`, `studios_id`, `films_id`) " +
-                    "VALUES ('"+this.Id+"', '"+fs.Std.Id+"', '"+fs.Flm.Id+"');";
-                Koneksi.JalankanPerintah(perintah2);
+                string perintah2 = "SELECT * FROM insomniac.sesi_films WHERE jadwal_film_id = " + this.Id + " AND studios_id = " + fs.Std.Id + " AND films_id = " + fs.Flm.Id + ";";
+                MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah2);
+                if (!msdr.Read())
+                {
+                    string perintah3 = "INSERT INTO `insomniac`.`sesi_films` " +
+                        "(`jadwal_film_id`, `studios_id`, `films_id`) " +
+                        "VALUES ('" + this.Id + "', '" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
+                    Koneksi.JalankanPerintah(perintah3);
+                }
             }
         }
 
@@ -90,9 +95,15 @@ namespace Insomiac_lib
                 string perintah = "INSERT INTO `insomniac`.`film_studio` (`studios_id`, `films_id`) VALUES ('" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
                 Koneksi.JalankanPerintah(perintah);
             }
-            string perintah2 = "INSERT INTO `insomniac`.`sesi_films` " +
-                "(`jadwal_film_id`, `studios_id`, `films_id`) " +
-                "VALUES ('" + this.Id + "', '" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
+                string perintah2 = "SELECT * FROM insomniac.sesi_films WHERE jadwal_film_id = " + this.Id + " AND studios_id = " + fs.Std.Id + " AND films_id = " + fs.Flm.Id + ";";
+                MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah2);
+                if (!msdr.Read())
+                {
+                    string perintah3 = "INSERT INTO `insomniac`.`sesi_films` " +
+                        "(`jadwal_film_id`, `studios_id`, `films_id`) " +
+                        "VALUES ('" + this.Id + "', '" + fs.Std.Id + "', '" + fs.Flm.Id + "');";
+                    Koneksi.JalankanPerintah(perintah3);
+                }
             Koneksi.JalankanPerintah(perintah2);
         }
 

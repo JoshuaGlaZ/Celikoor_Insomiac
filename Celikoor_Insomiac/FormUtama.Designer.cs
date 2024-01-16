@@ -298,7 +298,7 @@ namespace Celikoor_Insomiac
             this.toolStripStatusLabelClock,
             this.toolStripStatusLabelTime});
             this.statusStripInfo.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStripInfo.Location = new System.Drawing.Point(0, 712);
+            this.statusStripInfo.Location = new System.Drawing.Point(0, 675);
             this.statusStripInfo.Name = "statusStripInfo";
             this.statusStripInfo.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
             this.statusStripInfo.Size = new System.Drawing.Size(1013, 22);
@@ -455,7 +455,7 @@ namespace Celikoor_Insomiac
             this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideBar.Location = new System.Drawing.Point(0, 0);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(183, 712);
+            this.panelSideBar.Size = new System.Drawing.Size(183, 675);
             this.panelSideBar.TabIndex = 29;
             // 
             // buttonPegawai
@@ -481,7 +481,7 @@ namespace Celikoor_Insomiac
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1013, 734);
+            this.ClientSize = new System.Drawing.Size(1013, 697);
             this.Controls.Add(this.menuStripInfo);
             this.Controls.Add(this.panelSideBar);
             this.Controls.Add(this.statusStripInfo);

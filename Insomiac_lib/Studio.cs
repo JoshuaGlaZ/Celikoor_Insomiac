@@ -82,5 +82,10 @@ namespace Insomiac_lib
                 "WHERE `id`='"+s.Id+"';";
             Koneksi.JalankanPerintah(perintah);
         }
+
+        public override string ToString()
+        {
+            return Nama;
+        }
     }
 }

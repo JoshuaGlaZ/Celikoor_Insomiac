@@ -15,7 +15,7 @@ namespace Insomiac_lib
 
         public Koneksi(string pS, string pPort, string pD, string pU, string pPass)
         {
-            string conString = "Server=" + pS + ";Port="+ pPort +";Database=" + pD + ";Uid=" + pU + ";Pwd=" + pPass;
+            string conString = "Server=" + pS + ";Port="+ pPort +";Database=" + pD + ";Uid=" + pU + ";Pwd=" + pPass + "; max pool size = 1000;";
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = conString;
             Connect();
@@ -33,7 +33,7 @@ namespace Insomiac_lib
             string vUid = sectionSetting.Settings.Get("username").Value.ValueXml.InnerText;
             string vPwd = sectionSetting.Settings.Get("password").Value.ValueXml.InnerText;
 
-            string conString = "Server=" + vServer + ";Port=" + vPort + ";Database=" + vDb + ";Uid=" + vUid + ";Pwd=" + vPwd + ";";
+            string conString = "Server=" + vServer + ";Port=" + vPort + ";Database=" + vDb + ";Uid=" + vUid + ";Pwd=" + vPwd + "; max pool size = 1000;";
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = conString;
             Connect();
