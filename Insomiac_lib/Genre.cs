@@ -89,5 +89,10 @@ namespace Insomiac_lib
             string perintah = "DELETE FROM genres WHERE id=" + c.Id + ";";
             Koneksi.JalankanPerintah(perintah);
         }
+
+        public override string ToString()
+        {
+            return namaGenre;
+        }
     }
 }
