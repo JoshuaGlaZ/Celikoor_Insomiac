@@ -54,5 +54,10 @@ namespace Celikoor_Insomiac
             listLaporan = LaporanGenreTontonanKonsumen.BacaData(nilai, order);
             dataGridViewHasil.DataSource = listLaporan;
         }
+
+        private void buttonCetak_Click(object sender, EventArgs e)
+        {
+            LaporanGenreTontonanKonsumen.CetakLaporan(listLaporan);
+        }
     }
 }

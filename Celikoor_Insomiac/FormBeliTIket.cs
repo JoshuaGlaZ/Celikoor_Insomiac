@@ -106,10 +106,6 @@ namespace Celikoor_Insomiac
 
         private void comboBoxJudul_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Film judulFilm;
-            judulFilm = (Film)comboBoxJudul.SelectedItem; 
-            comboBoxTanggal.DataSource = JadwalFilm.BacaData(judulFilm);
-            comboBoxTanggal.DisplayMember = "tanggalPutar";
         }
 
         private void comboBoxTanggal_SelectedIndexChanged(object sender, EventArgs e)
@@ -262,9 +258,24 @@ namespace Celikoor_Insomiac
             UpdateTotalKursi();
         }
 
-        private void labelDiskon_Click(object sender, EventArgs e)
+        private void comboBoxJudul_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            Film judulFilm;
+            judulFilm = (Film)comboBoxJudul.SelectedItem;
+            comboBoxTanggal.DataSource = JadwalFilm.BacaData(judulFilm);
+            comboBoxTanggal.DisplayMember = "tanggalPutar";
+        }
 
+        private void comboBoxCinema_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
+            foreach (Film_Studio fs in jadwalFilm.ListFS)
+            {
+                if (listCinema.Contains(fs.Std.Bioskop))
+                {
+                    comboBoxStudio.Items.Add(fs.Std);
+                }
+            }
         }
     }
 }

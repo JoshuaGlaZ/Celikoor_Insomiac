@@ -45,5 +45,10 @@ namespace Celikoor_Insomiac
         {
             this.Close();
         }
+
+        private void buttonCetak_Click(object sender, EventArgs e)
+        {
+            LaporanFilmKetidakhadiranPenonton.CetakLaporan(listLaporan);
+        }
     }
 }

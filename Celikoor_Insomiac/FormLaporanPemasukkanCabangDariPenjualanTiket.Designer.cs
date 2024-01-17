@@ -42,6 +42,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
+            this.buttonCetak = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +136,7 @@
             this.label3.Location = new System.Drawing.Point(789, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 32);
+            this.label3.Size = new System.Drawing.Size(220, 32);
             this.label3.TabIndex = 20;
             this.label3.Text = "Urut Berdasarkan :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,7 +152,7 @@
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 32);
+            this.label1.Size = new System.Drawing.Size(214, 32);
             this.label1.TabIndex = 18;
             this.label1.Text = "Cari Berdasarkan :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +180,7 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(1082, 623);
+            this.buttonKeluar.Location = new System.Drawing.Point(1064, 624);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(168, 69);
@@ -250,11 +251,29 @@
             this.dataGridViewHasil.Size = new System.Drawing.Size(1226, 417);
             this.dataGridViewHasil.TabIndex = 27;
             // 
+            // buttonCetak
+            // 
+            this.buttonCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCetak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonCetak.FlatAppearance.BorderSize = 0;
+            this.buttonCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCetak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCetak.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCetak.Location = new System.Drawing.Point(865, 623);
+            this.buttonCetak.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCetak.Name = "buttonCetak";
+            this.buttonCetak.Size = new System.Drawing.Size(168, 69);
+            this.buttonCetak.TabIndex = 36;
+            this.buttonCetak.Text = "CETAK";
+            this.buttonCetak.UseVisualStyleBackColor = false;
+            this.buttonCetak.Click += new System.EventHandler(this.buttonCetak_Click);
+            // 
             // FormLaporanPemasukkanCabangDariPenjualanTiket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 717);
+            this.Controls.Add(this.buttonCetak);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
@@ -289,5 +308,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
+        private System.Windows.Forms.Button buttonCetak;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace Insomiac_lib
             }
             return listLaporan;
         }
+
         public static List<LaporanFilmKetidakhadiranPenonton> BacaData(string kriteria, string nilai, string urut)
         {
             List<LaporanFilmKetidakhadiranPenonton> listLaporan = new List<LaporanFilmKetidakhadiranPenonton>();
@@ -73,6 +75,25 @@ namespace Insomiac_lib
                 listLaporan.Add(laporan);
             }
             return listLaporan;
+        }
+
+        public static void CetakLaporan(List<LaporanFilmKetidakhadiranPenonton> lst)
+        {
+            string nama = "LAPORAN KETIDAKHADIRAN PENONTON_"+DateTime.Now.ToString("yyyy-MM-dd");
+            StreamWriter sw = new StreamWriter(nama);
+            sw.WriteLine("LAPORAN KETIDAKHADIRAN PENONTON_" + DateTime.Now.ToString("yyyy-MM-dd"));
+            sw.WriteLine("======================================================================");
+            sw.WriteLine("");
+            sw.WriteLine("3 FILM DENGAN STATUS KEHADIRAN PENONTON PALING SEDIKIT :");
+            sw.WriteLine("");
+            sw.WriteLine("no \t film \t jumlah ketidakhadiran");
+            for (int i = 1; i<=lst.Count; i++)
+            {
+                sw.WriteLine(i+". \t "+lst[i-1].Film.Judul+" \t "+lst[i-1].Jumlah_ketidakhadiran_penonton);
+            }
+            sw.Close();
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.kirimPrinter();
         }
     }
 }

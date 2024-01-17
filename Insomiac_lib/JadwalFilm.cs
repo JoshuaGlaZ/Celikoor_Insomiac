@@ -89,7 +89,7 @@ namespace Insomiac_lib
                "FROM  jadwal_films jf " +
                "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
-               "WHERE fs.films_id = '" + tFilm.Id + "';";
+               "WHERE fs.films_id = '" + tFilm.Id + "' GROUP BY jf.id;";
 
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
@@ -109,7 +109,8 @@ namespace Insomiac_lib
             List<Film_Studio> lst = new List<Film_Studio>();
             string perintah = "SELECT fs.studios_id,fs.films_id FROM jadwal_films jf " +
                 "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
-                "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id ;";
+                "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
+                "WHERE jf.id = "+Id+";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
@@ -126,12 +127,12 @@ namespace Insomiac_lib
             string perintah = "SELECT fs.studios_id,fs.films_id FROM jadwal_films jf " +
                 "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                 "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
-                "WHERE fs.films_id = " + tFilm.Id + " AND jf.id = " + Id + ";";
+                "WHERE fs.films_id = " + tFilm.Id + " AND jf.id = " + Id + " AND jf.id = " + Id + ";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 Film_Studio fs = new Film_Studio();
-                fs.Std = Studio.BacaData("id", msdr.GetValue(0).ToString())[0];
+                fs.Std = Studio.BacaData("id",msdr.GetValue(0).ToString())[0];
                 fs.Flm = Film.BacaData(msdr.GetValue(1).ToString());
                 lst.Add(fs);
             }
@@ -192,6 +193,10 @@ namespace Insomiac_lib
         {
             string perintah = "UPDATE `insomniac`.`jadwal_films` SET `tanggal`='"+tgl.ToString("yyyy-MM-dd")+"', `jam_pemutaran`='"+jamPutar+"' WHERE `id`='"+this.Id+"';";
             Koneksi.JalankanPerintah(perintah);
+        }
+        public override string ToString()
+        {   
+            return TanggalPutar.ToShortDateString() + " / " + JamPemutaran;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,9 +36,11 @@ namespace Insomiac_lib
         public static List<LaporanFilmLaris> BacaData()
         {
             List<LaporanFilmLaris> listLaporan = new List<LaporanFilmLaris>();
-            string perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM films f " +
-                "INNER JOIN tikets t ON f.id = t.films_id INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
-                "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan ORDER BY COUNT(t.films_id) DESC, CASE WHEN MONTH(jf.tanggal) = 0 THEN 99 ELSE MONTH(jf.tanggal) END;";
+            string perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
+                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                "INNER JOIN films f ON t.films_id = f.id " +
+                "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan ORDER BY COUNT(t.films_id) " +
+                "DESC, CASE WHEN MONTH(jf.tanggal) = 0 THEN 99 ELSE MONTH(jf.tanggal) END;";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
@@ -64,21 +67,24 @@ namespace Insomiac_lib
             }
             if(kriteria != "COUNT(t.films_id)")
             {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM films f " +
-                   "INNER JOIN tikets t ON f.id = t.films_id INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
+                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                "INNER JOIN films f ON t.films_id = f.id " +
                    "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 AND " + kriteria + " LIKE '%" + nilai + "%' GROUP BY f.Judul, Bulan  " +
                    order + ";";
             }
             else if (string.IsNullOrEmpty(nilai))
             {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM films f " +
-                    "INNER JOIN tikets t ON f.id = t.films_id INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
+                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                "INNER JOIN films f ON t.films_id = f.id " +
                     "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan " + order + ";";
             }
             else
             {
-                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM films f " +
-                     "INNER JOIN tikets t ON f.id = t.films_id INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
+                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                "INNER JOIN films f ON t.films_id = f.id " +
                      "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan HAVING " + kriteria + " = '" +
                     nilai + "' " + order + ";";
             }              
@@ -93,6 +99,24 @@ namespace Insomiac_lib
                 listLaporan.Add(laporan);
             }
             return listLaporan;
+        }
+        public static void CetakLaporan(List<LaporanFilmLaris> lst)
+        {
+            string nama = "LAPORAN FILM LARIS_" + DateTime.Now.ToString("yyyy-MM-dd");
+            StreamWriter sw = new StreamWriter(nama);
+            sw.WriteLine("LAPORAN FILM LARIS_" + DateTime.Now.ToString("yyyy-MM-dd"));
+            sw.WriteLine("======================================================================");
+            sw.WriteLine("");
+            sw.WriteLine("RANKING FILM PALING LARIS :");
+            sw.WriteLine("");
+            sw.WriteLine("no \t film \t jumlah penonton");
+            for (int i = 1; i <= lst.Count; i++)
+            {
+                sw.WriteLine(i + ". \t " + lst[i - 1].Film.Judul + " \t " + lst[i - 1].Jumlah_penonton);
+            }
+            sw.Close();
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.kirimPrinter();
         }
     }
 }
