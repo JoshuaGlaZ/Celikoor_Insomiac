@@ -183,5 +183,10 @@ namespace Insomiac_lib
                 return null;
             }
         }
+
+        public override string ToString()
+        {
+            return Nama;
+        }
     }
 }
