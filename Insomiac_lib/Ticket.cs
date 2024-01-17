@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,6 @@ namespace Insomiac_lib
         public Studio Studio { get => studio; set => studio = value; }
         public Film Film { get => film; set => film = value; }
         public Pegawai Op { get => op; set => op = value; }
+
     }
 }

@@ -78,6 +78,19 @@ namespace Insomiac_lib
             string perintah = "UPDATE tikets SET status_hadir = 1 WHERE SUBSTRING(invoices_id,0,3) = '" + invID + "'AND nomor_kursi = '" + nomorKursi + "';";
             Koneksi.JalankanPerintah(perintah);
         }
+        public static List<string> BacaKursi(JadwalFilm jadwalFilm, Film film, Studio studio)
+        {
+            string perintah = "SELECT tikets.nomor_kursi FROM tikets" +
+                " WHERE jadwal_film_id = '"+ jadwalFilm.Id.ToString()+"' AND studios_id = '"+studio.Id.ToString()+"' AND films_id = '"+film.Id.ToString()+"';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<string> listKursi = new List<string>();
+            while(hasil.Read())
+            {
+                string nomorKursi = hasil.GetString(0);
+                listKursi.Add(nomorKursi);
+            }
+            return listKursi; 
+        }
         public static List<Invoice> DisplayInvoice()
         {
             string perintah = "SELECT * from invoices";

@@ -268,12 +268,6 @@
     <Compile Include="FormUbahPegawai.Designer.cs">
       <DependentUpon>FormUbahPegawai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUbahStudio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUbahStudio.Designer.cs">
-      <DependentUpon>FormUbahStudio.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,9 +383,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahPegawai.resx">
       <DependentUpon>FormUbahPegawai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUbahStudio.resx">
-      <DependentUpon>FormUbahStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

@@ -77,10 +77,10 @@ namespace Celikoor_Insomiac
             {
                 if (s != null)
                 {
-                    FormUbahStudio formUP = new FormUbahStudio();
+  /*                  FormUbahStudio formUP = new FormUbahStudio();
                     formUP.studioUbah = s;
                     formUP.Owner = this;
-                    formUP.ShowDialog();
+                    formUP.ShowDialog();*/
                 }
                 else { MessageBox.Show("Ada kesalahan pada data"); }
                 FormMasterStudio_Load(sender, e);
