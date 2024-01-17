@@ -49,11 +49,11 @@
             // 
             // textBoxBarcode
             // 
-            this.textBoxBarcode.Location = new System.Drawing.Point(30, 103);
+            this.textBoxBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBarcode.Location = new System.Drawing.Point(40, 112);
             this.textBoxBarcode.MaxLength = 6;
-            this.textBoxBarcode.Multiline = true;
             this.textBoxBarcode.Name = "textBoxBarcode";
-            this.textBoxBarcode.Size = new System.Drawing.Size(438, 76);
+            this.textBoxBarcode.Size = new System.Drawing.Size(438, 71);
             this.textBoxBarcode.TabIndex = 86;
             // 
             // buttonHadir

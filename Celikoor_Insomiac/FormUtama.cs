@@ -88,7 +88,7 @@ namespace Celikoor_Insomiac
                     buttonPesanTicket.Visible = false;
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 672);
                 }
-                else if (pegawaiLogin.Roles == "OPERATOR" || pegawaiLogin.Roles == "KASIR")
+                else if (pegawaiLogin.Roles == "OPERATOR")
                 {
                     buttonKonsumen.Visible = false;
                     buttonCinema.Visible = false;
@@ -103,6 +103,23 @@ namespace Celikoor_Insomiac
                     buttonInvoices.Visible = false;
                     buttonPesanTicket.Visible = false ; 
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 53);
+                }
+                else if(pegawaiLogin.Roles == "KASIR")
+                {
+                    buttonKonsumen.Visible = false;
+                    buttonCinema.Visible = false;
+                    buttonPegawai.Visible = false;
+                    buttonKelompok.Visible = false;
+                    buttonAktor.Visible = false;
+                    buttonGenre.Visible = false;
+                    buttonJenisStudio.Visible = false;
+                    buttonJadwalFilm.Visible = false;
+                    buttonStudio.Visible = false;
+                    buttonFilm.Visible = false;
+                    buttonInvoices.Visible = true; buttonInvoices.Location = new Point(0, 53);
+                    buttonPesanTicket.Visible = false;
+                    buttonCekTiket.Visible = false; 
+
                 }
             }
         }
@@ -422,7 +439,7 @@ namespace Celikoor_Insomiac
                 Form form = Application.OpenForms["FormLaporanPemasukkanCabangDariPenjualanTiket"];
                 if (form == null)
                 {
-                    FormLaporanFilmTerlarisPerBulan laporan = new FormLaporanFilmTerlarisPerBulan();
+                    FormLaporanPemasukkanCabangDariPenjualanTiket laporan = new FormLaporanPemasukkanCabangDariPenjualanTiket();
                     laporan.MdiParent = this;
                     laporan.Show();
                 }
@@ -459,7 +476,7 @@ namespace Celikoor_Insomiac
                 Form form = Application.OpenForms["FormLaporanStudioBerdasarkanTingkatUtilitas"];
                 if (form == null)
                 {
-                    FormLaporanFilmTerlarisPerBulan laporan = new FormLaporanFilmTerlarisPerBulan();
+                    FormLaporanStudioBerdasarkanTingkatUtilitas laporan = new FormLaporanStudioBerdasarkanTingkatUtilitas();
                     laporan.MdiParent = this;
                     laporan.Show();
                 }
@@ -478,7 +495,7 @@ namespace Celikoor_Insomiac
                 Form form = Application.OpenForms["FormLaporanKonsumenBeradasarkanGenreTontonan"];
                 if (form == null)
                 {
-                    FormLaporanFilmTerlarisPerBulan laporan = new FormLaporanFilmTerlarisPerBulan();
+                    FormLaporanKonsumenBeradasarkanGenreTontonan laporan = new FormLaporanKonsumenBeradasarkanGenreTontonan();
                     laporan.MdiParent = this;
                     laporan.Show();
                 }
