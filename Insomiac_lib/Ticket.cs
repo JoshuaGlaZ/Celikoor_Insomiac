@@ -45,5 +45,10 @@ namespace Insomiac_lib
         public Film Film { get => film; set => film = value; }
         public Pegawai Op { get => op; set => op = value; }
 
+        public static void CekHadir(string invoice, string noKursi, Pegawai p)
+        {
+            string perintah = "Update 'tikets' set status_hadir = 1, operator_id = '" + p.Id + "where invoicces_id ='" + invoice + "' and nomor_kursi='" + noKursi + "';";
+            Koneksi.JalankanPerintah(perintah);
+        }
     }
 }

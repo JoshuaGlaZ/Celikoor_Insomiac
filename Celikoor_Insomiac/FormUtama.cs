@@ -380,7 +380,21 @@ namespace Celikoor_Insomiac
 
         private void buttonCekTiket_Click(object sender, EventArgs e)
         {
-
+            if (pegawaiLogin != null)
+            {
+                Form form = Application.OpenForms["FormScanBarcode"];
+                if (form == null)
+                {
+                    FormScanBarcode laporan = new FormScanBarcode();
+                    laporan.MdiParent = this;
+                    laporan.Show();
+                }
+                else
+                {
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
         }
         private void fILMTERLARISPERBULANSELAMA2023ToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -172,6 +172,12 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormScanBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScanBarcode.Designer.cs">
+      <DependentUpon>FormScanBarcode.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScanBarcode.resx">
+      <DependentUpon>FormScanBarcode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahFilm.resx">
       <DependentUpon>FormTambahFilm.cs</DependentUpon>
