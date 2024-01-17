@@ -1,13 +1,13 @@
--- MariaDB dump 10.19  Distrib 10.6.12-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: insomniac
 -- ------------------------------------------------------
--- Server version	10.6.12-MariaDB-0ubuntu0.22.04.1
+-- Server version	5.5.5-10.4.27-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -40,7 +40,7 @@ CREATE TABLE `aktor_film` (
 
 LOCK TABLES `aktor_film` WRITE;
 /*!40000 ALTER TABLE `aktor_film` DISABLE KEYS */;
-INSERT INTO `aktor_film` VALUES (2,27,'UTAMA'),(10,26,'PEMBANTU'),(12,27,'PEMBANTU'),(14,27,'PEMBANTU'),(17,26,'UTAMA');
+INSERT INTO `aktor_film` VALUES (1,1,'UTAMA'),(1,2,'UTAMA'),(1,3,'UTAMA'),(1,8,'PEMBANTU'),(2,1,'UTAMA'),(2,2,'UTAMA'),(2,3,'UTAMA'),(3,1,'PEMBANTU'),(3,8,'PEMBANTU'),(4,1,'PEMBANTU'),(4,2,'PEMBANTU'),(4,3,'PEMBANTU'),(5,1,'PEMBANTU'),(6,1,'PEMBANTU'),(6,2,'PEMBANTU'),(6,3,'PEMBANTU'),(7,2,'PEMBANTU'),(7,8,'PEMBANTU'),(8,2,'PEMBANTU'),(8,3,'PEMBANTU'),(9,2,'FIGURAN'),(10,2,'FIGURAN'),(11,3,'UTAMA'),(13,3,'PEMBANTU'),(14,3,'FIGURAN'),(15,3,'FIGURAN'),(16,4,'UTAMA'),(16,5,'UTAMA'),(16,8,'PEMBANTU'),(17,4,'UTAMA'),(17,5,'UTAMA'),(18,4,'PEMBANTU'),(19,4,'PEMBANTU'),(20,4,'PEMBANTU'),(20,5,'PEMBANTU'),(21,5,'PEMBANTU'),(21,8,'PEMBANTU'),(22,5,'PEMBANTU'),(23,5,'FIGURAN'),(24,5,'FIGURAN'),(26,6,'UTAMA'),(26,7,'UTAMA'),(26,8,'UTAMA'),(26,11,'PEMBANTU'),(26,21,'UTAMA'),(26,22,'UTAMA'),(27,6,'UTAMA'),(28,6,'PEMBANTU'),(29,6,'PEMBANTU'),(29,7,'FIGURAN'),(30,6,'PEMBANTU'),(30,12,'UTAMA'),(30,13,'UTAMA'),(30,14,'FIGURAN'),(31,7,'UTAMA'),(32,6,'PEMBANTU'),(32,7,'PEMBANTU'),(32,8,'UTAMA'),(33,7,'PEMBANTU'),(34,7,'FIGURAN'),(35,7,'FIGURAN'),(36,8,'UTAMA'),(36,21,'UTAMA'),(36,22,'UTAMA'),(37,8,'PEMBANTU'),(38,8,'FIGURAN'),(39,8,'FIGURAN'),(41,9,'UTAMA'),(41,10,'UTAMA'),(41,11,'UTAMA'),(41,19,'UTAMA'),(41,20,'UTAMA'),(41,21,'UTAMA'),(41,22,'UTAMA'),(42,9,'UTAMA'),(43,9,'UTAMA'),(44,9,'PEMBANTU'),(44,11,'UTAMA'),(45,9,'PEMBANTU'),(46,10,'PEMBANTU'),(46,11,'UTAMA'),(46,19,'UTAMA'),(46,20,'UTAMA'),(46,21,'UTAMA'),(46,22,'UTAMA'),(47,10,'PEMBANTU'),(48,10,'PEMBANTU'),(50,10,'PEMBANTU'),(51,11,'UTAMA'),(51,19,'UTAMA'),(51,20,'UTAMA'),(51,21,'UTAMA'),(51,22,'UTAMA'),(54,11,'UTAMA'),(54,22,'UTAMA'),(56,11,'UTAMA'),(56,12,'UTAMA'),(56,19,'UTAMA'),(56,20,'UTAMA'),(56,21,'UTAMA'),(56,22,'UTAMA'),(57,12,'PEMBANTU'),(58,12,'PEMBANTU'),(59,12,'PEMBANTU'),(60,12,'PEMBANTU'),(60,13,'UTAMA'),(61,13,'PEMBANTU'),(62,11,'PEMBANTU'),(62,14,'PEMBANTU'),(63,11,'PEMBANTU'),(63,13,'PEMBANTU'),(64,13,'PEMBANTU'),(66,14,'UTAMA'),(67,14,'PEMBANTU'),(68,14,'PEMBANTU'),(69,14,'PEMBANTU'),(71,15,'UTAMA'),(71,16,'UTAMA'),(71,17,'UTAMA'),(71,18,'UTAMA'),(71,19,'UTAMA'),(71,20,'UTAMA'),(71,21,'UTAMA'),(71,22,'UTAMA'),(72,15,'PEMBANTU'),(72,16,'PEMBANTU'),(73,15,'PEMBANTU'),(73,16,'PEMBANTU'),(73,18,'UTAMA'),(74,15,'PEMBANTU'),(74,16,'PEMBANTU'),(74,17,'UTAMA'),(75,15,'PEMBANTU'),(75,16,'PEMBANTU'),(76,16,'FIGURAN'),(77,16,'FIGURAN'),(78,16,'FIGURAN'),(80,17,'PEMBANTU'),(81,17,'PEMBANTU'),(82,17,'PEMBANTU'),(83,17,'PEMBANTU'),(84,17,'FIGURAN'),(86,18,'PEMBANTU'),(87,18,'PEMBANTU'),(88,18,'PEMBANTU'),(89,18,'PEMBANTU'),(90,18,'FIGURAN'),(91,17,'PEMBANTU'),(91,19,'UTAMA'),(91,20,'UTAMA'),(91,21,'UTAMA'),(91,22,'UTAMA'),(92,7,'UTAMA'),(92,10,'UTAMA'),(92,19,'PEMBANTU'),(93,19,'PEMBANTU'),(94,19,'PEMBANTU'),(95,19,'FIGURAN'),(101,20,'PEMBANTU'),(101,21,'PEMBANTU'),(102,20,'PEMBANTU'),(102,21,'PEMBANTU'),(103,20,'PEMBANTU'),(103,21,'PEMBANTU'),(104,20,'PEMBANTU'),(104,21,'PEMBANTU'),(105,20,'PEMBANTU'),(106,22,'PEMBANTU'),(107,22,'PEMBANTU'),(108,22,'PEMBANTU'),(109,22,'PEMBANTU'),(110,22,'PEMBANTU');
 /*!40000 ALTER TABLE `aktor_film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,6 +122,7 @@ CREATE TABLE `film_studio` (
 
 LOCK TABLES `film_studio` WRITE;
 /*!40000 ALTER TABLE `film_studio` DISABLE KEYS */;
+INSERT INTO `film_studio` VALUES (1,1),(1,2),(1,3),(1,4),(1,7),(1,8),(1,9),(1,11),(1,15),(2,1),(2,2),(2,3),(2,4),(2,7),(2,8),(2,11),(2,12),(2,15),(3,1),(3,2),(3,3),(3,4),(3,7),(3,8),(3,12),(3,15),(4,1),(4,2),(4,3),(4,5),(4,7),(4,9),(4,11),(5,1),(5,2),(5,3),(5,5),(5,8),(5,9),(5,11),(5,12),(6,1),(6,2),(6,3),(6,5),(7,19),(7,20),(7,21),(7,22),(8,19),(8,20),(8,21),(8,22),(9,19),(9,20),(9,21),(9,22),(10,19),(10,20),(10,21),(10,22),(11,19),(11,20),(11,21),(11,22),(12,18),(12,19),(12,22),(13,18),(13,19),(13,22),(14,18),(14,19),(14,22);
 /*!40000 ALTER TABLE `film_studio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,7 +156,7 @@ CREATE TABLE `films` (
 
 LOCK TABLES `films` WRITE;
 /*!40000 ALTER TABLE `films` DISABLE KEYS */;
-INSERT INTO `films` VALUES (1,'Spider-Man','',2002,121,2,'EN',1,'Spider-Man.png',60),(2,'Spider-Man 2','',2004,127,2,'EN',1,'Spider-Man 2.png',45),(3,'Spider-Man 3','',2007,139,2,'EN',1,'Spider-Man 3.png',39),(4,'The Amazing Spider-Man','',2012,136,2,'EN',1,'The Amazing Spider-Man.png',28),(5,'The Amazing Spider-Man 2','',2014,142,2,'EN',1,'The Amazing Spider-Man 2.png',22),(6,'Spider-Man: Homecoming','',2017,133,2,'EN',1,'Spider-Man - Homecoming.png',30),(7,'Spider-Man: Far from Home','',2019,129,2,'EN',1,'Spider-Man - Far from Home.png',15),(8,'Spider-Man: No Way Home','',2021,148,2,'EN',1,'Spider-Man - No Way Home.png',10),(9,'Captain America: The First Avenger','',2011,124,2,'EN',1,'Captain America - The First Avenger.png',29),(10,'Captain America: The Winter Soldier','',2014,136,2,'EN',1,'Captain America - The Winter Soldier.png',11),(11,'Captain America: Civil War','',2016,147,2,'EN',1,'Captain America - Civil War.png',10),(12,'Iron Man','',2008,126,2,'EN',1,'Iron Man.png',12),(13,'Iron Man 2','',2010,124,2,'EN',1,'Iron Man 2.png',8),(14,'Iron Man 3','',2013,130,2,'EN',1,'Iron Man 3.png',14),(15,'Thor','',2011,115,2,'EN',1,'Thor.png',6),(16,'Thor: The Dark World','',2013,112,2,'EN',1,'Thor - The Dark World.png',10),(17,'Thor: Ragnarok','',2017,130,2,'EN',1,'Thor - Ragnarok.png',27),(18,'Thor: Love and Thunder','',2022,118,2,'EN',1,'Thor - Love and Thunder.png',42),(19,'The Avengers','',2012,143,2,'EN',1,'The Avengers.png',32),(20,'Avengers: Age of Ultron','',2015,141,2,'EN',1,'Avengers - Age of Ultron.png',13),(21,'Avengers: Infinity War','',2018,149,2,'EN',1,'Avengers - Infinity War.png',25),(22,'Avengers: Endgame','',2019,181,2,'EN',1,'Avengers - Endgame.png',30),(23,'Shadow of Doubt','Thriller psikologis tentang pencarian kebenaran dalam jaringan konspirasi.',2021,130,4,'EN',0,'cover23.jpg',12500),(24,'Galactic Battles','Perang antargalaksi dengan efek visual yang menakjubkan.',2021,140,3,'EN',1,'cover24.jpg',20000),(25,'Desert Mirage','Petualangan di padang pasir yang menguji batas manusia.',2023,130,4,'EN',0,'cover25.jpg',18000),(26,'Anak Tiri','Jadi begini... Tamat',2021,180,4,'ID',1,'test_poster1.png',90),(27,'Hmmm','Bla bla bla bla',1009,19,3,'OTH',0,'test_poster2.png',200),(28,'Spider-Man','',2002,121,2,'EN',1,'Spider-Man.png',60);
+INSERT INTO `films` VALUES (1,'Spider-Man','lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',2002,121,2,'EN',1,'Spider-Man.jpg',60),(2,'Spider-Man 2','',2004,127,2,'EN',1,'Spider-Man 2.jpg',45),(3,'Spider-Man 3','',2007,139,2,'EN',1,'Spider-Man 3.jpg',39),(4,'The Amazing Spider-Man','',2012,136,2,'EN',1,'The Amazing Spider-Man.jpg',28),(5,'The Amazing Spider-Man 2','',2014,142,2,'EN',1,'The Amazing Spider-Man 2.jpg',22),(6,'Spider-Man: Homecoming','',2017,133,2,'EN',1,'Spider-Man - Homecoming.jpg',30),(7,'Spider-Man: Far from Home','',2019,129,2,'EN',1,'Spider-Man - Far from Home.jpg',15),(8,'Spider-Man: No Way Home','',2021,148,2,'EN',1,'Spider-Man - No Way Home.jpg',10),(9,'Captain America: The First Avenger','',2011,124,2,'EN',1,'Captain America - The First Avenger.jpg',29),(10,'Captain America: The Winter Soldier','',2014,136,2,'EN',1,'Captain America - The Winter Soldier.jpg',11),(11,'Captain America: Civil War','',2016,147,2,'EN',1,'Captain America - Civil War.jpg',10),(12,'Iron Man','',2008,126,2,'EN',1,'Iron Man.jpg',12),(13,'Iron Man 2','',2010,124,2,'EN',1,'Iron Man 2.jpg',8),(14,'Iron Man 3','',2013,130,2,'EN',1,'Iron Man 3.jpg',14),(15,'Thor','',2011,115,2,'EN',1,'Thor.jpg',6),(16,'Thor: The Dark World','',2013,112,2,'EN',1,'Thor - The Dark World.jpg',10),(17,'Thor: Ragnarok','',2017,130,2,'EN',1,'Thor - Ragnarok.jpg',27),(18,'Thor: Love and Thunder','',2022,118,2,'EN',1,'Thor - Love and Thunder.jpg',42),(19,'The Avengers','',2012,143,2,'EN',1,'The Avengers.jpg',32),(20,'Avengers: Age of Ultron','',2015,141,2,'EN',1,'Avengers - Age of Ultron.jpg',13),(21,'Avengers: Infinity War','',2018,149,2,'EN',1,'Avengers - Infinity War.jpg',25),(22,'Avengers: Endgame','',2019,181,2,'EN',1,'Avengers - Endgame.jpg',30);
 /*!40000 ALTER TABLE `films` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,7 +184,7 @@ CREATE TABLE `genre_film` (
 
 LOCK TABLES `genre_film` WRITE;
 /*!40000 ALTER TABLE `genre_film` DISABLE KEYS */;
-INSERT INTO `genre_film` VALUES (26,3),(26,6),(27,1),(27,5);
+INSERT INTO `genre_film` VALUES (1,1),(1,2),(1,4),(1,5),(2,1),(2,2),(2,4),(2,8),(3,1),(3,2),(3,4),(3,8),(4,1),(4,2),(4,9),(5,1),(5,2),(5,9),(6,1),(6,2),(6,9),(7,1),(7,2),(7,9),(8,1),(8,2),(8,9),(9,1),(9,2),(9,9),(10,1),(10,2),(10,9),(11,1),(11,9),(12,1),(12,9),(13,1),(13,2),(13,9),(14,1),(14,5),(15,1),(15,2),(15,5),(16,1),(16,2),(16,5),(17,1),(17,2),(17,3),(17,5),(17,9),(18,1),(18,2),(18,3),(18,5),(18,8),(18,9),(19,1),(19,9),(20,1),(20,2),(20,9),(21,1),(21,2),(21,9),(22,1),(22,2),(22,4),(22,9);
 /*!40000 ALTER TABLE `genre_film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,7 +233,7 @@ CREATE TABLE `invoices` (
   KEY `fk_invoices_pegawais1_idx` (`kasir_id`),
   CONSTRAINT `fk_invoices_konsumens1` FOREIGN KEY (`konsumens_id`) REFERENCES `konsumens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_invoices_pegawais1` FOREIGN KEY (`kasir_id`) REFERENCES `pegawais` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -241,6 +242,7 @@ CREATE TABLE `invoices` (
 
 LOCK TABLES `invoices` WRITE;
 /*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
+INSERT INTO `invoices` VALUES (1,'2023-01-01 00:00:00',100000,0,1,3,'TERBAYAR'),(2,'2023-02-02 00:00:00',600000,0,5,6,'TERBAYAR'),(3,'2023-11-21 00:00:00',60000,0,3,6,'TERBAYAR'),(4,'2023-09-05 00:00:00',100000,0,1,3,'TERBAYAR'),(5,'2023-09-19 00:00:00',180000,0,2,6,'TERBAYAR'),(6,'2023-08-21 00:00:00',120000,0,7,3,'TERBAYAR');
 /*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -256,7 +258,7 @@ CREATE TABLE `jadwal_films` (
   `tanggal` date NOT NULL,
   `jam_pemutaran` enum('I','II','III','IV') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -265,7 +267,7 @@ CREATE TABLE `jadwal_films` (
 
 LOCK TABLES `jadwal_films` WRITE;
 /*!40000 ALTER TABLE `jadwal_films` DISABLE KEYS */;
-INSERT INTO `jadwal_films` VALUES (1,'2023-09-28','I'),(2,'2023-09-28','II'),(3,'2023-12-07','I'),(4,'2023-12-19','I'),(5,'2023-12-19','II'),(12,'2023-12-20','I'),(13,'2023-12-20','II');
+INSERT INTO `jadwal_films` VALUES (1,'2023-09-28','I'),(2,'2023-09-28','II'),(3,'2023-12-07','I'),(4,'2023-12-19','I'),(5,'2023-12-19','II'),(6,'2023-12-20','I'),(7,'2023-12-20','II'),(8,'2023-07-02','I'),(9,'2023-07-08','I'),(10,'2023-07-05','I'),(11,'2023-07-02','II'),(12,'2023-07-08','II'),(13,'2023-07-05','II'),(14,'2023-07-02','III'),(15,'2023-07-08','III'),(16,'2023-07-05','III'),(17,'2023-08-13','I'),(18,'2023-08-13','II'),(19,'2023-08-14','I'),(20,'2023-08-14','II'),(21,'2023-08-15','I'),(22,'2023-08-15','II'),(23,'2023-08-16','I'),(24,'2023-08-16','II'),(25,'2023-08-17','I'),(26,'2023-08-17','II'),(27,'2023-08-18','I'),(28,'2023-08-18','II'),(29,'2024-01-19','I'),(30,'2024-01-19','II'),(31,'2024-01-19','III'),(32,'2024-01-20','I'),(33,'2024-01-20','II'),(34,'2024-01-20','III'),(35,'2024-01-21','I'),(36,'2024-01-21','II'),(37,'2024-01-21','III'),(38,'2024-01-22','I'),(39,'2024-01-22','II'),(40,'2024-01-22','III'),(41,'2024-01-23','I'),(42,'2024-01-23','II'),(43,'2024-01-23','III'),(44,'2024-01-24','I'),(45,'2024-01-24','II'),(46,'2024-01-24','III'),(47,'2024-01-25','I'),(48,'2024-01-25','II'),(49,'2024-01-25','III'),(50,'2024-01-26','I'),(51,'2024-01-26','II'),(52,'2024-01-26','III'),(53,'2024-01-27','I'),(54,'2024-01-27','II'),(55,'2024-01-27','III'),(56,'2024-01-28','I'),(57,'2024-01-28','II'),(58,'2024-01-28','III');
 /*!40000 ALTER TABLE `jadwal_films` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -402,6 +404,7 @@ CREATE TABLE `sesi_films` (
 
 LOCK TABLES `sesi_films` WRITE;
 /*!40000 ALTER TABLE `sesi_films` DISABLE KEYS */;
+INSERT INTO `sesi_films` VALUES (1,1,1),(1,1,2),(1,1,3),(1,1,4),(1,1,7),(1,1,8),(1,1,9),(1,1,11),(1,1,15),(1,2,1),(1,2,2),(1,2,3),(1,2,4),(1,2,7),(1,2,8),(1,2,11),(1,2,12),(1,2,15),(1,3,1),(1,3,2),(1,3,3),(1,3,4),(1,3,7),(1,3,8),(1,3,12),(1,3,15),(1,4,1),(1,4,2),(1,4,3),(1,4,5),(1,4,7),(1,4,9),(1,4,11),(1,5,1),(1,5,2),(1,5,3),(1,5,5),(1,5,8),(1,5,9),(1,5,11),(1,5,12),(1,6,1),(1,6,2),(1,6,3),(1,6,5),(1,7,19),(1,7,20),(1,7,21),(1,7,22),(1,8,19),(1,8,20),(1,8,21),(1,8,22),(1,9,19),(1,9,20),(1,9,21),(1,9,22),(1,10,19),(1,10,20),(1,10,21),(1,10,22),(1,11,19),(1,11,20),(1,11,21),(1,11,22),(1,12,18),(1,12,19),(1,12,22),(1,13,18),(1,13,19),(1,13,22),(1,14,18),(1,14,19),(1,14,22),(29,1,1),(29,1,2),(29,1,3),(29,1,4),(29,1,7),(29,1,8),(29,1,9),(29,1,11),(29,1,15),(29,2,1),(29,2,2),(29,2,3),(29,2,4),(29,2,7),(29,2,8),(29,2,11),(29,2,12),(29,2,15),(29,3,1),(29,3,2),(29,3,3),(29,3,4),(29,3,7),(29,3,8),(29,3,12),(29,3,15),(29,4,1),(29,4,2),(29,4,3),(29,4,5),(29,4,7),(29,4,9),(29,4,11),(29,5,1),(29,5,2),(29,5,3),(29,5,5),(29,5,8),(29,5,9),(29,5,11),(29,5,12),(29,6,1),(29,6,2),(29,6,3),(29,6,5),(29,7,19),(29,7,20),(29,7,21),(29,7,22),(29,8,19),(29,8,20),(29,8,21),(29,8,22),(29,9,19),(29,9,20),(29,9,21),(29,9,22),(29,10,19),(29,10,20),(29,10,21),(29,10,22),(29,11,19),(29,11,20),(29,11,21),(29,11,22),(29,12,18),(29,12,19),(29,12,22),(29,13,18),(29,13,19),(29,13,22),(29,14,18),(29,14,19),(29,14,22),(30,1,1),(30,1,2),(30,1,3),(30,1,4),(30,1,7),(30,1,8),(30,1,9),(30,1,11),(30,1,15),(30,2,1),(30,2,2),(30,2,3),(30,2,4),(30,2,7),(30,2,8),(30,2,11),(30,2,12),(30,2,15),(30,3,1),(30,3,2),(30,3,3),(30,3,4),(30,3,7),(30,3,8),(30,3,12),(30,3,15),(30,4,1),(30,4,2),(30,4,3),(30,4,5),(30,4,7),(30,4,9),(30,4,11),(30,5,1),(30,5,2),(30,5,3),(30,5,5),(30,5,8),(30,5,9),(30,5,11),(30,5,12),(30,6,1),(30,6,2),(30,6,3),(30,6,5),(30,7,19),(30,7,20),(30,7,21),(30,7,22),(30,8,19),(30,8,20),(30,8,21),(30,8,22),(30,9,19),(30,9,20),(30,9,21),(30,9,22),(30,10,19),(30,10,20),(30,10,21),(30,10,22),(30,11,19),(30,11,20),(30,11,21),(30,11,22),(30,12,18),(30,12,19),(30,12,22),(30,13,18),(30,13,19),(30,13,22),(30,14,18),(30,14,19),(30,14,22),(31,1,1),(31,1,2),(31,1,3),(31,1,4),(31,1,7),(31,1,8),(31,1,9),(31,1,11),(31,1,15),(31,2,1),(31,2,2),(31,2,3),(31,2,4),(31,2,7),(31,2,8),(31,2,11),(31,2,12),(31,2,15),(31,3,1),(31,3,2),(31,3,3),(31,3,4),(31,3,7),(31,3,8),(31,3,12),(31,3,15),(31,4,1),(31,4,2),(31,4,3),(31,4,5),(31,4,7),(31,4,9),(31,4,11),(31,5,1),(31,5,2),(31,5,3),(31,5,5),(31,5,8),(31,5,9),(31,5,11),(31,5,12),(31,6,1),(31,6,2),(31,6,3),(31,6,5),(31,7,19),(31,7,20),(31,7,21),(31,7,22),(31,8,19),(31,8,20),(31,8,21),(31,8,22),(31,9,19),(31,9,20),(31,9,21),(31,9,22),(31,10,19),(31,10,20),(31,10,21),(31,10,22),(31,11,19),(31,11,20),(31,11,21),(31,11,22),(31,12,18),(31,12,19),(31,12,22),(31,13,18),(31,13,19),(31,13,22),(31,14,18),(31,14,19),(31,14,22),(32,1,1),(32,1,2),(32,1,3),(32,1,4),(32,1,7),(32,1,8),(32,1,9),(32,1,11),(32,1,15),(32,2,1),(32,2,2),(32,2,3),(32,2,4),(32,2,7),(32,2,8),(32,2,11),(32,2,12),(32,2,15),(32,3,1),(32,3,2),(32,3,3),(32,3,4),(32,3,7),(32,3,8),(32,3,12),(32,3,15),(32,4,1),(32,4,2),(32,4,3),(32,4,5),(32,4,7),(32,4,9),(32,4,11),(32,5,1),(32,5,2),(32,5,3),(32,5,5),(32,5,8),(32,5,9),(32,5,11),(32,5,12),(32,6,1),(32,6,2),(32,6,3),(32,6,5),(32,7,19),(32,7,20),(32,7,21),(32,7,22),(32,8,19),(32,8,20),(32,8,21),(32,8,22),(32,9,19),(32,9,20),(32,9,21),(32,9,22),(32,10,19),(32,10,20),(32,10,21),(32,10,22),(32,11,19),(32,11,20),(32,11,21),(32,11,22),(32,12,18),(32,12,19),(32,12,22),(32,13,18),(32,13,19),(32,13,22),(32,14,18),(32,14,19),(32,14,22),(33,1,1),(33,1,2),(33,1,3),(33,1,4),(33,1,7),(33,1,8),(33,1,9),(33,1,11),(33,1,15),(33,2,1),(33,2,2),(33,2,3),(33,2,4),(33,2,7),(33,2,8),(33,2,11),(33,2,12),(33,2,15),(33,3,1),(33,3,2),(33,3,3),(33,3,4),(33,3,7),(33,3,8),(33,3,12),(33,3,15),(33,4,1),(33,4,2),(33,4,3),(33,4,5),(33,4,7),(33,4,9),(33,4,11),(33,5,1),(33,5,2),(33,5,3),(33,5,5),(33,5,8),(33,5,9),(33,5,11),(33,5,12),(33,6,1),(33,6,2),(33,6,3),(33,6,5),(33,7,19),(33,7,20),(33,7,21),(33,7,22),(33,8,19),(33,8,20),(33,8,21),(33,8,22),(33,9,19),(33,9,20),(33,9,21),(33,9,22),(33,10,19),(33,10,20),(33,10,21),(33,10,22),(33,11,19),(33,11,20),(33,11,21),(33,11,22),(33,12,18),(33,12,19),(33,12,22),(33,13,18),(33,13,19),(33,13,22),(33,14,18),(33,14,19),(33,14,22),(34,1,1),(34,1,2),(34,1,3),(34,1,4),(34,1,7),(34,1,8),(34,1,9),(34,1,11),(34,1,15),(34,2,1),(34,2,2),(34,2,3),(34,2,4),(34,2,7),(34,2,8),(34,2,11),(34,2,12),(34,2,15),(34,3,1),(34,3,2),(34,3,3),(34,3,4),(34,3,7),(34,3,8),(34,3,12),(34,3,15),(34,4,1),(34,4,2),(34,4,3),(34,4,5),(34,4,7),(34,4,9),(34,4,11),(34,5,1),(34,5,2),(34,5,3),(34,5,5),(34,5,8),(34,5,9),(34,5,11),(34,5,12),(34,6,1),(34,6,2),(34,6,3),(34,6,5),(34,7,19),(34,7,20),(34,7,21),(34,7,22),(34,8,19),(34,8,20),(34,8,21),(34,8,22),(34,9,19),(34,9,20),(34,9,21),(34,9,22),(34,10,19),(34,10,20),(34,10,21),(34,10,22),(34,11,19),(34,11,20),(34,11,21),(34,11,22),(34,12,18),(34,12,19),(34,12,22),(34,13,18),(34,13,19),(34,13,22),(34,14,18),(34,14,19),(34,14,22),(35,1,1),(35,1,2),(35,1,3),(35,1,4),(35,1,7),(35,1,8),(35,1,9),(35,1,11),(35,1,15),(35,2,1),(35,2,2),(35,2,3),(35,2,4),(35,2,7),(35,2,8),(35,2,11),(35,2,12),(35,2,15),(35,3,1),(35,3,2),(35,3,3),(35,3,4),(35,3,7),(35,3,8),(35,3,12),(35,3,15),(35,4,1),(35,4,2),(35,4,3),(35,4,5),(35,4,7),(35,4,9),(35,4,11),(35,5,1),(35,5,2),(35,5,3),(35,5,5),(35,5,8),(35,5,9),(35,5,11),(35,5,12),(35,6,1),(35,6,2),(35,6,3),(35,6,5),(35,7,19),(35,7,20),(35,7,21),(35,7,22),(35,8,19),(35,8,20),(35,8,21),(35,8,22),(35,9,19),(35,9,20),(35,9,21),(35,9,22),(35,10,19),(35,10,20),(35,10,21),(35,10,22),(35,11,19),(35,11,20),(35,11,21),(35,11,22),(35,12,18),(35,12,19),(35,12,22),(35,13,18),(35,13,19),(35,13,22),(35,14,18),(35,14,19),(35,14,22),(36,1,1),(36,1,2),(36,1,3),(36,1,4),(36,1,7),(36,1,8),(36,1,9),(36,1,11),(36,1,15),(36,2,1),(36,2,2),(36,2,3),(36,2,4),(36,2,7),(36,2,8),(36,2,11),(36,2,12),(36,2,15),(36,3,1),(36,3,2),(36,3,3),(36,3,4),(36,3,7),(36,3,8),(36,3,12),(36,3,15),(36,4,1),(36,4,2),(36,4,3),(36,4,5),(36,4,7),(36,4,9),(36,4,11),(36,5,1),(36,5,2),(36,5,3),(36,5,5),(36,5,8),(36,5,9),(36,5,11),(36,5,12),(36,6,1),(36,6,2),(36,6,3),(36,6,5),(36,7,19),(36,7,20),(36,7,21),(36,7,22),(36,8,19),(36,8,20),(36,8,21),(36,8,22),(36,9,19),(36,9,20),(36,9,21),(36,9,22),(36,10,19),(36,10,20),(36,10,21),(36,10,22),(36,11,19),(36,11,20),(36,11,21),(36,11,22),(36,12,18),(36,12,19),(36,12,22),(36,13,18),(36,13,19),(36,13,22),(36,14,18),(36,14,19),(36,14,22);
 /*!40000 ALTER TABLE `sesi_films` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -425,7 +428,7 @@ CREATE TABLE `studios` (
   KEY `fk_studios_cinemas1_idx` (`cinemas_id`),
   CONSTRAINT `fk_studios_cinemas1` FOREIGN KEY (`cinemas_id`) REFERENCES `cinemas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_studios_jenis_studios` FOREIGN KEY (`jenis_studios_id`) REFERENCES `jenis_studios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -434,7 +437,7 @@ CREATE TABLE `studios` (
 
 LOCK TABLES `studios` WRITE;
 /*!40000 ALTER TABLE `studios` DISABLE KEYS */;
-INSERT INTO `studios` VALUES (1,'1',64,2,4,45000,70000),(2,'2',24,1,6,40000,70000),(3,'3',24,1,6,40000,70000),(4,'4',64,2,9,50000,70000),(5,'5',24,1,9,40000,70000),(6,'6',64,2,9,50000,70000),(7,'A',84,2,7,30000,60000),(8,'B',64,1,7,40000,70000),(9,'C',64,1,7,40000,70000),(10,'D',48,2,7,30000,60000),(11,'E',48,2,7,35000,70000);
+INSERT INTO `studios` VALUES (1,'1',64,2,4,45000,70000),(2,'2',24,1,6,40000,70000),(3,'3',24,1,6,40000,70000),(4,'4',64,2,9,50000,70000),(5,'5',24,1,9,40000,70000),(6,'6',64,2,9,50000,70000),(7,'A',84,2,7,30000,60000),(8,'B',64,1,7,40000,70000),(9,'C',64,1,7,40000,70000),(10,'D',48,2,7,30000,60000),(11,'E',48,2,7,35000,70000),(12,'I',48,2,12,60000,50000),(13,'II',48,3,12,70000,65000),(14,'III',48,5,12,80000,70000);
 /*!40000 ALTER TABLE `studios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -470,6 +473,7 @@ CREATE TABLE `tikets` (
 
 LOCK TABLES `tikets` WRITE;
 /*!40000 ALTER TABLE `tikets` DISABLE KEYS */;
+INSERT INTO `tikets` VALUES (1,'5',1,5,20000,1,1,1),(1,'6',1,5,20000,1,1,1),(1,'7',1,5,20000,1,1,1),(1,'8',1,5,20000,1,1,1),(2,'1',1,8,30000,1,1,15),(2,'10',1,8,30000,1,1,15),(2,'11',1,8,30000,1,1,15),(2,'12',1,8,30000,1,1,15),(2,'13',1,8,30000,1,1,15),(2,'14',1,8,30000,1,1,15),(2,'15',1,8,30000,1,1,15),(2,'16',1,8,30000,1,1,15),(2,'17',1,8,30000,1,1,15),(2,'18',1,8,30000,1,1,15),(2,'19',1,8,30000,1,1,15),(2,'2',1,8,30000,1,1,15),(2,'20',1,8,30000,1,1,15),(2,'3',1,8,30000,1,1,15),(2,'4',1,8,30000,1,1,15),(2,'5',1,8,30000,1,1,15),(2,'6',1,8,30000,1,1,15),(2,'7',1,8,30000,1,1,15),(2,'8',1,8,30000,1,1,15),(2,'9',1,8,30000,1,1,15);
 /*!40000 ALTER TABLE `tikets` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -482,4 +486,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-17  1:11:37
+-- Dump completed on 2024-01-17  9:27:16
