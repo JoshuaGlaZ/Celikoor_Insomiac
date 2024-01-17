@@ -33,12 +33,12 @@ namespace Insomiac_lib
             string perintah = "";
             if (order == "Terendah")
             {
-                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from cinemas c left join studios s on c.id = s.cinemas_id " +
+                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from  studios s left join cinemas c on c.id = s.cinemas_id " +
                     "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id group by c.nama_cabang order by TotalPenjualan ASC Limit 3";
             }
             else
             {
-                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from cinemas c left join studios s on c.id = s.cinemas_id " +
+                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from studios s left join cinemas c on c.id = s.cinemas_id " +
                     "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id group by c.nama_cabang order by TotalPenjualan DESC Limit 3";
             }
                   
