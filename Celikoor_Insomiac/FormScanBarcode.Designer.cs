@@ -50,6 +50,7 @@
             // textBoxBarcode
             // 
             this.textBoxBarcode.Location = new System.Drawing.Point(30, 103);
+            this.textBoxBarcode.MaxLength = 6;
             this.textBoxBarcode.Multiline = true;
             this.textBoxBarcode.Name = "textBoxBarcode";
             this.textBoxBarcode.Size = new System.Drawing.Size(438, 76);

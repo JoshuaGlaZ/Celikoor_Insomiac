@@ -13,6 +13,7 @@ namespace Celikoor_Insomiac
 {
     public partial class FormScanBarcode : Form
     {
+        Pegawai ope;
         public FormScanBarcode()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Celikoor_Insomiac
         private void FormScanBarcode_Load(object sender, EventArgs e)
         {
             FormUtama frmUtama = (FormUtama)this.MdiParent;
-            Pegawai op = frmUtama.pegawaiLogin;
+            ope = frmUtama.pegawaiLogin;
         }
 
         private void buttonHadir_Click(object sender, EventArgs e)
@@ -29,8 +30,14 @@ namespace Celikoor_Insomiac
             try
             {
                 string invoice = textBoxBarcode.Text.Substring(0, 3);
-                string noKursi = textBoxBarcode.Text.Substring(3);
-                Ticket.CekHadir(invoice, noKursi);
+                int checkzero = int.Parse(invoice);
+                invoice = checkzero.ToString();
+
+                string rowKursi = textBoxBarcode.Text.Substring(3,1);
+                int checkKursi = int.Parse(textBoxBarcode.Text.Substring(4, 2));
+                string noKursi = rowKursi + checkKursi.ToString();
+
+                Ticket.CekHadir(invoice, noKursi, ope);
                 textBoxBarcode.Text = "";
             }
             catch(Exception ex)
