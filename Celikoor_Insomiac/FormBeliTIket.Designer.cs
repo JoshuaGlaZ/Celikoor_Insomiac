@@ -1671,6 +1671,7 @@
             this.labelDiskon.Size = new System.Drawing.Size(72, 28);
             this.labelDiskon.TabIndex = 279;
             this.labelDiskon.Text = "50000";
+            this.labelDiskon.Click += new System.EventHandler(this.labelDiskon_Click);
             // 
             // label15
             // 

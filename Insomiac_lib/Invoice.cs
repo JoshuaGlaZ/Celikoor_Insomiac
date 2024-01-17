@@ -54,20 +54,27 @@ namespace Insomiac_lib
 
         public static void CreateInvoice(Invoice newInv)
         {
-            string perintah = "INSERT INTO `invoices` (`tanggal`, `grand_total`, `diskon_nominal`, `konsumens_id`, `kasir_id`, `status`)" +
-                "VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + newInv.Grand_total + "', '" + newInv.Diskon_nominal + "', '" + newInv.Pelanggan.Id.ToString() + "', '" + newInv.Kasir.Id.ToString() + "', 'PENDING');";
-            Koneksi.JalankanPerintah(perintah); 
-            
-            foreach(Ticket tiket in newInv.ListTiket)
+            string perintah = "INSERT INTO `invoices` (`tanggal`, `grand_total`, `diskon_nominal`, `konsumens_id`, `status`)" +
+                "VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + newInv.Grand_total + "', '" + newInv.Diskon_nominal + "', '" + newInv.Pelanggan.Id.ToString() + "', 'PENDING');";
+            Koneksi.JalankanPerintah(perintah);
+
+            perintah = "SELECT invoices.id FROM invoices ORDER BY id DESC LIMIT 1;";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            if(hasil.Read())
+            {
+                newInv.Id = hasil.GetString(0);
+            }
+            foreach (Ticket tiket in newInv.ListTiket)
             {
                 perintah = "INSERT INTO `tikets` (`invoices_id`,`nomor_kursi`, `status_hadir`, `operator_id`, `harga`, `jadwal_film_id`, `studios_id`, `films_id`)" +
-                    "VALUES ('"+ newInv.Id +"','"+tiket.Nomor_kursi+"', '"+tiket.Status+"', '"+0+"', '"+tiket.Harga+"', '"+tiket.JadwalFilm+"', '"+tiket.Studio+"', '"+tiket.JadwalFilm+"')";
+                    "VALUES ('"+ newInv.Id.ToString() +"','"+tiket.Nomor_kursi.ToString()+"', '0', '"+2.ToString()+"', '"+tiket.Harga+"', '"+tiket.JadwalFilm.Id.ToString() +"', '"+tiket.Studio.Id.ToString() +"', '"+tiket.Film.Id.ToString() +"')";
                 Koneksi.JalankanPerintah(perintah);
             }
         }
-        public void AddTicket(string nomor_kursi, double harga, JadwalFilm jadwalFilm, Studio studio, Film film, Pegawai tOp)
+        public void AddTicket(string nomor_kursi, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
         {
-            Ticket tiket = new Ticket(nomor_kursi, harga, jadwalFilm, studio, film, tOp);
+            Ticket tiket = new Ticket(nomor_kursi, harga, jadwalFilm, studio, film);
             ListTiket.Add(tiket); 
         }
         public static void UpdateTicket(string barcode)

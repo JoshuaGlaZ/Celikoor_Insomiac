@@ -17,7 +17,7 @@ namespace Insomiac_lib
         Film film;
         Pegawai op;  
 
-        public Ticket(string nomor_kursi, double harga, JadwalFilm jadwalFilm, Studio studio, Film film, Pegawai tOp)
+        public Ticket(string nomor_kursi, double harga, JadwalFilm jadwalFilm, Studio studio, Film film)
         {
             Nomor_kursi = nomor_kursi;
             Status = 0;
@@ -25,7 +25,6 @@ namespace Insomiac_lib
             JadwalFilm = jadwalFilm;
             Studio = studio;
             Film = film;
-            op = tOp; 
         }
         public Ticket()
         {

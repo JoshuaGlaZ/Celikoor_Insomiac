@@ -15,6 +15,7 @@ namespace Celikoor_Insomiac
 {
     public partial class FormBeliTIket : Form
     {
+        FormUtama mainForm;
         List<Cinema> listCinema = new List<Cinema>();
         List<string> listKodeKursi = new List<string>();
         List<string> listKodeKursiTaken = new List<string>();
@@ -27,9 +28,11 @@ namespace Celikoor_Insomiac
 
         private void FormBeliTIket_Load(object sender, EventArgs e)
         {
+            mainForm = (FormUtama)this.MdiParent; 
             List<Film> listFilm = Film.BacaData();
             comboBoxJudul.DataSource = listFilm;
             comboBoxJudul.DisplayMember = "Judul";
+            isFrozen = true; 
 
             foreach (Control control in panel1.Controls)
             {
@@ -45,7 +48,16 @@ namespace Celikoor_Insomiac
 
         private void buttonPembayaran_Click(object sender, EventArgs e)
         {
-
+            Invoice invoice = new Invoice();
+            invoice.Tanggal = DateTime.Now;
+            invoice.Grand_total = int.Parse(labelTotalAkhir.Text);
+            invoice.Diskon_nominal = int.Parse(labelDiskon.Text);
+            invoice.Pelanggan = mainForm.konsumenLogin; 
+            foreach(string nomorKursi in listKodeKursi)
+            {
+                invoice.AddTicket(nomorKursi, double.Parse(labelHarga.Text), (JadwalFilm)comboBoxTanggal.SelectedItem, (Studio)comboBoxStudio.SelectedItem, (Film)comboBoxJudul.SelectedItem); 
+            }
+            Invoice.CreateInvoice(invoice); 
         }
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +77,7 @@ namespace Celikoor_Insomiac
             }
 
             UpdateKursi();
+            isFrozen = true; 
             foreach (Control control in panel1.Controls)
             {
                 if (control is CheckBox)
@@ -83,6 +96,7 @@ namespace Celikoor_Insomiac
                     }
                 }
             }
+            isFrozen = false;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -184,7 +198,10 @@ namespace Celikoor_Insomiac
                 total += int.Parse(labelHarga.Text);
             }
             labelTotalKursi.Text = totalKursi;
+            labelDiskon.Text = (listKodeKursi.Count() * ((Film)comboBoxJudul.SelectedItem).Diskon).ToString();
             labelTotal.Text = total.ToString();
+            labelTotalAkhir.Text = (total - double.Parse(labelDiskon.Text)).ToString();
+
         }
         public string ConvertKodeKursi(string kodeKursi)
         {
@@ -243,6 +260,11 @@ namespace Celikoor_Insomiac
                 }
             }
             UpdateTotalKursi();
+        }
+
+        private void labelDiskon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
