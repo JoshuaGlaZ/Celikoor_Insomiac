@@ -34,6 +34,7 @@ namespace Celikoor_Insomiac
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listLaporan.Clear();
             string order = comboBoxUrut.SelectedIndex.ToString();
             listLaporan = LaporanPenjualanTiketCabang.BacaData(order);
             dataGridViewHasil.DataSource = listLaporan;
