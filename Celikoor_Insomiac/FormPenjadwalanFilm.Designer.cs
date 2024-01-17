@@ -66,10 +66,6 @@ namespace Celikoor_Insomiac
             this.JamCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonBatal = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBoxPoster = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -96,9 +92,9 @@ namespace Celikoor_Insomiac
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(305, 268);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -108,7 +104,7 @@ namespace Celikoor_Insomiac
             this.comboBoxFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFilm.FormattingEnabled = true;
             this.comboBoxFilm.Location = new System.Drawing.Point(65, 183);
-            this.comboBoxFilm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxFilm.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFilm.Name = "comboBoxFilm";
             this.comboBoxFilm.Size = new System.Drawing.Size(129, 21);
             this.comboBoxFilm.TabIndex = 15;
@@ -118,7 +114,7 @@ namespace Celikoor_Insomiac
             // 
             this.checkBoxIV.AutoSize = true;
             this.checkBoxIV.Location = new System.Drawing.Point(167, 227);
-            this.checkBoxIV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxIV.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIV.Name = "checkBoxIV";
             this.checkBoxIV.Size = new System.Drawing.Size(36, 17);
             this.checkBoxIV.TabIndex = 13;
@@ -129,7 +125,7 @@ namespace Celikoor_Insomiac
             // 
             this.checkBoxIII.AutoSize = true;
             this.checkBoxIII.Location = new System.Drawing.Point(129, 227);
-            this.checkBoxIII.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxIII.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIII.Name = "checkBoxIII";
             this.checkBoxIII.Size = new System.Drawing.Size(35, 17);
             this.checkBoxIII.TabIndex = 14;
@@ -140,7 +136,7 @@ namespace Celikoor_Insomiac
             // 
             this.checkBoxII.AutoSize = true;
             this.checkBoxII.Location = new System.Drawing.Point(95, 227);
-            this.checkBoxII.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxII.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxII.Name = "checkBoxII";
             this.checkBoxII.Size = new System.Drawing.Size(32, 17);
             this.checkBoxII.TabIndex = 13;
@@ -151,7 +147,7 @@ namespace Celikoor_Insomiac
             // 
             this.checkBoxI.AutoSize = true;
             this.checkBoxI.Location = new System.Drawing.Point(65, 227);
-            this.checkBoxI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxI.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxI.Name = "checkBoxI";
             this.checkBoxI.Size = new System.Drawing.Size(29, 17);
             this.checkBoxI.TabIndex = 12;
@@ -161,7 +157,7 @@ namespace Celikoor_Insomiac
             // dateTimePickerTanggal
             // 
             this.dateTimePickerTanggal.Location = new System.Drawing.Point(65, 205);
-            this.dateTimePickerTanggal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerTanggal.Name = "dateTimePickerTanggal";
             this.dateTimePickerTanggal.Size = new System.Drawing.Size(129, 20);
             this.dateTimePickerTanggal.TabIndex = 11;
@@ -171,7 +167,7 @@ namespace Celikoor_Insomiac
             this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStudio.FormattingEnabled = true;
             this.comboBoxStudio.Location = new System.Drawing.Point(65, 51);
-            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStudio.Name = "comboBoxStudio";
             this.comboBoxStudio.Size = new System.Drawing.Size(82, 21);
             this.comboBoxStudio.TabIndex = 9;
@@ -182,7 +178,7 @@ namespace Celikoor_Insomiac
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.FormattingEnabled = true;
             this.comboBoxCinema.Location = new System.Drawing.Point(65, 25);
-            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCinema.Name = "comboBoxCinema";
             this.comboBoxCinema.Size = new System.Drawing.Size(82, 21);
             this.comboBoxCinema.TabIndex = 8;
@@ -271,7 +267,7 @@ namespace Celikoor_Insomiac
             // buttonTambah
             // 
             this.buttonTambah.Location = new System.Drawing.Point(254, 318);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(77, 29);
             this.buttonTambah.TabIndex = 2;
@@ -292,9 +288,9 @@ namespace Celikoor_Insomiac
             this.groupBox2.Controls.Add(this.labelSinopsis);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(557, 38);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(315, 308);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -413,7 +409,7 @@ namespace Celikoor_Insomiac
             this.TanggalCol,
             this.JamCol});
             this.dataGridViewInput.Location = new System.Drawing.Point(15, 362);
-            this.dataGridViewInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewInput.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewInput.Name = "dataGridViewInput";
             this.dataGridViewInput.RowHeadersWidth = 62;
             this.dataGridViewInput.RowTemplate.Height = 28;
@@ -459,7 +455,7 @@ namespace Celikoor_Insomiac
             // buttonSimpan
             // 
             this.buttonSimpan.Location = new System.Drawing.Point(657, 533);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(95, 27);
             this.buttonSimpan.TabIndex = 5;
@@ -470,7 +466,7 @@ namespace Celikoor_Insomiac
             // buttonBatal
             // 
             this.buttonBatal.Location = new System.Drawing.Point(777, 533);
-            this.buttonBatal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBatal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBatal.Name = "buttonBatal";
             this.buttonBatal.Size = new System.Drawing.Size(95, 27);
             this.buttonBatal.TabIndex = 6;
@@ -478,47 +474,11 @@ namespace Celikoor_Insomiac
             this.buttonBatal.UseVisualStyleBackColor = true;
             this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(894, 10);
-            this.panel3.TabIndex = 21;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 610);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 10);
-            this.panel1.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 600);
-            this.panel2.TabIndex = 23;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(48)))), ((int)(((byte)(54)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(884, 10);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 600);
-            this.panel4.TabIndex = 24;
-            // 
             // pictureBoxPoster
             // 
             this.pictureBoxPoster.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBoxPoster.Location = new System.Drawing.Point(346, 38);
-            this.pictureBoxPoster.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxPoster.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxPoster.Name = "pictureBoxPoster";
             this.pictureBoxPoster.Size = new System.Drawing.Size(198, 308);
             this.pictureBoxPoster.TabIndex = 1;
@@ -530,10 +490,6 @@ namespace Celikoor_Insomiac
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(894, 620);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.buttonBatal);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.dataGridViewInput);
@@ -541,7 +497,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.pictureBoxPoster);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPenjadwalanFilm";
             this.Text = "Penjadwalan Film";
             this.Load += new System.EventHandler(this.FormPenjadwalanFilm_Load);
@@ -589,10 +545,6 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.DataGridView dataGridViewInput;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonBatal;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxFilm;
         private System.Windows.Forms.DataGridViewTextBoxColumn JudulFilmCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CinemaCol;
