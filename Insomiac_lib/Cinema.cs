@@ -57,7 +57,7 @@ namespace Insomiac_lib
         public static List<Cinema> BacaData(string kriteria, string nilai)
         {
             List<Cinema> lst = new List<Cinema>();
-            string perintah = "SELECT * FROM cinemas WHERE " + kriteria + " LIKE \'%" + nilai + "%\';";
+            string perintah = "SELECT * FROM cinemas WHERE " + kriteria + " = '" + nilai + "';";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {

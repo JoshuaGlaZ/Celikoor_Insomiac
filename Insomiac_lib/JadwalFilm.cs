@@ -89,7 +89,7 @@ namespace Insomiac_lib
                "FROM  jadwal_films jf " +
                "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
-               "WHERE fs.films_id = '" + tFilm.Id + "';";
+               "WHERE fs.films_id = '" + tFilm.Id + "' GROUP BY jf.id;";
 
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
@@ -193,6 +193,10 @@ namespace Insomiac_lib
         {
             string perintah = "UPDATE `insomniac`.`jadwal_films` SET `tanggal`='"+tgl.ToString("yyyy-MM-dd")+"', `jam_pemutaran`='"+jamPutar+"' WHERE `id`='"+this.Id+"';";
             Koneksi.JalankanPerintah(perintah);
+        }
+        public override string ToString()
+        {   
+            return TanggalPutar.ToShortDateString() + " / " + JamPemutaran;
         }
     }
 }
