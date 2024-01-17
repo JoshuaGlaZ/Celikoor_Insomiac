@@ -50,7 +50,7 @@ namespace Celikoor_Insomiac
         private void filterPencarian()
         {
             string nilai = comboBoxGenre.SelectedItem.ToString();
-            string order = comboBoxUrut.SelectedItem.ToString();
+            string order = comboBoxUrut.SelectedIndex.ToString();
             listLaporan = LaporanGenreTontonanKonsumen.BacaData(nilai, order);
             dataGridViewHasil.DataSource = listLaporan;
         }

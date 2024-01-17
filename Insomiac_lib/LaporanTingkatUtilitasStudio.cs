@@ -42,8 +42,9 @@ namespace Insomiac_lib
             while (msdr.Read())
             {
                 LaporanTingkatUtilitasStudio laporan = new LaporanTingkatUtilitasStudio();
-                laporan.Studio = Studio.BacaData("judul", msdr.GetString(0))[0];
-                laporan.JumlahKursiKosong = msdr.GetInt32(1);
+                laporan.Studio = Studio.BacaData("nama", msdr.GetString(1))[0];
+                laporan.cinema = Cinema.BacaData("nama_cabang", msdr.GetString(0))[0];
+                laporan.JumlahKursiKosong = msdr.GetInt32(2);
                 listLaporan.Add(laporan);
             }
             return listLaporan;
