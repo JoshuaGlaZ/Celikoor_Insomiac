@@ -64,5 +64,10 @@ namespace Celikoor_Insomiac
             textBoxCari_TextChanged(sender, e);
 
         }
+
+        private void buttonCetak_Click(object sender, EventArgs e)
+        {
+            LaporanFilmLaris.CetakLaporan(listLaporan);
+        }
     }
 }

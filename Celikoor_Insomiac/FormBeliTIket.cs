@@ -235,12 +235,11 @@ namespace Celikoor_Insomiac
             JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
             foreach (Film_Studio fs in jadwalFilm.ListFS)
             {
-                if(listCinema.Contains(fs.Std.Bioskop))
+                if (listCinema.Contains(fs.Std.Bioskop) && !comboBoxStudio.Items.Contains(fs.Std))
                 {
                     comboBoxStudio.Items.Add(fs.Std);
                 }
-            }
-            
+            }        
         }
 
         private void checkBo1_CheckedChanged(object sender, EventArgs e)

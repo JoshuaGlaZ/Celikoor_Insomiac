@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,24 @@ namespace Insomiac_lib
             }
             return listLaporan;
         }
-        
+
+        public static void CetakLaporan(List<LaporanTingkatUtilitasStudio> lst)
+        {
+            string nama = "LAPORAN TINGKAT UTILITAS STUDIO_" + DateTime.Now.ToString("yyyy-MM-dd");
+            StreamWriter sw = new StreamWriter(nama);
+            sw.WriteLine("LAPORAN TINGKAT UTILITAS STUDIO_" + DateTime.Now.ToString("yyyy-MM-dd"));
+            sw.WriteLine("======================================================================");
+            sw.WriteLine("");
+            sw.WriteLine("JUMLAH KURSI KOSONG DI STUDIO :");
+            sw.WriteLine("");
+            sw.WriteLine("no \t cinema \t studio \t jumlah kursi kosong");
+            for (int i = 1; i <= lst.Count; i++)
+            {
+                sw.WriteLine(i + ". \t " + lst[i - 1].Cinema.Nama_cabang + " \t " + lst[i - 1].Studio.Nama + " \t " + lst[i-1].JumlahKursiKosong);
+            }
+            sw.Close();
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.kirimPrinter();
+        }
     }
 }

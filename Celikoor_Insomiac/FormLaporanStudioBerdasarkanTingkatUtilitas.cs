@@ -51,5 +51,10 @@ namespace Celikoor_Insomiac
             dataGridViewHasil.DataSource = listLaporan;
 
         }
+
+        private void buttonCetak_Click(object sender, EventArgs e)
+        {
+            LaporanTingkatUtilitasStudio.CetakLaporan(listLaporan);
+        }
     }
 }
