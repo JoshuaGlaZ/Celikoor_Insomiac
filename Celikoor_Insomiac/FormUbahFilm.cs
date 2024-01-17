@@ -108,7 +108,7 @@ namespace Celikoor_Insomiac
                 else
                 {
                     Film filmUbah = new Film(textBoxJudul.Text,
-                                textBoxSinopsis.Text,
+                                textBoxSinopsis.Text.Replace("'","\\'"),
                                 int.Parse(textBoxTahun.Text),
                                 int.Parse(textBoxDurasi.Text),
                                 (Kelompok)comboBoxKelompok.SelectedItem,
