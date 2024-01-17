@@ -41,7 +41,6 @@
             this.textBoxTahun = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
-            this.labelCoverPath = new System.Windows.Forms.Label();
             this.colKelompok = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.ColumnAktorTglLahir = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -214,20 +213,11 @@
             this.buttonCari.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonCari.Location = new System.Drawing.Point(886, 44);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(272, 35);
+            this.buttonCari.Size = new System.Drawing.Size(205, 35);
             this.buttonCari.TabIndex = 152;
             this.buttonCari.Text = "CARI";
             this.buttonCari.UseVisualStyleBackColor = false;
             this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
-            // 
-            // labelCoverPath
-            // 
-            this.labelCoverPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCoverPath.Location = new System.Drawing.Point(947, 15);
-            this.labelCoverPath.Name = "labelCoverPath";
-            this.labelCoverPath.Size = new System.Drawing.Size(212, 21);
-            this.labelCoverPath.TabIndex = 153;
-            this.labelCoverPath.Text = "-";
             // 
             // colKelompok
             // 
@@ -240,7 +230,7 @@
             this.pictureBoxCover.Location = new System.Drawing.Point(886, 92);
             this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
+            this.pictureBoxCover.Size = new System.Drawing.Size(205, 266);
             this.pictureBoxCover.TabIndex = 106;
             this.pictureBoxCover.TabStop = false;
             // 
@@ -535,7 +525,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label6.Location = new System.Drawing.Point(12, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1147, 42);
+            this.label6.Size = new System.Drawing.Size(1078, 42);
             this.label6.TabIndex = 156;
             this.label6.Text = "U B A H   F I L M ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -561,7 +551,6 @@
             this.panelUtama.Controls.Add(this.label12);
             this.panelUtama.Controls.Add(this.buttonKeluar);
             this.panelUtama.Controls.Add(this.buttonCari);
-            this.panelUtama.Controls.Add(this.labelCoverPath);
             this.panelUtama.Controls.Add(this.comboBoxBahasa);
             this.panelUtama.Controls.Add(this.label11);
             this.panelUtama.Controls.Add(this.dataGridViewAktor);
@@ -601,7 +590,7 @@
             this.textBoxCoverPath.Name = "textBoxCoverPath";
             this.textBoxCoverPath.ReadOnly = true;
             this.textBoxCoverPath.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBoxCoverPath.Size = new System.Drawing.Size(215, 22);
+            this.textBoxCoverPath.Size = new System.Drawing.Size(148, 22);
             this.textBoxCoverPath.TabIndex = 157;
             this.textBoxCoverPath.Text = "-";
             // 
@@ -609,7 +598,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 497);
+            this.ClientSize = new System.Drawing.Size(1111, 497);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panelUtama);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -640,7 +629,6 @@
         private System.Windows.Forms.TextBox textBoxTahun;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button buttonCari;
-        private System.Windows.Forms.Label labelCoverPath;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKelompok;
         private System.Windows.Forms.PictureBox pictureBoxCover;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAktorTglLahir;

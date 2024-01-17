@@ -82,8 +82,8 @@
             this.buttonCari = new System.Windows.Forms.Button();
             this.colKelompok = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelUtama = new System.Windows.Forms.Panel();
-            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             this.textBoxCoverPath = new System.Windows.Forms.TextBox();
+            this.pictureBoxCover = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGenre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAktor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilm)).BeginInit();
@@ -510,7 +510,7 @@
             this.dataGridViewFilm.Name = "dataGridViewFilm";
             this.dataGridViewFilm.RowHeadersWidth = 62;
             this.dataGridViewFilm.RowTemplate.Height = 28;
-            this.dataGridViewFilm.Size = new System.Drawing.Size(1148, 179);
+            this.dataGridViewFilm.Size = new System.Drawing.Size(1080, 179);
             this.dataGridViewFilm.TabIndex = 148;
             this.dataGridViewFilm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFilm_CellContentClick);
             // 
@@ -625,7 +625,7 @@
             this.buttonCari.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonCari.Location = new System.Drawing.Point(886, 44);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(272, 35);
+            this.buttonCari.Size = new System.Drawing.Size(205, 35);
             this.buttonCari.TabIndex = 152;
             this.buttonCari.Text = "CARI";
             this.buttonCari.UseVisualStyleBackColor = false;
@@ -677,16 +677,6 @@
             this.panelUtama.Size = new System.Drawing.Size(1177, 676);
             this.panelUtama.TabIndex = 155;
             // 
-            // pictureBoxCover
-            // 
-            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxCover.Location = new System.Drawing.Point(886, 92);
-            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxCover.Name = "pictureBoxCover";
-            this.pictureBoxCover.Size = new System.Drawing.Size(273, 266);
-            this.pictureBoxCover.TabIndex = 106;
-            this.pictureBoxCover.TabStop = false;
-            // 
             // textBoxCoverPath
             // 
             this.textBoxCoverPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
@@ -697,15 +687,25 @@
             this.textBoxCoverPath.Name = "textBoxCoverPath";
             this.textBoxCoverPath.ReadOnly = true;
             this.textBoxCoverPath.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBoxCoverPath.Size = new System.Drawing.Size(215, 22);
+            this.textBoxCoverPath.Size = new System.Drawing.Size(148, 22);
             this.textBoxCoverPath.TabIndex = 156;
             this.textBoxCoverPath.Text = "-";
+            // 
+            // pictureBoxCover
+            // 
+            this.pictureBoxCover.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxCover.Location = new System.Drawing.Point(886, 92);
+            this.pictureBoxCover.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCover.Name = "pictureBoxCover";
+            this.pictureBoxCover.Size = new System.Drawing.Size(205, 266);
+            this.pictureBoxCover.TabIndex = 106;
+            this.pictureBoxCover.TabStop = false;
             // 
             // FormTambahFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 684);
+            this.ClientSize = new System.Drawing.Size(1110, 684);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panelUtama);
             this.Margin = new System.Windows.Forms.Padding(2);

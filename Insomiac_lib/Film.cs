@@ -74,13 +74,15 @@ namespace Insomiac_lib
         public string tampilkanAktor()
         {
             string data = "";
-            int count = 1;
-            foreach (Aktor_Film af in BacaDataAktor("",Id.ToString(), "UTAMA"))
+            int count = 0;
+            List<Aktor_Film> listAktor = BacaDataAktor("", Id.ToString(), "UTAMA");
+            foreach (Aktor_Film af in listAktor)
             {
                 data += af.Atr.Nama;
                 count++;
-                if (count < 2 && BacaDataAktor("", "", "UTAMA").Count!=1) { data += ", "; }
-                else if(count == 2) { data += ",..."; break; }
+                if (count < 2 && listAktor.Count != 1) { data += ", "; }
+                else if (count == 2 && listAktor.Count == 2) { break; }
+                else if (count == 2 && listAktor.Count > 2) { data += ",..."; break; }
             }
             return data;
         }
@@ -88,12 +90,13 @@ namespace Insomiac_lib
         public string tampilkanGenre()
         {
             string data = "";
-            int count = 1;
-            foreach (Genre_Film gr in BacaDataGenre(Id.ToString()))
+            int count =0;
+            List<Genre_Film> listGenre = BacaDataGenre(Id.ToString());
+            foreach (Genre_Film gr in listGenre)
             {
                 data += gr.Gnr.NamaGenre;
                 count++;
-                if(count!= BacaDataGenre().Count) { data += ", "; }
+                if(count!= listGenre.Count) { data += ", "; }
             }
             return data;
         }
@@ -174,11 +177,15 @@ namespace Insomiac_lib
             string perintah = "SELECT * FROM aktor_film";
             if (idAktor != "" && idFilm != "" && peran!="")
             {
-                perintah += " WHERE aktors_id=" + idAktor + " AND films_id=" + idFilm + " AND peran=" + peran+ ";";
+                perintah += " WHERE aktors_id=" + idAktor + " AND films_id=" + idFilm + " AND peran='" + peran+ "';";
             }
             else if (idAktor != "")
             {
                 perintah += " WHERE aktors_id=" + idAktor + ";";
+            }
+            else if (idFilm != "" && peran != "")
+            {
+                perintah += " WHERE films_id=" + idFilm +" AND peran='" + peran + "';";
             }
             else if (idFilm != "")
             {

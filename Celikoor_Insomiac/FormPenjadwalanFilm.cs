@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,18 +26,6 @@ namespace Celikoor_Insomiac
             this.Close();
         }
 
-        private void RefreshLabel()
-        {
-            labelNamaStudio.Text = "(nama studio)";
-            labelHargaWeekday.Text = "(nama harga weekday)";
-            labelHargaWeekend.Text = "(nama harga weekend)";
-
-            labelSinopsis.Text = "(sinopsis)";
-            labelDurasi.Text = "(durasi)";
-            labelAktorUtama.Text = "(aktor, aktor...)";
-            labelGenre.Text = "(genre, genre)";
-            labelKelompok.Text = "(kelompok)";
-        }
 
         private void dataGridViewInput_CellContentClick(object sender, DataGridViewCellEventArgs e) //masih perlu dilengkapi
         {
@@ -57,7 +46,6 @@ namespace Celikoor_Insomiac
                 }
             }
             if (temp != -1) { ListJF.RemoveAt(temp); }
-            MessageBox.Show("data berhasil dihapus");
             loadDataGrid();
         }
 
@@ -67,17 +55,30 @@ namespace Celikoor_Insomiac
             comboBoxCinema.DisplayMember = "Nama_cabang";
             comboBoxCinema.SelectedItem = null;
 
+            comboBoxFilm.SelectedIndexChanged -= comboBoxCinema_SelectedIndexChanged;
             comboBoxFilm.DataSource = Film.BacaData();
+            comboBoxFilm.SelectedIndexChanged += comboBoxCinema_SelectedIndexChanged;
             comboBoxFilm.SelectedItem = null;
 
-            RefreshLabel();
+            labelNamaStudio.Text = "(nama studio)";
+            labelHargaWeekday.Text = "(nama harga weekday)";
+            labelHargaWeekend.Text = "(nama harga weekend)";
+
+            labelSinopsis.Text = "(sinopsis)";
+            labelDurasi.Text = "(durasi)";
+            labelAktorUtama.Text = "(aktor, aktor...)";
+            labelGenre.Text = "(genre, genre)";
+            labelKelompok.Text = "(kelompok)";
+
+            pictureBoxPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPoster.Image = null;
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
             try
             {
-                if (comboBoxStudio.SelectedIndex == -1) { throw new Exception("harap isi studio terlebih dulu"); }
+                if (comboBoxStudio.SelectedIndex == -1) { throw new Exception("Harap isi studio terlebih dulu"); }
                 else
                 {
                     Film_Studio fs = new Film_Studio();
@@ -141,12 +142,12 @@ namespace Celikoor_Insomiac
                 jf.Id = JadwalFilm.BacaData(jf.TanggalPutar.ToString("yyyy-MM-dd"), jf.JamPemutaran).Id;
                 jf.TambahDataFilmStudio(); //buat masukin film_studio dan sesi film
             }
-            MessageBox.Show("data berhasil dimasukan");
+            MessageBox.Show("Data jadwal berhasil ditambahkan");
         }
 
         private void comboBoxFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFilm.Text != "")
+            if (comboBoxFilm.SelectedValue != null)
             {
                 Film f = (Film)comboBoxFilm.SelectedItem;
                 labelSinopsis.Text = f.Sinopsis.ToString();
@@ -154,26 +155,34 @@ namespace Celikoor_Insomiac
                 labelAktorUtama.Text = f.tampilkanAktor();
                 labelGenre.Text = f.tampilkanGenre();
                 labelKelompok.Text = f.Kelompok.Nama;
+
+                if (File.Exists(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + f.CoverPath)))
+                {
+                    pictureBoxPoster.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + f.CoverPath));
+                }
+                else
+                {
+                    MessageBox.Show(f.CoverPath + " tidak ditemukan");
+                }
             }
         }
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCinema.Text != "")
+            if (comboBoxCinema.SelectedIndex != -1 && comboBoxCinema.SelectedValue != null)
             {
                 Cinema c = (Cinema)comboBoxCinema.SelectedValue;
                 comboBoxStudio.DataSource = Studio.BacaData("cinemas_id", c.Id.ToString());
-                comboBoxStudio.SelectedItem = null;
-                RefreshLabel();
+                comboBoxStudio.SelectedIndex = 0;
             }
         }
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxStudio.Text != "")
+            if (comboBoxStudio.SelectedValue != null)
             {
                 Studio s = (Studio)comboBoxStudio.SelectedItem;
-                labelNamaStudio.Text = s.Nama;  
+                labelNamaStudio.Text = s.Jenis + "    " + s.Kapasitas + " Kursi";  
                 labelHargaWeekday.Text = s.Harga_weekday.ToString("C", CultureInfo.CurrentCulture) ;
                 labelHargaWeekend.Text = s.Harga_weekend.ToString("C", CultureInfo.CurrentCulture) ;
             }
