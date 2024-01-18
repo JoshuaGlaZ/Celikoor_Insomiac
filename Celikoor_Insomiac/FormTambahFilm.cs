@@ -325,5 +325,10 @@ namespace Celikoor_Insomiac
         {
             this.Close();
         }
+
+        private void panelUtama_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

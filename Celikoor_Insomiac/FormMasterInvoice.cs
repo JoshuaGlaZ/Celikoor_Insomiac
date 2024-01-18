@@ -41,17 +41,17 @@ namespace Celikoor_Insomiac
 
         private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string kriteria = comboBoxCari.Text.Replace(" ", "_").Replace("Tanggal", "tgl");
+            string kriteria = comboBoxCari.Text.Replace(" ", "_").Replace("Konsumen", "konsumens_id").Replace("Kasir", "kasir_id");
             string nilai = textBoxCari.Text;
-            string order = comboBoxUrut.Text.Replace(" ", "_").Replace("Tanggal", "tgl");
-            listInvoice = Invoice.DisplayInvoice(kriteria, nilai, order);
+            string order = comboBoxUrut.Text.Replace(" ", "_").Replace("Konsumen", "konsumens_id").Replace("Kasir", "kasir_id");
+            if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(kriteria, nilai, order); }
+            else { listInvoice = Invoice.DisplayInvoiceKasir(kriteria, nilai, order); }
             dataGridViewHasil.DataSource = listInvoice;
         }
 
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
-            listInvoice = Invoice.DisplayInvoice(comboBoxCari.Text, textBoxCari.Text);
-            dataGridViewHasil.DataSource = listInvoice;
+            comboBoxCari_SelectedIndexChanged(sender, e);
         }
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)

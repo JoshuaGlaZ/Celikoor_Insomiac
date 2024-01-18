@@ -44,19 +44,13 @@ namespace Celikoor_Insomiac
             this.labelHargaWeekend = new System.Windows.Forms.Label();
             this.labelHargaWeekday = new System.Windows.Forms.Label();
             this.labelNamaStudio = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonTambah = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelKelompok = new System.Windows.Forms.Label();
-            this.labelGenre = new System.Windows.Forms.Label();
-            this.labelAktorUtama = new System.Windows.Forms.Label();
             this.labelDurasi = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelSinopsis = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewInput = new System.Windows.Forms.DataGridView();
             this.JudulFilmCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,9 +58,16 @@ namespace Celikoor_Insomiac
             this.StudioCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TanggalCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JamCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonSimpan = new System.Windows.Forms.Button();
-            this.buttonBatal = new System.Windows.Forms.Button();
             this.pictureBoxPoster = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxSinopsis = new System.Windows.Forms.TextBox();
+            this.buttonBatal = new System.Windows.Forms.Button();
+            this.buttonSimpan = new System.Windows.Forms.Button();
+            this.buttonTambah = new System.Windows.Forms.Button();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
+            this.textBoxAktor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).BeginInit();
@@ -75,6 +76,9 @@ namespace Celikoor_Insomiac
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.comboBoxFilm);
             this.groupBox1.Controls.Add(this.checkBoxIV);
             this.groupBox1.Controls.Add(this.checkBoxIII);
@@ -89,13 +93,11 @@ namespace Celikoor_Insomiac
             this.groupBox1.Controls.Add(this.labelHargaWeekend);
             this.groupBox1.Controls.Add(this.labelHargaWeekday);
             this.groupBox1.Controls.Add(this.labelNamaStudio);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 38);
+            this.groupBox1.Location = new System.Drawing.Point(11, 64);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(305, 268);
+            this.groupBox1.Size = new System.Drawing.Size(310, 289);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -103,20 +105,21 @@ namespace Celikoor_Insomiac
             // 
             this.comboBoxFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFilm.FormattingEnabled = true;
-            this.comboBoxFilm.Location = new System.Drawing.Point(65, 183);
+            this.comboBoxFilm.Location = new System.Drawing.Point(112, 180);
             this.comboBoxFilm.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFilm.Name = "comboBoxFilm";
-            this.comboBoxFilm.Size = new System.Drawing.Size(129, 21);
+            this.comboBoxFilm.Size = new System.Drawing.Size(167, 21);
             this.comboBoxFilm.TabIndex = 15;
             this.comboBoxFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilm_SelectedIndexChanged);
             // 
             // checkBoxIV
             // 
             this.checkBoxIV.AutoSize = true;
-            this.checkBoxIV.Location = new System.Drawing.Point(167, 227);
+            this.checkBoxIV.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBoxIV.Location = new System.Drawing.Point(234, 231);
             this.checkBoxIV.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIV.Name = "checkBoxIV";
-            this.checkBoxIV.Size = new System.Drawing.Size(36, 17);
+            this.checkBoxIV.Size = new System.Drawing.Size(43, 25);
             this.checkBoxIV.TabIndex = 13;
             this.checkBoxIV.Text = "IV";
             this.checkBoxIV.UseVisualStyleBackColor = true;
@@ -124,10 +127,11 @@ namespace Celikoor_Insomiac
             // checkBoxIII
             // 
             this.checkBoxIII.AutoSize = true;
-            this.checkBoxIII.Location = new System.Drawing.Point(129, 227);
+            this.checkBoxIII.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBoxIII.Location = new System.Drawing.Point(193, 231);
             this.checkBoxIII.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIII.Name = "checkBoxIII";
-            this.checkBoxIII.Size = new System.Drawing.Size(35, 17);
+            this.checkBoxIII.Size = new System.Drawing.Size(41, 25);
             this.checkBoxIII.TabIndex = 14;
             this.checkBoxIII.Text = "III";
             this.checkBoxIII.UseVisualStyleBackColor = true;
@@ -135,10 +139,11 @@ namespace Celikoor_Insomiac
             // checkBoxII
             // 
             this.checkBoxII.AutoSize = true;
-            this.checkBoxII.Location = new System.Drawing.Point(95, 227);
+            this.checkBoxII.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBoxII.Location = new System.Drawing.Point(153, 231);
             this.checkBoxII.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxII.Name = "checkBoxII";
-            this.checkBoxII.Size = new System.Drawing.Size(32, 17);
+            this.checkBoxII.Size = new System.Drawing.Size(37, 25);
             this.checkBoxII.TabIndex = 13;
             this.checkBoxII.Text = "II";
             this.checkBoxII.UseVisualStyleBackColor = true;
@@ -146,30 +151,31 @@ namespace Celikoor_Insomiac
             // checkBoxI
             // 
             this.checkBoxI.AutoSize = true;
-            this.checkBoxI.Location = new System.Drawing.Point(65, 227);
+            this.checkBoxI.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkBoxI.Location = new System.Drawing.Point(112, 231);
             this.checkBoxI.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxI.Name = "checkBoxI";
-            this.checkBoxI.Size = new System.Drawing.Size(29, 17);
+            this.checkBoxI.Size = new System.Drawing.Size(33, 25);
             this.checkBoxI.TabIndex = 12;
             this.checkBoxI.Text = "I";
             this.checkBoxI.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerTanggal
             // 
-            this.dateTimePickerTanggal.Location = new System.Drawing.Point(65, 205);
+            this.dateTimePickerTanggal.Location = new System.Drawing.Point(112, 207);
             this.dateTimePickerTanggal.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerTanggal.Name = "dateTimePickerTanggal";
-            this.dateTimePickerTanggal.Size = new System.Drawing.Size(129, 20);
+            this.dateTimePickerTanggal.Size = new System.Drawing.Size(167, 20);
             this.dateTimePickerTanggal.TabIndex = 11;
             // 
             // comboBoxStudio
             // 
             this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(65, 51);
+            this.comboBoxStudio.Location = new System.Drawing.Point(112, 49);
             this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxStudio.Size = new System.Drawing.Size(167, 21);
             this.comboBoxStudio.TabIndex = 9;
             this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
@@ -177,221 +183,174 @@ namespace Celikoor_Insomiac
             // 
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(65, 25);
+            this.comboBoxCinema.Location = new System.Drawing.Point(112, 23);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(82, 21);
+            this.comboBoxCinema.Size = new System.Drawing.Size(167, 21);
             this.comboBoxCinema.TabIndex = 8;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 227);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label8.Location = new System.Drawing.Point(42, 233);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 13);
+            this.label8.Size = new System.Drawing.Size(45, 21);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Jam";
+            this.label8.Text = "Jam :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 205);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label7.Location = new System.Drawing.Point(17, 206);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.Size = new System.Drawing.Size(70, 21);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Tanggal";
+            this.label7.Text = "Tanggal :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 183);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label6.Location = new System.Drawing.Point(33, 180);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Judul";
+            this.label6.Text = "Judul :";
             // 
             // labelHargaWeekend
             // 
             this.labelHargaWeekend.AutoSize = true;
-            this.labelHargaWeekend.Location = new System.Drawing.Point(43, 136);
+            this.labelHargaWeekend.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelHargaWeekend.Location = new System.Drawing.Point(43, 137);
             this.labelHargaWeekend.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHargaWeekend.Name = "labelHargaWeekend";
-            this.labelHargaWeekend.Size = new System.Drawing.Size(81, 13);
+            this.labelHargaWeekend.Size = new System.Drawing.Size(117, 21);
             this.labelHargaWeekend.TabIndex = 4;
             this.labelHargaWeekend.Text = "(harga weeked)";
             // 
             // labelHargaWeekday
             // 
             this.labelHargaWeekday.AutoSize = true;
-            this.labelHargaWeekday.Location = new System.Drawing.Point(43, 113);
+            this.labelHargaWeekday.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelHargaWeekday.Location = new System.Drawing.Point(43, 114);
             this.labelHargaWeekday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHargaWeekday.Name = "labelHargaWeekday";
-            this.labelHargaWeekday.Size = new System.Drawing.Size(91, 13);
+            this.labelHargaWeekday.Size = new System.Drawing.Size(132, 21);
             this.labelHargaWeekday.TabIndex = 3;
             this.labelHargaWeekday.Text = "(harga weekdays)";
             // 
             // labelNamaStudio
             // 
             this.labelNamaStudio.AutoSize = true;
-            this.labelNamaStudio.Location = new System.Drawing.Point(43, 89);
+            this.labelNamaStudio.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelNamaStudio.Location = new System.Drawing.Point(43, 90);
             this.labelNamaStudio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNamaStudio.Name = "labelNamaStudio";
-            this.labelNamaStudio.Size = new System.Drawing.Size(70, 13);
+            this.labelNamaStudio.Size = new System.Drawing.Size(106, 21);
             this.labelNamaStudio.TabIndex = 2;
             this.labelNamaStudio.Text = "(nama studio)";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 56);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Studio :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cinema :";
-            // 
-            // buttonTambah
-            // 
-            this.buttonTambah.Location = new System.Drawing.Point(254, 318);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(77, 29);
-            this.buttonTambah.TabIndex = 2;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.UseVisualStyleBackColor = true;
-            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.groupBox2.Controls.Add(this.textBoxAktor);
+            this.groupBox2.Controls.Add(this.textBoxGenre);
+            this.groupBox2.Controls.Add(this.textBoxSinopsis);
             this.groupBox2.Controls.Add(this.labelKelompok);
-            this.groupBox2.Controls.Add(this.labelGenre);
-            this.groupBox2.Controls.Add(this.labelAktorUtama);
             this.groupBox2.Controls.Add(this.labelDurasi);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.labelSinopsis);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(557, 38);
+            this.groupBox2.Location = new System.Drawing.Point(571, 64);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(315, 308);
+            this.groupBox2.Size = new System.Drawing.Size(405, 341);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // labelKelompok
             // 
             this.labelKelompok.AutoSize = true;
-            this.labelKelompok.Location = new System.Drawing.Point(75, 244);
+            this.labelKelompok.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelKelompok.Location = new System.Drawing.Point(102, 287);
             this.labelKelompok.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(59, 13);
+            this.labelKelompok.Size = new System.Drawing.Size(89, 21);
             this.labelKelompok.TabIndex = 9;
             this.labelKelompok.Text = "(kelompok)";
-            // 
-            // labelGenre
-            // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(59, 222);
-            this.labelGenre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(40, 13);
-            this.labelGenre.TabIndex = 8;
-            this.labelGenre.Text = "(genre)";
-            // 
-            // labelAktorUtama
-            // 
-            this.labelAktorUtama.AutoSize = true;
-            this.labelAktorUtama.Location = new System.Drawing.Point(89, 201);
-            this.labelAktorUtama.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAktorUtama.Name = "labelAktorUtama";
-            this.labelAktorUtama.Size = new System.Drawing.Size(37, 13);
-            this.labelAktorUtama.TabIndex = 7;
-            this.labelAktorUtama.Text = "(aktor)";
             // 
             // labelDurasi
             // 
             this.labelDurasi.AutoSize = true;
-            this.labelDurasi.Location = new System.Drawing.Point(58, 179);
+            this.labelDurasi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.labelDurasi.Location = new System.Drawing.Point(79, 214);
             this.labelDurasi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDurasi.Name = "labelDurasi";
-            this.labelDurasi.Size = new System.Drawing.Size(41, 13);
+            this.labelDurasi.Size = new System.Drawing.Size(63, 21);
             this.labelDurasi.TabIndex = 6;
             this.labelDurasi.Text = "(durasi)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 244);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label10.Location = new System.Drawing.Point(11, 287);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(87, 21);
             this.label10.TabIndex = 5;
             this.label10.Text = "Kelompok :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 222);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label9.Location = new System.Drawing.Point(11, 263);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(59, 21);
             this.label9.TabIndex = 4;
             this.label9.Text = "Genre :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 201);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.Location = new System.Drawing.Point(12, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.Size = new System.Drawing.Size(105, 21);
             this.label5.TabIndex = 3;
             this.label5.Text = "Aktor Utama :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 179);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label4.Location = new System.Drawing.Point(13, 214);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(62, 21);
             this.label4.TabIndex = 2;
             this.label4.Text = "Durasi :";
-            // 
-            // labelSinopsis
-            // 
-            this.labelSinopsis.AutoSize = true;
-            this.labelSinopsis.Location = new System.Drawing.Point(13, 48);
-            this.labelSinopsis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSinopsis.Name = "labelSinopsis";
-            this.labelSinopsis.Size = new System.Drawing.Size(52, 13);
-            this.labelSinopsis.TabIndex = 1;
-            this.labelSinopsis.Text = "(Sinopsis)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 22);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Sinopsis :";
             // 
@@ -408,12 +367,12 @@ namespace Celikoor_Insomiac
             this.StudioCol,
             this.TanggalCol,
             this.JamCol});
-            this.dataGridViewInput.Location = new System.Drawing.Point(15, 362);
+            this.dataGridViewInput.Location = new System.Drawing.Point(11, 420);
             this.dataGridViewInput.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewInput.Name = "dataGridViewInput";
             this.dataGridViewInput.RowHeadersWidth = 62;
             this.dataGridViewInput.RowTemplate.Height = 28;
-            this.dataGridViewInput.Size = new System.Drawing.Size(857, 153);
+            this.dataGridViewInput.Size = new System.Drawing.Size(965, 164);
             this.dataGridViewInput.TabIndex = 4;
             this.dataGridViewInput.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInput_CellContentClick);
             // 
@@ -452,49 +411,149 @@ namespace Celikoor_Insomiac
             this.JamCol.Name = "JamCol";
             this.JamCol.Width = 51;
             // 
-            // buttonSimpan
-            // 
-            this.buttonSimpan.Location = new System.Drawing.Point(657, 533);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(95, 27);
-            this.buttonSimpan.TabIndex = 5;
-            this.buttonSimpan.Text = "Simpan";
-            this.buttonSimpan.UseVisualStyleBackColor = true;
-            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
-            // 
-            // buttonBatal
-            // 
-            this.buttonBatal.Location = new System.Drawing.Point(777, 533);
-            this.buttonBatal.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBatal.Name = "buttonBatal";
-            this.buttonBatal.Size = new System.Drawing.Size(95, 27);
-            this.buttonBatal.TabIndex = 6;
-            this.buttonBatal.Text = "Batal";
-            this.buttonBatal.UseVisualStyleBackColor = true;
-            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
-            // 
             // pictureBoxPoster
             // 
             this.pictureBoxPoster.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBoxPoster.Location = new System.Drawing.Point(346, 38);
+            this.pictureBoxPoster.Location = new System.Drawing.Point(333, 65);
             this.pictureBoxPoster.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxPoster.Name = "pictureBoxPoster";
-            this.pictureBoxPoster.Size = new System.Drawing.Size(198, 308);
+            this.pictureBoxPoster.Size = new System.Drawing.Size(232, 340);
             this.pictureBoxPoster.TabIndex = 1;
             this.pictureBoxPoster.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 21);
+            this.label11.TabIndex = 261;
+            this.label11.Text = "Cinema : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.TabIndex = 262;
+            this.label1.Text = "Studio : ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label2.Location = new System.Drawing.Point(59, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(870, 42);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "P E N J A D W A L A N   F I L M";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxSinopsis
+            // 
+            this.textBoxSinopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinopsis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSinopsis.Location = new System.Drawing.Point(15, 49);
+            this.textBoxSinopsis.Multiline = true;
+            this.textBoxSinopsis.Name = "textBoxSinopsis";
+            this.textBoxSinopsis.ReadOnly = true;
+            this.textBoxSinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxSinopsis.Size = new System.Drawing.Size(372, 162);
+            this.textBoxSinopsis.TabIndex = 10;
+            this.textBoxSinopsis.Text = "(sinopsis)";
+            // 
+            // buttonBatal
+            // 
+            this.buttonBatal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBatal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.buttonBatal.FlatAppearance.BorderSize = 0;
+            this.buttonBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBatal.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBatal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.buttonBatal.Location = new System.Drawing.Point(864, 592);
+            this.buttonBatal.Name = "buttonBatal";
+            this.buttonBatal.Size = new System.Drawing.Size(112, 45);
+            this.buttonBatal.TabIndex = 107;
+            this.buttonBatal.Text = "KELUAR";
+            this.buttonBatal.UseVisualStyleBackColor = false;
+            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
+            // 
+            // buttonSimpan
+            // 
+            this.buttonSimpan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonSimpan.FlatAppearance.BorderSize = 0;
+            this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSimpan.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonSimpan.Location = new System.Drawing.Point(730, 592);
+            this.buttonSimpan.Name = "buttonSimpan";
+            this.buttonSimpan.Size = new System.Drawing.Size(112, 45);
+            this.buttonSimpan.TabIndex = 108;
+            this.buttonSimpan.Text = "SIMPAN";
+            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
+            // 
+            // buttonTambah
+            // 
+            this.buttonTambah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonTambah.FlatAppearance.BorderSize = 0;
+            this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonTambah.Location = new System.Drawing.Point(209, 360);
+            this.buttonTambah.Name = "buttonTambah";
+            this.buttonTambah.Size = new System.Drawing.Size(112, 45);
+            this.buttonTambah.TabIndex = 109;
+            this.buttonTambah.Text = "TAMBAH";
+            this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
+            // 
+            // textBoxGenre
+            // 
+            this.textBoxGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGenre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxGenre.Location = new System.Drawing.Point(75, 263);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.ReadOnly = true;
+            this.textBoxGenre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxGenre.Size = new System.Drawing.Size(312, 22);
+            this.textBoxGenre.TabIndex = 11;
+            this.textBoxGenre.Text = "(genre)";
+            // 
+            // textBoxAktor
+            // 
+            this.textBoxAktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxAktor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAktor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxAktor.Location = new System.Drawing.Point(125, 238);
+            this.textBoxAktor.Name = "textBoxAktor";
+            this.textBoxAktor.ReadOnly = true;
+            this.textBoxAktor.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxAktor.Size = new System.Drawing.Size(262, 22);
+            this.textBoxAktor.TabIndex = 12;
+            this.textBoxAktor.Text = "(aktor)";
             // 
             // FormPenjadwalanFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(894, 620);
-            this.Controls.Add(this.buttonBatal);
+            this.ClientSize = new System.Drawing.Size(988, 649);
+            this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.buttonSimpan);
+            this.Controls.Add(this.buttonBatal);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewInput);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.pictureBoxPoster);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -527,29 +586,30 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.Label labelHargaWeekend;
         private System.Windows.Forms.Label labelHargaWeekday;
         private System.Windows.Forms.Label labelNamaStudio;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxPoster;
-        private System.Windows.Forms.Button buttonTambah;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label labelKelompok;
-        private System.Windows.Forms.Label labelGenre;
-        private System.Windows.Forms.Label labelAktorUtama;
         private System.Windows.Forms.Label labelDurasi;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelSinopsis;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewInput;
-        private System.Windows.Forms.Button buttonSimpan;
-        private System.Windows.Forms.Button buttonBatal;
         private System.Windows.Forms.ComboBox comboBoxFilm;
         private System.Windows.Forms.DataGridViewTextBoxColumn JudulFilmCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CinemaCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudioCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TanggalCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn JamCol;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxSinopsis;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonBatal;
+        private System.Windows.Forms.Button buttonSimpan;
+        private System.Windows.Forms.Button buttonTambah;
+        private System.Windows.Forms.TextBox textBoxAktor;
+        private System.Windows.Forms.TextBox textBoxGenre;
     }
 }

@@ -135,9 +135,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.labelAktor = new System.Windows.Forms.Label();
-            this.labelSinopsi = new System.Windows.Forms.Label();
-            this.labelGenre = new System.Windows.Forms.Label();
             this.labelKelompok = new System.Windows.Forms.Label();
             this.label1Durasi = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -154,12 +151,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.buttonPembayaran = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPoster = new System.Windows.Forms.PictureBox();
+            this.textBoxSinopsis = new System.Windows.Forms.TextBox();
+            this.textBoxAktor = new System.Windows.Forms.TextBox();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoster)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -174,6 +174,7 @@
             // 
             // comboBoxJudul
             // 
+            this.comboBoxJudul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJudul.FormattingEnabled = true;
             this.comboBoxJudul.Location = new System.Drawing.Point(111, 16);
             this.comboBoxJudul.Margin = new System.Windows.Forms.Padding(2);
@@ -194,6 +195,7 @@
             // 
             // comboBoxCinema
             // 
+            this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.FormattingEnabled = true;
             this.comboBoxCinema.Location = new System.Drawing.Point(111, 78);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(2);
@@ -236,6 +238,7 @@
             // 
             // comboBoxStudio
             // 
+            this.comboBoxStudio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStudio.FormattingEnabled = true;
             this.comboBoxStudio.Location = new System.Drawing.Point(110, 105);
             this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(2);
@@ -247,7 +250,7 @@
             // checkBo76
             // 
             this.checkBo76.AutoSize = true;
-            this.checkBo76.Location = new System.Drawing.Point(123, 204);
+            this.checkBo76.Location = new System.Drawing.Point(135, 204);
             this.checkBo76.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo76.Name = "checkBo76";
             this.checkBo76.Size = new System.Drawing.Size(38, 17);
@@ -259,7 +262,7 @@
             // checkBo75
             // 
             this.checkBo75.AutoSize = true;
-            this.checkBo75.Location = new System.Drawing.Point(89, 204);
+            this.checkBo75.Location = new System.Drawing.Point(97, 204);
             this.checkBo75.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo75.Name = "checkBo75";
             this.checkBo75.Size = new System.Drawing.Size(38, 17);
@@ -271,7 +274,7 @@
             // checkBo74
             // 
             this.checkBo74.AutoSize = true;
-            this.checkBo74.Location = new System.Drawing.Point(55, 204);
+            this.checkBo74.Location = new System.Drawing.Point(59, 204);
             this.checkBo74.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo74.Name = "checkBo74";
             this.checkBo74.Size = new System.Drawing.Size(38, 17);
@@ -294,26 +297,24 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label6.Location = new System.Drawing.Point(19, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 29);
+            this.label6.Size = new System.Drawing.Size(148, 29);
             this.label6.TabIndex = 194;
             this.label6.Text = "A";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label5.Location = new System.Drawing.Point(176, 9);
+            this.label5.Location = new System.Drawing.Point(183, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 29);
+            this.label5.Size = new System.Drawing.Size(146, 29);
             this.label5.TabIndex = 223;
             this.label5.Text = "B";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,7 +322,7 @@
             // checkBo80
             // 
             this.checkBo80.AutoSize = true;
-            this.checkBo80.Location = new System.Drawing.Point(280, 204);
+            this.checkBo80.Location = new System.Drawing.Point(297, 204);
             this.checkBo80.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo80.Name = "checkBo80";
             this.checkBo80.Size = new System.Drawing.Size(38, 17);
@@ -333,7 +334,7 @@
             // checkBo79
             // 
             this.checkBo79.AutoSize = true;
-            this.checkBo79.Location = new System.Drawing.Point(247, 204);
+            this.checkBo79.Location = new System.Drawing.Point(259, 204);
             this.checkBo79.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo79.Name = "checkBo79";
             this.checkBo79.Size = new System.Drawing.Size(38, 17);
@@ -345,7 +346,7 @@
             // checkBo78
             // 
             this.checkBo78.AutoSize = true;
-            this.checkBo78.Location = new System.Drawing.Point(213, 204);
+            this.checkBo78.Location = new System.Drawing.Point(221, 204);
             this.checkBo78.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo78.Name = "checkBo78";
             this.checkBo78.Size = new System.Drawing.Size(38, 17);
@@ -357,7 +358,7 @@
             // checkBo77
             // 
             this.checkBo77.AutoSize = true;
-            this.checkBo77.Location = new System.Drawing.Point(178, 204);
+            this.checkBo77.Location = new System.Drawing.Point(183, 204);
             this.checkBo77.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo77.Name = "checkBo77";
             this.checkBo77.Size = new System.Drawing.Size(38, 17);
@@ -368,13 +369,12 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label7.Location = new System.Drawing.Point(337, 9);
+            this.label7.Location = new System.Drawing.Point(345, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 29);
+            this.label7.Size = new System.Drawing.Size(146, 29);
             this.label7.TabIndex = 252;
             this.label7.Text = "C";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -382,7 +382,7 @@
             // checkBo84
             // 
             this.checkBo84.AutoSize = true;
-            this.checkBo84.Location = new System.Drawing.Point(441, 204);
+            this.checkBo84.Location = new System.Drawing.Point(459, 204);
             this.checkBo84.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo84.Name = "checkBo84";
             this.checkBo84.Size = new System.Drawing.Size(38, 17);
@@ -394,7 +394,7 @@
             // checkBo83
             // 
             this.checkBo83.AutoSize = true;
-            this.checkBo83.Location = new System.Drawing.Point(407, 204);
+            this.checkBo83.Location = new System.Drawing.Point(421, 204);
             this.checkBo83.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo83.Name = "checkBo83";
             this.checkBo83.Size = new System.Drawing.Size(38, 17);
@@ -406,7 +406,7 @@
             // checkBo82
             // 
             this.checkBo82.AutoSize = true;
-            this.checkBo82.Location = new System.Drawing.Point(373, 204);
+            this.checkBo82.Location = new System.Drawing.Point(383, 204);
             this.checkBo82.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo82.Name = "checkBo82";
             this.checkBo82.Size = new System.Drawing.Size(38, 17);
@@ -418,7 +418,7 @@
             // checkBo81
             // 
             this.checkBo81.AutoSize = true;
-            this.checkBo81.Location = new System.Drawing.Point(339, 204);
+            this.checkBo81.Location = new System.Drawing.Point(345, 204);
             this.checkBo81.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo81.Name = "checkBo81";
             this.checkBo81.Size = new System.Drawing.Size(38, 17);
@@ -431,7 +431,7 @@
             // 
             this.labelTIPE.AutoSize = true;
             this.labelTIPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTIPE.Location = new System.Drawing.Point(49, 149);
+            this.labelTIPE.Location = new System.Drawing.Point(74, 149);
             this.labelTIPE.Name = "labelTIPE";
             this.labelTIPE.Size = new System.Drawing.Size(55, 21);
             this.labelTIPE.TabIndex = 253;
@@ -441,7 +441,7 @@
             // 
             this.labelKursi.AutoSize = true;
             this.labelKursi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKursi.Location = new System.Drawing.Point(107, 149);
+            this.labelKursi.Location = new System.Drawing.Point(236, 149);
             this.labelKursi.Name = "labelKursi";
             this.labelKursi.Size = new System.Drawing.Size(70, 21);
             this.labelKursi.TabIndex = 254;
@@ -451,7 +451,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(40, 181);
+            this.label8.Location = new System.Drawing.Point(74, 181);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 21);
             this.label8.TabIndex = 255;
@@ -461,7 +461,7 @@
             // 
             this.labelRp.AutoSize = true;
             this.labelRp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRp.Location = new System.Drawing.Point(108, 181);
+            this.labelRp.Location = new System.Drawing.Point(212, 181);
             this.labelRp.Name = "labelRp";
             this.labelRp.Size = new System.Drawing.Size(30, 21);
             this.labelRp.TabIndex = 256;
@@ -469,7 +469,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label7);
@@ -560,13 +560,13 @@
             this.panel1.Location = new System.Drawing.Point(8, 250);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 233);
+            this.panel1.Size = new System.Drawing.Size(510, 233);
             this.panel1.TabIndex = 257;
             // 
             // checkBo31
             // 
             this.checkBo31.AutoSize = true;
-            this.checkBo31.Location = new System.Drawing.Point(247, 103);
+            this.checkBo31.Location = new System.Drawing.Point(259, 103);
             this.checkBo31.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo31.Name = "checkBo31";
             this.checkBo31.Size = new System.Drawing.Size(38, 17);
@@ -578,7 +578,7 @@
             // checkBo2
             // 
             this.checkBo2.AutoSize = true;
-            this.checkBo2.Location = new System.Drawing.Point(55, 47);
+            this.checkBo2.Location = new System.Drawing.Point(59, 47);
             this.checkBo2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo2.Name = "checkBo2";
             this.checkBo2.Size = new System.Drawing.Size(32, 17);
@@ -590,7 +590,7 @@
             // checkBo3
             // 
             this.checkBo3.AutoSize = true;
-            this.checkBo3.Location = new System.Drawing.Point(89, 47);
+            this.checkBo3.Location = new System.Drawing.Point(97, 47);
             this.checkBo3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo3.Name = "checkBo3";
             this.checkBo3.Size = new System.Drawing.Size(32, 17);
@@ -602,7 +602,7 @@
             // checkBo4
             // 
             this.checkBo4.AutoSize = true;
-            this.checkBo4.Location = new System.Drawing.Point(123, 47);
+            this.checkBo4.Location = new System.Drawing.Point(135, 47);
             this.checkBo4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo4.Name = "checkBo4";
             this.checkBo4.Size = new System.Drawing.Size(32, 17);
@@ -626,7 +626,7 @@
             // checkBo14
             // 
             this.checkBo14.AutoSize = true;
-            this.checkBo14.Location = new System.Drawing.Point(55, 75);
+            this.checkBo14.Location = new System.Drawing.Point(59, 75);
             this.checkBo14.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo14.Name = "checkBo14";
             this.checkBo14.Size = new System.Drawing.Size(32, 17);
@@ -638,7 +638,7 @@
             // checkBo15
             // 
             this.checkBo15.AutoSize = true;
-            this.checkBo15.Location = new System.Drawing.Point(89, 75);
+            this.checkBo15.Location = new System.Drawing.Point(97, 75);
             this.checkBo15.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo15.Name = "checkBo15";
             this.checkBo15.Size = new System.Drawing.Size(32, 17);
@@ -650,7 +650,7 @@
             // checkBo16
             // 
             this.checkBo16.AutoSize = true;
-            this.checkBo16.Location = new System.Drawing.Point(123, 75);
+            this.checkBo16.Location = new System.Drawing.Point(135, 75);
             this.checkBo16.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo16.Name = "checkBo16";
             this.checkBo16.Size = new System.Drawing.Size(32, 17);
@@ -662,7 +662,7 @@
             // checkBo72
             // 
             this.checkBo72.AutoSize = true;
-            this.checkBo72.Location = new System.Drawing.Point(441, 179);
+            this.checkBo72.Location = new System.Drawing.Point(459, 179);
             this.checkBo72.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo72.Name = "checkBo72";
             this.checkBo72.Size = new System.Drawing.Size(38, 17);
@@ -686,7 +686,7 @@
             // checkBo71
             // 
             this.checkBo71.AutoSize = true;
-            this.checkBo71.Location = new System.Drawing.Point(407, 179);
+            this.checkBo71.Location = new System.Drawing.Point(421, 179);
             this.checkBo71.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo71.Name = "checkBo71";
             this.checkBo71.Size = new System.Drawing.Size(38, 17);
@@ -698,7 +698,7 @@
             // checkBo26
             // 
             this.checkBo26.AutoSize = true;
-            this.checkBo26.Location = new System.Drawing.Point(55, 103);
+            this.checkBo26.Location = new System.Drawing.Point(59, 103);
             this.checkBo26.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo26.Name = "checkBo26";
             this.checkBo26.Size = new System.Drawing.Size(38, 17);
@@ -710,7 +710,7 @@
             // checkBo70
             // 
             this.checkBo70.AutoSize = true;
-            this.checkBo70.Location = new System.Drawing.Point(373, 179);
+            this.checkBo70.Location = new System.Drawing.Point(383, 179);
             this.checkBo70.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo70.Name = "checkBo70";
             this.checkBo70.Size = new System.Drawing.Size(38, 17);
@@ -722,7 +722,7 @@
             // checkBo27
             // 
             this.checkBo27.AutoSize = true;
-            this.checkBo27.Location = new System.Drawing.Point(89, 103);
+            this.checkBo27.Location = new System.Drawing.Point(97, 103);
             this.checkBo27.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo27.Name = "checkBo27";
             this.checkBo27.Size = new System.Drawing.Size(38, 17);
@@ -734,7 +734,7 @@
             // checkBo69
             // 
             this.checkBo69.AutoSize = true;
-            this.checkBo69.Location = new System.Drawing.Point(339, 179);
+            this.checkBo69.Location = new System.Drawing.Point(345, 179);
             this.checkBo69.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo69.Name = "checkBo69";
             this.checkBo69.Size = new System.Drawing.Size(38, 17);
@@ -746,7 +746,7 @@
             // checkBo28
             // 
             this.checkBo28.AutoSize = true;
-            this.checkBo28.Location = new System.Drawing.Point(123, 103);
+            this.checkBo28.Location = new System.Drawing.Point(135, 103);
             this.checkBo28.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo28.Name = "checkBo28";
             this.checkBo28.Size = new System.Drawing.Size(38, 17);
@@ -758,7 +758,7 @@
             // checkBo60
             // 
             this.checkBo60.AutoSize = true;
-            this.checkBo60.Location = new System.Drawing.Point(441, 153);
+            this.checkBo60.Location = new System.Drawing.Point(459, 153);
             this.checkBo60.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo60.Name = "checkBo60";
             this.checkBo60.Size = new System.Drawing.Size(38, 17);
@@ -782,7 +782,7 @@
             // checkBo59
             // 
             this.checkBo59.AutoSize = true;
-            this.checkBo59.Location = new System.Drawing.Point(407, 153);
+            this.checkBo59.Location = new System.Drawing.Point(421, 153);
             this.checkBo59.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo59.Name = "checkBo59";
             this.checkBo59.Size = new System.Drawing.Size(38, 17);
@@ -794,7 +794,7 @@
             // checkBo38
             // 
             this.checkBo38.AutoSize = true;
-            this.checkBo38.Location = new System.Drawing.Point(55, 128);
+            this.checkBo38.Location = new System.Drawing.Point(59, 128);
             this.checkBo38.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo38.Name = "checkBo38";
             this.checkBo38.Size = new System.Drawing.Size(38, 17);
@@ -806,7 +806,7 @@
             // checkBo58
             // 
             this.checkBo58.AutoSize = true;
-            this.checkBo58.Location = new System.Drawing.Point(373, 153);
+            this.checkBo58.Location = new System.Drawing.Point(383, 153);
             this.checkBo58.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo58.Name = "checkBo58";
             this.checkBo58.Size = new System.Drawing.Size(38, 17);
@@ -818,7 +818,7 @@
             // checkBo39
             // 
             this.checkBo39.AutoSize = true;
-            this.checkBo39.Location = new System.Drawing.Point(89, 128);
+            this.checkBo39.Location = new System.Drawing.Point(97, 128);
             this.checkBo39.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo39.Name = "checkBo39";
             this.checkBo39.Size = new System.Drawing.Size(38, 17);
@@ -830,7 +830,7 @@
             // checkBo57
             // 
             this.checkBo57.AutoSize = true;
-            this.checkBo57.Location = new System.Drawing.Point(339, 153);
+            this.checkBo57.Location = new System.Drawing.Point(345, 153);
             this.checkBo57.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo57.Name = "checkBo57";
             this.checkBo57.Size = new System.Drawing.Size(38, 17);
@@ -842,7 +842,7 @@
             // checkBo40
             // 
             this.checkBo40.AutoSize = true;
-            this.checkBo40.Location = new System.Drawing.Point(123, 128);
+            this.checkBo40.Location = new System.Drawing.Point(135, 128);
             this.checkBo40.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo40.Name = "checkBo40";
             this.checkBo40.Size = new System.Drawing.Size(38, 17);
@@ -854,7 +854,7 @@
             // checkBo48
             // 
             this.checkBo48.AutoSize = true;
-            this.checkBo48.Location = new System.Drawing.Point(441, 128);
+            this.checkBo48.Location = new System.Drawing.Point(459, 128);
             this.checkBo48.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo48.Name = "checkBo48";
             this.checkBo48.Size = new System.Drawing.Size(38, 17);
@@ -878,7 +878,7 @@
             // checkBo47
             // 
             this.checkBo47.AutoSize = true;
-            this.checkBo47.Location = new System.Drawing.Point(407, 128);
+            this.checkBo47.Location = new System.Drawing.Point(421, 128);
             this.checkBo47.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo47.Name = "checkBo47";
             this.checkBo47.Size = new System.Drawing.Size(38, 17);
@@ -890,7 +890,7 @@
             // checkBo50
             // 
             this.checkBo50.AutoSize = true;
-            this.checkBo50.Location = new System.Drawing.Point(55, 153);
+            this.checkBo50.Location = new System.Drawing.Point(59, 153);
             this.checkBo50.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo50.Name = "checkBo50";
             this.checkBo50.Size = new System.Drawing.Size(38, 17);
@@ -902,7 +902,7 @@
             // checkBo46
             // 
             this.checkBo46.AutoSize = true;
-            this.checkBo46.Location = new System.Drawing.Point(373, 128);
+            this.checkBo46.Location = new System.Drawing.Point(383, 128);
             this.checkBo46.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo46.Name = "checkBo46";
             this.checkBo46.Size = new System.Drawing.Size(38, 17);
@@ -914,7 +914,7 @@
             // checkBo51
             // 
             this.checkBo51.AutoSize = true;
-            this.checkBo51.Location = new System.Drawing.Point(89, 153);
+            this.checkBo51.Location = new System.Drawing.Point(97, 153);
             this.checkBo51.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo51.Name = "checkBo51";
             this.checkBo51.Size = new System.Drawing.Size(38, 17);
@@ -926,7 +926,7 @@
             // checkBo45
             // 
             this.checkBo45.AutoSize = true;
-            this.checkBo45.Location = new System.Drawing.Point(339, 128);
+            this.checkBo45.Location = new System.Drawing.Point(345, 128);
             this.checkBo45.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo45.Name = "checkBo45";
             this.checkBo45.Size = new System.Drawing.Size(38, 17);
@@ -938,7 +938,7 @@
             // checkBo52
             // 
             this.checkBo52.AutoSize = true;
-            this.checkBo52.Location = new System.Drawing.Point(123, 153);
+            this.checkBo52.Location = new System.Drawing.Point(135, 153);
             this.checkBo52.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo52.Name = "checkBo52";
             this.checkBo52.Size = new System.Drawing.Size(38, 17);
@@ -950,7 +950,7 @@
             // checkBo36
             // 
             this.checkBo36.AutoSize = true;
-            this.checkBo36.Location = new System.Drawing.Point(441, 103);
+            this.checkBo36.Location = new System.Drawing.Point(459, 103);
             this.checkBo36.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo36.Name = "checkBo36";
             this.checkBo36.Size = new System.Drawing.Size(38, 17);
@@ -974,7 +974,7 @@
             // checkBo35
             // 
             this.checkBo35.AutoSize = true;
-            this.checkBo35.Location = new System.Drawing.Point(407, 103);
+            this.checkBo35.Location = new System.Drawing.Point(421, 103);
             this.checkBo35.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo35.Name = "checkBo35";
             this.checkBo35.Size = new System.Drawing.Size(38, 17);
@@ -986,7 +986,7 @@
             // checkBo62
             // 
             this.checkBo62.AutoSize = true;
-            this.checkBo62.Location = new System.Drawing.Point(55, 179);
+            this.checkBo62.Location = new System.Drawing.Point(59, 179);
             this.checkBo62.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo62.Name = "checkBo62";
             this.checkBo62.Size = new System.Drawing.Size(38, 17);
@@ -998,7 +998,7 @@
             // checkBo34
             // 
             this.checkBo34.AutoSize = true;
-            this.checkBo34.Location = new System.Drawing.Point(373, 103);
+            this.checkBo34.Location = new System.Drawing.Point(383, 103);
             this.checkBo34.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo34.Name = "checkBo34";
             this.checkBo34.Size = new System.Drawing.Size(38, 17);
@@ -1010,7 +1010,7 @@
             // checkBo63
             // 
             this.checkBo63.AutoSize = true;
-            this.checkBo63.Location = new System.Drawing.Point(89, 179);
+            this.checkBo63.Location = new System.Drawing.Point(97, 179);
             this.checkBo63.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo63.Name = "checkBo63";
             this.checkBo63.Size = new System.Drawing.Size(38, 17);
@@ -1022,7 +1022,7 @@
             // checkBo33
             // 
             this.checkBo33.AutoSize = true;
-            this.checkBo33.Location = new System.Drawing.Point(339, 103);
+            this.checkBo33.Location = new System.Drawing.Point(345, 103);
             this.checkBo33.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo33.Name = "checkBo33";
             this.checkBo33.Size = new System.Drawing.Size(32, 17);
@@ -1034,7 +1034,7 @@
             // checkBo64
             // 
             this.checkBo64.AutoSize = true;
-            this.checkBo64.Location = new System.Drawing.Point(123, 179);
+            this.checkBo64.Location = new System.Drawing.Point(135, 179);
             this.checkBo64.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo64.Name = "checkBo64";
             this.checkBo64.Size = new System.Drawing.Size(38, 17);
@@ -1046,7 +1046,7 @@
             // checkBo24
             // 
             this.checkBo24.AutoSize = true;
-            this.checkBo24.Location = new System.Drawing.Point(441, 75);
+            this.checkBo24.Location = new System.Drawing.Point(459, 75);
             this.checkBo24.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo24.Name = "checkBo24";
             this.checkBo24.Size = new System.Drawing.Size(32, 17);
@@ -1058,7 +1058,7 @@
             // checkBo23
             // 
             this.checkBo23.AutoSize = true;
-            this.checkBo23.Location = new System.Drawing.Point(407, 75);
+            this.checkBo23.Location = new System.Drawing.Point(421, 75);
             this.checkBo23.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo23.Name = "checkBo23";
             this.checkBo23.Size = new System.Drawing.Size(32, 17);
@@ -1070,7 +1070,7 @@
             // checkBo22
             // 
             this.checkBo22.AutoSize = true;
-            this.checkBo22.Location = new System.Drawing.Point(373, 75);
+            this.checkBo22.Location = new System.Drawing.Point(383, 75);
             this.checkBo22.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo22.Name = "checkBo22";
             this.checkBo22.Size = new System.Drawing.Size(32, 17);
@@ -1082,7 +1082,7 @@
             // checkBo21
             // 
             this.checkBo21.AutoSize = true;
-            this.checkBo21.Location = new System.Drawing.Point(339, 75);
+            this.checkBo21.Location = new System.Drawing.Point(345, 75);
             this.checkBo21.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo21.Name = "checkBo21";
             this.checkBo21.Size = new System.Drawing.Size(32, 17);
@@ -1094,7 +1094,7 @@
             // checkBo12
             // 
             this.checkBo12.AutoSize = true;
-            this.checkBo12.Location = new System.Drawing.Point(441, 47);
+            this.checkBo12.Location = new System.Drawing.Point(459, 47);
             this.checkBo12.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo12.Name = "checkBo12";
             this.checkBo12.Size = new System.Drawing.Size(32, 17);
@@ -1106,7 +1106,7 @@
             // checkBo5
             // 
             this.checkBo5.AutoSize = true;
-            this.checkBo5.Location = new System.Drawing.Point(178, 47);
+            this.checkBo5.Location = new System.Drawing.Point(183, 47);
             this.checkBo5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo5.Name = "checkBo5";
             this.checkBo5.Size = new System.Drawing.Size(32, 17);
@@ -1118,7 +1118,7 @@
             // checkBo11
             // 
             this.checkBo11.AutoSize = true;
-            this.checkBo11.Location = new System.Drawing.Point(407, 47);
+            this.checkBo11.Location = new System.Drawing.Point(421, 47);
             this.checkBo11.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo11.Name = "checkBo11";
             this.checkBo11.Size = new System.Drawing.Size(32, 17);
@@ -1130,7 +1130,7 @@
             // checkBo6
             // 
             this.checkBo6.AutoSize = true;
-            this.checkBo6.Location = new System.Drawing.Point(213, 47);
+            this.checkBo6.Location = new System.Drawing.Point(221, 47);
             this.checkBo6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo6.Name = "checkBo6";
             this.checkBo6.Size = new System.Drawing.Size(32, 17);
@@ -1142,7 +1142,7 @@
             // checkBo10
             // 
             this.checkBo10.AutoSize = true;
-            this.checkBo10.Location = new System.Drawing.Point(373, 47);
+            this.checkBo10.Location = new System.Drawing.Point(383, 47);
             this.checkBo10.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo10.Name = "checkBo10";
             this.checkBo10.Size = new System.Drawing.Size(32, 17);
@@ -1154,7 +1154,7 @@
             // checkBo7
             // 
             this.checkBo7.AutoSize = true;
-            this.checkBo7.Location = new System.Drawing.Point(247, 47);
+            this.checkBo7.Location = new System.Drawing.Point(259, 47);
             this.checkBo7.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo7.Name = "checkBo7";
             this.checkBo7.Size = new System.Drawing.Size(32, 17);
@@ -1166,7 +1166,7 @@
             // checkBo9
             // 
             this.checkBo9.AutoSize = true;
-            this.checkBo9.Location = new System.Drawing.Point(339, 47);
+            this.checkBo9.Location = new System.Drawing.Point(345, 47);
             this.checkBo9.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo9.Name = "checkBo9";
             this.checkBo9.Size = new System.Drawing.Size(32, 17);
@@ -1178,7 +1178,7 @@
             // checkBo8
             // 
             this.checkBo8.AutoSize = true;
-            this.checkBo8.Location = new System.Drawing.Point(280, 47);
+            this.checkBo8.Location = new System.Drawing.Point(297, 47);
             this.checkBo8.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo8.Name = "checkBo8";
             this.checkBo8.Size = new System.Drawing.Size(32, 17);
@@ -1190,7 +1190,7 @@
             // checkBo17
             // 
             this.checkBo17.AutoSize = true;
-            this.checkBo17.Location = new System.Drawing.Point(178, 75);
+            this.checkBo17.Location = new System.Drawing.Point(183, 75);
             this.checkBo17.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo17.Name = "checkBo17";
             this.checkBo17.Size = new System.Drawing.Size(32, 17);
@@ -1202,7 +1202,7 @@
             // checkBo18
             // 
             this.checkBo18.AutoSize = true;
-            this.checkBo18.Location = new System.Drawing.Point(213, 75);
+            this.checkBo18.Location = new System.Drawing.Point(221, 75);
             this.checkBo18.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo18.Name = "checkBo18";
             this.checkBo18.Size = new System.Drawing.Size(32, 17);
@@ -1214,7 +1214,7 @@
             // checkBo19
             // 
             this.checkBo19.AutoSize = true;
-            this.checkBo19.Location = new System.Drawing.Point(247, 75);
+            this.checkBo19.Location = new System.Drawing.Point(259, 75);
             this.checkBo19.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo19.Name = "checkBo19";
             this.checkBo19.Size = new System.Drawing.Size(32, 17);
@@ -1226,7 +1226,7 @@
             // checkBo20
             // 
             this.checkBo20.AutoSize = true;
-            this.checkBo20.Location = new System.Drawing.Point(280, 75);
+            this.checkBo20.Location = new System.Drawing.Point(297, 75);
             this.checkBo20.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo20.Name = "checkBo20";
             this.checkBo20.Size = new System.Drawing.Size(32, 17);
@@ -1238,7 +1238,7 @@
             // checkBo68
             // 
             this.checkBo68.AutoSize = true;
-            this.checkBo68.Location = new System.Drawing.Point(280, 179);
+            this.checkBo68.Location = new System.Drawing.Point(297, 179);
             this.checkBo68.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo68.Name = "checkBo68";
             this.checkBo68.Size = new System.Drawing.Size(38, 17);
@@ -1250,7 +1250,7 @@
             // checkBo29
             // 
             this.checkBo29.AutoSize = true;
-            this.checkBo29.Location = new System.Drawing.Point(178, 103);
+            this.checkBo29.Location = new System.Drawing.Point(183, 103);
             this.checkBo29.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo29.Name = "checkBo29";
             this.checkBo29.Size = new System.Drawing.Size(32, 17);
@@ -1262,7 +1262,7 @@
             // checkBo67
             // 
             this.checkBo67.AutoSize = true;
-            this.checkBo67.Location = new System.Drawing.Point(247, 179);
+            this.checkBo67.Location = new System.Drawing.Point(259, 179);
             this.checkBo67.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo67.Name = "checkBo67";
             this.checkBo67.Size = new System.Drawing.Size(38, 17);
@@ -1274,7 +1274,7 @@
             // checkBo30
             // 
             this.checkBo30.AutoSize = true;
-            this.checkBo30.Location = new System.Drawing.Point(212, 103);
+            this.checkBo30.Location = new System.Drawing.Point(221, 103);
             this.checkBo30.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo30.Name = "checkBo30";
             this.checkBo30.Size = new System.Drawing.Size(38, 17);
@@ -1286,7 +1286,7 @@
             // checkBo66
             // 
             this.checkBo66.AutoSize = true;
-            this.checkBo66.Location = new System.Drawing.Point(213, 179);
+            this.checkBo66.Location = new System.Drawing.Point(221, 179);
             this.checkBo66.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo66.Name = "checkBo66";
             this.checkBo66.Size = new System.Drawing.Size(38, 17);
@@ -1298,7 +1298,7 @@
             // checkBo32
             // 
             this.checkBo32.AutoSize = true;
-            this.checkBo32.Location = new System.Drawing.Point(280, 103);
+            this.checkBo32.Location = new System.Drawing.Point(297, 103);
             this.checkBo32.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo32.Name = "checkBo32";
             this.checkBo32.Size = new System.Drawing.Size(38, 17);
@@ -1310,7 +1310,7 @@
             // checkBo65
             // 
             this.checkBo65.AutoSize = true;
-            this.checkBo65.Location = new System.Drawing.Point(178, 179);
+            this.checkBo65.Location = new System.Drawing.Point(183, 179);
             this.checkBo65.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo65.Name = "checkBo65";
             this.checkBo65.Size = new System.Drawing.Size(38, 17);
@@ -1322,7 +1322,7 @@
             // checkBo41
             // 
             this.checkBo41.AutoSize = true;
-            this.checkBo41.Location = new System.Drawing.Point(178, 128);
+            this.checkBo41.Location = new System.Drawing.Point(183, 128);
             this.checkBo41.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo41.Name = "checkBo41";
             this.checkBo41.Size = new System.Drawing.Size(38, 17);
@@ -1334,7 +1334,7 @@
             // checkBo56
             // 
             this.checkBo56.AutoSize = true;
-            this.checkBo56.Location = new System.Drawing.Point(280, 153);
+            this.checkBo56.Location = new System.Drawing.Point(297, 153);
             this.checkBo56.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo56.Name = "checkBo56";
             this.checkBo56.Size = new System.Drawing.Size(38, 17);
@@ -1346,7 +1346,7 @@
             // checkBo42
             // 
             this.checkBo42.AutoSize = true;
-            this.checkBo42.Location = new System.Drawing.Point(213, 128);
+            this.checkBo42.Location = new System.Drawing.Point(221, 128);
             this.checkBo42.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo42.Name = "checkBo42";
             this.checkBo42.Size = new System.Drawing.Size(38, 17);
@@ -1358,7 +1358,7 @@
             // checkBo55
             // 
             this.checkBo55.AutoSize = true;
-            this.checkBo55.Location = new System.Drawing.Point(247, 153);
+            this.checkBo55.Location = new System.Drawing.Point(259, 153);
             this.checkBo55.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo55.Name = "checkBo55";
             this.checkBo55.Size = new System.Drawing.Size(38, 17);
@@ -1370,7 +1370,7 @@
             // checkBo43
             // 
             this.checkBo43.AutoSize = true;
-            this.checkBo43.Location = new System.Drawing.Point(247, 128);
+            this.checkBo43.Location = new System.Drawing.Point(259, 128);
             this.checkBo43.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo43.Name = "checkBo43";
             this.checkBo43.Size = new System.Drawing.Size(38, 17);
@@ -1382,7 +1382,7 @@
             // checkBo54
             // 
             this.checkBo54.AutoSize = true;
-            this.checkBo54.Location = new System.Drawing.Point(213, 153);
+            this.checkBo54.Location = new System.Drawing.Point(221, 153);
             this.checkBo54.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo54.Name = "checkBo54";
             this.checkBo54.Size = new System.Drawing.Size(38, 17);
@@ -1394,7 +1394,7 @@
             // checkBo44
             // 
             this.checkBo44.AutoSize = true;
-            this.checkBo44.Location = new System.Drawing.Point(280, 128);
+            this.checkBo44.Location = new System.Drawing.Point(297, 128);
             this.checkBo44.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo44.Name = "checkBo44";
             this.checkBo44.Size = new System.Drawing.Size(38, 17);
@@ -1406,7 +1406,7 @@
             // checkBo53
             // 
             this.checkBo53.AutoSize = true;
-            this.checkBo53.Location = new System.Drawing.Point(178, 153);
+            this.checkBo53.Location = new System.Drawing.Point(183, 153);
             this.checkBo53.Margin = new System.Windows.Forms.Padding(2);
             this.checkBo53.Name = "checkBo53";
             this.checkBo53.Size = new System.Drawing.Size(38, 17);
@@ -1417,7 +1417,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
             this.panel2.Controls.Add(this.labelHarga);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
@@ -1434,14 +1434,14 @@
             this.panel2.Location = new System.Drawing.Point(8, 8);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(503, 231);
+            this.panel2.Size = new System.Drawing.Size(510, 231);
             this.panel2.TabIndex = 258;
             // 
             // labelHarga
             // 
             this.labelHarga.AutoSize = true;
             this.labelHarga.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHarga.Location = new System.Drawing.Point(140, 181);
+            this.labelHarga.Location = new System.Drawing.Point(236, 181);
             this.labelHarga.Name = "labelHarga";
             this.labelHarga.Size = new System.Drawing.Size(19, 21);
             this.labelHarga.TabIndex = 257;
@@ -1449,6 +1449,7 @@
             // 
             // comboBoxTanggal
             // 
+            this.comboBoxTanggal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTanggal.FormattingEnabled = true;
             this.comboBoxTanggal.Location = new System.Drawing.Point(111, 47);
             this.comboBoxTanggal.Margin = new System.Windows.Forms.Padding(2);
@@ -1471,77 +1472,47 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(49, 135);
+            this.label10.Location = new System.Drawing.Point(41, 189);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 21);
+            this.label10.Size = new System.Drawing.Size(66, 21);
             this.label10.TabIndex = 262;
-            this.label10.Text = "Durasi: ";
+            this.label10.Text = "Durasi : ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 107);
+            this.label11.Location = new System.Drawing.Point(16, 166);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 21);
+            this.label11.Size = new System.Drawing.Size(91, 21);
             this.label11.TabIndex = 264;
-            this.label11.Text = "Kelompok: ";
+            this.label11.Text = "Kelompok : ";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(49, 167);
+            this.label12.Location = new System.Drawing.Point(178, 166);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 21);
+            this.label12.Size = new System.Drawing.Size(59, 21);
             this.label12.TabIndex = 266;
-            this.label12.Text = "Genre:";
+            this.label12.Text = "Genre :";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(53, 200);
+            this.label13.Location = new System.Drawing.Point(182, 189);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 21);
+            this.label13.Size = new System.Drawing.Size(55, 21);
             this.label13.TabIndex = 268;
-            this.label13.Text = "Aktor:";
-            // 
-            // labelAktor
-            // 
-            this.labelAktor.AutoSize = true;
-            this.labelAktor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAktor.Location = new System.Drawing.Point(119, 200);
-            this.labelAktor.Name = "labelAktor";
-            this.labelAktor.Size = new System.Drawing.Size(77, 21);
-            this.labelAktor.TabIndex = 270;
-            this.labelAktor.Text = "Josh,ALex";
-            // 
-            // labelSinopsi
-            // 
-            this.labelSinopsi.AutoSize = true;
-            this.labelSinopsi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSinopsi.Location = new System.Drawing.Point(24, 35);
-            this.labelSinopsi.Name = "labelSinopsi";
-            this.labelSinopsi.Size = new System.Drawing.Size(61, 21);
-            this.labelSinopsi.TabIndex = 269;
-            this.labelSinopsi.Text = "Sinopsi";
-            // 
-            // labelGenre
-            // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenre.Location = new System.Drawing.Point(119, 167);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(54, 21);
-            this.labelGenre.TabIndex = 271;
-            this.labelGenre.Text = "Action";
+            this.label13.Text = "Aktor :";
             // 
             // labelKelompok
             // 
             this.labelKelompok.AutoSize = true;
             this.labelKelompok.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKelompok.Location = new System.Drawing.Point(119, 107);
+            this.labelKelompok.Location = new System.Drawing.Point(110, 166);
             this.labelKelompok.Name = "labelKelompok";
             this.labelKelompok.Size = new System.Drawing.Size(30, 21);
             this.labelKelompok.TabIndex = 272;
@@ -1551,7 +1522,7 @@
             // 
             this.label1Durasi.AutoSize = true;
             this.label1Durasi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Durasi.Location = new System.Drawing.Point(119, 135);
+            this.label1Durasi.Location = new System.Drawing.Point(110, 189);
             this.label1Durasi.Name = "label1Durasi";
             this.label1Durasi.Size = new System.Drawing.Size(30, 21);
             this.label1Durasi.TabIndex = 273;
@@ -1559,12 +1530,12 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel5.Controls.Add(this.labelSinopsi);
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.panel5.Controls.Add(this.textBoxAktor);
+            this.panel5.Controls.Add(this.textBoxGenre);
+            this.panel5.Controls.Add(this.textBoxSinopsis);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.labelKelompok);
-            this.panel5.Controls.Add(this.labelAktor);
-            this.panel5.Controls.Add(this.labelGenre);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label1Durasi);
             this.panel5.Controls.Add(this.label10);
@@ -1578,7 +1549,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
             this.panel6.Controls.Add(this.labelSaldo);
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.labelTotalAkhir);
@@ -1599,7 +1570,7 @@
             // 
             this.labelSaldo.AutoSize = true;
             this.labelSaldo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(157, 138);
+            this.labelSaldo.Location = new System.Drawing.Point(158, 138);
             this.labelSaldo.Name = "labelSaldo";
             this.labelSaldo.Size = new System.Drawing.Size(55, 21);
             this.labelSaldo.TabIndex = 283;
@@ -1609,7 +1580,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(70, 138);
+            this.label18.Location = new System.Drawing.Point(73, 138);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(74, 21);
             this.label18.TabIndex = 282;
@@ -1619,7 +1590,7 @@
             // 
             this.labelTotalAkhir.AutoSize = true;
             this.labelTotalAkhir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalAkhir.Location = new System.Drawing.Point(157, 108);
+            this.labelTotalAkhir.Location = new System.Drawing.Point(157, 109);
             this.labelTotalAkhir.Name = "labelTotalAkhir";
             this.labelTotalAkhir.Size = new System.Drawing.Size(55, 21);
             this.labelTotalAkhir.TabIndex = 281;
@@ -1629,7 +1600,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(20, 108);
+            this.label17.Location = new System.Drawing.Point(27, 109);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(120, 21);
             this.label17.TabIndex = 280;
@@ -1649,7 +1620,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(61, 80);
+            this.label15.Location = new System.Drawing.Point(64, 80);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(83, 21);
             this.label15.TabIndex = 278;
@@ -1689,7 +1660,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(80, 20);
+            this.label14.Location = new System.Drawing.Point(79, 20);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 21);
             this.label14.TabIndex = 274;
@@ -1714,11 +1685,11 @@
             // buttonKeluar
             // 
             this.buttonKeluar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.buttonKeluar.Location = new System.Drawing.Point(1138, 498);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
@@ -1727,24 +1698,66 @@
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // pictureBox1
+            // pictureBoxPoster
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(528, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(310, 476);
-            this.pictureBox1.TabIndex = 259;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxPoster.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxPoster.Location = new System.Drawing.Point(530, 8);
+            this.pictureBoxPoster.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxPoster.Name = "pictureBoxPoster";
+            this.pictureBoxPoster.Size = new System.Drawing.Size(310, 476);
+            this.pictureBoxPoster.TabIndex = 259;
+            this.pictureBoxPoster.TabStop = false;
+            // 
+            // textBoxSinopsis
+            // 
+            this.textBoxSinopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinopsis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSinopsis.Location = new System.Drawing.Point(19, 40);
+            this.textBoxSinopsis.Multiline = true;
+            this.textBoxSinopsis.Name = "textBoxSinopsis";
+            this.textBoxSinopsis.ReadOnly = true;
+            this.textBoxSinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxSinopsis.Size = new System.Drawing.Size(363, 118);
+            this.textBoxSinopsis.TabIndex = 274;
+            this.textBoxSinopsis.Text = "(sinopsis)";
+            // 
+            // textBoxAktor
+            // 
+            this.textBoxAktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxAktor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAktor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxAktor.Location = new System.Drawing.Point(239, 189);
+            this.textBoxAktor.Name = "textBoxAktor";
+            this.textBoxAktor.ReadOnly = true;
+            this.textBoxAktor.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxAktor.Size = new System.Drawing.Size(139, 22);
+            this.textBoxAktor.TabIndex = 276;
+            this.textBoxAktor.Text = "(aktor)";
+            // 
+            // textBoxGenre
+            // 
+            this.textBoxGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(246)))));
+            this.textBoxGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGenre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBoxGenre.Location = new System.Drawing.Point(239, 166);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.ReadOnly = true;
+            this.textBoxGenre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBoxGenre.Size = new System.Drawing.Size(143, 22);
+            this.textBoxGenre.TabIndex = 275;
+            this.textBoxGenre.Text = "(genre)";
             // 
             // FormBeliTIket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 582);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1265, 559);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonPembayaran);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxPoster);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
@@ -1760,7 +1773,7 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoster)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1801,9 +1814,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label labelAktor;
-        private System.Windows.Forms.Label labelSinopsi;
-        private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.Label labelKelompok;
         private System.Windows.Forms.Label label1Durasi;
         private System.Windows.Forms.Panel panel5;
@@ -1821,7 +1831,7 @@
         private System.Windows.Forms.Button buttonPembayaran;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.ComboBox comboBoxTanggal;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxPoster;
         private System.Windows.Forms.Label labelHarga;
         private System.Windows.Forms.CheckBox checkBo31;
         private System.Windows.Forms.CheckBox checkBo2;
@@ -1894,5 +1904,8 @@
         private System.Windows.Forms.CheckBox checkBo54;
         private System.Windows.Forms.CheckBox checkBo44;
         private System.Windows.Forms.CheckBox checkBo53;
+        private System.Windows.Forms.TextBox textBoxSinopsis;
+        private System.Windows.Forms.TextBox textBoxAktor;
+        private System.Windows.Forms.TextBox textBoxGenre;
     }
 }

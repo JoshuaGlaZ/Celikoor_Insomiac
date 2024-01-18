@@ -44,10 +44,9 @@ namespace Celikoor_Insomiac
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(23, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1085, 50);
+            this.label2.Size = new System.Drawing.Size(814, 41);
             this.label2.TabIndex = 32;
             this.label2.Text = "D A F T A R   K E L O M P O K";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,15 +56,14 @@ namespace Celikoor_Insomiac
             this.buttonKeluar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(959, 498);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.buttonKeluar.Location = new System.Drawing.Point(719, 405);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(149, 55);
+            this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 31;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -81,10 +79,9 @@ namespace Celikoor_Insomiac
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(21, 498);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTambah.Location = new System.Drawing.Point(16, 405);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(149, 55);
+            this.buttonTambah.Size = new System.Drawing.Size(112, 45);
             this.buttonTambah.TabIndex = 30;
             this.buttonTambah.Text = "TAMBAH";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -96,25 +93,24 @@ namespace Celikoor_Insomiac
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(23, 84);
-            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(17, 68);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.RowHeadersWidth = 62;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(1085, 406);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(814, 330);
             this.dataGridViewHasil.TabIndex = 33;
             this.dataGridViewHasil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHasil_CellContentClick);
             // 
             // FormMasterKelompok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1132, 574);
+            this.ClientSize = new System.Drawing.Size(849, 466);
             this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMasterKelompok";
             this.Text = "Kelompok";
             this.Load += new System.EventHandler(this.FormMasterKelompok_Load);

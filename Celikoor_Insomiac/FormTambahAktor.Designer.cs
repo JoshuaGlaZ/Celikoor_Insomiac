@@ -38,10 +38,10 @@ namespace Celikoor_Insomiac
             this.textBoxNegara = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNama = new System.Windows.Forms.TextBox();
-            this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonKeluar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendarTanggalLahir
@@ -137,24 +137,6 @@ namespace Celikoor_Insomiac
             this.textBoxNama.TabIndex = 89;
             this.textBoxNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // buttonKeluar
-            // 
-            this.buttonKeluar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
-            this.buttonKeluar.FlatAppearance.BorderSize = 0;
-            this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(349, 274);
-            this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
-            this.buttonKeluar.TabIndex = 108;
-            this.buttonKeluar.Text = "KELUAR";
-            this.buttonKeluar.UseVisualStyleBackColor = false;
-            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
-            // 
             // buttonKosongi
             // 
             this.buttonKosongi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -204,14 +186,32 @@ namespace Celikoor_Insomiac
             this.label2.Text = "T A M B A H   A K T O R";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonKeluar
+            // 
+            this.buttonKeluar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.buttonKeluar.FlatAppearance.BorderSize = 0;
+            this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.buttonKeluar.Location = new System.Drawing.Point(348, 274);
+            this.buttonKeluar.Name = "buttonKeluar";
+            this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
+            this.buttonKeluar.TabIndex = 108;
+            this.buttonKeluar.Text = "KELUAR";
+            this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
+            // 
             // FormTambahAktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(574, 331);
-            this.Controls.Add(this.textBoxNegara);
             this.Controls.Add(this.buttonKeluar);
+            this.Controls.Add(this.textBoxNegara);
             this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.label2);
@@ -242,9 +242,9 @@ namespace Celikoor_Insomiac
         private System.Windows.Forms.TextBox textBoxNegara;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNama;
-        private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Button buttonKosongi;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonKeluar;
     }
 }
