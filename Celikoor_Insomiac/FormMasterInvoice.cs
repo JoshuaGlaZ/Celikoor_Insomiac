@@ -45,10 +45,13 @@ namespace Celikoor_Insomiac
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
-            Invoice.UpdateStatus(int.Parse(id));
-            MessageBox.Show("data berhasil diupdate");
-            FormMasterInvoice_Load(this,e);
+            if(p.Roles == "KASIR" && dataGridViewHasil.CurrentCell.OwningColumn.Name == "UPDATE")
+            {
+                string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
+                Invoice.UpdateStatus(int.Parse(id));
+                MessageBox.Show("data berhasil diupdate");
+                FormMasterInvoice_Load(this, e);
+            }
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
