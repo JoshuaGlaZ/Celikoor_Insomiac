@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,10 +18,10 @@ namespace Insomiac_lib
         public int JumlahKursiKosong { get => jumlahKursiKosong; set => jumlahKursiKosong = value; }
         public Cinema Cinema { get => cinema; set => cinema = value; }
 
-        public static List<LaporanTingkatUtilitasStudio> BacaData(string bulan = "", string order = "Terendah")
+        public static List<LaporanTingkatUtilitasStudio> BacaData(string bulan = "", string order = "")
         {
             List<LaporanTingkatUtilitasStudio> listLaporan = new List<LaporanTingkatUtilitasStudio>();
-            if(order == "Terendah")
+            if(order == "0")
             {
                 order = "DESC";
             } 
@@ -28,14 +29,18 @@ namespace Insomiac_lib
             {
                 order = "ASC";
             }
-            string perintah = "select c.nama_cabang, s.nama, (s.kapasitas - Count(t.nomor_kursi)) as KursiKosong from cinemas c left join studios s on c.id = s.cinemas_id " +
-                   "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id And monthname(i.tanggal) = 'january' " +
-                   "group by c.nama_cabang, s.nama order by KursiKosong "+ order +" LIMIT 3;";
+
+            string perintah = "select c.nama_cabang, s.nama, (sum(s.kapasitas) - Count(t.nomor_kursi)) as KursiKosong " +
+                "from cinemas c inner join studios s on c.id = s.cinemas_id left join tikets t on t.studios_id = s.id " +
+                "left join invoices i on i.id = t.invoices_id where monthname(i.tanggal) = 'January'" +
+                "group by c.nama_cabang, s.nama order by KursiKosong "+  order + " LIMIT 3;";
+
             if (bulan != "")
             {
-                perintah = "select c.nama_cabang, s.nama, (s.kapasitas - Count(t.nomor_kursi)) as KursiKosong from cinemas c left join studios s on c.id = s.cinemas_id " +
-                   "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id And monthname(i.tanggal) = '" + bulan + "'" +
-                   "group by c.nama_cabang, s.nama order by KursiKosong " + order + " LIMIT 3;";
+                perintah = "select c.nama_cabang, s.nama, (sum(s.kapasitas) - Count(t.nomor_kursi)) as KursiKosong " +
+                "from cinemas c inner join studios s on c.id = s.cinemas_id left join tikets t on t.studios_id = s.id " +
+                "left join invoices i on i.id = t.invoices_id where monthname(i.tanggal) = '" + bulan + "'" +
+                "group by c.nama_cabang, s.nama order by KursiKosong " + order + " LIMIT 3;";
             }
            
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);

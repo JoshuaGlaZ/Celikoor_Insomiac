@@ -27,36 +27,29 @@ namespace Insomiac_lib
             this.JumlahMenonton = 0;
         }
 
-        public static List<LaporanGenreTontonanKonsumen> BacaData(string nilai = "", string urut = "")
+        public static List<LaporanGenreTontonanKonsumen> BacaData(string nilai = "Comedy", string urut = "")
         {
             List<LaporanGenreTontonanKonsumen> listLaporan = new List<LaporanGenreTontonanKonsumen>();
-            string perintah = "Select k.nama, Count(i.id) as TotalTonton from konsumens k inner join invoices i on k.id = i.konsumens_id " +
-                "inner join tikets t on t.invoices_id" + " = i.id inner join genre_film gf on gf.films_id = t.films_id " +
-                "inner join genres g on gf.genres_id = g.nama and g.nama = 'Komedi' group by k.nama ORDER BY TotalTonton DESC LIMIT 10;";
-
-            if (urut == "Terbanyak")
+            if(urut == "Tersedikit")
             {
-                perintah = "Select k.nama, Count(i.id) as TotalTonton from konsumens k inner join invoices i on k.id = i.konsumens_id " +
-                "inner join tikets t on t.invoices_id" + " = i.id inner join genre_film gf on gf.films_id = t.films_id " +
-                "inner join genres g on gf.genres_id = g.nama and g.nama = '" + nilai + "' group by k.nama ORDER BY TotalTonton DESC LIMIT 10;";
-            }
-            else if (urut == "Tersedikit")
-            {
-                perintah = "Select k.nama, Count(i.id) as TotalTonton from konsumens k inner join invoices i on k.id = i.konsumens_id " +
-                 "inner join tikets t on t.invoices_id" + " = i.id inner join genre_film gf on gf.films_id = t.films_id " +
-                 "inner join genres g on gf.genres_id = g.nama and g.nama = '" + nilai + "' group by k.nama ORDER BY TotalTonton ASC LIMIT 10;";
+                urut = "ASC";
             }
             else
             {
-                perintah = "Select k.nama, Count(i.id) as TotalTonton from konsumens k inner join invoices i on k.id = i.konsumens_id " +
-                "inner join tikets t on t.invoices_id" + " = i.id inner join genre_film gf on gf.films_id = t.films_id " +
-                "inner join genres g on gf.genres_id = g.nama and g.nama = 'Komedi' group by k.nama ORDER BY TotalTonton DESC LIMIT 10;";
+                urut = "DESC";
             }
+
+            string perintah = "Select k.id, Count(i.id) as TotalTonton from konsumens k left join invoices i on k.id = i.konsumens_id " +
+                "left join tikets t on t.invoices_id = i.id left join genre_film gf on gf.films_id = t.films_id left join genres g on gf.genres_id = g.id " +
+                "where g.nama = '" + nilai + "' group by k.nama " +
+                "order by TotalTonton "+ urut + " Limit 10;";
+
+
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 LaporanGenreTontonanKonsumen laporan = new LaporanGenreTontonanKonsumen();
-                laporan.Konsumen = Konsumen.BacaData("nama", msdr.GetString(0),"")[0];
+                laporan.Konsumen = Konsumen.BacaData(int.Parse(msdr.GetString(0)));
                 laporan.JumlahMenonton = msdr.GetInt32(1);
                 listLaporan.Add(laporan);
             }
