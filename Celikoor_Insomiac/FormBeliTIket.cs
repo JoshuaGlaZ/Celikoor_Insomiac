@@ -32,6 +32,7 @@ namespace Celikoor_Insomiac
         {
             mainForm = (FormUtama)this.MdiParent; 
             List<Film> listFilm = Film.BacaData();
+            labelComingSoon.Visible = false; 
             comboBoxJudul.DataSource = listFilm;
             comboBoxJudul.DisplayMember = "Judul";
             labelSaldo.Text = mainForm.konsumenLogin.Saldo.ToString(); 
@@ -117,13 +118,15 @@ namespace Celikoor_Insomiac
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void comboBoxTanggal_SelectedIndexChanged(object sender, EventArgs e)
         {
             JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
             listCinema.Clear();
+            comboBoxStudio.Items.Clear();
+
             List<string> listNamaBioskop = new List<string>();
             foreach(Film_Studio fs in jadwalFilm.ListFS)
             {
@@ -135,6 +138,7 @@ namespace Celikoor_Insomiac
             }
             comboBoxCinema.DataSource = listCinema;
             comboBoxCinema.DisplayMember = "Nama_cabang";
+            comboBoxCinema_SelectionChangeCommitted(sender, e);
         }
         public string ConvertNumberKursi(string nomorKursi)
         {
@@ -157,7 +161,7 @@ namespace Celikoor_Insomiac
             {
                 nomorKelompok = 4; 
             }
-            int baris = (int)(Math.Floor(urutanKursi / 12.0));
+            int baris = (int)(Math.Floor((urutanKursi - 0.1)/ 12.0));
             kodeKursi += (nomorKelompok + 4 * baris).ToString();
             return kodeKursi; 
             
@@ -217,27 +221,43 @@ namespace Celikoor_Insomiac
         {
             string kursi = "checkBo";
             int urutanKursi = 0;
+            int nomorKelompok = 0;
             if(kodeKursi.Substring(0,1) == "A")
             {
                 urutanKursi = int.Parse(kodeKursi.Substring(1));
-                int baris = (int)(Math.Floor(urutanKursi / 4.0));
-                urutanKursi += baris * 12; 
+                int baris = (int)(Math.Floor((urutanKursi - 0.1)/ 4.0));
+                nomorKelompok = urutanKursi % 4; 
+                if(nomorKelompok == 0)
+                {
+                    nomorKelompok = 4; 
+                }
+                nomorKelompok += baris * 12; 
             }
             else if(kodeKursi.Substring(0, 1) == "B")
             {
                 urutanKursi = int.Parse(kodeKursi.Substring(1));
-                int baris = (int)(Math.Floor(urutanKursi / 4.0));
-                urutanKursi += 4; 
-                urutanKursi += baris * 12;
+                int baris = (int)(Math.Floor((urutanKursi - 0.1) / 4.0));
+                nomorKelompok = urutanKursi % 4;
+                if (nomorKelompok == 0)
+                {
+                    nomorKelompok = 4;
+                }
+                nomorKelompok += baris * 12;
+                nomorKelompok += 4;
             }
             else if(kodeKursi.Substring(0, 1) == "C")
             {
                 urutanKursi = int.Parse(kodeKursi.Substring(1));
-                int baris = (int)(Math.Floor(urutanKursi / 4.0));
-                urutanKursi += 8;
-                urutanKursi += baris * 12;
+                int baris = (int)(Math.Floor((urutanKursi - 0.1) / 4.0));
+                nomorKelompok = urutanKursi % 4;
+                if (nomorKelompok == 0)
+                {
+                    nomorKelompok = 4;
+                }
+                nomorKelompok += baris * 12;
+                nomorKelompok += 8;
             }
-            kursi += urutanKursi.ToString();
+            kursi += nomorKelompok.ToString();
             return kursi; 
         }
 
@@ -263,8 +283,41 @@ namespace Celikoor_Insomiac
         private void comboBoxJudul_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Film judulFilm;
+            listCinema.Clear();
+            comboBoxStudio.Items.Clear();
             judulFilm = (Film)comboBoxJudul.SelectedItem;
             comboBoxTanggal.DataSource = JadwalFilm.BacaData(judulFilm);
+
+            if (comboBoxTanggal.Items.Count!=0)
+            {
+                labelComingSoon.Visible = false;
+                labelHarga.Visible = true;
+                labelRp.Visible = true;
+                labelTIPE.Visible = true;
+                labelKursi.Visible = true;
+                labelSesi.Visible = true;
+                labelStudio.Visible = true;
+                labelCinema.Visible = true;
+                labelTHARGA.Visible = true;
+                comboBoxTanggal.Visible = true;
+                comboBoxCinema.Visible = true;
+                comboBoxStudio.Visible = true; 
+            }
+            else
+            {
+                labelComingSoon.Visible = true;
+                labelHarga.Visible = false;
+                labelRp.Visible = false;
+                labelTIPE.Visible = false;
+                labelKursi.Visible = false;
+                labelSesi.Visible = false;
+                labelStudio.Visible = false;
+                labelCinema.Visible = false;
+                labelTHARGA.Visible = false;
+                comboBoxTanggal.Visible = false;
+                comboBoxCinema.Visible = false;
+                comboBoxStudio.Visible = false;
+            }
             textBoxSinopsis.Text = judulFilm.Sinopsis;
             labelKelompok.Text = judulFilm.Kelompok.ToString();
             label1Durasi.Text = judulFilm.Durasi.ToString();
@@ -292,6 +345,10 @@ namespace Celikoor_Insomiac
                     comboBoxStudio.Items.Add(fs.Std);
                 }
             }
+        }
+
+        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

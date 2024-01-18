@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Net.Configuration;
+using System.Data;
 
 namespace Insomiac_lib
 {
@@ -54,7 +55,7 @@ namespace Insomiac_lib
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
-            return cmd.ExecuteReader();
+            return cmd.ExecuteReader(CommandBehavior.CloseConnection);
         }
 
         public static void JalankanPerintah(string perintah)
@@ -67,12 +68,14 @@ namespace Insomiac_lib
         {
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
             cmd.ExecuteNonQuery();
+
         }
         public static MySqlDataReader JalankanPerintahId(string perintah)
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
             return cmd.ExecuteReader();
-    }
+
+        }
     }
 }

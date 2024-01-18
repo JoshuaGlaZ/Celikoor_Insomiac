@@ -54,17 +54,19 @@ namespace Insomiac_lib
         {
             List<JadwalFilm> lst = new List<JadwalFilm>();
             string perintah = "SELECT * FROM jadwal_films WHERE id = " + kode;
-            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            while (msdr.Read())
+            using (MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah))
             {
-                JadwalFilm jf = new JadwalFilm();
-                jf.Id = int.Parse(msdr.GetValue(0).ToString());
-                jf.TanggalPutar = DateTime.Parse(msdr.GetValue(1).ToString());
-                jf.JamPemutaran = msdr.GetValue(2).ToString();
-                jf.ListFS = jf.DaftarFilmStudio();
-                lst.Add(jf);
+                while (msdr.Read())
+                {
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.Id = int.Parse(msdr.GetValue(0).ToString());
+                    jf.TanggalPutar = DateTime.Parse(msdr.GetValue(1).ToString());
+                    jf.JamPemutaran = msdr.GetValue(2).ToString();
+                    jf.ListFS = jf.DaftarFilmStudio();
+                    lst.Add(jf);
+                }
+                return lst;
             }
-            return lst;
         }
         public static JadwalFilm BacaData(string tanggal, string jam)
         {
@@ -90,16 +92,17 @@ namespace Insomiac_lib
                "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
                "WHERE fs.films_id = '" + tFilm.Id + "' GROUP BY jf.id;";
-
-            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            while (msdr.Read())
+            using (MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah))
             {
-                JadwalFilm jf = new JadwalFilm();
-                jf.Id = msdr.GetInt32(0);
-                jf.TanggalPutar = DateTime.Parse(msdr.GetValue(1).ToString());
-                jf.JamPemutaran = msdr.GetString(2);
-                jf.ListFS = jf.DaftarFilmStudio(tFilm);
-                lst.Add(jf);
+                while (msdr.Read())
+                {
+                    JadwalFilm jf = new JadwalFilm();
+                    jf.Id = int.Parse(msdr.GetValue(0).ToString());
+                    jf.TanggalPutar = DateTime.Parse(msdr.GetValue(1).ToString());
+                    jf.JamPemutaran = msdr.GetValue(2).ToString();
+                    jf.ListFS = jf.DaftarFilmStudio(tFilm);
+                    lst.Add(jf);
+                }
             }
             return lst;
         }
@@ -111,14 +114,15 @@ namespace Insomiac_lib
                 "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                 "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
                 "WHERE jf.id = "+Id+";";
-            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            while (msdr.Read())
-            {
-                Film_Studio fs = new Film_Studio();
-                fs.Std = Studio.BacaData("id", msdr.GetValue(0).ToString())[0];
-                fs.Flm = Film.BacaData(msdr.GetValue(1).ToString());
-                lst.Add(fs);
-            }
+
+            using (MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah))
+                while (msdr.Read())
+                {
+                    Film_Studio fs = new Film_Studio();
+                    fs.Std = Studio.BacaData("id", msdr.GetValue(0).ToString())[0];
+                    fs.Flm = Film.BacaData(msdr.GetValue(1).ToString());
+                    lst.Add(fs);
+                }
             return lst;
         }
         public List<Film_Studio> DaftarFilmStudio(Film tFilm)
@@ -127,7 +131,7 @@ namespace Insomiac_lib
             string perintah = "SELECT fs.studios_id,fs.films_id FROM jadwal_films jf " +
                 "inner join sesi_films sf on jf.id = sf.jadwal_film_id " +
                 "inner join film_studio fs on sf.studios_id = fs.studios_id AND sf.films_id = fs.films_id " +
-                "WHERE fs.films_id = " + tFilm.Id + " AND jf.id = " + Id + " AND jf.id = " + Id + ";";
+                "WHERE fs.films_id = " + tFilm.Id + " AND jf.id = " + Id + ";";
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {

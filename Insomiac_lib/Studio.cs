@@ -41,19 +41,19 @@ namespace Insomiac_lib
             string perintah = "SELECT * FROM studios;";
             if (kriteria == "id") { perintah = "SELECT * FROM studios WHERE id="+kode+";"; }
             else if (kriteria != "" && kode != "") { perintah = "SELECT * FROM studios WHERE " + kriteria + " LIKE '%" + kode + "%';"; }
-            MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
-            while (msdr.Read())
-            {
-                Studio s = new Studio();
-                s.Id = int.Parse(msdr.GetValue(0).ToString());
-                s.Nama = msdr.GetValue(1).ToString();
-                s.Kapasitas = int.Parse(msdr.GetValue(2).ToString());
-                s.Jenis = JenisStudio.BacaData("id", msdr.GetValue(3).ToString())[0];
-                s.Bioskop = Cinema.BacaData("id", msdr.GetValue(4).ToString())[0];
-                s.Harga_weekday = int.Parse(msdr.GetValue(5).ToString());
-                s.Harga_weekend = int.Parse(msdr.GetValue(6).ToString());
-                lst.Add(s);
-            }
+            using (MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah))
+                while (msdr.Read())
+                {
+                    Studio s = new Studio();
+                    s.Id = int.Parse(msdr.GetValue(0).ToString());
+                    s.Nama = msdr.GetValue(1).ToString();
+                    s.Kapasitas = int.Parse(msdr.GetValue(2).ToString());
+                    s.Jenis = JenisStudio.BacaData("id", msdr.GetValue(3).ToString())[0];
+                    s.Bioskop = Cinema.BacaData("id", msdr.GetValue(4).ToString())[0];
+                    s.Harga_weekday = int.Parse(msdr.GetValue(5).ToString());
+                    s.Harga_weekend = int.Parse(msdr.GetValue(6).ToString());
+                    lst.Add(s);
+                }
             return lst;
         }
         public static List<Studio> BacaData(string kriteria, string nilai, string urut)
