@@ -27,21 +27,28 @@ namespace Celikoor_Insomiac
         private void FormLaporanPemasukkanCabangDariPenjualanTiket_Load(object sender, EventArgs e)
         {
             this.MinimumSize = this.Size;
-            comboBoxUrut.SelectedIndex = 0;
+            comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
             listLaporan = LaporanPenjualanTiketCabang.BacaData();
             dataGridViewHasil.DataSource = listLaporan;
         }
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string order = comboBoxUrut.SelectedIndex.ToString();
-            listLaporan = LaporanPenjualanTiketCabang.BacaData(order);
+            string kriteria = comboBoxCari.Text.Replace("Nama Cabang", "nama_cabang").Replace("Total Penjualan","TotalPenjualan");
+            string nilai = textBoxCari.Text;
+            string order = comboBoxUrut.Text;
+            listLaporan = LaporanPenjualanTiketCabang.BacaData(kriteria, nilai, order);
             dataGridViewHasil.DataSource = listLaporan;
         }
 
         private void buttonCetak_Click(object sender, EventArgs e)
         {
             LaporanPenjualanTiketCabang.CetakLaporan(listLaporan);
+        }
+
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
+        {
+            comboBoxUrut_SelectedIndexChanged(sender, e);
         }
     }
 }

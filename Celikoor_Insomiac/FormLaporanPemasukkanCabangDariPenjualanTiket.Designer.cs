@@ -35,8 +35,9 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.buttonCetak = new System.Windows.Forms.Button();
-            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCari = new System.Windows.Forms.TextBox();
+            this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
-            this.panel5.Controls.Add(this.comboBoxGenre);
+            this.panel5.Controls.Add(this.textBoxCari);
+            this.panel5.Controls.Add(this.comboBoxCari);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.comboBoxUrut);
             this.panel5.Controls.Add(this.label3);
@@ -59,8 +61,8 @@
             this.comboBoxUrut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUrut.FormattingEnabled = true;
             this.comboBoxUrut.Items.AddRange(new object[] {
-            "Tertinggi",
-            "Terendah"});
+            "Terendah",
+            "Tertinggi"});
             this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);
@@ -145,29 +147,6 @@
             this.buttonCetak.UseVisualStyleBackColor = false;
             this.buttonCetak.Click += new System.EventHandler(this.buttonCetak_Click);
             // 
-            // comboBoxGenre
-            // 
-            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBoxGenre.Location = new System.Drawing.Point(156, 17);
-            this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(364, 24);
-            this.comboBoxGenre.TabIndex = 25;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -180,6 +159,28 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Cari Berdasarkan :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxCari
+            // 
+            this.textBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCari.Location = new System.Drawing.Point(289, 17);
+            this.textBoxCari.Name = "textBoxCari";
+            this.textBoxCari.Size = new System.Drawing.Size(231, 22);
+            this.textBoxCari.TabIndex = 26;
+            this.textBoxCari.TextChanged += new System.EventHandler(this.textBoxCari_TextChanged);
+            // 
+            // comboBoxCari
+            // 
+            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCari.FormattingEnabled = true;
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "Nama Cabang",
+            "Total Penjualan"});
+            this.comboBoxCari.Location = new System.Drawing.Point(153, 17);
+            this.comboBoxCari.Name = "comboBoxCari";
+            this.comboBoxCari.Size = new System.Drawing.Size(130, 24);
+            this.comboBoxCari.TabIndex = 25;
             // 
             // FormLaporanPemasukkanCabangDariPenjualanTiket
             // 
@@ -211,7 +212,8 @@
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Button buttonCetak;
-        private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxCari;
+        private System.Windows.Forms.ComboBox comboBoxCari;
     }
 }

@@ -11,46 +11,65 @@ namespace Insomiac_lib
     public class LaporanPenjualanTiketCabang
     {
         private Cinema cabang;
-        private int nominalPenjualan;
+        private int totalPenjualan;
 
         public LaporanPenjualanTiketCabang()
         {
             this.Cabang = cabang;
-            this.NominalPenjualan = 0;
+            this.TotalPenjualan = 0;
         }
         public LaporanPenjualanTiketCabang(Cinema cabang, int nominalPenjualan)
         {
             this.Cabang = cabang;
-            this.NominalPenjualan = nominalPenjualan;
+            this.TotalPenjualan = nominalPenjualan;
         }
 
         public Cinema Cabang { get => cabang; set => cabang = value; }
-        public int NominalPenjualan { get => nominalPenjualan; set => nominalPenjualan = value; }
+        public int TotalPenjualan { get => totalPenjualan; set => totalPenjualan = value; }
 
-        public static List<LaporanPenjualanTiketCabang> BacaData(string order = "")
+        public static List<LaporanPenjualanTiketCabang> BacaData(string kriteria = "", string nilai = "", string order = "")
         {
             List<LaporanPenjualanTiketCabang> listLaporan = new List<LaporanPenjualanTiketCabang>();
-            if(order == "1")
-            {
-                order = "ASC";
-            }
-            else
+            if(order == "Tertinggi")
             {
                 order = "DESC";
             }
+            else
+            {
+                order = "ASC";
+            }
 
-            string perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan " +
+            string perintah = "";
+            if(kriteria == "")
+            {
+                perintah = "select c.nama_cabang, Sum(i.grand_total) as TotalPenjualan " +
                     "from cinemas c left join studios s on c.id = s.cinemas_id " +
                     "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id " +
-                    "group by c.nama_cabang order by TotalPenjualan "+ order +" Limit 3"; ;
-            
+                    " group by c.nama_cabang having TotalPenjualan is not null order by TotalPenjualan Limit 3";
+            }
+            else if (kriteria == "TotalPenjualan")
+            {
+                perintah = "select c.nama_cabang, Sum(i.grand_total) as TotalPenjualan " +
+                   "from cinemas c left join studios s on c.id = s.cinemas_id " +
+                   "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id " +
+                   "group by c.nama_cabang having TotalPenjualan is not null and " + kriteria + " LIKE '%" + nilai + 
+                   "%' order by TotalPenjualan " + order + " Limit 3";
+            }
+            else
+            {
+                perintah = "select c.nama_cabang, Sum(i.grand_total) as TotalPenjualan " +
+                    "from cinemas c left join studios s on c.id = s.cinemas_id " +
+                    "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id " +
+                    "where " + kriteria + " LIKE '%" + nilai +
+                    "%' group by c.nama_cabang having TotalPenjualan is not null order by TotalPenjualan " + order + " Limit 3";
+            }            
                   
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())
             {
                 LaporanPenjualanTiketCabang laporan = new LaporanPenjualanTiketCabang();
                 laporan.Cabang = Cinema.BacaData("nama_cabang", msdr.GetString(0))[0];
-                laporan.NominalPenjualan = msdr.GetInt32(1);
+                laporan.TotalPenjualan = msdr.GetInt32(1);
                 listLaporan.Add(laporan);
             }
             return listLaporan;
@@ -68,7 +87,7 @@ namespace Insomiac_lib
             sw.WriteLine("no \t nama cabang \t pendapatan");
             for (int i = 1; i <= lst.Count; i++)
             {
-                sw.WriteLine(i + ". \t " + lst[i - 1].Cabang.Nama_cabang + " \t " + lst[i - 1].NominalPenjualan);
+                sw.WriteLine(i + ". \t " + lst[i - 1].Cabang.Nama_cabang + " \t " + lst[i - 1].TotalPenjualan);
             }
             sw.Close();
             CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
