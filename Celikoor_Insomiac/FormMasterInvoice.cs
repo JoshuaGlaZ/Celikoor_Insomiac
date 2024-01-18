@@ -25,13 +25,26 @@ namespace Celikoor_Insomiac
             this.MinimumSize = this.Size;
             comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
             if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(); }
-            else { listInvoice = Invoice.DisplayInvoiceKasir(); }
+            else { 
+                listInvoice = Invoice.DisplayInvoiceKasir();
+                if (dataGridViewHasil.Columns.Count==7) {
+                    DataGridViewButtonColumn btnUbah = new DataGridViewButtonColumn();
+                    btnUbah.Name = "UPDATE";
+                    btnUbah.HeaderText = "UPDATE";
+                    btnUbah.Text = "UPDATE";
+                    btnUbah.UseColumnTextForButtonValue = true;
+                    dataGridViewHasil.Columns.Add(btnUbah);
+                }
+            }
             dataGridViewHasil.DataSource = listInvoice;
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
+            Invoice.UpdateStatus(int.Parse(id));
+            MessageBox.Show("data berhasil diupdate");
+            FormMasterInvoice_Load(this,e);
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

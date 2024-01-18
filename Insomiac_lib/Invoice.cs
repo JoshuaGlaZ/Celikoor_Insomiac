@@ -224,7 +224,7 @@ namespace Insomiac_lib
             Invoice newInv = new Invoice();
             string perintah = "SELECT * from invoices WHERE id = '" + id + "'";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            if (hasil.Read() == true)
+            if (hasil.Read())
             {
                 newInv.Status = hasil.GetString(6);
             }
