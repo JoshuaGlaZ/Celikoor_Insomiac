@@ -93,8 +93,8 @@
             this.comboBoxUrut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUrut.FormattingEnabled = true;
             this.comboBoxUrut.Items.AddRange(new object[] {
-            "Terendah",
-            "Tertinggi"});
+            "Tertinggi",
+            "Terendah"});
             this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);

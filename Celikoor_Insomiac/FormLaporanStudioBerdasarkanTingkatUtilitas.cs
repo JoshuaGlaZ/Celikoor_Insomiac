@@ -46,8 +46,8 @@ namespace Celikoor_Insomiac
 
         private void filterPencarian()
         {
-            string bulan = comboBoxBulan.SelectedItem.ToString();
-            string order = comboBoxUrut.SelectedIndex.ToString();
+            string bulan = comboBoxBulan.Text;
+            string order = comboBoxUrut.Text;
             listLaporan = LaporanTingkatUtilitasStudio.BacaData(bulan,order);
             dataGridViewHasil.DataSource = listLaporan;
 
