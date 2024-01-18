@@ -47,7 +47,7 @@ namespace Insomiac_lib
 
         public static void CekHadir(string invoice, string noKursi, Pegawai p)
         {
-            string perintah = "Update 'tikets' set status_hadir = 1, operator_id = '" + p.Id + "where invoicces_id ='" + invoice + "' and nomor_kursi='" + noKursi + "';";
+            string perintah = "Update 'tikets' set status_hadir = 1, operator_id = '" + p.Id + "where invoices_id ='" + invoice + "' and nomor_kursi='" + noKursi + "';";
             Koneksi.JalankanPerintah(perintah);
         }
     }
