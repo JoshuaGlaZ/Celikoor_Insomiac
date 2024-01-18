@@ -46,7 +46,7 @@ namespace Celikoor_Insomiac
         {
             filterPencarian();
         }
-
+        
         private void filterPencarian()
         {
             string nilai = comboBoxGenre.SelectedItem.ToString();

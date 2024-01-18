@@ -30,17 +30,20 @@ namespace Insomiac_lib
         public static List<LaporanPenjualanTiketCabang> BacaData(string order = "")
         {
             List<LaporanPenjualanTiketCabang> listLaporan = new List<LaporanPenjualanTiketCabang>();
-            string perintah = "";
-            if (order == "Terendah")
+            if(order == "1")
             {
-                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from  studios s left join cinemas c on c.id = s.cinemas_id " +
-                    "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id group by c.nama_cabang order by TotalPenjualan ASC Limit 3";
+                order = "ASC";
             }
             else
             {
-                perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan from studios s left join cinemas c on c.id = s.cinemas_id " +
-                    "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id group by c.nama_cabang order by TotalPenjualan DESC Limit 3";
+                order = "DESC";
             }
+
+            string perintah = "select c.nama_cabang, IFNULL(Sum(i.grand_total),0) as TotalPenjualan " +
+                    "from cinemas c left join studios s on c.id = s.cinemas_id " +
+                    "left join tikets t on t.studios_id = s.id left join invoices i on i.id = t.invoices_id " +
+                    "group by c.nama_cabang order by TotalPenjualan "+ order +" Limit 3"; ;
+            
                   
             MySqlDataReader msdr = Koneksi.JalankanPerintahSelect(perintah);
             while (msdr.Read())

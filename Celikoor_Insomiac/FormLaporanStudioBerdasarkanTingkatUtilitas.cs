@@ -26,6 +26,7 @@ namespace Celikoor_Insomiac
 
         private void FormLaporanStudioBerdasarkanTingkatUtilitas_Load(object sender, EventArgs e)
         {
+
             this.MinimumSize = this.Size;
             comboBoxBulan.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
             listLaporan = LaporanTingkatUtilitasStudio.BacaData();
@@ -47,7 +48,7 @@ namespace Celikoor_Insomiac
         {
             string bulan = comboBoxBulan.SelectedItem.ToString();
             string order = comboBoxUrut.SelectedIndex.ToString();
-            listLaporan = LaporanTingkatUtilitasStudio.BacaData();
+            listLaporan = LaporanTingkatUtilitasStudio.BacaData(bulan,order);
             dataGridViewHasil.DataSource = listLaporan;
 
         }

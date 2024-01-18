@@ -27,7 +27,7 @@ namespace Celikoor_Insomiac
         private void FormLaporanPemasukkanCabangDariPenjualanTiket_Load(object sender, EventArgs e)
         {
             this.MinimumSize = this.Size;
-            comboBoxBulan.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
+            comboBoxUrut.SelectedIndex = 0;
             listLaporan = LaporanPenjualanTiketCabang.BacaData();
             dataGridViewHasil.DataSource = listLaporan;
         }

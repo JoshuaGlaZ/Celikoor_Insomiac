@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBoxBulan = new System.Windows.Forms.ComboBox();
-            this.textBoxCari = new System.Windows.Forms.TextBox();
             this.comboBoxUrut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
@@ -45,8 +42,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
-            this.panel5.Controls.Add(this.comboBoxBulan);
-            this.panel5.Controls.Add(this.textBoxCari);
             this.panel5.Controls.Add(this.comboBoxUrut);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label1);
@@ -84,6 +79,8 @@
             this.textBoxCari.Location = new System.Drawing.Point(289, 17);
             this.textBoxCari.Name = "textBoxCari";
             this.textBoxCari.Size = new System.Drawing.Size(231, 22);
+            this.textBoxCari.TabIndex = 22;
+            // 
             this.textBoxCari.TabIndex = 22;
             // 
             // comboBoxUrut
@@ -217,11 +214,8 @@
 
         #endregion
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBoxBulan;
-        private System.Windows.Forms.TextBox textBoxCari;
         private System.Windows.Forms.ComboBox comboBoxUrut;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.DataGridView dataGridViewHasil;
