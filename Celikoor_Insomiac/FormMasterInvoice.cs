@@ -32,6 +32,10 @@ namespace Celikoor_Insomiac
                     btnUbah.Name = "UPDATE";
                     btnUbah.HeaderText = "UPDATE";
                     btnUbah.Text = "UPDATE";
+                    btnUbah.FlatStyle = FlatStyle.Flat;
+                    btnUbah.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+                    btnUbah.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
+                    btnUbah.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
                     btnUbah.UseColumnTextForButtonValue = true;
                     dataGridViewHasil.Columns.Add(btnUbah);
                 }
