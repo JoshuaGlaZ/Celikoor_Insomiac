@@ -113,7 +113,6 @@ namespace Celikoor_Insomiac
             this.comboBoxCari.Name = "comboBoxCari";
             this.comboBoxCari.Size = new System.Drawing.Size(130, 24);
             this.comboBoxCari.TabIndex = 19;
-            this.comboBoxCari.SelectedIndexChanged += new System.EventHandler(this.comboBoxCari_SelectedIndexChanged);
             // 
             // label1
             // 

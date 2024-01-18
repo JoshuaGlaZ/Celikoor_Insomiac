@@ -447,9 +447,9 @@ namespace Celikoor_Insomiac
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(59, 9);
+            this.label2.Location = new System.Drawing.Point(11, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(870, 42);
+            this.label2.Size = new System.Drawing.Size(965, 42);
             this.label2.TabIndex = 106;
             this.label2.Text = "P E N J A D W A L A N   F I L M";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -34,19 +34,9 @@ namespace Celikoor_Insomiac
             numericUpDownKapasitas.Value = studioUbah.Kapasitas;
             comboBoxJenisStudio.SelectedItem = listJenisStudio.FirstOrDefault(js => js.Id == studioUbah.Jenis.Id);
             comboBoxCinema.SelectedItem = listCinema.FirstOrDefault(c => c.Id == studioUbah.Bioskop.Id);
-            textBoxHargaWeekday.Text = studioUbah.Harga_weekday.ToString(); 
+            textBoxHargaWeekday.Text = studioUbah.Harga_weekday.ToString();
             textBoxHargaWeekend.Text = studioUbah.Harga_weekend.ToString();
 
-        }
-
-        private void buttonKosongi_Click(object sender, EventArgs e)
-        {
-            textBoxNama.Clear();
-            numericUpDownKapasitas.Value = 4;
-            comboBoxJenisStudio.SelectedItem = null;
-            comboBoxCinema.SelectedItem = null;
-            textBoxHargaWeekday.Clear();
-            textBoxHargaWeekend.Clear();
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -83,6 +73,16 @@ namespace Celikoor_Insomiac
             {
                 MessageBox.Show("Data " + ex.Message + " belum diisi");
             }
+        }
+
+        private void buttonKosongi_Click(object sender, EventArgs e)
+        {
+            textBoxNama.Clear();
+            numericUpDownKapasitas.Value = 4;
+            comboBoxJenisStudio.SelectedIndex = -1;
+            comboBoxCinema.SelectedIndex = -1;
+            textBoxHargaWeekday.Clear();
+            textBoxHargaWeekend.Clear();
         }
     }
 }

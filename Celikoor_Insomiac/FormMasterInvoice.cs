@@ -59,7 +59,7 @@ namespace Celikoor_Insomiac
             this.Close();
         }
 
-        private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
+        private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
             string kriteria = comboBoxCari.Text.Replace(" ", "_").Replace("Konsumen", "konsumens_id").Replace("Kasir", "kasir_id");
             string nilai = textBoxCari.Text;
@@ -69,14 +69,9 @@ namespace Celikoor_Insomiac
             dataGridViewHasil.DataSource = listInvoice;
         }
 
-        private void textBoxCari_TextChanged(object sender, EventArgs e)
-        {
-            comboBoxCari_SelectedIndexChanged(sender, e);
-        }
-
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxCari_SelectedIndexChanged(sender, e);
+            textBoxCari_TextChanged(sender, e);
         }
     }
 }

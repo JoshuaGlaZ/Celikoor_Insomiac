@@ -140,11 +140,11 @@ namespace Celikoor_Insomiac
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.buttonKeluar.Location = new System.Drawing.Point(277, 314);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
@@ -244,7 +244,7 @@ namespace Celikoor_Insomiac
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(382, 42);
             this.label6.TabIndex = 174;
-            this.label6.Text = "U B A H   S T U D I O";
+            this.label6.Text = "T A M B A H   S T U D I O";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormUbahStudio
@@ -270,6 +270,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUbahStudio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormUbahStudio";
             this.Load += new System.EventHandler(this.FormUbahStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKapasitas)).EndInit();

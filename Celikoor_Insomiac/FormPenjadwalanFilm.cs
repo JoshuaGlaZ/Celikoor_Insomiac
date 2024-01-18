@@ -184,8 +184,8 @@ namespace Celikoor_Insomiac
             {
                 Studio s = (Studio)comboBoxStudio.SelectedItem;
                 labelNamaStudio.Text = s.Jenis + "    " + s.Kapasitas + " Kursi";  
-                labelHargaWeekday.Text = s.Harga_weekday.ToString("C", CultureInfo.CurrentCulture) ;
-                labelHargaWeekend.Text = s.Harga_weekend.ToString("C", CultureInfo.CurrentCulture) ;
+                labelHargaWeekday.Text = "Weekday: " + s.Harga_weekday.ToString("C", CultureInfo.CurrentCulture) ;
+                labelHargaWeekend.Text = "Weekend: " + s.Harga_weekend.ToString("C", CultureInfo.CurrentCulture) ;
             }
         }
 
