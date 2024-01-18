@@ -452,7 +452,7 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSimpan.Location = new System.Drawing.Point(381, 563);
+            this.buttonSimpan.Location = new System.Drawing.Point(374, 616);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(118, 45);
             this.buttonSimpan.TabIndex = 145;
@@ -462,12 +462,12 @@
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(566, 563);
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.buttonKeluar.Location = new System.Drawing.Point(692, 616);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(118, 45);
             this.buttonKeluar.TabIndex = 146;
@@ -482,7 +482,7 @@
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonTambah.Location = new System.Drawing.Point(751, 563);
+            this.buttonTambah.Location = new System.Drawing.Point(260, 370);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(118, 45);
             this.buttonTambah.TabIndex = 147;
@@ -505,7 +505,7 @@
             this.ColumnSubIndo,
             this.ColumnCoverImage,
             this.ColumnDiskon});
-            this.dataGridViewFilm.Location = new System.Drawing.Point(11, 370);
+            this.dataGridViewFilm.Location = new System.Drawing.Point(11, 427);
             this.dataGridViewFilm.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewFilm.Name = "dataGridViewFilm";
             this.dataGridViewFilm.RowHeadersWidth = 62;
@@ -676,6 +676,7 @@
             this.panelUtama.Name = "panelUtama";
             this.panelUtama.Size = new System.Drawing.Size(1177, 676);
             this.panelUtama.TabIndex = 155;
+            this.panelUtama.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUtama_Paint);
             // 
             // textBoxCoverPath
             // 
@@ -705,7 +706,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 684);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1110, 729);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panelUtama);
             this.Margin = new System.Windows.Forms.Padding(2);

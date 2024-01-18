@@ -30,20 +30,20 @@ namespace Celikoor_Insomiac
         private void InitializeComponent()
         {
             this.dataGridViewAktorFilm = new System.Windows.Forms.DataGridView();
-            this.dataGridViewGenreFilm = new System.Windows.Forms.DataGridView();
-            this.buttonGenreBack = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelFilm = new System.Windows.Forms.Label();
             this.ColumnAktorFilmAktorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAktorFilmNama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAktorFilmTglLahir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAktorFilmGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAktorFilmNegaraAsal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAktorFilmPeran = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewGenreFilm = new System.Windows.Forms.DataGridView();
             this.ColumnGenreFilmGenreId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGenreFilmNama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGenreFilmDeskripsi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGenreBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelFilm = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAktorFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGenreFilm)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,47 @@ namespace Celikoor_Insomiac
             this.dataGridViewAktorFilm.Size = new System.Drawing.Size(374, 293);
             this.dataGridViewAktorFilm.TabIndex = 163;
             // 
+            // ColumnAktorFilmAktorId
+            // 
+            this.ColumnAktorFilmAktorId.HeaderText = "Aktors_Id";
+            this.ColumnAktorFilmAktorId.Name = "ColumnAktorFilmAktorId";
+            this.ColumnAktorFilmAktorId.ReadOnly = true;
+            this.ColumnAktorFilmAktorId.Width = 77;
+            // 
+            // ColumnAktorFilmNama
+            // 
+            this.ColumnAktorFilmNama.HeaderText = "Nama_Aktor";
+            this.ColumnAktorFilmNama.Name = "ColumnAktorFilmNama";
+            this.ColumnAktorFilmNama.ReadOnly = true;
+            this.ColumnAktorFilmNama.Width = 91;
+            // 
+            // ColumnAktorFilmTglLahir
+            // 
+            this.ColumnAktorFilmTglLahir.HeaderText = "Tanggal_Lahir";
+            this.ColumnAktorFilmTglLahir.Name = "ColumnAktorFilmTglLahir";
+            this.ColumnAktorFilmTglLahir.ReadOnly = true;
+            // 
+            // ColumnAktorFilmGender
+            // 
+            this.ColumnAktorFilmGender.HeaderText = "Gender";
+            this.ColumnAktorFilmGender.Name = "ColumnAktorFilmGender";
+            this.ColumnAktorFilmGender.ReadOnly = true;
+            this.ColumnAktorFilmGender.Width = 67;
+            // 
+            // ColumnAktorFilmNegaraAsal
+            // 
+            this.ColumnAktorFilmNegaraAsal.HeaderText = "Negara_Asal";
+            this.ColumnAktorFilmNegaraAsal.Name = "ColumnAktorFilmNegaraAsal";
+            this.ColumnAktorFilmNegaraAsal.ReadOnly = true;
+            this.ColumnAktorFilmNegaraAsal.Width = 93;
+            // 
+            // ColumnAktorFilmPeran
+            // 
+            this.ColumnAktorFilmPeran.HeaderText = "Peran";
+            this.ColumnAktorFilmPeran.Name = "ColumnAktorFilmPeran";
+            this.ColumnAktorFilmPeran.ReadOnly = true;
+            this.ColumnAktorFilmPeran.Width = 60;
+            // 
             // dataGridViewGenreFilm
             // 
             this.dataGridViewGenreFilm.AllowUserToAddRows = false;
@@ -86,6 +127,27 @@ namespace Celikoor_Insomiac
             this.dataGridViewGenreFilm.RowHeadersWidth = 51;
             this.dataGridViewGenreFilm.Size = new System.Drawing.Size(374, 293);
             this.dataGridViewGenreFilm.TabIndex = 161;
+            // 
+            // ColumnGenreFilmGenreId
+            // 
+            this.ColumnGenreFilmGenreId.HeaderText = "Genres_Id";
+            this.ColumnGenreFilmGenreId.Name = "ColumnGenreFilmGenreId";
+            this.ColumnGenreFilmGenreId.ReadOnly = true;
+            this.ColumnGenreFilmGenreId.Width = 81;
+            // 
+            // ColumnGenreFilmNama
+            // 
+            this.ColumnGenreFilmNama.HeaderText = "Nama_Genre";
+            this.ColumnGenreFilmNama.Name = "ColumnGenreFilmNama";
+            this.ColumnGenreFilmNama.ReadOnly = true;
+            this.ColumnGenreFilmNama.Width = 95;
+            // 
+            // ColumnGenreFilmDeskripsi
+            // 
+            this.ColumnGenreFilmDeskripsi.HeaderText = "Deskripsi";
+            this.ColumnGenreFilmDeskripsi.Name = "ColumnGenreFilmDeskripsi";
+            this.ColumnGenreFilmDeskripsi.ReadOnly = true;
+            this.ColumnGenreFilmDeskripsi.Width = 75;
             // 
             // buttonGenreBack
             // 
@@ -138,72 +200,11 @@ namespace Celikoor_Insomiac
             this.labelFilm.Text = "F I L M    N A M E";
             this.labelFilm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ColumnAktorFilmAktorId
-            // 
-            this.ColumnAktorFilmAktorId.HeaderText = "Aktors_Id";
-            this.ColumnAktorFilmAktorId.Name = "ColumnAktorFilmAktorId";
-            this.ColumnAktorFilmAktorId.ReadOnly = true;
-            this.ColumnAktorFilmAktorId.Width = 77;
-            // 
-            // ColumnAktorFilmNama
-            // 
-            this.ColumnAktorFilmNama.HeaderText = "Nama_Aktor";
-            this.ColumnAktorFilmNama.Name = "ColumnAktorFilmNama";
-            this.ColumnAktorFilmNama.ReadOnly = true;
-            this.ColumnAktorFilmNama.Width = 91;
-            // 
-            // ColumnAktorFilmTglLahir
-            // 
-            this.ColumnAktorFilmTglLahir.HeaderText = "Tanggal_Lahir";
-            this.ColumnAktorFilmTglLahir.Name = "ColumnAktorFilmTglLahir";
-            this.ColumnAktorFilmTglLahir.ReadOnly = true;
-            // 
-            // ColumnAktorFilmGender
-            // 
-            this.ColumnAktorFilmGender.HeaderText = "Gender";
-            this.ColumnAktorFilmGender.Name = "ColumnAktorFilmGender";
-            this.ColumnAktorFilmGender.ReadOnly = true;
-            this.ColumnAktorFilmGender.Width = 67;
-            // 
-            // ColumnAktorFilmNegaraAsal
-            // 
-            this.ColumnAktorFilmNegaraAsal.HeaderText = "Negara_Asal";
-            this.ColumnAktorFilmNegaraAsal.Name = "ColumnAktorFilmNegaraAsal";
-            this.ColumnAktorFilmNegaraAsal.ReadOnly = true;
-            this.ColumnAktorFilmNegaraAsal.Width = 93;
-            // 
-            // ColumnAktorFilmPeran
-            // 
-            this.ColumnAktorFilmPeran.HeaderText = "Peran";
-            this.ColumnAktorFilmPeran.Name = "ColumnAktorFilmPeran";
-            this.ColumnAktorFilmPeran.ReadOnly = true;
-            this.ColumnAktorFilmPeran.Width = 60;
-            // 
-            // ColumnGenreFilmGenreId
-            // 
-            this.ColumnGenreFilmGenreId.HeaderText = "Genres_Id";
-            this.ColumnGenreFilmGenreId.Name = "ColumnGenreFilmGenreId";
-            this.ColumnGenreFilmGenreId.ReadOnly = true;
-            this.ColumnGenreFilmGenreId.Width = 81;
-            // 
-            // ColumnGenreFilmNama
-            // 
-            this.ColumnGenreFilmNama.HeaderText = "Nama_Genre";
-            this.ColumnGenreFilmNama.Name = "ColumnGenreFilmNama";
-            this.ColumnGenreFilmNama.ReadOnly = true;
-            this.ColumnGenreFilmNama.Width = 95;
-            // 
-            // ColumnGenreFilmDeskripsi
-            // 
-            this.ColumnGenreFilmDeskripsi.HeaderText = "Deskripsi";
-            this.ColumnGenreFilmDeskripsi.Name = "ColumnGenreFilmDeskripsi";
-            this.ColumnGenreFilmDeskripsi.ReadOnly = true;
-            this.ColumnGenreFilmDeskripsi.Width = 75;
-            // 
             // FormTambahFilmAktorGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelFilm);
             this.Controls.Add(this.label2);

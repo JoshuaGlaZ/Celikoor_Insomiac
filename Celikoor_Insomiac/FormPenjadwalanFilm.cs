@@ -60,14 +60,16 @@ namespace Celikoor_Insomiac
             comboBoxFilm.SelectedIndexChanged += comboBoxCinema_SelectedIndexChanged;
             comboBoxFilm.SelectedItem = null;
 
+            comboBoxStudio.SelectedItem = null;
+
             labelNamaStudio.Text = "(nama studio)";
             labelHargaWeekday.Text = "(nama harga weekday)";
             labelHargaWeekend.Text = "(nama harga weekend)";
 
-            labelSinopsis.Text = "(sinopsis)";
+            textBoxSinopsis.Text = "(sinopsis)";
             labelDurasi.Text = "(durasi)";
-            labelAktorUtama.Text = "(aktor, aktor...)";
-            labelGenre.Text = "(genre, genre)";
+            textBoxAktor.Text = "(aktor, aktor...)";
+            textBoxGenre.Text = "(genre, genre)";
             labelKelompok.Text = "(kelompok)";
 
             pictureBoxPoster.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -150,10 +152,10 @@ namespace Celikoor_Insomiac
             if (comboBoxFilm.SelectedValue != null)
             {
                 Film f = (Film)comboBoxFilm.SelectedItem;
-                labelSinopsis.Text = f.Sinopsis.ToString();
+                textBoxSinopsis.Text = f.Sinopsis.ToString();
                 labelDurasi.Text = f.Durasi.ToString();
-                labelAktorUtama.Text = f.tampilkanAktor();
-                labelGenre.Text = f.tampilkanGenre();
+                textBoxAktor.Text = f.tampilkanAktor();
+                textBoxGenre.Text = f.tampilkanGenre();
                 labelKelompok.Text = f.Kelompok.Nama;
 
                 if (File.Exists(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + f.CoverPath)))
@@ -169,11 +171,10 @@ namespace Celikoor_Insomiac
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCinema.SelectedIndex != -1 && comboBoxCinema.SelectedValue != null)
+            if (comboBoxCinema.SelectedValue != null)
             {
                 Cinema c = (Cinema)comboBoxCinema.SelectedValue;
                 comboBoxStudio.DataSource = Studio.BacaData("cinemas_id", c.Id.ToString());
-                comboBoxStudio.SelectedIndex = 0;
             }
         }
 

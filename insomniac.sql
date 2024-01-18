@@ -16,25 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `aktor_film`
---
-
-DROP TABLE IF EXISTS `aktor_film`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `aktor_film` (
-  `aktors_id` int(11) NOT NULL,
-  `films_id` int(11) NOT NULL,
-  `peran` enum('UTAMA','PEMBANTU','FIGURAN') DEFAULT NULL,
-  PRIMARY KEY (`aktors_id`,`films_id`),
-  KEY `fk_aktors_has_films_films1_idx` (`films_id`),
-  KEY `fk_aktors_has_films_aktors1_idx` (`aktors_id`),
-  CONSTRAINT `fk_aktors_has_films_aktors1` FOREIGN KEY (`aktors_id`) REFERENCES `aktors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_aktors_has_films_films1` FOREIGN KEY (`films_id`) REFERENCES `films` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `aktor_film`
 --
 
@@ -43,23 +24,6 @@ LOCK TABLES `aktor_film` WRITE;
 INSERT INTO `aktor_film` VALUES (1,1,'UTAMA'),(1,2,'UTAMA'),(1,3,'UTAMA'),(1,8,'PEMBANTU'),(2,1,'UTAMA'),(2,2,'UTAMA'),(2,3,'UTAMA'),(3,1,'PEMBANTU'),(3,8,'PEMBANTU'),(4,1,'PEMBANTU'),(4,2,'PEMBANTU'),(4,3,'PEMBANTU'),(5,1,'PEMBANTU'),(6,1,'PEMBANTU'),(6,2,'PEMBANTU'),(6,3,'PEMBANTU'),(7,2,'PEMBANTU'),(7,8,'PEMBANTU'),(8,2,'PEMBANTU'),(8,3,'PEMBANTU'),(9,2,'FIGURAN'),(10,2,'FIGURAN'),(11,3,'UTAMA'),(13,3,'PEMBANTU'),(14,3,'FIGURAN'),(15,3,'FIGURAN'),(16,4,'UTAMA'),(16,5,'UTAMA'),(16,8,'PEMBANTU'),(17,4,'UTAMA'),(17,5,'UTAMA'),(18,4,'PEMBANTU'),(19,4,'PEMBANTU'),(20,4,'PEMBANTU'),(20,5,'PEMBANTU'),(21,5,'PEMBANTU'),(21,8,'PEMBANTU'),(22,5,'PEMBANTU'),(23,5,'FIGURAN'),(24,5,'FIGURAN'),(26,6,'UTAMA'),(26,7,'UTAMA'),(26,8,'UTAMA'),(26,11,'PEMBANTU'),(26,21,'UTAMA'),(26,22,'UTAMA'),(27,6,'UTAMA'),(28,6,'PEMBANTU'),(29,6,'PEMBANTU'),(29,7,'FIGURAN'),(30,6,'PEMBANTU'),(30,12,'UTAMA'),(30,13,'UTAMA'),(30,14,'FIGURAN'),(31,7,'UTAMA'),(32,6,'PEMBANTU'),(32,7,'PEMBANTU'),(32,8,'UTAMA'),(33,7,'PEMBANTU'),(34,7,'FIGURAN'),(35,7,'FIGURAN'),(36,8,'UTAMA'),(36,21,'UTAMA'),(36,22,'UTAMA'),(37,8,'PEMBANTU'),(38,8,'FIGURAN'),(39,8,'FIGURAN'),(41,9,'UTAMA'),(41,10,'UTAMA'),(41,11,'UTAMA'),(41,19,'UTAMA'),(41,20,'UTAMA'),(41,21,'UTAMA'),(41,22,'UTAMA'),(42,9,'UTAMA'),(43,9,'UTAMA'),(44,9,'PEMBANTU'),(44,11,'UTAMA'),(45,9,'PEMBANTU'),(46,10,'PEMBANTU'),(46,11,'UTAMA'),(46,19,'UTAMA'),(46,20,'UTAMA'),(46,21,'UTAMA'),(46,22,'UTAMA'),(47,10,'PEMBANTU'),(48,10,'PEMBANTU'),(50,10,'PEMBANTU'),(51,11,'UTAMA'),(51,19,'UTAMA'),(51,20,'UTAMA'),(51,21,'UTAMA'),(51,22,'UTAMA'),(54,11,'UTAMA'),(54,22,'UTAMA'),(56,11,'UTAMA'),(56,12,'UTAMA'),(56,19,'UTAMA'),(56,20,'UTAMA'),(56,21,'UTAMA'),(56,22,'UTAMA'),(57,12,'PEMBANTU'),(58,12,'PEMBANTU'),(59,12,'PEMBANTU'),(60,12,'PEMBANTU'),(60,13,'UTAMA'),(61,13,'PEMBANTU'),(62,11,'PEMBANTU'),(62,14,'PEMBANTU'),(63,11,'PEMBANTU'),(63,13,'PEMBANTU'),(64,13,'PEMBANTU'),(66,14,'UTAMA'),(67,14,'PEMBANTU'),(68,14,'PEMBANTU'),(69,14,'PEMBANTU'),(71,15,'UTAMA'),(71,16,'UTAMA'),(71,17,'UTAMA'),(71,18,'UTAMA'),(71,19,'UTAMA'),(71,20,'UTAMA'),(71,21,'UTAMA'),(71,22,'UTAMA'),(72,15,'PEMBANTU'),(72,16,'PEMBANTU'),(73,15,'PEMBANTU'),(73,16,'PEMBANTU'),(73,18,'UTAMA'),(74,15,'PEMBANTU'),(74,16,'PEMBANTU'),(74,17,'UTAMA'),(75,15,'PEMBANTU'),(75,16,'PEMBANTU'),(76,16,'FIGURAN'),(77,16,'FIGURAN'),(78,16,'FIGURAN'),(80,17,'PEMBANTU'),(81,17,'PEMBANTU'),(82,17,'PEMBANTU'),(83,17,'PEMBANTU'),(84,17,'FIGURAN'),(86,18,'PEMBANTU'),(87,18,'PEMBANTU'),(88,18,'PEMBANTU'),(89,18,'PEMBANTU'),(90,18,'FIGURAN'),(91,17,'PEMBANTU'),(91,19,'UTAMA'),(91,20,'UTAMA'),(91,21,'UTAMA'),(91,22,'UTAMA'),(92,7,'UTAMA'),(92,10,'UTAMA'),(92,19,'PEMBANTU'),(93,19,'PEMBANTU'),(94,19,'PEMBANTU'),(95,19,'FIGURAN'),(101,20,'PEMBANTU'),(101,21,'PEMBANTU'),(102,20,'PEMBANTU'),(102,21,'PEMBANTU'),(103,20,'PEMBANTU'),(103,21,'PEMBANTU'),(104,20,'PEMBANTU'),(104,21,'PEMBANTU'),(105,20,'PEMBANTU'),(106,22,'PEMBANTU'),(107,22,'PEMBANTU'),(108,22,'PEMBANTU'),(109,22,'PEMBANTU'),(110,22,'PEMBANTU');
 /*!40000 ALTER TABLE `aktor_film` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `aktors`
---
-
-DROP TABLE IF EXISTS `aktors`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `aktors` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `tgl_lahir` date NOT NULL,
-  `gender` enum('L','P') NOT NULL,
-  `negara_asal` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `aktors`
@@ -72,23 +36,6 @@ INSERT INTO `aktors` VALUES (1,'Tobey Maguire','1975-06-27','L','Amerika Serikat
 UNLOCK TABLES;
 
 --
--- Table structure for table `cinemas`
---
-
-DROP TABLE IF EXISTS `cinemas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cinemas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_cabang` varchar(45) NOT NULL,
-  `alamat` varchar(75) NOT NULL,
-  `tgl_dibuka` date NOT NULL,
-  `kota` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `cinemas`
 --
 
@@ -97,24 +44,6 @@ LOCK TABLES `cinemas` WRITE;
 INSERT INTO `cinemas` VALUES (1,'Tunjungan XXI','Jl. Basuki Rahmat No.8-12','2015-08-12','Surabaya'),(2,'Galaxy XXI','Galaxy Mall 1, Jl. Dr. Ir. H. Soekarno No.35-39','2019-09-30','Surabaya'),(3,'Delta XXI','Plaza Surabaya, Jl. Pemuda No.31-37 Lt. 5','2019-10-10','Surabaya'),(4,'Grand City XXI','Lantai 4 Grand City, Jl. Walikota Mustajab No.1','2013-05-12','Surabaya'),(5,'PTC XXI','Pakuwon Trade Center, Jl. Puncak Indah Lontar II No.2 lt.1','2015-08-12','Surabaya'),(6,'Cinema XXI - Ciputra World','Ciputra World, Jl. Mayjen Sungkono No.89 Lantai 4','2012-03-12','Surabaya'),(7,'XXI Premiere Lenmarc','LenMarc Lt. 4, Jl. Mayjend. Jonosewojo No.9','2012-08-25','Surabaya'),(8,'XXI - Tunjungan Plaza 5','Tunjungan Plaza 5, Jl. Embong Malang No.32-36','2017-07-02','Surabaya'),(9,'Pakuwon City XXI','Pakuwon City, Jl. Raya Laguna KJW Putih Tambak No.17','2018-08-15','Surabaya'),(10,'CGV Cinemas BG Junction','BG Junction Mall, Jl. Bubutan No.1 - 7','2017-08-22','Surabaya'),(11,'Transmart Ngagel XXI','Jl. Ngagel','2015-12-16','Surabaya'),(12,'Pakuwon Mall XXI','Pakuwon Mall, Jl. Puncak Indah Lontar No.2','2012-09-06','Surabaya'),(13,'Royal XXI','Royal Plaza, Jl. Achmad Yani No.16-18 Lt. 3','2014-06-17','Surabaya'),(14,'Cinepolis','Jl. Ahmad Yani No.288','2018-02-17','Surabaya'),(15,'CGV Cinemas Maspion','Jl. Ahmad Yani No.73','2015-08-14','Surabaya'),(16,'CGV Marvell City','Marvell City Mall, Jl. Ngagel No.123 Lt. 3','2012-08-13','Surabaya'),(17,'The Premiere - XXI Grand City Mall','Jl. Walikota Mustajab No.1','2013-11-12','Surabaya'),(18,'Transmart Rungkut XXI','Transmart Rungkut, Jl. Raya Kalirungkut No.23-25','2013-02-26','Surabaya'),(19,'Movimax Kaza','Kaza Mall, Jl. Kapas Krampung No.45 Lantai 3','2020-10-09','Surabaya'),(20,'Trans Icon Mall XXI','Jl. Ahmad Yani, Gayungan','2019-03-04','Surabaya');
 /*!40000 ALTER TABLE `cinemas` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `film_studio`
---
-
-DROP TABLE IF EXISTS `film_studio`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `film_studio` (
-  `studios_id` int(11) NOT NULL,
-  `films_id` int(11) NOT NULL,
-  PRIMARY KEY (`studios_id`,`films_id`),
-  KEY `fk_studios_has_films_films1_idx` (`films_id`),
-  KEY `fk_studios_has_films_studios1_idx` (`studios_id`),
-  CONSTRAINT `fk_studios_has_films_films1` FOREIGN KEY (`films_id`) REFERENCES `films` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_studios_has_films_studios1` FOREIGN KEY (`studios_id`) REFERENCES `studios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `film_studio`
@@ -127,56 +56,14 @@ INSERT INTO `film_studio` VALUES (1,1),(1,2),(1,3),(2,1),(2,2),(2,3),(3,1),(3,2)
 UNLOCK TABLES;
 
 --
--- Table structure for table `films`
---
-
-DROP TABLE IF EXISTS `films`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `films` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `judul` varchar(45) NOT NULL,
-  `sinopsis` text NOT NULL,
-  `tahun` int(11) NOT NULL,
-  `durasi` smallint(6) NOT NULL,
-  `kelompoks_id` int(11) NOT NULL,
-  `bahasa` enum('EN','ID','CHN','KOR','JPN','OTH') NOT NULL DEFAULT 'EN',
-  `is_sub_indo` tinyint(4) NOT NULL DEFAULT 1,
-  `cover_image` varchar(45) DEFAULT NULL,
-  `diskon_nominal` double DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_films_kelompoks1_idx` (`kelompoks_id`),
-  CONSTRAINT `fk_films_kelompoks1` FOREIGN KEY (`kelompoks_id`) REFERENCES `kelompoks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `films`
 --
 
 LOCK TABLES `films` WRITE;
 /*!40000 ALTER TABLE `films` DISABLE KEYS */;
-INSERT INTO `films` VALUES (1,'Spider-Man','lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',2002,121,2,'EN',1,'Spider-Man.jpg',60),(2,'Spider-Man 2','',2004,127,2,'EN',1,'Spider-Man 2.jpg',45),(3,'Spider-Man 3','',2007,139,2,'EN',1,'Spider-Man 3.jpg',39),(4,'The Amazing Spider-Man','',2012,136,2,'EN',1,'The Amazing Spider-Man.jpg',28),(5,'The Amazing Spider-Man 2','',2014,142,2,'EN',1,'The Amazing Spider-Man 2.jpg',22),(6,'Spider-Man: Homecoming','',2017,133,2,'EN',1,'Spider-Man - Homecoming.jpg',30),(7,'Spider-Man: Far from Home','',2019,129,2,'EN',1,'Spider-Man - Far from Home.jpg',15),(8,'Spider-Man: No Way Home','',2021,148,2,'EN',1,'Spider-Man - No Way Home.jpg',10),(9,'Captain America: The First Avenger','',2011,124,2,'EN',1,'Captain America - The First Avenger.jpg',29),(10,'Captain America: The Winter Soldier','',2014,136,2,'EN',1,'Captain America - The Winter Soldier.jpg',11),(11,'Captain America: Civil War','',2016,147,2,'EN',1,'Captain America - Civil War.jpg',10),(12,'Iron Man','',2008,126,2,'EN',1,'Iron Man.jpg',12),(13,'Iron Man 2','',2010,124,2,'EN',1,'Iron Man 2.jpg',8),(14,'Iron Man 3','',2013,130,2,'EN',1,'Iron Man 3.jpg',14),(15,'Thor','',2011,115,2,'EN',1,'Thor.jpg',6),(16,'Thor: The Dark World','',2013,112,2,'EN',1,'Thor - The Dark World.jpg',10),(17,'Thor: Ragnarok','',2017,130,2,'EN',1,'Thor - Ragnarok.jpg',27),(18,'Thor: Love and Thunder','',2022,118,2,'EN',1,'Thor - Love and Thunder.jpg',42),(19,'The Avengers','',2012,143,2,'EN',1,'The Avengers.jpg',32),(20,'Avengers: Age of Ultron','',2015,141,2,'EN',1,'Avengers - Age of Ultron.jpg',13),(21,'Avengers: Infinity War','',2018,149,2,'EN',1,'Avengers - Infinity War.jpg',25),(22,'Avengers: Endgame','',2019,181,2,'EN',1,'Avengers - Endgame.jpg',30);
+INSERT INTO `films` VALUES (1,'Spider-Man','Peter Parker, a socially awkward high school senior from Queens, undergoes a dramatic transformation after a bite from a genetically-altered spider bestows him with superhuman abilities. Embracing the role of Spider-Man, he confronts the complexities of his new powers, the pain of personal loss, and the trials of adolescence. His journey intertwines with that of Norman Osborn, the father of his friend, who becomes the formidable Green Goblin due to a failed experiment. This clash of destinies plunges Peter into a series of intense confrontations, testing his strength and exposing deep-seated truths. Grappling with guilt over Uncle Ben\'s passing and the weight of leading a double life, Peter faces a critical juncture, choosing to walk the solitary path of a guardian, all while endeavoring to protect those he holds dear, especially Mary Jane, from the dangers that accompany his hidden identity.',2002,121,2,'EN',1,'Spider-Man.jpg',60),(2,'Spider-Man 2','Peter Parker, juggling his dual life as Spider-Man and a struggling college student, faces a cascade of personal challenges including job loss, financial woes, strained relationships, and Aunt May\'s looming foreclosure. His situation worsens when his idol, Professor Otto Octavius, becomes the villainous Doctor Octopus after a failed experiment, prompting a series of conflicts including a bank robbery involving Peter and Aunt May. Amidst losing and regaining his powers, grappling with guilt over Uncle Ben\'s death, and Mary Jane\'s engagement, Peter finds resilience through Aunt May\'s inspiring words. The climax unfolds with Peter battling Doc Ock, convincing him to sacrifice himself to stop a dangerous reactor. Despite the risks, Mary Jane chooses to be with Peter after discovering his secret identity, while Harry Osborn, haunted by his father\'s legacy, uncovers the Green Goblin\'s arsenal, setting the stage for future battles as Peter continues his life as Spider-Man.',2004,127,2,'EN',1,'Spider-Man 2.jpg',45),(3,'Spider-Man 3','Months after Spider-Man 2, Peter Parker\'s life is tumultuous, contending with Harry Osborn\'s vendetta as the New Goblin, his intentions to propose to Mary Jane, and a rivalry with Eddie Brock. A meteor crash brings an alien symbiote that alters Spider-Man, intertwining his fate with Flint Marko, the Sandman, who seeks redemption for a misunderstood crime. The symbiote\'s influence induces aggressive behavior in Peter, straining his relationships and responsibilities. The narrative peaks in a showdown involving Venom, a fusion of the symbiote and Eddie Brock, and the Sandman, challenging Peter to confront his internal and external adversaries. In the aftermath of fierce confrontations and revelations about Uncle Ben\'s demise, Peter reconciles with his foes and his shadowed self. The saga concludes with Peter and Mary Jane rekindling their connection, fortified by the ordeals they\'ve jointly endured and surmounted.',2007,139,2,'EN',1,'Spider-Man 3.jpg',39),(4,'The Amazing Spider-Man','In Queens, young Peter Parker is left with his Aunt May and Uncle Ben when his parents, Richard and Mary Parker, mysteriously disappear after finding their home ransacked. Years later, teenage Peter discovers his father\'s old documents linking him to scientist Dr. Curtis Connors at Oscorp. His life changes after a genetically-altered spider bite grants him superhuman abilities. While exploring these powers, Peter accidentally contributes to the tragic death of Uncle Ben, leading him to become the vigilante Spider-Man. Meanwhile, Dr. Connors, desperate to regenerate his lost arm, transforms into the monstrous Lizard after self-testing a formula. Spider-Man must navigate his newfound identity, battling the Lizard, saving lives, and protecting his love, Gwen Stacy, while dealing with the police led by Gwen\'s father. Despite Captain Stacy\'s dying wish for Peter to distance himself from Gwen for her safety, their bond strengthens. The tale ends with Peter embracing his role as a hero, while ominous forces concerning his father\'s past loom in the shadows.',2012,136,2,'EN',1,'The Amazing Spider-Man.jpg',28),(5,'The Amazing Spider-Man 2','The film begins with Richard Parker frantically deleting files and escaping from Oscorp after discovering a breach, leaving young Peter with his Aunt May and Uncle Ben. Years later, Peter Parker, now a teenager, uncovers his father\'s secret Oscorp research on cross-species genetics and, after being bitten by a genetically-altered spider, gains superhuman abilities. As Spider-Man, Peter grapples with his new powers, the death of Uncle Ben, and his budding relationship with Gwen Stacy, all while Oscorp\'s sinister experiments surface. Dr. Connors, transformed into the Lizard after an experiment gone wrong, becomes Spider-Man\'s first major adversary. Peter\'s quest to understand his parents\' disappearance reveals a deeper conspiracy involving Oscorp, leading to confrontations with powerful foes like Electro, who emerges after an accident at Oscorp, and Harry Osborn, who transforms into the Green Goblin. As Spider-Man battles these threats, personal tragedy strikes with the loss of Gwen, leaving Peter devastated. In the end, inspired by Gwen\'s words and the city\'s need for a hero, Peter returns as Spider-Man, ready to face new challenges, including the menacing Rhino.',2014,142,2,'EN',1,'The Amazing Spider-Man 2.jpg',22),(6,'Spider-Man: Homecoming','In the aftermath of the Avengers\' battle in New York, salvage worker Adrian Toomes, after losing his job to the U.S. Department of Damage Control, becomes the Vulture using stolen Chitauri technology. Meanwhile, Peter Parker, under Tony Stark\'s mentorship, juggles high school life with his duties as Spider-Man. After an incident involving the Vulture, Tony confiscates Peter\'s suit, leaving him to tackle his next challenges in his homemade suit. Peter uncovers Toomes\' plan to steal advanced technology from a plane, resulting in a dramatic showdown where Spider-Man, despite the odds, manages to save both Toomes and the technology. Despite being offered a place among the Avengers, Peter decides to stay grounded and continue his work as the friendly neighborhood Spider-Man, earning back Tony\'s trust and his advanced suit. The film closes with Toomes, now in prison, protecting Spider-Man\'s identity and a humorous PSA from Captain America about patience.',2017,133,2,'EN',1,'Spider-Man - Homecoming.jpg',30),(7,'Spider-Man: Far from Home','The film commences with Nick Fury and Maria Hill in Mexico, confronting an Elemental entity, assisted by Quentin Beck aka Mysterio. Back in New York, Peter Parker, still mourning Tony Stark and others lost, prepares for a school trip to Europe, intending to confess his feelings to MJ. In Venice, another Elemental attack leads Peter into action, sans suit, witnessing Mysterio\'s apparent heroism. Contacted by Fury, Peter reluctantly joins the battle against the Elementals, led by Beck, who claims to be from an alternate Earth. However, Peter\'s school trip and romantic plans are constantly interrupted by these encounters. As the Elementals\' threat escalates, Peter receives Tony Stark\'s EDITH technology, but in a grave mistake, he hands it to Beck, only to discover Beck\'s deception: the Elementals are fabricated via drones and advanced projections, part of Beck\'s elaborate revenge against Tony Stark. Realizing Beck\'s plan to stage a catastrophic attack in London and blame Spider-Man, Peter, with the help of his friends and Happy Hogan, confronts Beck. In a fierce battle involving illusions and drones, Peter overcomes his challenges, reclaims EDITH, and defeats Beck, who broadcasts a doctored video framing Spider-Man for the attacks and revealing his identity as Peter Parker. Unbeknownst to all, Fury and Maria are actually Skrulls, with the real Fury on a Skrull ship, hinting at larger cosmic involvements.',2019,129,2,'EN',1,'Spider-Man - Far from Home.jpg',15),(8,'Spider-Man: No Way Home','Following Mysterio\'s deceitful revelations, Peter Parker\'s life spirals as his identity as Spider-Man is exposed, leading to an intense media and legal onslaught. Despite Matt Murdock\'s successful legal intervention, societal backlash disrupts Peter\'s academic aspirations. Seeking normalcy, Peter requests Doctor Strange to erase Spider-Man\'s identity from the world\'s memory, inadvertently causing characters from parallel universes, including Doctor Octopus and Green Goblin, to infiltrate his reality. The ensuing chaos forces Peter, alongside Doctor Strange and two alternate versions of Spider-Man, to confront and rectify the disrupted multiverse. Their mission involves curing the antagonists\' afflictions to restore balance. However, Green Goblin\'s interference magnifies the crisis, prompting Peter to make a heart-wrenching decision to erase his existence from everyone\'s memory, ensuring their safety. This selfless act leaves him isolated but resolved to uphold his duties as Spider-Man. In a disconnected post-credits scene, Eddie Brock and Venom briefly crossover, leaving behind a symbiote fragment, hinting at future complexities.',2021,148,2,'EN',1,'Spider-Man - No Way Home.jpg',10),(9,'Captain America: The First Avenger','Bright headlights cut through a thick sheet of snowflakes. A scientist, bundled as warmly as possible, treks through the sleet. Two other men, in matching black cold-weather uniforms, approach the scientist. He leads them to an excavation site which is easily the size of a football field; at the center of the site appears to be a giant wing and fuselage. The black-suited men cut through the fuselage of the mystery craft and enter. Inside they find the remains of a massive, frozen ship. One of the men brushes away at the snow and sees a shimmering red, white, and blue shield encased in ice.',2011,124,2,'EN',1,'Captain America - The First Avenger.jpg',29),(10,'Captain America: The Winter Soldier','As the movie opens, Steve makes the acquaintance of Sam Wilson (Anthony Mackie), a retired pararescueman, as Sam does a morning jog around the Tidal Basin. Steve completes multiple laps over Sam until the latter gets tired and sits to rest. While recuperating, Sam recommends that Steve listen to Marvin Gaye\'s \"Trouble Man\" soundtrack to get up to speed on the last few decades. Steve adds it to his list, along with things like Star Wars, Star Trek, and the Rocky movies. Steve gets a text telling him to stand by the curb in front of the Capitol. A car pulls up, driven by Natasha Romanoff, a.k.a. Black Widow (Scarlett Johansson). She greets the two men and Steve hops in the car.',2014,136,2,'EN',1,'Captain America - The Winter Soldier.jpg',11),(11,'Captain America: Civil War','After the Avengers defeated Ultron, Thor and Hulk are nowhere to be found. Hawkeye (Jeremy Renner) has gone home to spend time with his family. Even Iron Man (Robert Downey Jr.) has apparently disengaged. Captain America (Chris Evans) and Black Widow (Scarlett Johansson) are leading a new team of Avengers, consisting of Scarlet Witch (Elizabeth Olsen), Vision (Paul Bettany), War Machine (Don Cheadle) and Falcon (Anthony Mackie). But the world hasn\'t forgotten the numerous civilian casualties that resulted from the Avengers\' previous missions.',2016,147,2,'EN',1,'Captain America - Civil War.jpg',10),(12,'Iron Man','A convoy of military Humvees drives across the Afghanistan desert. In one of them is billionaire weapons developer Tony Stark (Robert Downey Jr.), riding with soldiers on duty. He is joking with some members of a convoy who seem to be genuinely amused by his persona and his flamboyant public image. Suddenly, the convoy is ambushed by unseen gunmen. The soldiers fight to defend themselves but are quickly killed. Tony flees the Humvee, taking refuge behind a large rock. Moments later, a missile lands nearby and explodes, but not before Tony sees the Stark Industries logo painted on it. A small amount of shrapnel penetrates his body armor and he is thrown backwards, losing consciousness.',2008,126,2,'EN',1,'Iron Man.jpg',12),(13,'Iron Man 2','The movie opens several months after the events in the first Iron Man movie. We are introduced to a man named Ivan Vanko. Ivan\'s father Anton is slowly dying and telling Ivan his final wishes. Ivan thinks he should have the fame that Tony Stark is enjoying but Anton tells him to \"ignore that garbage.\" All Anton can give Ivan is his knowledge. Ivan takes a blueprint that has his father\'s name on it, and also the name of Howard Stark, Tony Stark\'s father. Ivan then sets about recreating the Arc reactor and begins building his own weaponized suit. Tony Stark has become a champion for world peace thanks to the Iron Man suit, and has practically solved the issue of world peace, or so he claims.',2010,124,2,'EN',1,'Iron Man 2.jpg',8),(14,'Iron Man 3','In December 2012, it has been quite sometime after the events of New York City and the Avengers Initiative (from \'The Avengers\') when Iron Man/Tony Stark saved New York. A haunted Tony Stark has obsessively built several Iron Man suits in his mansion. Tony works on a new model, the Mark 42, which is modular; all the suit pieces fly to him and recombine. The first attempt at making the MK42 work is met with a funk version of \"Jingle Bells\" with Tony dancing while the pieces are coming at him. As per the course, Tony of course completely ignores any safety measures that JARVIS takes. It ends rather poorly when Tony is thrown across the room attempting flight with the MK42 and it shatters into pieces. JARVIS of course gloats with an \"I told you so\" moment.',2013,130,2,'EN',1,'Iron Man 3.jpg',14),(15,'Thor','Thor gathers Loki and his close friends, Volstagg (Ray Stevenson), Fandral (Josh Dallas), Hogun (Tadanobu Asano), and Sif (Jaimie Alexander), and they ride out to the Bifrost Bridge portal. The guardian, Heimdall (Idris Elba), allows them to pass and the six are transported to the frost giant planet, Jötunheim, a frozen, crumbling wasteland. Suddenly they are confronted by King Laufey (Colm Feore), who taunts the Asgardian heroes. More frost giants surround the six and a battle starts. Loki survives with some magic and has an unusual reaction when he is touched by a frost giant. Laufey releases a huge beast and the Asgardians run for their lives. Thor kills the beast but once again the team are surrounded and things look desperate. Odin arrives to save the day; he apologizes to Laufey for the intrusion and attempts to reinstate peace, but Laufey states that they are beyond diplomacy, that the Frost Giants are now at war with Asgard. He attempts to stab Odin, who blasts Laufey back and takes the young group home.',2011,115,2,'EN',1,'Thor.jpg',6),(16,'Thor: The Dark World','The Asgardians learn that the Convergence, a rare alignment of the Nine Realms, is imminent; as the event approaches, portals linking the worlds appear at random. Heimdall alerts Thor of Jane\'s recent disappearance, leading Thor to search for her. When she inadvertently releases an unearthly force while being arrested by the police for trespassing on private property, he takes her to Asgard. However, the Asgardian healers say they do not know how to treat her. Odin, recognizing the Aether, warns Jane\'s infection will kill her given enough time, and that the Aether\'s return heralds a catastrophic prophecy.',2013,112,2,'EN',1,'Thor - The Dark World.jpg',10),(17,'Thor: Ragnarok','Reaching Asgard, Thor sees a massive statue of Loki (Tom Hiddleston) as well as Odin lounging around, enjoying a play about Loki\'s \'heroic sacrifice\' while fighting the Dark Elves. Realizing what\'s happened, Thor quickly forces Loki (who usurped and disguised himself as Odin prior to the end of \'Thor: The Dark World\') to drop his charade and demands to know what happened to Odin. It is revealed that Loki had placed Odin under a spell and dumped him in a retirement home in New York City. By the time they get there, it is being demolished. Before they can plan their next move, Loki is suddenly pulled through a dimensional hole in the sidewalk and a card with an address (177a Bleecker St) is left behind. Thor goes there and finds Doctor Stephen Strange (Benedict Cumberbatch), the mystic guardian of Earth, who agrees to help him find Odin on the condition that all Asgardians leave Earth. Thor agrees, and after doing some research (during which Thor is constantly teleported around Strange\'s Sanctum, a disorienting experience) Doctor Strange deduces that Odin is in Norway. He then releases Loki from his endless fall, and when Loki tries to attack an exasperated Strange, the doctor unceremoniously sends them both through another portal.',2017,130,2,'EN',1,'Thor - Ragnarok.jpg',27),(18,'Thor: Love and Thunder','Thor continues his adventures with the Guardians of the Galaxy, responding to distress calls across the universe while working to get back in shape. However, Thor remains discontent with where he is in life, and intends to retire. An influx of incoming calls regarding Gorr emerge, one of them being from Lady Sif, who had hunted him down. Thor and Korg respond to Sif\'s call, parting ways with the Guardians who leave to respond to the others. They find a defeated Sif with her arm severed, who warns them that Gorr will attack New Asgard next.',2022,118,2,'EN',1,'Thor - Love and Thunder.jpg',42),(19,'The Avengers','Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement, and Logistics Division), arrives at S.H.I.E.L.D. headquarters outside of Santa Fe, New Mexico, during an evacuation. The Tesseract, an energy source of unknown potential, has activated. It opens a portal through space and the exiled Norse god Loki (Tom Hiddleston) steps through, carrying a strange spear with a blue glowing tip. Loki takes the Tesseract and uses the spear to take control of the minds of several SHIELD personnel, including Dr. Erik Selvig (Stellan Skarsgård) , and Agent Clint \"Hawkeye\" Barton (Jeremy Renner), to aid him in his getaway. SHIELD personnel pull out of their base when an energy surge from the Tesseract causes the ground beneath the base to collapse and destroying it. A short pursuit of Loki fails to capture him.',2012,143,2,'EN',1,'The Avengers.jpg',32),(20,'Avengers: Age of Ultron','Meanwhile, Tony kills Dr. List, Strucker\'s top underling, as he\'s trying to delete files on their work. While Tony has JARVIS download the data for preservation, he finds a secret laboratory underneath the fortress in which Strucker\'s people have been taking a Leviathan apart, and the scepter, sitting in plain sight. As Tony walks up to the scepter, he doesn\'t notice that Wanda has followed him into the lab. As he\'s about to grab the scepter, she walks up behind him and casts a spell on him, implanting a vision into his mind. Tony sees his teammates in front of him either dead or dying, and Steve saying he could\'ve done more to save them, while the Chitauri launch an even larger invasion of Earth. After a few moments, he snaps out of the vision and realizes it was all a dream. Pietro makes it downstairs and is confused by the fact his sister is just letting Tony walk away. Wanda says nothing but grins as Tony summons part of his armor and grabs the scepter.',2015,141,2,'EN',1,'Avengers - Age of Ultron.jpg',13),(21,'Avengers: Infinity War','Hulk crash lands at the Sanctum Sanctorum in New York City and is reverts back to Bruce Banner, who informs Stephen Strange and Wong about Thanos\' impending arrival. Strange and Banner contact Tony Stark and brief him about the Infinity Stones and Thanos. Realizing they must find Vision to protect the Mind Stone embedded in his head, Stark realizes he must make contact with Steve Rogers to find Vision, who has gone off the grid with Wanda Maximoff. Just then, Maw and Obsidian arrive in New York to seize the Time Stone from Strange, and Stark, Strange, Wong and Peter Parker confront them. Having been traumatized by his defeat at the hands of Thanos, Banner finds himself unable to transform into the Hulk and help in the battle. Maw incapacitates and captures Strange; Stark and Parker pursue his spaceship off Earth while Wong stays behind to protect the Sanctorum. Banner contacts the rest of the Avengers.',2018,149,2,'EN',1,'Avengers - Infinity War.jpg',25),(22,'Avengers: Endgame','In the opening, Clint Barton is teaching his daughter archery on his secluded farm while his wife prepares a picnic lunch for them. Suddenly, Clint\'s daughter vanishes and the rest of Clint\'s family disintegrates, along with half of all life across the universe, the result of Thanos\' snapping his fingers after acquiring all six Infinity Stones. Nebula and Tony Stark are stranded in space following their defeat by Thanos on Titan, but are returned to Earth by Carol Danvers and reunited with Natasha Romanoff, Bruce Banner, Steve Rogers, Rocket, Thor, and James Rhodes. The team formulates a plan to steal the Infinity Stones back from Thanos and use them to reverse his actions, but learn upon finding him that he had used the stones a second time to destroy them, preventing their further use. He tells the remaining Avengers that he did so to avoid using the Stones for further nefarious purposes. Enraged, Thor beheads Thanos, saying it\'s what he should have done in Wakanda.',2019,181,2,'EN',1,'Avengers - Endgame.jpg',30);
 /*!40000 ALTER TABLE `films` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `genre_film`
---
-
-DROP TABLE IF EXISTS `genre_film`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `genre_film` (
-  `films_id` int(11) NOT NULL,
-  `genres_id` int(11) NOT NULL,
-  PRIMARY KEY (`films_id`,`genres_id`),
-  KEY `fk_films_has_genres_genres1_idx` (`genres_id`),
-  KEY `fk_films_has_genres_films1_idx` (`films_id`),
-  CONSTRAINT `fk_films_has_genres_films1` FOREIGN KEY (`films_id`) REFERENCES `films` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_films_has_genres_genres1` FOREIGN KEY (`genres_id`) REFERENCES `genres` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `genre_film`
@@ -189,21 +76,6 @@ INSERT INTO `genre_film` VALUES (1,1),(1,2),(1,4),(1,5),(2,1),(2,2),(2,4),(2,8),
 UNLOCK TABLES;
 
 --
--- Table structure for table `genres`
---
-
-DROP TABLE IF EXISTS `genres`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `genres` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `deskripsi` varchar(150) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `genres`
 --
 
@@ -212,29 +84,6 @@ LOCK TABLES `genres` WRITE;
 INSERT INTO `genres` VALUES (1,'Action','Film yang menekankan pada urutan adegan seru dan energik, sering kali melibatkan adegan kejar-kejaran, pertarungan, dan ledakan.'),(2,'Adventure','Film yang berfokus pada petualangan heroik, sering kali di latar belakang eksotis atau tempat-tempat yang jauh.'),(3,'Comedy','Genre yang tujuannya menghibur penonton dengan humor, sering melibatkan situasi konyol atau dialog lucu.'),(4,'Drama','Film yang berfokus pada pengembangan karakter dan interaksi emosional, sering menggambarkan situasi kehidupan yang realistis.'),(5,'Fantasy','Genre yang mencakup unsur-unsur supranatural dan magis, sering berlatar di dunia yang sepenuhnya imajinatif.'),(6,'Horror','Film yang bertujuan menimbulkan rasa takut, sering dengan unsur supernatural atau psikologis yang menegangkan.'),(7,'Mystery','Genre yang melibatkan penyelidikan suatu misteri, sering mengandung plot yang rumit dan berakhir dengan twist yang mengejutkan.'),(8,'Romance','Film yang berpusat pada hubungan cinta antara karakter, menekankan pada emosi dan hubungan romantis.'),(9,'Sci-Fi','Genre yang mengeksplorasi dampak ilmu pengetahuan dan teknologi, sering berlatar di masa depan atau di dunia alternatif.'),(10,'Thriller','Film yang membangun ketegangan dan suspense, sering melibatkan konflik yang harus diatasi oleh protagonis.'),(11,'Documentary','Film non-fiksi yang memberikan informasi tentang suatu subjek, orang, atau peristiwa, sering digunakan untuk mendidik atau membawa kesadaran.'),(12,'Biography','Film yang menceritakan kehidupan seseorang, sering berdasarkan tokoh nyata dan peristiwa bersejarah.'),(13,'Animation','Film yang dibuat dengan animasi, bisa dalam berbagai bentuk seperti kartun, CGI, atau stop motion, menargetkan semua usia.');
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `invoices`
---
-
-DROP TABLE IF EXISTS `invoices`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `invoices` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tanggal` datetime NOT NULL,
-  `grand_total` double NOT NULL,
-  `diskon_nominal` double DEFAULT NULL,
-  `konsumens_id` int(11) NOT NULL,
-  `kasir_id` int(11) DEFAULT NULL,
-  `status` enum('PENDING','VALIDASI','TERBAYAR') NOT NULL DEFAULT 'PENDING',
-  PRIMARY KEY (`id`),
-  KEY `fk_invoices_konsumens1_idx` (`konsumens_id`),
-  KEY `fk_invoices_pegawais1_idx` (`kasir_id`),
-  CONSTRAINT `fk_invoices_konsumens1` FOREIGN KEY (`konsumens_id`) REFERENCES `konsumens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_invoices_pegawais1` FOREIGN KEY (`kasir_id`) REFERENCES `pegawais` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `invoices`
@@ -247,21 +96,6 @@ INSERT INTO `invoices` VALUES (1,'2023-01-01 00:00:00',100000,0,1,3,'TERBAYAR'),
 UNLOCK TABLES;
 
 --
--- Table structure for table `jadwal_films`
---
-
-DROP TABLE IF EXISTS `jadwal_films`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `jadwal_films` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tanggal` date NOT NULL,
-  `jam_pemutaran` enum('I','II','III','IV') NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `jadwal_films`
 --
 
@@ -270,21 +104,6 @@ LOCK TABLES `jadwal_films` WRITE;
 INSERT INTO `jadwal_films` VALUES (1,'2023-09-28','I'),(2,'2023-09-28','II'),(3,'2023-12-07','I'),(4,'2023-12-19','I'),(5,'2023-12-19','II'),(6,'2023-12-20','I'),(7,'2023-12-20','II'),(8,'2023-07-02','I'),(9,'2023-07-08','I'),(10,'2023-07-05','I'),(11,'2023-07-02','II'),(12,'2023-07-08','II'),(13,'2023-07-05','II'),(14,'2023-07-02','III'),(15,'2023-07-08','III'),(16,'2023-07-05','III'),(17,'2023-08-13','I'),(18,'2023-08-13','II'),(19,'2023-08-14','I'),(20,'2023-08-14','II'),(21,'2023-08-15','I'),(22,'2023-08-15','II'),(23,'2023-08-16','I'),(24,'2023-08-16','II'),(25,'2023-08-17','I'),(26,'2023-08-17','II'),(27,'2023-08-18','I'),(28,'2023-08-18','II');
 /*!40000 ALTER TABLE `jadwal_films` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `jenis_studios`
---
-
-DROP TABLE IF EXISTS `jenis_studios`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `jenis_studios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `deskripsi` varchar(355) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `jenis_studios`
@@ -297,20 +116,6 @@ INSERT INTO `jenis_studios` VALUES (1,'Reguler / Deluxe','Menawarkan pengalaman 
 UNLOCK TABLES;
 
 --
--- Table structure for table `kelompoks`
---
-
-DROP TABLE IF EXISTS `kelompoks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `kelompoks` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `kelompoks`
 --
 
@@ -319,27 +124,6 @@ LOCK TABLES `kelompoks` WRITE;
 INSERT INTO `kelompoks` VALUES (1,'Semua Umur (SU)'),(2,'13+'),(3,'17+'),(4,'21+');
 /*!40000 ALTER TABLE `kelompoks` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `konsumens`
---
-
-DROP TABLE IF EXISTS `konsumens`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `konsumens` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `no_hp` varchar(45) NOT NULL,
-  `gender` enum('L','P') NOT NULL,
-  `tgl_lahir` date NOT NULL,
-  `saldo` double DEFAULT 0,
-  `username` varchar(45) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `konsumens`
@@ -352,24 +136,6 @@ INSERT INTO `konsumens` VALUES (1,'hulk','hulk123@gmail.com','081234567890','L',
 UNLOCK TABLES;
 
 --
--- Table structure for table `pegawais`
---
-
-DROP TABLE IF EXISTS `pegawais`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pegawais` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `username` varchar(45) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `roles` enum('ADMIN','KASIR','OPERATOR') NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `pegawais`
 --
 
@@ -380,56 +146,14 @@ INSERT INTO `pegawais` VALUES (1,'guin','guin123@gmail.com','guin123','3c9909afe
 UNLOCK TABLES;
 
 --
--- Table structure for table `sesi_films`
---
-
-DROP TABLE IF EXISTS `sesi_films`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sesi_films` (
-  `jadwal_film_id` int(11) NOT NULL,
-  `studios_id` int(11) NOT NULL,
-  `films_id` int(11) NOT NULL,
-  PRIMARY KEY (`jadwal_film_id`,`studios_id`,`films_id`),
-  KEY `fk_jadwal_film_has_film_studio_film_studio1_idx` (`studios_id`,`films_id`),
-  KEY `fk_jadwal_film_has_film_studio_jadwal_film1_idx` (`jadwal_film_id`),
-  CONSTRAINT `fk_jadwal_film_has_film_studio_film_studio1` FOREIGN KEY (`studios_id`, `films_id`) REFERENCES `film_studio` (`studios_id`, `films_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_jadwal_film_has_film_studio_jadwal_film1` FOREIGN KEY (`jadwal_film_id`) REFERENCES `jadwal_films` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `sesi_films`
 --
 
 LOCK TABLES `sesi_films` WRITE;
 /*!40000 ALTER TABLE `sesi_films` DISABLE KEYS */;
-INSERT INTO `sesi_films` VALUES (1,1,1),(1,2,1),(1,3,1),(1,5,2),(3,6,3),(5,1,1),(5,2,1),(5,3,1),(7,1,1),(7,2,1),(7,3,1),(8,9,22),(9,5,2),(11,1,1),(11,2,1),(11,3,1),(12,6,3),(17,9,22),(18,1,1),(18,2,1),(18,3,1),(20,1,1),(20,2,1),(20,3,1),(21,9,22);
+INSERT INTO `sesi_films` VALUES (1,1,1),(1,2,1),(1,3,1),(1,5,2),(3,6,3),(5,1,1),(5,2,1),(5,3,1),(7,1,1),(7,2,1),(7,3,1),(8,9,22),(9,5,2),(11,1,1),(11,2,1),(11,3,1),(12,6,3),(17,9,22),(18,1,1),(18,2,1),(18,3,1),(21,9,22);
 /*!40000 ALTER TABLE `sesi_films` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `studios`
---
-
-DROP TABLE IF EXISTS `studios`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `studios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(45) NOT NULL,
-  `kapasitas` int(11) NOT NULL,
-  `jenis_studios_id` int(11) NOT NULL,
-  `cinemas_id` int(11) NOT NULL,
-  `harga_weekday` int(11) NOT NULL,
-  `harga_weekend` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_studios_jenis_studios_idx` (`jenis_studios_id`),
-  KEY `fk_studios_cinemas1_idx` (`cinemas_id`),
-  CONSTRAINT `fk_studios_cinemas1` FOREIGN KEY (`cinemas_id`) REFERENCES `cinemas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_studios_jenis_studios` FOREIGN KEY (`jenis_studios_id`) REFERENCES `jenis_studios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `studios`
@@ -440,32 +164,6 @@ LOCK TABLES `studios` WRITE;
 INSERT INTO `studios` VALUES (1,'1',64,2,4,45000,70000),(2,'2',24,1,6,40000,70000),(3,'3',24,1,6,40000,70000),(4,'4',64,2,9,50000,70000),(5,'5',24,1,9,40000,70000),(6,'6',64,2,9,50000,70000),(7,'A',84,2,7,30000,60000),(8,'B',64,1,7,40000,70000),(9,'C',64,1,7,40000,70000),(10,'D',48,2,7,30000,60000),(11,'E',48,2,7,35000,70000),(12,'I',48,2,12,60000,50000),(13,'II',48,3,12,70000,65000),(14,'III',48,5,12,80000,70000);
 /*!40000 ALTER TABLE `studios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `tikets`
---
-
-DROP TABLE IF EXISTS `tikets`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tikets` (
-  `invoices_id` int(11) NOT NULL,
-  `nomor_kursi` varchar(3) NOT NULL,
-  `status_hadir` tinyint(4) DEFAULT NULL,
-  `operator_id` int(11) NOT NULL,
-  `harga` double NOT NULL,
-  `jadwal_film_id` int(11) NOT NULL,
-  `studios_id` int(11) NOT NULL,
-  `films_id` int(11) NOT NULL,
-  PRIMARY KEY (`invoices_id`,`nomor_kursi`),
-  KEY `fk_film_studio_has_invoices_invoices1_idx` (`invoices_id`),
-  KEY `fk_film_studio_has_invoices_pegawais1_idx` (`operator_id`),
-  KEY `fk_tikets_sesi_films1_idx` (`jadwal_film_id`,`studios_id`,`films_id`),
-  CONSTRAINT `fk_film_studio_has_invoices_invoices1` FOREIGN KEY (`invoices_id`) REFERENCES `invoices` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_film_studio_has_invoices_pegawais1` FOREIGN KEY (`operator_id`) REFERENCES `pegawais` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_tikets_sesi_films1` FOREIGN KEY (`jadwal_film_id`, `studios_id`, `films_id`) REFERENCES `sesi_films` (`jadwal_film_id`, `studios_id`, `films_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `tikets`
@@ -486,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-18 12:14:50
+-- Dump completed on 2024-01-18 19:25:19

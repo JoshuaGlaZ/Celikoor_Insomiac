@@ -44,11 +44,44 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(218)))), ((int)(((byte)(245)))));
             this.panel5.Controls.Add(this.comboBoxUrut);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(24, 105);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Location = new System.Drawing.Point(16, 68);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1226, 83);
+            this.panel5.Size = new System.Drawing.Size(817, 54);
             this.panel5.TabIndex = 34;
+            // 
+            // comboBoxBulan
+            // 
+            this.comboBoxBulan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBulan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBulan.FormattingEnabled = true;
+            this.comboBoxBulan.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.comboBoxBulan.Location = new System.Drawing.Point(155, 17);
+            this.comboBoxBulan.Name = "comboBoxBulan";
+            this.comboBoxBulan.Size = new System.Drawing.Size(364, 24);
+            this.comboBoxBulan.TabIndex = 23;
+            // 
+            // textBoxCari
+            // 
+            this.textBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCari.Location = new System.Drawing.Point(289, 17);
+            this.textBoxCari.Name = "textBoxCari";
+            this.textBoxCari.Size = new System.Drawing.Size(231, 22);
+            this.textBoxCari.TabIndex = 22;
+            // 
+            this.textBoxCari.TabIndex = 22;
             // 
             // comboBoxUrut
             // 
@@ -58,10 +91,9 @@
             this.comboBoxUrut.Items.AddRange(new object[] {
             "Tertinggi",
             "Terendah"});
-            this.comboBoxUrut.Location = new System.Drawing.Point(247, 30);
-            this.comboBoxUrut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxUrut.Location = new System.Drawing.Point(675, 17);
             this.comboBoxUrut.Name = "comboBoxUrut";
-            this.comboBoxUrut.Size = new System.Drawing.Size(193, 33);
+            this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);
             this.comboBoxUrut.TabIndex = 21;
             this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
             // 
@@ -73,13 +105,27 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label3.Location = new System.Drawing.Point(20, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(526, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 32);
+            this.label3.Size = new System.Drawing.Size(143, 21);
             this.label3.TabIndex = 20;
             this.label3.Text = "Urut Berdasarkan :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Cari Berdasarkan :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -88,10 +134,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label2.Location = new System.Drawing.Point(24, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(16, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1226, 65);
+            this.label2.Size = new System.Drawing.Size(817, 42);
             this.label2.TabIndex = 33;
             this.label2.Text = "P E N J U A L A N  T I K E T  C A B A N G ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,15 +144,14 @@
             // buttonKeluar
             // 
             this.buttonKeluar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
+            this.buttonKeluar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.buttonKeluar.FlatAppearance.BorderSize = 0;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKeluar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonKeluar.Location = new System.Drawing.Point(1064, 625);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.buttonKeluar.Location = new System.Drawing.Point(721, 405);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(168, 69);
+            this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 32;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -123,12 +167,11 @@
             this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(24, 197);
-            this.dataGridViewHasil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 128);
             this.dataGridViewHasil.Name = "dataGridViewHasil";
             this.dataGridViewHasil.ReadOnly = true;
             this.dataGridViewHasil.RowHeadersWidth = 51;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(1226, 417);
+            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 271);
             this.dataGridViewHasil.TabIndex = 27;
             // 
             // buttonCetak
@@ -139,10 +182,9 @@
             this.buttonCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCetak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCetak.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonCetak.Location = new System.Drawing.Point(866, 623);
-            this.buttonCetak.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCetak.Location = new System.Drawing.Point(577, 405);
             this.buttonCetak.Name = "buttonCetak";
-            this.buttonCetak.Size = new System.Drawing.Size(168, 69);
+            this.buttonCetak.Size = new System.Drawing.Size(112, 45);
             this.buttonCetak.TabIndex = 36;
             this.buttonCetak.Text = "CETAK";
             this.buttonCetak.UseVisualStyleBackColor = false;
@@ -150,14 +192,16 @@
             // 
             // FormLaporanPemasukkanCabangDariPenjualanTiket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 717);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(849, 466);
             this.Controls.Add(this.buttonCetak);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.dataGridViewHasil);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLaporanPemasukkanCabangDariPenjualanTiket";
             this.Text = "FormLaporanPemasukkanCabangDariPenjualanTiket";
             this.Load += new System.EventHandler(this.FormLaporanPemasukkanCabangDariPenjualanTiket_Load);

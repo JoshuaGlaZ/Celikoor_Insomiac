@@ -36,7 +36,10 @@ namespace Celikoor_Insomiac
             comboBoxJudul.DisplayMember = "Judul";
             labelSaldo.Text = mainForm.konsumenLogin.Saldo.ToString(); 
             isFrozen = true;
-            
+
+            pictureBoxPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxPoster.Image = null;
+
             foreach (Control control in panel1.Controls)
             {
                 if (control is CheckBox == true)
@@ -262,14 +265,15 @@ namespace Celikoor_Insomiac
             Film judulFilm;
             judulFilm = (Film)comboBoxJudul.SelectedItem;
             comboBoxTanggal.DataSource = JadwalFilm.BacaData(judulFilm);
-            labelSinopsi.Text = judulFilm.Sinopsis;
+            textBoxSinopsis.Text = judulFilm.Sinopsis;
             labelKelompok.Text = judulFilm.Kelompok.ToString();
             label1Durasi.Text = judulFilm.Durasi.ToString();
-            labelGenre.Text = judulFilm.tampilkanGenre();
-            labelAktor.Text = judulFilm.tampilkanAktor();
+            textBoxGenre.Text = judulFilm.tampilkanGenre();
+            textBoxAktor.Text = judulFilm.tampilkanAktor();
+            
             if (File.Exists(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + judulFilm.CoverPath)))
             {
-                pictureBox1.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + judulFilm.CoverPath));
+                pictureBoxPoster.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + judulFilm.CoverPath));
             }
             else
             {

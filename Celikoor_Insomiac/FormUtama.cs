@@ -33,13 +33,28 @@ namespace Celikoor_Insomiac
                 login.ShowDialog();
                 this.WindowState = FormWindowState.Maximized;
 
-                Akses();
-
                 timerHour_Tick(sender, e);
                 Timer hour = new Timer();
                 hour.Interval = (1000);
                 hour.Tick += new EventHandler(timerHour_Tick);
                 hour.Start();
+
+                menuStripLaporan.Location = new Point(0, 53);
+                buttonKonsumen.Location = new Point(0, 96);
+                buttonCinema.Location = new Point(0, 132);
+                buttonPegawai.Location = new Point(0, 168);
+                buttonKelompok.Location = new Point(0, 204);
+                buttonAktor.Location = new Point(0, 240);
+                buttonGenre.Location = new Point(0, 276);
+                buttonJenisStudio.Location = new Point(0, 312);
+                buttonJadwalFilm.Location = new Point(0, 348);
+                buttonStudio.Location = new Point(0, 384);
+                buttonFilm.Location = new Point(0, 420);
+                buttonInvoices.Location = new Point(0, 456);
+                buttonPesanTicket.Location = new Point(0, 492);
+                buttonCekTiket.Location = new Point(0, 528);
+
+                Akses();
             }
             catch (Exception ex)
             {
@@ -55,25 +70,27 @@ namespace Celikoor_Insomiac
             if (konsumenLogin != null)
             {
                 toolStripMenuItemProfile.Text = konsumenLogin.Nama.ToUpper();
+                menuStripLaporan.Visible = false;
                 buttonKonsumen.Visible = false;
                 buttonCinema.Visible = false;
-                buttonPegawai.Visible = false;
+                buttonPegawai.Visible = false; 
                 buttonKelompok.Visible = false;
-                buttonAktor.Visible = false;
+                buttonAktor.Visible = false; 
                 buttonGenre.Visible = false;
-                buttonJenisStudio.Visible = false;
-                buttonJadwalFilm.Visible = false;
-                buttonStudio.Visible = false;
-                buttonFilm.Visible = false;
-                buttonInvoices.Visible = false;
+                buttonJenisStudio.Visible = false; 
+                buttonJadwalFilm.Visible = false; 
+                buttonStudio.Visible = false; 
+                buttonFilm.Visible = false; ;
+                buttonInvoices.Visible = false; 
                 buttonPesanTicket.Visible = true; buttonPesanTicket.Location = new Point(0, 53);
-                buttonCekTiket.Visible = false;
+                buttonCekTiket.Visible = false; 
             }
             else if (pegawaiLogin != null)
             {
                 toolStripMenuItemProfile.Text = pegawaiLogin.Nama.ToUpper() + " / " + pegawaiLogin.Roles;
                 if (pegawaiLogin.Roles == "ADMIN")
                 {
+                    menuStripLaporan.Visible = true;
                     buttonKonsumen.Visible = true;
                     buttonCinema.Visible = true;
                     buttonPegawai.Visible = true;
@@ -84,12 +101,13 @@ namespace Celikoor_Insomiac
                     buttonJadwalFilm.Visible = true;
                     buttonStudio.Visible = true;
                     buttonFilm.Visible = true;
-                    buttonInvoices.Visible = true;
-                    buttonPesanTicket.Visible = false;
-                    buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 672);
+                    buttonInvoices.Visible = true; buttonInvoices.Location = new Point(0, 456);
+                    buttonPesanTicket.Visible = false; 
+                    buttonCekTiket.Visible = false; 
                 }
                 else if (pegawaiLogin.Roles == "OPERATOR")
                 {
+                    menuStripLaporan.Visible = false;
                     buttonKonsumen.Visible = false;
                     buttonCinema.Visible = false;
                     buttonPegawai.Visible = false;
@@ -100,12 +118,13 @@ namespace Celikoor_Insomiac
                     buttonJadwalFilm.Visible = false;
                     buttonStudio.Visible = false;
                     buttonFilm.Visible = false;
-                    buttonInvoices.Visible = false;
-                    buttonPesanTicket.Visible = false ; 
+                    buttonInvoices.Visible = false; 
+                    buttonPesanTicket.Visible = false; 
                     buttonCekTiket.Visible = true; buttonCekTiket.Location = new Point(0, 53);
                 }
                 else if(pegawaiLogin.Roles == "KASIR")
                 {
+                    menuStripLaporan.Visible = false;
                     buttonKonsumen.Visible = false;
                     buttonCinema.Visible = false;
                     buttonPegawai.Visible = false;
@@ -506,91 +525,6 @@ namespace Celikoor_Insomiac
                     form.Show();
                 }
             }
-        }
-
-        private void buttonGenreFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSesiFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAktorFilm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonFilmStudio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aktorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jenisStudioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jadwalFilmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void invoicesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pemesananTiketToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

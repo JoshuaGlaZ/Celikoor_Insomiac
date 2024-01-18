@@ -25,13 +25,26 @@ namespace Celikoor_Insomiac
             this.MinimumSize = this.Size;
             comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
             if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(); }
-            else { listInvoice = Invoice.DisplayInvoiceKasir(); }
+            else { 
+                listInvoice = Invoice.DisplayInvoiceKasir();
+                if (dataGridViewHasil.Columns.Count==7) {
+                    DataGridViewButtonColumn btnUbah = new DataGridViewButtonColumn();
+                    btnUbah.Name = "UPDATE";
+                    btnUbah.HeaderText = "UPDATE";
+                    btnUbah.Text = "UPDATE";
+                    btnUbah.UseColumnTextForButtonValue = true;
+                    dataGridViewHasil.Columns.Add(btnUbah);
+                }
+            }
             dataGridViewHasil.DataSource = listInvoice;
         }
 
         private void dataGridViewHasil_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
+            Invoice.UpdateStatus(int.Parse(id));
+            MessageBox.Show("data berhasil diupdate");
+            FormMasterInvoice_Load(this,e);
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -41,17 +54,17 @@ namespace Celikoor_Insomiac
 
         private void comboBoxCari_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string kriteria = comboBoxCari.Text.Replace(" ", "_").Replace("Tanggal", "tgl");
+            string kriteria = comboBoxCari.Text.Replace(" ", "_").Replace("Konsumen", "konsumens_id").Replace("Kasir", "kasir_id");
             string nilai = textBoxCari.Text;
-            string order = comboBoxUrut.Text.Replace(" ", "_").Replace("Tanggal", "tgl");
-            listInvoice = Invoice.DisplayInvoice(kriteria, nilai, order);
+            string order = comboBoxUrut.Text.Replace(" ", "_").Replace("Konsumen", "konsumens_id").Replace("Kasir", "kasir_id");
+            if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(kriteria, nilai, order); }
+            else { listInvoice = Invoice.DisplayInvoiceKasir(kriteria, nilai, order); }
             dataGridViewHasil.DataSource = listInvoice;
         }
 
         private void textBoxCari_TextChanged(object sender, EventArgs e)
         {
-            listInvoice = Invoice.DisplayInvoice(comboBoxCari.Text, textBoxCari.Text);
-            dataGridViewHasil.DataSource = listInvoice;
+            comboBoxCari_SelectedIndexChanged(sender, e);
         }
 
         private void comboBoxUrut_SelectedIndexChanged(object sender, EventArgs e)

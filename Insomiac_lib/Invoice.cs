@@ -110,8 +110,8 @@ namespace Insomiac_lib
                 newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
-                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
-                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -129,8 +129,8 @@ namespace Insomiac_lib
                 newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
-                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
-                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -150,8 +150,28 @@ namespace Insomiac_lib
                 newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
-                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
-                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Status = hasil.GetString(6);
+                lst.Add(newInv);
+            }
+            return lst;
+        }
+
+        public static List<Invoice> DisplayInvoiceKasir(string kriteria, string nilai, string order)
+        {
+            string perintah = "SELECT * from invoices WHERE status='PENDING' AND '" + kriteria + "' LIKE '%" + nilai + "%' ORDER BY '" + order + "';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Invoice> lst = new List<Invoice>();
+            while (hasil.Read() == true)
+            {
+                Invoice newInv = new Invoice();
+                newInv.Id = hasil.GetString(0);
+                newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                newInv.Grand_total = hasil.GetInt32(2);
+                newInv.Diskon_nominal = hasil.GetInt32(3);
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -170,8 +190,8 @@ namespace Insomiac_lib
                 newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
-                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
-                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -184,12 +204,12 @@ namespace Insomiac_lib
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah); 
             if(hasil.Read() == true)
             {
-                newInv.Id = id;
+                newInv.Id = hasil.GetString(0);
                 newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
-                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
-                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
+                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
                 newInv.Status = hasil.GetString(6);
                 return newInv; 
             }
@@ -204,7 +224,7 @@ namespace Insomiac_lib
             Invoice newInv = new Invoice();
             string perintah = "SELECT * from invoices WHERE id = '" + id + "'";
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            if (hasil.Read() == true)
+            if (hasil.Read())
             {
                 newInv.Status = hasil.GetString(6);
             }
