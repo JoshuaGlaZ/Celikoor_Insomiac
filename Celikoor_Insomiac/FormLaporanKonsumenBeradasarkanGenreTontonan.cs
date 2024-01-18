@@ -31,7 +31,7 @@ namespace Celikoor_Insomiac
             comboBoxGenre.DisplayMember = "nama";
 
             this.MinimumSize = this.Size;
-            comboBoxGenre.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
+            comboBoxGenre.SelectedIndex = 2; comboBoxUrut.SelectedIndex = 0;
             listLaporan = LaporanGenreTontonanKonsumen.BacaData();
             dataGridViewHasil.DataSource = listLaporan;
         
@@ -49,8 +49,8 @@ namespace Celikoor_Insomiac
         
         private void filterPencarian()
         {
-            string nilai = comboBoxGenre.SelectedItem.ToString();
-            string order = comboBoxUrut.SelectedIndex.ToString();
+            string nilai = comboBoxGenre.Text;
+            string order = comboBoxUrut.Text;
             listLaporan = LaporanGenreTontonanKonsumen.BacaData(nilai, order);
             dataGridViewHasil.DataSource = listLaporan;
         }

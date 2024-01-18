@@ -67,7 +67,7 @@ namespace Insomiac_lib
             sw.WriteLine("");
             sw.WriteLine("JUMLAH KURSI KOSONG DI STUDIO :");
             sw.WriteLine("");
-            sw.WriteLine("no \t cinema \t studio \t jumlah kursi kosong");
+            sw.WriteLine("no \t cinema \t studio \t jumlah kursi kosong \t bulan");
             for (int i = 1; i <= lst.Count; i++)
             {
                 sw.WriteLine(i + ". \t " + lst[i - 1].Cinema.Nama_cabang + " \t " + lst[i - 1].Studio.Nama + " \t " + lst[i - 1].JumlahKursiKosong + " \t " + lst[i-1].Bulan);

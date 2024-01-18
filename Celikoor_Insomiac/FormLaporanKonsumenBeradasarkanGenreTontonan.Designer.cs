@@ -34,10 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.buttonCetak = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxGenre = new System.Windows.Forms.ComboBox();
+            this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,7 @@
             this.comboBoxUrut.Name = "comboBoxUrut";
             this.comboBoxUrut.Size = new System.Drawing.Size(130, 24);
             this.comboBoxUrut.TabIndex = 24;
+            this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
             // 
             // textBoxCari
             // 
@@ -117,20 +118,6 @@
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
-            // dataGridViewHasil
-            // 
-            this.dataGridViewHasil.AllowUserToAddRows = false;
-            this.dataGridViewHasil.AllowUserToDeleteRows = false;
-            this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 128);
-            this.dataGridViewHasil.Name = "dataGridViewHasil";
-            this.dataGridViewHasil.ReadOnly = true;
-            this.dataGridViewHasil.RowHeadersWidth = 51;
-            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 271);
-            this.dataGridViewHasil.TabIndex = 27;
-            // 
             // buttonCetak
             // 
             this.buttonCetak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(51)))), ((int)(((byte)(79)))));
@@ -165,24 +152,28 @@
             this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
             this.comboBoxGenre.Location = new System.Drawing.Point(155, 17);
             this.comboBoxGenre.Name = "comboBoxGenre";
             this.comboBoxGenre.Size = new System.Drawing.Size(364, 24);
             this.comboBoxGenre.TabIndex = 23;
             this.comboBoxGenre.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenre_SelectedIndexChanged);
+            // 
+            // dataGridViewHasil
+            // 
+            this.dataGridViewHasil.AllowUserToAddRows = false;
+            this.dataGridViewHasil.AllowUserToDeleteRows = false;
+            this.dataGridViewHasil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewHasil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewHasil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewHasil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHasil.Location = new System.Drawing.Point(16, 128);
+            this.dataGridViewHasil.Name = "dataGridViewHasil";
+            this.dataGridViewHasil.ReadOnly = true;
+            this.dataGridViewHasil.RowHeadersWidth = 51;
+            this.dataGridViewHasil.Size = new System.Drawing.Size(817, 271);
+            this.dataGridViewHasil.TabIndex = 36;
             // 
             // FormLaporanKonsumenBeradasarkanGenreTontonan
             // 
@@ -190,12 +181,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(849, 466);
+            this.Controls.Add(this.dataGridViewHasil);
             this.Controls.Add(this.buttonCetak);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
-            this.Controls.Add(this.dataGridViewHasil);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "FormLaporanKonsumenBeradasarkanGenreTontonan";
             this.Text = "FormLaporanKonsumenBeradasarkanGenreTontonan";
@@ -213,10 +204,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.DataGridView dataGridViewHasil;
         private System.Windows.Forms.Button buttonCetak;
         private System.Windows.Forms.ComboBox comboBoxUrut;
         private System.Windows.Forms.ComboBox comboBoxGenre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewHasil;
     }
 }

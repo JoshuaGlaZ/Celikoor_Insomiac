@@ -30,13 +30,13 @@ namespace Insomiac_lib
         public static List<LaporanGenreTontonanKonsumen> BacaData(string nilai = "Comedy", string urut = "")
         {
             List<LaporanGenreTontonanKonsumen> listLaporan = new List<LaporanGenreTontonanKonsumen>();
-            if(urut == "Tersedikit")
+            if(urut == "Tertinggi")
             {
-                urut = "ASC";
+                urut = "DESC";
             }
             else
             {
-                urut = "DESC";
+                urut = "ASC";
             }
 
             string perintah = "Select k.id, Count(i.id) as TotalTonton from konsumens k left join invoices i on k.id = i.konsumens_id " +
