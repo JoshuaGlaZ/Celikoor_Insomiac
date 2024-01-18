@@ -33,8 +33,8 @@ namespace Insomiac_lib
             {
                 Film_Studio fs = new Film_Studio();
                 fs.Std = Studio.BacaData("id",msdr.GetValue(0).ToString())[0];
-                fs.Flm = Film.BacaData("id",msdr.GetValue(1).ToString())[0];
-                lst.Add(fs);
+/*                fs.Flm = Film.BacaData("id",msdr.GetValue(1).ToString())[0];
+*/                lst.Add(fs);
             }
             return lst;
         }

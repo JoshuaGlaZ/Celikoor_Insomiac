@@ -136,6 +136,28 @@ namespace Insomiac_lib
             }
             return lst;
         }
+
+
+        public static List<Invoice> DisplayInvoiceKasir()
+        {
+            string perintah = "SELECT * from invoices WHERE status='PENDING';";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Invoice> lst = new List<Invoice>();
+            while (hasil.Read() == true)
+            {
+                Invoice newInv = new Invoice();
+                newInv.Id = hasil.GetString(0);
+                newInv.Tanggal = DateTime.Parse(hasil.GetValue(1).ToString());
+                newInv.Grand_total = hasil.GetInt32(2);
+                newInv.Diskon_nominal = hasil.GetInt32(3);
+                Konsumen konsumen = Konsumen.BacaData(hasil.GetInt32(4));
+                Pegawai kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                newInv.Status = hasil.GetString(6);
+                lst.Add(newInv);
+            }
+            return lst;
+        }
+
         public static List<Invoice> DisplayInvoice(string kriteria, string nilai, string order)
         {
             string perintah = "SELECT * from invoices WHERE '" + kriteria + "' LIKE '%" + nilai + "%' ORDER BY '" + order + "';";

@@ -37,7 +37,7 @@ namespace Insomiac_lib
         {
             List<LaporanFilmLaris> listLaporan = new List<LaporanFilmLaris>();
             string perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
-                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                " tikets t INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
                 "INNER JOIN films f ON t.films_id = f.id " +
                 "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan ORDER BY COUNT(t.films_id) " +
                 "DESC, CASE WHEN MONTH(jf.tanggal) = 0 THEN 99 ELSE MONTH(jf.tanggal) END;";
@@ -68,7 +68,7 @@ namespace Insomiac_lib
             if(kriteria != "COUNT(t.films_id)")
             {
                 perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
-                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                " tikets t INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
                 "INNER JOIN films f ON t.films_id = f.id " +
                    "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 AND " + kriteria + " LIKE '%" + nilai + "%' GROUP BY f.Judul, Bulan  " +
                    order + ";";
@@ -76,14 +76,14 @@ namespace Insomiac_lib
             else if (string.IsNullOrEmpty(nilai))
             {
                 perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
-                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                " tikets t INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
                 "INNER JOIN films f ON t.films_id = f.id " +
                     "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan " + order + ";";
             }
             else
             {
                 perintah = "SELECT f.Judul, COUNT(t.films_id) as 'Jumlah Penonton', MONTHNAME(jf.tanggal) as Bulan FROM" +
-                " tikets tINNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
+                " tikets t INNER JOIN jadwal_films jf ON t.jadwal_film_id = jf.id " +
                 "INNER JOIN films f ON t.films_id = f.id " +
                      "WHERE YEAR(jf.tanggal) = 2023 AND t.status_hadir = 1 GROUP BY f.Judul, Bulan HAVING " + kriteria + " = '" +
                     nilai + "' " + order + ";";

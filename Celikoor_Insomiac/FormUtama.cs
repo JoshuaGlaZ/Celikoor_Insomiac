@@ -366,6 +366,7 @@ namespace Celikoor_Insomiac
                 {
                     FormMasterInvoice jadwal = new FormMasterInvoice();
                     jadwal.MdiParent = this;
+                    jadwal.p = pegawaiLogin;
                     jadwal.Show();
                 }
                 else

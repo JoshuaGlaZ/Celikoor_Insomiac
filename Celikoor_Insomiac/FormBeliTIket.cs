@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,8 +34,9 @@ namespace Celikoor_Insomiac
             List<Film> listFilm = Film.BacaData();
             comboBoxJudul.DataSource = listFilm;
             comboBoxJudul.DisplayMember = "Judul";
-            isFrozen = true; 
-
+            labelSaldo.Text = mainForm.konsumenLogin.Saldo.ToString(); 
+            isFrozen = true;
+            
             foreach (Control control in panel1.Controls)
             {
                 if (control is CheckBox == true)
@@ -57,7 +60,17 @@ namespace Celikoor_Insomiac
             {
                 invoice.AddTicket(nomorKursi, double.Parse(labelHarga.Text), (JadwalFilm)comboBoxTanggal.SelectedItem, (Studio)comboBoxStudio.SelectedItem, (Film)comboBoxJudul.SelectedItem); 
             }
-            Invoice.CreateInvoice(invoice); 
+            if(mainForm.konsumenLogin.Saldo >= double.Parse(labelTotalAkhir.Text))
+            {
+                Invoice.CreateInvoice(invoice);
+                MessageBox.Show("Transaksi Berhasil");
+                mainForm.konsumenLogin.Saldo -= double.Parse(labelTotalAkhir.Text);
+                Konsumen.UbahData(mainForm.konsumenLogin);
+            }
+            else
+            {
+                MessageBox.Show("Saldo Anda Tidak Cukup");
+            }
         }
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,18 +117,16 @@ namespace Celikoor_Insomiac
 
         }
 
-        private void comboBoxJudul_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void comboBoxTanggal_SelectedIndexChanged(object sender, EventArgs e)
         {
             JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
             listCinema.Clear();
+            List<string> listNamaBioskop = new List<string>();
             foreach(Film_Studio fs in jadwalFilm.ListFS)
             {
-                if(!(listCinema.Contains(fs.Std.Bioskop)))
+                if(!(listNamaBioskop).Contains(fs.Std.Bioskop.Nama_cabang))
                 {
+                    listNamaBioskop.Add(fs.Std.Bioskop.Nama_cabang);
                     listCinema.Add(fs.Std.Bioskop); 
                 }
             }
@@ -226,18 +237,6 @@ namespace Celikoor_Insomiac
             kursi += urutanKursi.ToString();
             return kursi; 
         }
-        private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
-            foreach (Film_Studio fs in jadwalFilm.ListFS)
-            {
-                if(listCinema.Contains(fs.Std.Bioskop))
-                {
-                    comboBoxStudio.Items.Add(fs.Std);
-                }
-            }
-            
-        }
 
         private void checkBo1_CheckedChanged(object sender, EventArgs e)
         {
@@ -263,15 +262,28 @@ namespace Celikoor_Insomiac
             Film judulFilm;
             judulFilm = (Film)comboBoxJudul.SelectedItem;
             comboBoxTanggal.DataSource = JadwalFilm.BacaData(judulFilm);
-            comboBoxTanggal.DisplayMember = "tanggalPutar";
+            labelSinopsi.Text = judulFilm.Sinopsis;
+            labelKelompok.Text = judulFilm.Kelompok.ToString();
+            label1Durasi.Text = judulFilm.Durasi.ToString();
+            labelGenre.Text = judulFilm.tampilkanGenre();
+            labelAktor.Text = judulFilm.tampilkanAktor();
+            if (File.Exists(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + judulFilm.CoverPath)))
+            {
+                pictureBox1.Image = Image.FromFile(Directory.GetCurrentDirectory().Replace(@"\Celikoor_Insomiac\bin\Debug", @"\Assets\" + judulFilm.CoverPath));
+            }
+            else
+            {
+                MessageBox.Show(judulFilm.CoverPath + " tidak ditemukan");
+            }
         }
 
         private void comboBoxCinema_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            comboBoxStudio.Items.Clear();
             JadwalFilm jadwalFilm = (JadwalFilm)comboBoxTanggal.SelectedItem;
             foreach (Film_Studio fs in jadwalFilm.ListFS)
             {
-                if (listCinema.Contains(fs.Std.Bioskop))
+                if (((Cinema)comboBoxCinema.SelectedItem).Nama_cabang == fs.Std.Bioskop.Nama_cabang)
                 {
                     comboBoxStudio.Items.Add(fs.Std);
                 }

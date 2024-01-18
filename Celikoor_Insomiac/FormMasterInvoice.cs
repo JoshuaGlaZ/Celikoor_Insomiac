@@ -14,6 +14,7 @@ namespace Celikoor_Insomiac
     public partial class FormMasterInvoice : Form
     {
         List<Invoice> listInvoice = new List<Invoice>();
+        public Pegawai p;
         public FormMasterInvoice()
         {
             InitializeComponent();
@@ -23,7 +24,8 @@ namespace Celikoor_Insomiac
         {
             this.MinimumSize = this.Size;
             comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
-            listInvoice = Invoice.DisplayInvoice();
+            if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(); }
+            else { listInvoice = Invoice.DisplayInvoiceKasir(); }
             dataGridViewHasil.DataSource = listInvoice;
         }
 
