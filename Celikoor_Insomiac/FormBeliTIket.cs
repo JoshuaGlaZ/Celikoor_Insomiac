@@ -82,7 +82,7 @@ namespace Celikoor_Insomiac
             Studio std = (Studio)comboBoxStudio.SelectedItem;
             DateTime today = DateTime.Now;
             labelTIPE.Text = std.Jenis.ToString();
-            labelKursi.Text = std.Kapasitas.ToString();
+            labelKursi.Text = std.Kapasitas.ToString() + " Kursi";
             listKodeKursiTaken = Invoice.BacaKursi((JadwalFilm)comboBoxTanggal.SelectedItem, (Film)comboBoxJudul.SelectedItem, (Studio)comboBoxStudio.SelectedItem);
             if(today.DayOfWeek == DayOfWeek.Sunday || today.DayOfWeek == DayOfWeek.Saturday)
             {

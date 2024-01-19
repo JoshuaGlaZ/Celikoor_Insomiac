@@ -50,7 +50,7 @@ namespace Celikoor_Insomiac
             if(p.Roles == "KASIR" && dataGridViewHasil.CurrentCell.OwningColumn.Name == "UPDATE")
             {
                 string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
-                Invoice.UpdateStatus(int.Parse(id));
+                Invoice.UpdateStatus(int.Parse(id), p);
                 MessageBox.Show("INVOICE berhasil tervalidasi");
                 FormMasterInvoice_Load(this, e);
             }

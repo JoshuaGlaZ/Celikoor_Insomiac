@@ -109,12 +109,23 @@ namespace Celikoor_Insomiac
             {
                 if (f != null)
                 {
-                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus film " + f.Judul + " ?", "Hapus Data", MessageBoxButtons.YesNo);
-                    if (ans == DialogResult.Yes)
+                    try
                     {
-                        Film.HapusData(f);
-                        FormMasterFilm_Load(sender, e);
+                        DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus film " + f.Judul + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                        if (ans == DialogResult.Yes)
+                        {
+                            Film.HapusData(f);
+                            FormMasterFilm_Load(sender, e);
+                        }
                     }
+                    catch(Exception ex)
+                    {
+                        if (ex.Message == "Cannot delete or update a parent row: a foreign key constraint fails (`insomniac`.`film_studio`, CONSTRAINT `fk_studios_has_films_films1` FOREIGN KEY (`films_id`) REFERENCES `films` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)")
+                        {
+                            MessageBox.Show("Film masih ditayangkan\nError: " + ex.Message);
+                        }
+                    } 
+                    
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
             }

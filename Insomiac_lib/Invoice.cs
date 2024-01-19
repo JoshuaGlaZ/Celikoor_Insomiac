@@ -236,7 +236,7 @@ namespace Insomiac_lib
                 return null; 
             }
         }
-        public static void UpdateStatus(int id)
+        public static void UpdateStatus(int id, Pegawai kasir)
         {
             string perintahUpdate = ""; 
             Invoice newInv = new Invoice();
@@ -248,7 +248,7 @@ namespace Insomiac_lib
             }
             if(newInv.Status == "PENDING")
             {
-                perintahUpdate = "UPDATE `invoices` SET `status` = 'VALIDASI' WHERE `id` = '"+id+"';"; 
+                perintahUpdate = "UPDATE `invoices` SET `status` = 'VALIDASI', kasir_id = '" + kasir.Id + "' WHERE `id` = '"+id+"';"; 
             }
             else if (newInv.Status == "VALIDASI")
             {
