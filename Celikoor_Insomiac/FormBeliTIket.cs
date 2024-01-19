@@ -212,7 +212,7 @@ namespace Celikoor_Insomiac
                 total += int.Parse(labelHarga.Text);
             }
             labelTotalKursi.Text = totalKursi;
-            labelDiskon.Text = (listKodeKursi.Count() * ((Film)comboBoxJudul.SelectedItem).Diskon).ToString();
+            labelDiskon.Text = (listKodeKursi.Count() * int.Parse(labelHarga.Text) * ((Film)comboBoxJudul.SelectedItem).Diskon / 100.0).ToString();
             labelTotal.Text = total.ToString();
             labelTotalAkhir.Text = (total - double.Parse(labelDiskon.Text)).ToString();
 
