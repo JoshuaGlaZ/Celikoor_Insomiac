@@ -38,11 +38,12 @@ namespace Celikoor_Insomiac
                 string noKursi = rowKursi + checkKursi.ToString();
 
                 Ticket.CekHadir(invoice, noKursi, ope);
+                MessageBox.Show("Tiket telah diupdate");
                 textBoxBarcode.Text = "";
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Masukkan Barcode");
+                MessageBox.Show("Error: " + ex.Message);
             }
 
             
