@@ -244,7 +244,7 @@ namespace Celikoor_Insomiac
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(382, 42);
             this.label6.TabIndex = 174;
-            this.label6.Text = "T A M B A H   S T U D I O";
+            this.label6.Text = "U B A H   S T U D I O";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormUbahStudio
