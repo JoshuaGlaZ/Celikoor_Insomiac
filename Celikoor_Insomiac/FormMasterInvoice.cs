@@ -24,7 +24,9 @@ namespace Celikoor_Insomiac
         {
             this.MinimumSize = this.Size;
             comboBoxCari.SelectedIndex = 0; comboBoxUrut.SelectedIndex = 0;
-            if (p.Roles == "ADMIN") { listInvoice = Invoice.DisplayInvoice(); }
+            if (p.Roles == "ADMIN") {
+                listInvoice = Invoice.DisplayInvoice();
+            }
             else { 
                 listInvoice = Invoice.DisplayInvoiceKasir();
                 if (dataGridViewHasil.Columns.Count==7) {
@@ -34,8 +36,8 @@ namespace Celikoor_Insomiac
                     btnUbah.Text = "UPDATE";
                     btnUbah.FlatStyle = FlatStyle.Flat;
                     btnUbah.DefaultCellStyle.Font = new Font("Segoe UI", 9);
-                    btnUbah.DefaultCellStyle.BackColor = Color.FromArgb(240, 84, 84);
-                    btnUbah.DefaultCellStyle.ForeColor = Color.FromArgb(18, 18, 18);
+                    btnUbah.DefaultCellStyle.BackColor = Color.FromArgb(54, 78, 104);
+                    btnUbah.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
                     btnUbah.UseColumnTextForButtonValue = true;
                     dataGridViewHasil.Columns.Add(btnUbah);
                 }
@@ -49,7 +51,7 @@ namespace Celikoor_Insomiac
             {
                 string id = dataGridViewHasil.CurrentRow.Cells["id"].Value.ToString();
                 Invoice.UpdateStatus(int.Parse(id));
-                MessageBox.Show("data berhasil diupdate");
+                MessageBox.Show("INVOICE berhasil tervalidasi");
                 FormMasterInvoice_Load(this, e);
             }
         }

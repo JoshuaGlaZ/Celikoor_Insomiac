@@ -111,7 +111,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -130,7 +133,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -151,7 +157,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -171,7 +180,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if(hasil.GetValue(5).ToString()!="")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -191,7 +203,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 lst.Add(newInv);
             }
@@ -209,7 +224,10 @@ namespace Insomiac_lib
                 newInv.Grand_total = hasil.GetInt32(2);
                 newInv.Diskon_nominal = hasil.GetInt32(3);
                 newInv.Pelanggan = Konsumen.BacaData(hasil.GetInt32(4));
-                newInv.Kasir = Pegawai.BacaData(hasil.GetInt32(5));
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    newInv.Kasir = Pegawai.BacaData(int.Parse(hasil.GetValue(5).ToString()));
+                }
                 newInv.Status = hasil.GetString(6);
                 return newInv; 
             }
