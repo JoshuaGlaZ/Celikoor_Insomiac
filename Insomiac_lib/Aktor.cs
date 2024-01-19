@@ -129,6 +129,8 @@ namespace Insomiac_lib
 
         public static void HapusData(Aktor c)
         {
+            string perintah1 = "DELETE FROM aktor_film WHERE aktors_id =" + c.Id + ";";
+            Koneksi.JalankanPerintah(perintah1);
             string perintah = "DELETE FROM aktors WHERE id=" + c.Id + ";";
             Koneksi.JalankanPerintah(perintah);
         }

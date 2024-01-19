@@ -95,11 +95,22 @@ namespace Celikoor_Insomiac
             {
                 if (k != null)
                 {
-                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus konsumen " + k.Nama + " ?", "Hapus Data", MessageBoxButtons.YesNo);
-                    if (ans == DialogResult.Yes)
+                    try
                     {
-                        Konsumen.HapusData(k);
-                        FormMasterKonsumen_Load(sender, e);
+                        DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus konsumen " + k.Nama + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                        if (ans == DialogResult.Yes)
+                        {
+                            Konsumen.HapusData(k);
+                            FormMasterKonsumen_Load(sender, e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        if (ex.Message == "Cannot delete or update a parent row: a foreign key constraint fails (`insomniac`.`invoices`, CONSTRAINT `fk_invoices_konsumens1` FOREIGN KEY (`konsumens_id`) REFERENCES `konsumens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)")
+                        {
+                            MessageBox.Show("Konsumen tercatat di invoice sehingga tidak bisa dihapus");
+                        }
                     }
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }

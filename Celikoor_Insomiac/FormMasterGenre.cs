@@ -71,11 +71,21 @@ namespace Celikoor_Insomiac
             {
                 if (g != null)
                 {
-                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus genre " + g.NamaGenre + " ?", "Hapus Data", MessageBoxButtons.YesNo);
-                    if (ans == DialogResult.Yes)
+                    try
                     {
-                        Genre.HapusData(g);
-                        FormMasterGenre_Load(sender, e);
+                        DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus genre " + g.NamaGenre + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                        if (ans == DialogResult.Yes)
+                        {
+                            Genre.HapusData(g);
+                            FormMasterGenre_Load(sender, e);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        if (ex.Message =="Cannot delete or update a parent row: a foreign key constraint fails (`insomniac`.`genre_film`, CONSTRAINT `fk_films_has_genres_genres1` FOREIGN KEY (`genres_id`) REFERENCES `genres` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)")
+                        {
+                            MessageBox.Show("Genre masih dipakai pada film");
+                        }
                     }
                 }
                 else { MessageBox.Show("Ada kesalahan pada data"); }

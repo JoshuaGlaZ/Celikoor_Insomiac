@@ -95,11 +95,22 @@ namespace Celikoor_Insomiac
             {
                 if (k != null)
                 {
-                    DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus Aktor " + k.Nama + " ?", "Hapus Data", MessageBoxButtons.YesNo);
-                    if (ans == DialogResult.Yes)
+                    try
                     {
-                        Aktor.HapusData(k);
-                        FormMasterAktor_Load(sender, e);
+                        DialogResult ans = MessageBox.Show("Apakah Anda yakin ingin menghapus Aktor " + k.Nama + " ?", "Hapus Data", MessageBoxButtons.YesNo);
+                        if (ans == DialogResult.Yes)
+                        {
+                            Aktor.HapusData(k);
+                            FormMasterAktor_Load(sender, e);
+                        }
+                    }
+                    
+                    catch(Exception ex)
+                    {
+                        if (ex.Message == "Cannot delete or update a parent row: a foreign key constraint fails (`insomniac`.`aktor_film`, CONSTRAINT `fk_aktors_has_films_aktors1` FOREIGN KEY (`aktors_id`) REFERENCES `aktors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)")
+                        {
+                            MessageBox.Show("Aktor masih berperan di film");
+                        }
                     }
                 }
                 else { MessageBox.Show("ada kesalahan pada data"); }
