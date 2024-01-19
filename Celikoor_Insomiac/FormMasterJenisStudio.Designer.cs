@@ -111,7 +111,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonTambah);
             this.Name = "FormMasterJenisStudio";
-            this.Text = "Studio";
+            this.Text = "Jenis Studio";
             this.Load += new System.EventHandler(this.FormMasterJenisStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.ResumeLayout(false);

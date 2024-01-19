@@ -50,7 +50,7 @@
             // 
             this.textBoxBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBarcode.Location = new System.Drawing.Point(27, 73);
-            this.textBoxBarcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBarcode.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxBarcode.MaxLength = 6;
             this.textBoxBarcode.Name = "textBoxBarcode";
             this.textBoxBarcode.Size = new System.Drawing.Size(293, 50);
@@ -83,9 +83,9 @@
             this.Controls.Add(this.buttonHadir);
             this.Controls.Add(this.textBoxBarcode);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormScanBarcode";
-            this.Text = "FormScanBarcode";
+            this.Text = "Scan Barcode";
             this.Load += new System.EventHandler(this.FormScanBarcode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

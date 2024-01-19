@@ -1771,7 +1771,7 @@
             this.Controls.Add(this.panel5);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormBeliTIket";
-            this.Text = "s";
+            this.Text = "Beli Tiket";
             this.Load += new System.EventHandler(this.FormBeliTIket_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

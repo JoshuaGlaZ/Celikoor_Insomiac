@@ -147,7 +147,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.buttonKeluar.Location = new System.Drawing.Point(721, 405);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 32;
@@ -195,9 +195,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.dataGridViewHasil);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormLaporanStudioBerdasarkanTingkatUtilitas";
-            this.Text = "FormLaporanStudioBerdasarkanTingkatUtilitas";
+            this.Text = "Laporan Studio Berdasarkan Tingkat Utilitas";
             this.Load += new System.EventHandler(this.FormLaporanStudioBerdasarkanTingkatUtilitas_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

@@ -209,7 +209,7 @@ namespace Celikoor_Insomiac
             this.Controls.Add(this.buttonTambah);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMasterStudio";
-            this.Text = "FormMasterStudio";
+            this.Text = "Studio";
             this.Load += new System.EventHandler(this.FormMasterStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).EndInit();
             this.panel5.ResumeLayout(false);

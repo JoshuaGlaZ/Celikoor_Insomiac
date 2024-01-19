@@ -30,13 +30,13 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBoxUrut = new System.Windows.Forms.ComboBox();
+            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.textBoxCari = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonCetak = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
             this.dataGridViewHasil = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHasil)).BeginInit();
@@ -69,6 +69,17 @@
             this.comboBoxUrut.TabIndex = 24;
             this.comboBoxUrut.SelectedIndexChanged += new System.EventHandler(this.comboBoxUrut_SelectedIndexChanged);
             // 
+            // comboBoxGenre
+            // 
+            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGenre.FormattingEnabled = true;
+            this.comboBoxGenre.Location = new System.Drawing.Point(155, 17);
+            this.comboBoxGenre.Name = "comboBoxGenre";
+            this.comboBoxGenre.Size = new System.Drawing.Size(364, 24);
+            this.comboBoxGenre.TabIndex = 23;
+            this.comboBoxGenre.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenre_SelectedIndexChanged);
+            // 
             // textBoxCari
             // 
             this.textBoxCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +101,19 @@
             this.label3.Text = "Urut Berdasarkan :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Cari Berdasarkan :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(191)))), ((int)(((byte)(245)))));
@@ -110,7 +134,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.buttonKeluar.Location = new System.Drawing.Point(721, 404);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(112, 45);
             this.buttonKeluar.TabIndex = 32;
@@ -126,37 +150,13 @@
             this.buttonCetak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCetak.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonCetak.Location = new System.Drawing.Point(573, 404);
-            this.buttonCetak.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCetak.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCetak.Name = "buttonCetak";
             this.buttonCetak.Size = new System.Drawing.Size(112, 45);
             this.buttonCetak.TabIndex = 35;
             this.buttonCetak.Text = "CETAK";
             this.buttonCetak.UseVisualStyleBackColor = false;
             this.buttonCetak.Click += new System.EventHandler(this.buttonCetak_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.label1.Location = new System.Drawing.Point(8, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 21);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Cari Berdasarkan :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxGenre
-            // 
-            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Location = new System.Drawing.Point(155, 17);
-            this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(364, 24);
-            this.comboBoxGenre.TabIndex = 23;
-            this.comboBoxGenre.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenre_SelectedIndexChanged);
             // 
             // dataGridViewHasil
             // 
@@ -187,9 +187,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonKeluar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormLaporanKonsumenBeradasarkanGenreTontonan";
-            this.Text = "FormLaporanKonsumenBeradasarkanGenreTontonan";
+            this.Text = "Laporan Konsumen Berdasarkan Genre Tontonan";
             this.Load += new System.EventHandler(this.FormLaporanKonsumenBeradasarkanGenreTontonan_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
